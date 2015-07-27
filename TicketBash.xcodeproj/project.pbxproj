@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96930CCAA9D76F14913E7966 /* libPods-TicketBash.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5541564E813636E63D176C62 /* libPods-TicketBash.a */; };
 		B112DAF11B66C0A500F6ADE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B112DAF01B66C0A500F6ADE1 /* AppDelegate.swift */; };
 		B112DAF31B66C0A500F6ADE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B112DAF21B66C0A500F6ADE1 /* ViewController.swift */; };
 		B112DAF61B66C0A500F6ADE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B112DAF41B66C0A500F6ADE1 /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C869B814DE9655B6927C186 /* Pods-TicketBash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketBash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicketBash/Pods-TicketBash.debug.xcconfig"; sourceTree = "<group>"; };
+		5541564E813636E63D176C62 /* libPods-TicketBash.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TicketBash.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D402A7624A5B5E5A8F41284 /* Pods-TicketBash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketBash.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicketBash/Pods-TicketBash.release.xcconfig"; sourceTree = "<group>"; };
 		B112DAEB1B66C0A500F6ADE1 /* TicketBash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketBash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B112DAEF1B66C0A500F6ADE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B112DAF01B66C0A500F6ADE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +40,7 @@
 		B112DB001B66C0A500F6ADE1 /* TicketBashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicketBashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B112DB051B66C0A500F6ADE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B112DB061B66C0A500F6ADE1 /* TicketBashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketBashTests.swift; sourceTree = "<group>"; };
+		B112DB141B66CC3500F6ADE1 /* TicketBash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TicketBash-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96930CCAA9D76F14913E7966 /* libPods-TicketBash.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +62,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BD28208892D4848AB0678E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C869B814DE9655B6927C186 /* Pods-TicketBash.debug.xcconfig */,
+				9D402A7624A5B5E5A8F41284 /* Pods-TicketBash.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		683B9107FD748C86679A3C8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5541564E813636E63D176C62 /* libPods-TicketBash.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B112DAE21B66C0A500F6ADE1 = {
 			isa = PBXGroup;
 			children = (
 				B112DAED1B66C0A500F6ADE1 /* TicketBash */,
 				B112DB031B66C0A500F6ADE1 /* TicketBashTests */,
 				B112DAEC1B66C0A500F6ADE1 /* Products */,
+				2BD28208892D4848AB0678E3 /* Pods */,
+				683B9107FD748C86679A3C8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +108,7 @@
 				B112DAF71B66C0A500F6ADE1 /* Images.xcassets */,
 				B112DAF91B66C0A500F6ADE1 /* LaunchScreen.xib */,
 				B112DAEE1B66C0A500F6ADE1 /* Supporting Files */,
+				B112DB141B66CC3500F6ADE1 /* TicketBash-Bridging-Header.h */,
 			);
 			path = TicketBash;
 			sourceTree = "<group>";
@@ -119,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B112DB0A1B66C0A500F6ADE1 /* Build configuration list for PBXNativeTarget "TicketBash" */;
 			buildPhases = (
+				46039B0A72F96200662796EE /* Check Pods Manifest.lock */,
 				B112DAE71B66C0A500F6ADE1 /* Sources */,
 				B112DAE81B66C0A500F6ADE1 /* Frameworks */,
 				B112DAE91B66C0A500F6ADE1 /* Resources */,
+				79D794B23A105902C334959B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +234,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46039B0A72F96200662796EE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		79D794B23A105902C334959B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TicketBash/Pods-TicketBash-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B112DAE71B66C0A500F6ADE1 /* Sources */ = {
@@ -338,21 +399,27 @@
 		};
 		B112DB0B1B66C0A500F6ADE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C869B814DE9655B6927C186 /* Pods-TicketBash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TicketBash/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TicketBash/TicketBash-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		B112DB0C1B66C0A500F6ADE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D402A7624A5B5E5A8F41284 /* Pods-TicketBash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TicketBash/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TicketBash/TicketBash-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +476,7 @@
 				B112DB0C1B66C0A500F6ADE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B112DB0D1B66C0A500F6ADE1 /* Build configuration list for PBXNativeTarget "TicketBashTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +485,7 @@
 				B112DB0F1B66C0A500F6ADE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
