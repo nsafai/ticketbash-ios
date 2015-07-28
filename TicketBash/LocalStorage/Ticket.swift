@@ -13,7 +13,7 @@ class Ticket: Object {
     
     dynamic var explanationText: String = ""
     
-    
+//    dynamic var user: NSData!
 //    dynamic var ticketPicture: NSData!
 //    dynamic var evidencePicture: NSData!
 //    
@@ -23,14 +23,5 @@ class Ticket: Object {
 //    dynamic var mailingState: String = ""
 //    
 //    dynamic var modificationDate = NSDate()
-    
-    
-    //    User (pointer)
-    //    ticketPicture (File)
-    //    evidencePicture (File)
-    //    explanationText (string) ?
-    //    mailingAddress (string)
-    //    mailingCity (string)
-    //    mailingZip (string)
-    //    mailingState (string)
+
 }
