@@ -4,7 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKLoginKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKShareKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PBJVision.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2DD6DA7EE178DD96C14DF59B8963750A</key>
+		<key>4043FF2159B563797616106776319EAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8FDCFAE866F0ED89A9E3C12C3D790574</key>
+		<key>6660CAC988555F1280149548F5A38FDF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>94002BF488C669BF0538F6DAFDBE0232</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AB6D4CB5104CE0E095AF663EB312D094</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B61406EC58345CB7D1414307D9028797</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E5DA547B05DED0367E52805876489253</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EEF9A9ECD7AA39496D2E35BD075F2302</key>
 		<dict>
 			<key>primary</key>
 			<true/>
