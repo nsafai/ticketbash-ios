@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Explanation View Controller-->
+        <!--Explanation-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ExplanationViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,9 +15,36 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9g-Xk-yo4">
+                                <rect key="frame" x="0.0" y="334" width="600" height="53"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Why don't you deserve the parking ticket?" translatesAutoresizingMaskIntoConstraints="NO" id="5n2-aB-xJO">
+                                <rect key="frame" x="0.0" y="64" width="600" height="271"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5n2-aB-xJO" firstAttribute="trailing" secondItem="I9g-Xk-yo4" secondAttribute="trailing" id="114-mw-NOf"/>
+                            <constraint firstItem="I9g-Xk-yo4" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="270" id="6iL-Xl-Xei"/>
+                            <constraint firstItem="5n2-aB-xJO" firstAttribute="leading" secondItem="I9g-Xk-yo4" secondAttribute="leading" id="968-Ua-8jF"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5n2-aB-xJO" secondAttribute="bottom" constant="265" id="FnO-Ce-VVV"/>
+                            <constraint firstAttribute="trailing" secondItem="5n2-aB-xJO" secondAttribute="trailing" id="ZIR-Bg-dWS"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="I9g-Xk-yo4" secondAttribute="bottom" constant="213" id="ZJ1-Fh-Bp1"/>
+                            <constraint firstItem="5n2-aB-xJO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="hZz-7e-41P"/>
+                            <constraint firstItem="5n2-aB-xJO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="udZ-1M-MUr"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="AuP-CJ-sE5"/>
+                    <navigationItem key="navigationItem" title="Explanation" id="AuP-CJ-sE5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

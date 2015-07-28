@@ -13,6 +13,7 @@
 		B10D33881B683B8200DE4D8E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10D33841B68389400DE4D8E /* RealmSwift.framework */; };
 		B10D33891B683B8200DE4D8E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B10D33841B68389400DE4D8E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B10D338D1B683CE400DE4D8E /* ExplanationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10D338C1B683CE400DE4D8E /* ExplanationViewController.swift */; };
+		B10D338F1B683F1F00DE4D8E /* TicketCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10D338E1B683F1F00DE4D8E /* TicketCameraViewController.swift */; };
 		B112DAF11B66C0A500F6ADE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B112DAF01B66C0A500F6ADE1 /* AppDelegate.swift */; };
 		B112DAF61B66C0A500F6ADE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B112DAF41B66C0A500F6ADE1 /* Main.storyboard */; };
 		B112DAF81B66C0A500F6ADE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B112DAF71B66C0A500F6ADE1 /* Images.xcassets */; };
@@ -52,6 +53,7 @@
 		B10D33831B68389400DE4D8E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		B10D33841B68389400DE4D8E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		B10D338C1B683CE400DE4D8E /* ExplanationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationViewController.swift; sourceTree = "<group>"; };
+		B10D338E1B683F1F00DE4D8E /* TicketCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketCameraViewController.swift; sourceTree = "<group>"; };
 		B112DAEB1B66C0A500F6ADE1 /* TicketBash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketBash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B112DAEF1B66C0A500F6ADE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B112DAF01B66C0A500F6ADE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				B10D338C1B683CE400DE4D8E /* ExplanationViewController.swift */,
+				B10D338E1B683F1F00DE4D8E /* TicketCameraViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			files = (
 				B112DAF11B66C0A500F6ADE1 /* AppDelegate.swift in Sources */,
 				B10D338D1B683CE400DE4D8E /* ExplanationViewController.swift in Sources */,
+				B10D338F1B683F1F00DE4D8E /* TicketCameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
