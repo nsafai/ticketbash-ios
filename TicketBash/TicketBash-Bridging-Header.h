@@ -14,7 +14,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <Parse/Parse.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
-#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 // unimported/installed pods:
 // pod 'FBSDKShareKit'
