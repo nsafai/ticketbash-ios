@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F6a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tmN-bl-i3v">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Explanation-->
@@ -21,8 +20,7 @@
                                 <rect key="frame" x="0.0" y="299" width="600" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="3DP-k0-gAC"/>
-                                    <constraint firstAttribute="height" constant="50" id="fRh-XP-AeE"/>
+                                    <constraint firstAttribute="height" constant="50" id="qi0-HG-qVp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Next">
@@ -39,16 +37,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5n2-aB-xJO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="AtY-b7-IgK"/>
-                            <constraint firstItem="I9g-Xk-yo4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Ioz-3W-Arv"/>
-                            <constraint firstItem="5n2-aB-xJO" firstAttribute="trailing" secondItem="I9g-Xk-yo4" secondAttribute="trailing" id="aT1-au-fte"/>
-                            <constraint firstItem="5n2-aB-xJO" firstAttribute="leading" secondItem="I9g-Xk-yo4" secondAttribute="leading" id="kR4-QD-xNI"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5n2-aB-xJO" secondAttribute="bottom" constant="303" id="kcN-Kk-4tf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="I9g-Xk-yo4" secondAttribute="trailing" constant="-16" id="lAa-Gl-aFV"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="I9g-Xk-yo4" secondAttribute="bottom" constant="251" id="rKA-r5-14a"/>
+                            <constraint firstItem="5n2-aB-xJO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="8Hf-S0-xOe"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="I9g-Xk-yo4" secondAttribute="bottom" constant="251" id="BYz-uy-ATD"/>
+                            <constraint firstItem="I9g-Xk-yo4" firstAttribute="top" secondItem="5n2-aB-xJO" secondAttribute="bottom" constant="2" id="JAF-rv-CU9"/>
+                            <constraint firstAttribute="trailing" secondItem="5n2-aB-xJO" secondAttribute="trailing" id="OSF-15-G9o"/>
+                            <constraint firstItem="I9g-Xk-yo4" firstAttribute="leading" secondItem="5n2-aB-xJO" secondAttribute="leading" id="UNu-yJ-bnq"/>
+                            <constraint firstItem="5n2-aB-xJO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="cbV-ab-uVk"/>
+                            <constraint firstItem="I9g-Xk-yo4" firstAttribute="trailing" secondItem="5n2-aB-xJO" secondAttribute="trailing" id="teg-QF-IpB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Explanation" id="AuP-CJ-sE5"/>
+                    <connections>
+                        <outlet property="explanationTextView" destination="5n2-aB-xJO" id="RHn-QI-AjV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
