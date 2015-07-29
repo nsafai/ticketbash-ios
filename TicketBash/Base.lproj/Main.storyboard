@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="1255" y="390"/>
         </scene>
-        <!--Contact Info View Controller-->
+        <!--Contact Info-->
         <scene sceneID="nkc-bj-Dku">
             <objects>
-                <viewController storyboardIdentifier="ContactInfoViewController" id="MKZ-8v-mWK" customClass="ContactInfoViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactInfoViewController" title="Contact Info" id="MKZ-8v-mWK" customClass="ContactInfoViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NJY-Hf-iRd"/>
                         <viewControllerLayoutGuide type="bottom" id="Iif-bA-2LN"/>
@@ -139,6 +139,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" label=""/>
                         <constraints>
                             <constraint firstItem="9xd-1C-mzZ" firstAttribute="trailing" secondItem="7wM-Rl-amQ" secondAttribute="trailing" id="0B6-bz-2MV"/>
                             <constraint firstItem="bkE-gM-V6O" firstAttribute="top" secondItem="YLf-aH-I3Y" secondAttribute="bottom" constant="28" id="1SK-2N-tMP"/>
@@ -178,6 +179,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Contact Info" id="Ary-f8-eva"/>
                     <connections>
                         <outlet property="addressTextField" destination="bkE-gM-V6O" id="NCf-vj-VOM"/>
                         <outlet property="cityTextField" destination="3Aa-nY-uIN" id="E4K-rV-1yv"/>

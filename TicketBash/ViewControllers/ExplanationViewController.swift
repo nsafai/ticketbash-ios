@@ -14,7 +14,7 @@ import ParseUI
 import FBSDKLoginKit
 import ParseFacebookUtils
 
-class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
+class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UITextViewDelegate {
     
     @IBOutlet weak var explanationTextView: UITextView!
     var myTicket: Ticket?
@@ -40,7 +40,8 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
     }
     
     override func viewWillAppear(animated: Bool) {
-        explanationTextView.returnKeyType = .Next
+//        explanationTextView.returnKeyType = .Next
+        explanationTextView.delegate = self
         explanationTextView.becomeFirstResponder()
         
         var tickets = realm.objects(Ticket)
