@@ -9,7 +9,7 @@ target 'TicketBash' do
 	pod 'FBSDKLoginKit'
 	pod 'FBSDKShareKit'
 	pod 'Parse'
-#	pod 'RealmSwift'
+	pod 'ParseUI'
 
 end
 
