@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PBJVision
 
 class TicketCameraViewController: UIViewController, PBJVisionDelegate {
 

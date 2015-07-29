@@ -7,16 +7,27 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+       
+        
+        // Set up the Parse SDK
+        Parse.setApplicationId("XGBNSjq1RRCVmAiiX1QRVbcbqik1wJo41uUAomIu", clientKey: "YpZD16HyM0cq0w2sblzad4ecstKGjo5JAtp9IJ8C")
+        
+        
+        let acl = PFACL()
+        acl.setPublicReadAccess(true)
+        PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
+        
+         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -42,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
+
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.

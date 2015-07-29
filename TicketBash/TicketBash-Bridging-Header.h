@@ -9,6 +9,9 @@
 #ifndef TicketBash_TicketBash_Bridging_Header_h
 #define TicketBash_TicketBash_Bridging_Header_h
 
-#import "PBJVision.h"
+#import <PBJVision/PBJVision.h>
+#import <ParseUI/ParseUI.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <Parse/Parse.h>
 
 #endif
