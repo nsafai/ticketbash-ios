@@ -37,6 +37,11 @@ class ExplanationViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        explanationTextView.returnKeyType = .Next
+        explanationTextView.becomeFirstResponder()
+    }
+    
     
     
     override func didReceiveMemoryWarning() {
