@@ -18,24 +18,41 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var phoneTextField: UITextField!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firstNameTextField.becomeFirstResponder()
-
-    }
-    
-    override func viewWillAppear(animated: Bool) {
+        phoneTextField.delegate = self
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
         addressTextField.delegate = self
         cityTextField.delegate = self
         zipTextField.delegate = self
-        phoneTextField.delegate = self
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+
         firstNameTextField.becomeFirstResponder()
         
-        
-        
             }
+   
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        if textField == firstNameTextField { // Switch focus to other text field
+            lastNameTextField.becomeFirstResponder()
+        } else if textField == lastNameTextField {
+            addressTextField.becomeFirstResponder()
+        } else if textField == addressTextField {
+            cityTextField.becomeFirstResponder()
+        } else if textField == cityTextField {
+            zipTextField.becomeFirstResponder()
+        } else if textField == zipTextField {
+            phoneTextField.becomeFirstResponder()
+        } else if textField == phoneTextField {
+            // click next
+        }
+        
+        return true
+    }
+    
 }
