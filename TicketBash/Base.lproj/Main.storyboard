@@ -52,6 +52,7 @@
                     <navigationItem key="navigationItem" title="Explanation" id="AuP-CJ-sE5"/>
                     <connections>
                         <outlet property="explanationTextView" destination="5n2-aB-xJO" id="RHn-QI-AjV"/>
+                        <segue destination="MKZ-8v-mWK" kind="show" identifier="showContactInfo" id="djk-7r-gLz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

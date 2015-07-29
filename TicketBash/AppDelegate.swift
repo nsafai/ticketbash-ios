@@ -11,7 +11,7 @@ import FBSDKCoreKit
 import Parse
 import ParseUI
 import FBSDKLoginKit
-import PFFacebookUtils
+import ParseFacebookUtils
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Initialize Facebook
         // 1
-        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+        PFFacebookUtils.initializeFacebook()
         
          return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
@@ -62,6 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
 
+    
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.

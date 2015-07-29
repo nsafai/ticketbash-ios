@@ -8,17 +8,35 @@
 
 import UIKit
 import RealmSwift
+import FBSDKCoreKit
+import Parse
+import ParseUI
+import FBSDKLoginKit
+import ParseFacebookUtils
 
-class ExplanationViewController: UIViewController {
+class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
     
     @IBOutlet weak var explanationTextView: UITextView!
     var myTicket: Ticket?
     let realm = Realm()
     var parseLoginHelper: ParseLoginHelper!
+    let loginViewController = PFLogInViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.parseLoginHelper = ParseLoginHelper {[unowned self] user, error in // Initialize the ParseLoginHelper with a callback
+            
+            if let error = error {
+                ErrorHandling.defaultErrorHandler(error)
+                println("Error logging in \(user)")
+            } else if let user = user {
+                // login was successful
+                println("CASE 1 Logged in user is \(user)")
+                self.dismissViewControllerAnimated(true, completion: nil)
+                self.performSegueWithIdentifier("showContactInfo", sender: self)
+            }
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -46,20 +64,23 @@ class ExplanationViewController: UIViewController {
                 ticket.explanationText = self.explanationTextView.text // change realm text value to what user just wrote in text view
                 self.realm.add(ticket, update: true) // 3 Add  new ticket to Realm if none exists, else update it
 
-        
-        let parseLoginHelper = ParseLoginHelper {[unowned self] user, error in // Initialize the ParseLoginHelper with a callback
+        let user = PFUser.currentUser()
+        if (user != nil) {
+            // someone is logged in
+            println("CASE 2 Logged in user is \(user)")
+            self.performSegueWithIdentifier("showContactInfo", sender: self)
             
-            if let error = error {
-                ErrorHandling.defaultErrorHandler(error)
-                println("Error logging in \(user)")
-            } else if let user = user {
-                // login was successful
-                println("Logged in user is \(user)")
-                
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let contactInfoViewController = storyboard.instantiateViewControllerWithIdentifier("ContactInfoViewController") as! UIViewController
-                self.navigationController?.presentViewController(contactInfoViewController, animated: true, completion: nil)
-                    }
+        } else {
+            // no one is logged in
+            
+            self.loginViewController.fields = .UsernameAndPassword | .LogInButton | .SignUpButton | .PasswordForgotten | .Facebook
+            self.loginViewController.delegate = self.parseLoginHelper
+            self.loginViewController.signUpController?.delegate = self.parseLoginHelper
+            
+            // present login view controller modally
+//            self.navigationController?.pushViewController(self.loginViewController, animated: true)
+            self.presentViewController(self.loginViewController, animated: true, completion: nil)
+//            
                 }
             }
         }
