@@ -24,15 +24,16 @@ class ExplanationViewController: UIViewController {
             }
         }
         
+        //testing
         let sampleTicket = Ticket()
         sampleTicket.explanationText   = "Super Simple Test Note"
         
         println("excuse for sampleTicket is: \(sampleTicket.explanationText)")
 //        explanationTextView.text = "Hello"
         
-        let realm = Realm() // 1
-        realm.write() { // 2
-            realm.add(sampleTicket) // 3
+        let realm = Realm() // 1 Before you can add it to Realm you must first grab the default Realm.
+        realm.write() { // 2 All changes to an object (addition, modification and deletion) must be done within a write transaction/closure.
+            realm.add(sampleTicket) // 3 Add your new note to Realm
         }
         
     }
