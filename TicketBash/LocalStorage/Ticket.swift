@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 
 class Ticket: Object {
+    dynamic var id = 0
     
     dynamic var explanationText: String = ""
     
@@ -24,4 +25,11 @@ class Ticket: Object {
 //    
 //    dynamic var modificationDate = NSDate()
 
+
+    override class func primaryKey() -> String {
+        return "id"
+    }
+
+
 }
+

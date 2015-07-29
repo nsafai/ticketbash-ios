@@ -10,6 +10,8 @@
 	<string>TicketBash</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>865AEB25AAEDD53826B3D304DC09A31FE24C3C4E</key>
+		<string>github.com:nsafai/MakeSchoolNotes.git</string>
 		<key>D00246CA265B64548555FA6C6B9ADA20F1C3FAAA</key>
 		<string>github.com:nsafai/TicketBash.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>TicketBash.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>865AEB25AAEDD53826B3D304DC09A31FE24C3C4E</key>
+		<string>../../MakeSchoolNotes</string>
 		<key>D00246CA265B64548555FA6C6B9ADA20F1C3FAAA</key>
 		<string>..</string>
 	</dict>
@@ -28,6 +32,14 @@
 	<string>D00246CA265B64548555FA6C6B9ADA20F1C3FAAA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>865AEB25AAEDD53826B3D304DC09A31FE24C3C4E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MakeSchoolNotes</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

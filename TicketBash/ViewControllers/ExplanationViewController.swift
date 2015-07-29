@@ -12,37 +12,40 @@ import RealmSwift
 class ExplanationViewController: UIViewController {
     
     @IBOutlet weak var explanationTextView: UITextView!
+    var myTicket: Ticket?
+    let realm = Realm()
     
-    func viewDidLoad(animated: Bool) {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        
         
     }
     
     override func viewWillAppear(animated: Bool) {
         explanationTextView.returnKeyType = .Next
         explanationTextView.becomeFirstResponder()
+       
+        var tickets = realm.objects(Ticket)
         
-        var ticket: Ticket? {
-            didSet {
-                if let ticket = ticket, explanationTextView = explanationTextView {
-                    explanationTextView.text = ticket.explanationText
-                }
-            }
+        if let ticket = tickets.first {
+            myTicket = ticket
+            explanationTextView.text = myTicket!.explanationText
+            println("grabbed ticket from realm")
+        } else {
+            myTicket = Ticket()
+            println("created new ticket")
         }
         
-        //testing
-        let sampleTicket = Ticket()
-        sampleTicket.explanationText   = "Super Simple Test Note"
-        println("excuse for sampleTicket is: \(sampleTicket.explanationText)")
-        
-        let realm = Realm() // 1 Before you can add it to Realm you must first grab the default Realm.
-        realm.write() { // 2 All changes to an object (addition, modification and deletion) must be done within a write transaction/closure.
-            realm.add(sampleTicket) // 3 Add your new note to Realm
-        }
-
     }
     
+    @IBAction func nextButton(sender: AnyObject) {
+        
+        if let ticket = myTicket {
+            realm.write() { //changes must be done within a write transaction/closure.
+                ticket.explanationText = self.explanationTextView.text // change realm text value to what user just wrote in text view
+                self.realm.add(ticket, update: true) // 3 Add  new ticket to Realm if none exists, else update it
+            }
+        }
+    }
     
     
     override func didReceiveMemoryWarning() {
