@@ -10,6 +10,14 @@ import UIKit
 
 class ContactInfoViewController: UIViewController {
 
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var zipTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
