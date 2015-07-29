@@ -11,6 +11,7 @@ target 'TicketBash' do
 	pod 'Parse'
 	pod 'ParseUI'
 	pod 'ConvenienceKit'
+	pod 'ParseFacebookUtils'
 
 end
 

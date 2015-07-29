@@ -34,12 +34,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Facebook-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PBJVision.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ParseFacebookUtils.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,52 +67,62 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>023771F9631872BFF4A2CF395206ECC4</key>
+		<key>024F316AB234FD859CFB4F18F17F4143</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>065F18557BAF5BB10E657A46538B9081</key>
+		<key>0CD557EA763AF5F5B2675B3CAB7FF01A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4B3389FF3725E0F0E141686D16877839</key>
+		<key>15BD807249C5B5A189C7748273519B7D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B7865BEC6200ADB6429DD90B38F0601</key>
+		<key>19C9AF844EB63AF8EBB3D7AE1B070BE3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B3465B721C5ECBF90E80CC1EEAFB2017</key>
+		<key>2EDBB78F7E1ED2026F8C65CC659D47F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B4C228756BB413647EBD3C709840D222</key>
+		<key>36CC4D24286CAEC53C919C1392291037</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF80790A7970D35A19020F9E12213EDB</key>
+		<key>38ECA14EBF4A7C45D8F2B7C37C05EE45</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D8521EE00CBDBE4F567C7437B344F951</key>
+		<key>67527D9935EF1EA91F68AD5ABC78BDBE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EEB062C0C00E23FE94615F1369DFBEF2</key>
+		<key>ACB50E28A03E1F33CF5B8C33E0B7C62B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F42547CE418F31433B0ACC2A67782D9E</key>
+		<key>BD783F4FAAF9FD4924D3F2F7474FFD3A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DAA1DF88C714E6B2FEC06F0F754DCC51</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EE7E4C3891FE0E63F7C8298ED3B88C99</key>
 		<dict>
 			<key>primary</key>
 			<true/>

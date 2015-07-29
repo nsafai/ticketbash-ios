@@ -13,5 +13,11 @@
 #import <ParseUI/ParseUI.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <Parse/Parse.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
+
+// unimported/installed pods:
+// pod 'FBSDKShareKit'
+// Swift pod 'ConvenienceKit'
 
 #endif

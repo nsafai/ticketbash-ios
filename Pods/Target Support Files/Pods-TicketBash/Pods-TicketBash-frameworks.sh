@@ -57,8 +57,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-TicketBash/FBSDKCoreKit.framework'
   install_framework 'Pods-TicketBash/FBSDKLoginKit.framework'
   install_framework 'Pods-TicketBash/FBSDKShareKit.framework'
+  install_framework 'Pods-TicketBash/FacebookSDK.framework'
   install_framework 'Pods-TicketBash/PBJVision.framework'
   install_framework 'Pods-TicketBash/Parse.framework'
+  install_framework 'Pods-TicketBash/ParseFacebookUtils.framework'
   install_framework 'Pods-TicketBash/ParseUI.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -67,7 +69,9 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-TicketBash/FBSDKCoreKit.framework'
   install_framework 'Pods-TicketBash/FBSDKLoginKit.framework'
   install_framework 'Pods-TicketBash/FBSDKShareKit.framework'
+  install_framework 'Pods-TicketBash/FacebookSDK.framework'
   install_framework 'Pods-TicketBash/PBJVision.framework'
   install_framework 'Pods-TicketBash/Parse.framework'
+  install_framework 'Pods-TicketBash/ParseFacebookUtils.framework'
   install_framework 'Pods-TicketBash/ParseUI.framework'
 fi

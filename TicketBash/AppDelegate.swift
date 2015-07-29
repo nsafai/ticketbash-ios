@@ -9,6 +9,9 @@
 import UIKit
 import FBSDKCoreKit
 import Parse
+import ParseUI
+import FBSDKLoginKit
+import PFFacebookUtils
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,7 +30,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         acl.setPublicReadAccess(true)
         PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
         
+        // Initialize Facebook
+        // 1
+        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+        
          return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+
     }
 
     func applicationWillResignActive(application: UIApplication) {
