@@ -73,7 +73,9 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
         } else {
             // no one is logged in
             
-            self.loginViewController.fields = .UsernameAndPassword | .LogInButton | .SignUpButton | .PasswordForgotten | .Facebook
+            self.loginViewController.fields = .UsernameAndPassword | .LogInButton | .SignUpButton | .PasswordForgotten
+            // add | .Facebook for Facebook
+            self.loginViewController.emailAsUsername = true
             self.loginViewController.delegate = self.parseLoginHelper
             self.loginViewController.signUpController?.delegate = self.parseLoginHelper
             
@@ -94,4 +96,11 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
     
     
 }
+
+
+//@IBAction func logoutAction(sender: AnyObject) {
+//    
+//    PFUser.logOut()
+//    
+//}
 
