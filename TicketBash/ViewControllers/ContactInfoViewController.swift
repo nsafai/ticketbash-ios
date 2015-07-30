@@ -71,7 +71,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             stateTextField.becomeFirstResponder()
         } else if textField == stateTextField {
             zipTextField.becomeFirstResponder()
-        }else if textField == zipTextField {
+        } else if textField == zipTextField {
             // this doesn't do anything yet because there is no Return key on numeric pad.
             phoneTextField.becomeFirstResponder()
         } else if textField == phoneTextField {
