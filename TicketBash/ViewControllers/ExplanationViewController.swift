@@ -31,7 +31,7 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
                 ErrorHandling.defaultErrorHandler(error)
                 println("Error logging in \(user)")
             } else if let user = user {
-                // login was successful
+                // code below indicates what should happen if PFLogInViewController succesfully logs in a user
                 println("CASE 1 Logged in user is \(user)")
                 self.dismissViewControllerAnimated(true, completion: nil)
                 self.performSegueWithIdentifier("showContactInfo", sender: self)
@@ -59,7 +59,6 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
     
     @IBAction func nextButton(sender: AnyObject) {
         
-        // code that used to be in IBAction
         if let ticket = self.myTicket {
             self.realm.write() { //changes must be done within a write transaction/closure.
                 ticket.explanationText = self.explanationTextView.text // change realm text value to what user just wrote in text view

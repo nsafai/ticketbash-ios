@@ -135,6 +135,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="nextButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="I87-WE-H8K"/>
+                                    <action selector="nextButton:" destination="MKZ-8v-mWK" eventType="touchUpInside" id="ZUl-1k-ssy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -186,6 +187,7 @@
                         <outlet property="firstNameTextField" destination="YLf-aH-I3Y" id="vwL-oE-oBm"/>
                         <outlet property="lastNameTextField" destination="Bgk-ko-7j7" id="MNv-OE-izu"/>
                         <outlet property="phoneTextField" destination="9xd-1C-mzZ" id="6nG-TW-OX2"/>
+                        <outlet property="stateTextField" destination="7Ko-9J-O4X" id="gxL-jN-uX3"/>
                         <outlet property="zipTextField" destination="aEn-BZ-Mes" id="zsW-x2-qWa"/>
                     </connections>
                 </viewController>

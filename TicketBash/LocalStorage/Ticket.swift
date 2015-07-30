@@ -12,24 +12,32 @@ import RealmSwift
 class Ticket: Object {
     dynamic var id = 0
     
+
+    
+    // stored in TicketCameraViewController
+    dynamic var ticketPicture = NSData()
+    
+    // stored in EvidenceCameraViewController
+    dynamic var evidencePicture = NSData()
+    
+    // stored in ExplanationViewController
     dynamic var explanationText: String = ""
     
-//    dynamic var user: NSData!
-//    dynamic var ticketPicture: NSData!
-//    dynamic var evidencePicture: NSData!
-//    
-//    dynamic var mailingAddress: String = ""
-//    dynamic var mailingCity: String = ""
-//    dynamic var mailingZip: String = ""
-//    dynamic var mailingState: String = ""
-//    
-//    dynamic var modificationDate = NSDate()
-
-
+    // stored in ContactInfoViewController
+    dynamic var firstName: String = ""
+    dynamic var lastName: String = ""
+    dynamic var mailingAddress: String = ""
+    dynamic var mailingCity: String = ""
+    dynamic var mailingState: String = ""
+    dynamic var mailingZip: String = ""
+    dynamic var phoneNumber: String = ""
+    
     override class func primaryKey() -> String {
         return "id"
     }
-
+    
+    
+//    dynamic var modificationDate = NSDate()
 
 }
 

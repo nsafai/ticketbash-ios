@@ -12,6 +12,7 @@ import Parse
 import ParseUI
 import FBSDKLoginKit
 import ParseFacebookUtils
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
