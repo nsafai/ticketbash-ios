@@ -24,6 +24,7 @@
 		B112DB071B66C0A500F6ADE1 /* TicketBashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B112DB061B66C0A500F6ADE1 /* TicketBashTests.swift */; };
 		B19853381B6BA7E600BFCEEE /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19853371B6BA7E600BFCEEE /* SubmitViewController.swift */; };
 		B198533C1B6BE55300BFCEEE /* EvidenceCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */; };
+		B198533E1B6BE93F00BFCEEE /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198533D1B6BE93F00BFCEEE /* CameraViewController.swift */; };
 		B1CC524E1B693C6C00DB1BD2 /* ContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC524D1B693C6C00DB1BD2 /* ContactInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		B112DB141B66CC3500F6ADE1 /* TicketBash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TicketBash-Bridging-Header.h"; sourceTree = "<group>"; };
 		B19853371B6BA7E600BFCEEE /* SubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
 		B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvidenceCameraViewController.swift; sourceTree = "<group>"; };
+		B198533D1B6BE93F00BFCEEE /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		B1CC524D1B693C6C00DB1BD2 /* ContactInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 		B10D338B1B683CD600DE4D8E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B198533D1B6BE93F00BFCEEE /* CameraViewController.swift */,
 				B10D338E1B683F1F00DE4D8E /* TicketCameraViewController.swift */,
 				B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */,
 				B10D338C1B683CE400DE4D8E /* ExplanationViewController.swift */,
@@ -362,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B19853381B6BA7E600BFCEEE /* SubmitViewController.swift in Sources */,
+				B198533E1B6BE93F00BFCEEE /* CameraViewController.swift in Sources */,
 				B112DAF11B66C0A500F6ADE1 /* AppDelegate.swift in Sources */,
 				B10D338D1B683CE400DE4D8E /* ExplanationViewController.swift in Sources */,
 				B10D354B1B692E9C00DE4D8E /* ParseLoginHelper.swift in Sources */,

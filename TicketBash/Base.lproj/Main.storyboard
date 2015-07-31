@@ -363,158 +363,107 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1l3-mf-7dv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="3CI-4N-yF4" customClass="TicketCameraViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="woZ-My-xfR"/>
-                        <viewControllerLayoutGuide type="bottom" id="Aqo-q6-KZn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oIX-pi-GQC">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="JJO-nc-Mcx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZk-93-U7S">
-                                <rect key="frame" x="255" y="480" width="90" height="90"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="Dqo-h4-8ne"/>
-                                    <constraint firstAttribute="height" constant="90" id="K8p-w6-xVf"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="photoButtonTapped:" destination="3CI-4N-yF4" eventType="touchUpInside" id="RY8-zh-9Jq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfd-B4-a05">
-                                <rect key="frame" x="509" y="304" width="75" height="75"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="4VX-Cq-RYZ"/>
-                                    <constraint firstAttribute="width" constant="75" id="xQX-h8-uYX"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="acceptPicture:" destination="3CI-4N-yF4" eventType="touchUpInside" id="WW9-z1-fRc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hB-W1-aEW">
-                                <rect key="frame" x="16" y="304" width="75" height="75"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="WKE-Vb-mGd"/>
-                                    <constraint firstAttribute="width" constant="75" id="aX2-cE-bJg"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="retryPicture:" destination="3CI-4N-yF4" eventType="touchUpInside" id="Tps-0r-VJT"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Bfd-B4-a05" firstAttribute="trailing" secondItem="oIX-pi-GQC" secondAttribute="trailingMargin" id="1JA-in-8PU"/>
-                            <constraint firstItem="Bfd-B4-a05" firstAttribute="baseline" secondItem="4hB-W1-aEW" secondAttribute="baseline" id="4Hm-Gp-Yg9"/>
-                            <constraint firstItem="dZk-93-U7S" firstAttribute="centerX" secondItem="oIX-pi-GQC" secondAttribute="centerX" id="4W7-oe-NZx"/>
-                            <constraint firstItem="4hB-W1-aEW" firstAttribute="bottom" secondItem="Bfd-B4-a05" secondAttribute="bottom" id="8BE-cM-Mu5"/>
-                            <constraint firstItem="4hB-W1-aEW" firstAttribute="top" secondItem="woZ-My-xfR" secondAttribute="bottom" constant="240" id="Clk-op-rPN"/>
-                            <constraint firstItem="4hB-W1-aEW" firstAttribute="leading" secondItem="oIX-pi-GQC" secondAttribute="leadingMargin" id="Fqv-fv-tO7"/>
-                            <constraint firstItem="Aqo-q6-KZn" firstAttribute="top" secondItem="dZk-93-U7S" secondAttribute="bottom" constant="30" id="dWP-ZF-aol"/>
-                            <constraint firstItem="Bfd-B4-a05" firstAttribute="top" secondItem="4hB-W1-aEW" secondAttribute="top" id="dXF-fb-voB"/>
-                            <constraint firstItem="Aqo-q6-KZn" firstAttribute="top" secondItem="4hB-W1-aEW" secondAttribute="bottom" constant="263" id="u1Q-Up-v0x"/>
-                            <constraint firstItem="4hB-W1-aEW" firstAttribute="firstBaseline" secondItem="Bfd-B4-a05" secondAttribute="firstBaseline" id="umg-S1-zgG"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="u1Q-Up-v0x"/>
-                            </mask>
-                        </variation>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="GdB-4y-KPe" kind="embed" identifier="showCamera" id="qlv-Sl-VCK"/>
+                        </connections>
+                    </containerView>
                     <navigationItem key="navigationItem" id="uzQ-B4-jjc"/>
                     <connections>
                         <segue destination="t6v-GG-VNE" kind="show" identifier="showEvidenceCamera" id="Y6e-ls-FlA"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="387" y="400"/>
+            <point key="canvasLocation" x="402" y="400"/>
         </scene>
-        <!--Evidence Camera View Controller-->
-        <scene sceneID="3D1-aH-9VK">
+        <!--Camera View Controller-->
+        <scene sceneID="51b-3W-3lb">
             <objects>
-                <viewController id="t6v-GG-VNE" customClass="EvidenceCameraViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5Y-t7-9rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="GdB-4y-KPe" customClass="CameraViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YV6-Ba-UW9"/>
-                        <viewControllerLayoutGuide type="bottom" id="EUm-ys-QBX"/>
+                        <viewControllerLayoutGuide type="top" id="aVJ-YE-oXK"/>
+                        <viewControllerLayoutGuide type="bottom" id="G6B-tI-vSm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="c3Q-qa-8dL">
+                    <view key="view" contentMode="scaleToFill" id="YpS-NE-l16">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJo-rH-p6O">
-                                <rect key="frame" x="255" y="480" width="90" height="90"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7I-bD-f1b">
+                                <rect key="frame" x="255" y="490" width="90" height="90"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="G7z-l7-T7B"/>
-                                    <constraint firstAttribute="width" constant="90" id="fDA-gy-Igv"/>
+                                    <constraint firstAttribute="height" constant="90" id="O6J-2I-PtK"/>
+                                    <constraint firstAttribute="width" constant="90" id="QDH-ex-cxP"/>
                                 </constraints>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="photoButtonTapped:" destination="t6v-GG-VNE" eventType="touchUpInside" id="JgX-Zx-lee"/>
+                                    <action selector="photoButtonTapped:" destination="GdB-4y-KPe" eventType="touchUpInside" id="pct-Hi-F5l"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xK0-PD-fBz">
-                                <rect key="frame" x="509" y="304" width="75" height="75"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zd-Uo-VVP">
+                                <rect key="frame" x="509" y="314" width="75" height="75"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="6rf-IT-uLB"/>
-                                    <constraint firstAttribute="width" constant="75" id="ReJ-aP-r2Y"/>
+                                    <constraint firstAttribute="width" constant="75" id="HO6-Pm-iGR"/>
+                                    <constraint firstAttribute="height" constant="75" id="dGx-NG-yW7"/>
                                 </constraints>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="acceptPicture:" destination="t6v-GG-VNE" eventType="touchUpInside" id="emC-Kg-l45"/>
+                                    <action selector="acceptPicture:" destination="GdB-4y-KPe" eventType="touchUpInside" id="ywL-4Q-b48"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obS-bw-ZX1">
-                                <rect key="frame" x="16" y="304" width="75" height="75"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ky6-61-hFu">
+                                <rect key="frame" x="16" y="314" width="75" height="75"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="4DP-LV-uSR"/>
-                                    <constraint firstAttribute="height" constant="75" id="6XD-br-OAi"/>
+                                    <constraint firstAttribute="width" constant="75" id="WrP-yv-2Vh"/>
+                                    <constraint firstAttribute="height" constant="75" id="vNM-wc-KCM"/>
                                 </constraints>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="retryPicture:" destination="t6v-GG-VNE" eventType="touchUpInside" id="SXY-LD-Qwy"/>
+                                    <action selector="retryPicture:" destination="GdB-4y-KPe" eventType="touchUpInside" id="9N5-MY-iHU"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EUm-ys-QBX" firstAttribute="top" secondItem="obS-bw-ZX1" secondAttribute="bottom" constant="263" id="09V-bX-hfG"/>
-                            <constraint firstItem="xK0-PD-fBz" firstAttribute="trailing" secondItem="c3Q-qa-8dL" secondAttribute="trailingMargin" id="4kd-SR-328"/>
-                            <constraint firstItem="obS-bw-ZX1" firstAttribute="bottom" secondItem="xK0-PD-fBz" secondAttribute="bottom" id="Bxu-YG-Wg8"/>
-                            <constraint firstItem="obS-bw-ZX1" firstAttribute="firstBaseline" secondItem="xK0-PD-fBz" secondAttribute="firstBaseline" id="H3G-P6-LcN"/>
-                            <constraint firstItem="obS-bw-ZX1" firstAttribute="leading" secondItem="c3Q-qa-8dL" secondAttribute="leadingMargin" id="ISM-aO-1J2"/>
-                            <constraint firstItem="obS-bw-ZX1" firstAttribute="top" secondItem="YV6-Ba-UW9" secondAttribute="bottom" constant="240" id="Nj0-At-hCk"/>
-                            <constraint firstItem="xK0-PD-fBz" firstAttribute="baseline" secondItem="obS-bw-ZX1" secondAttribute="baseline" id="PLm-XJ-NGT"/>
-                            <constraint firstItem="EUm-ys-QBX" firstAttribute="top" secondItem="BJo-rH-p6O" secondAttribute="bottom" constant="30" id="c5h-ha-tIp"/>
-                            <constraint firstItem="xK0-PD-fBz" firstAttribute="top" secondItem="obS-bw-ZX1" secondAttribute="top" id="m6q-6e-1th"/>
-                            <constraint firstItem="BJo-rH-p6O" firstAttribute="centerX" secondItem="c3Q-qa-8dL" secondAttribute="centerX" id="zEM-ET-btI"/>
+                            <constraint firstItem="8Zd-Uo-VVP" firstAttribute="trailing" secondItem="YpS-NE-l16" secondAttribute="trailingMargin" id="80q-ef-DBJ"/>
+                            <constraint firstItem="8Zd-Uo-VVP" firstAttribute="firstBaseline" secondItem="ky6-61-hFu" secondAttribute="firstBaseline" id="F0R-dY-yDJ"/>
+                            <constraint firstAttribute="bottom" secondItem="j7I-bD-f1b" secondAttribute="bottom" constant="20" symbolic="YES" id="Hkr-pc-Ao5"/>
+                            <constraint firstItem="ky6-61-hFu" firstAttribute="leading" secondItem="YpS-NE-l16" secondAttribute="leadingMargin" id="LIo-qE-xy2"/>
+                            <constraint firstItem="8Zd-Uo-VVP" firstAttribute="baseline" secondItem="ky6-61-hFu" secondAttribute="baseline" id="ReB-r2-gtW"/>
+                            <constraint firstItem="j7I-bD-f1b" firstAttribute="centerX" secondItem="YpS-NE-l16" secondAttribute="centerX" id="X0u-vY-MYn"/>
+                            <constraint firstItem="8Zd-Uo-VVP" firstAttribute="baseline" secondItem="ky6-61-hFu" secondAttribute="baseline" id="bpe-Mt-usf"/>
+                            <constraint firstItem="G6B-tI-vSm" firstAttribute="top" secondItem="ky6-61-hFu" secondAttribute="bottom" constant="211" id="kX8-Xf-SZg"/>
+                            <constraint firstItem="ky6-61-hFu" firstAttribute="firstBaseline" secondItem="8Zd-Uo-VVP" secondAttribute="firstBaseline" id="oLQ-OZ-wGV"/>
+                            <constraint firstItem="ky6-61-hFu" firstAttribute="bottom" secondItem="8Zd-Uo-VVP" secondAttribute="bottom" id="wew-w5-2JZ"/>
+                            <constraint firstItem="8Zd-Uo-VVP" firstAttribute="top" secondItem="ky6-61-hFu" secondAttribute="top" id="zBE-5u-99P"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="09V-bX-hfG"/>
-                            </mask>
-                        </variation>
                     </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="740" y="1155"/>
+        </scene>
+        <!--Evidence Camera View Controller-->
+        <scene sceneID="3D1-aH-9VK">
+            <objects>
+                <viewController id="t6v-GG-VNE" customClass="EvidenceCameraViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="FQ1-Ry-Axc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="GdB-4y-KPe" kind="embed" id="Fhl-J0-dMk"/>
+                        </connections>
+                    </containerView>
                     <navigationItem key="navigationItem" id="Lul-Cq-pAB"/>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="show" identifier="showExplanation" id="G02-h7-D11"/>
@@ -525,4 +474,7 @@
             <point key="canvasLocation" x="1072" y="400"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qlv-Sl-VCK"/>
+    </inferredMetricsTieBreakers>
 </document>

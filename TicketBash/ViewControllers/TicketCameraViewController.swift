@@ -9,60 +9,25 @@
 import UIKit
 import PBJVision
 
-class TicketCameraViewController: UIViewController, PBJVisionDelegate {
+class TicketCameraViewController: UIViewController {
 
-    let vision = PBJVision.sharedInstance()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let previewView = UIView(frame: self.view.frame)
-        previewView.backgroundColor = UIColor.blackColor()
-        let previewLayer = PBJVision.sharedInstance().previewLayer
-        previewLayer.frame = previewView.bounds
-        previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-        previewView.layer.addSublayer(previewLayer)
-        self.view.addSubview(previewView)
-        self.view.sendSubviewToBack(previewView)
-        
-        
-        
-        self.vision.delegate = self
-        self.vision.cameraMode = .Photo
-        self.vision.cameraOrientation = .Portrait
-        self.vision.focusMode = .ContinuousAutoFocus
-        self.vision.outputFormat = PBJOutputFormat.Standard
-        self.vision.captureSessionPreset = AVCaptureSessionPresetHigh
-        self.vision.startPreview()
-        
-    }
+            
+          }
     
-    @IBAction func retryPicture(sender: AnyObject) {
-        self.vision.startPreview()
-    }
-    
-    @IBAction func acceptPicture(sender: AnyObject) {
-        // save picture
-        
-        // switch to evidence camera view controller
-        self.performSegueWithIdentifier("showEvidenceCamera", sender: self)
-    }
-    
-    @IBAction func photoButtonTapped(sender: AnyObject) {
-        self.vision.capturePhoto()
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showCamera") {
+            let cameraViewController = segue.destinationViewController as! CameraViewController
+            cameraViewController.delegate = self
+        }
     }
 }
 
-extension TicketCameraViewController: PBJVisionDelegate {
-    func vision(vision: PBJVision, capturedPhoto photoDict: [NSObject : AnyObject]?, error: NSError?) {
-        // TODO: handle errors
-        
-        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), { () -> Void in
-            let imageData: NSData = photoDict![PBJVisionPhotoJPEGKey] as! NSData
-            let image = UIImage(data: imageData)
-            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-        })
-        
-
+extension TicketCameraViewController: CameraViewControllerDelegate {
+    func acceptedImage(image: UIImage) {
+        // save to realm
+        // segue to next view
     }
 }
+//        self.performSegueWithIdentifier("showEvidenceCamera", sender: self)
