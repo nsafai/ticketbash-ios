@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Parse
 
 class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     
@@ -94,6 +95,22 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                 ticket.phoneNumber = self.phoneTextField.text
                 self.realm.add(ticket, update: true) // 3 Add a new ticket to Realm if none exists, else update it
             }
+        
+        }
+        println(myTicket)
+        if let ticketData = myTicket {
+            println(ticketData)
+            
+            let ticketObject = PFObject(className: "Ticket")
+            ticketObject["explanationText"] = ticketData.explanationText
+            ticketObject["mailingAddress"] = ticketData.mailingAddress
+            ticketObject["mailingCity"] = ticketData.mailingCity
+            ticketObject["mailingState"] = ticketData.mailingState
+            ticketObject["mailingZip"] = ticketData.mailingZip
+            ticketObject["user"] = PFUser.currentUser()
+            ticketObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
+            })
+            println("")
         }
     }
 }

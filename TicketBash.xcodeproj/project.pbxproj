@@ -22,6 +22,8 @@
 		B112DAF81B66C0A500F6ADE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B112DAF71B66C0A500F6ADE1 /* Images.xcassets */; };
 		B112DAFB1B66C0A500F6ADE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B112DAF91B66C0A500F6ADE1 /* LaunchScreen.xib */; };
 		B112DB071B66C0A500F6ADE1 /* TicketBashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B112DB061B66C0A500F6ADE1 /* TicketBashTests.swift */; };
+		B19853381B6BA7E600BFCEEE /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19853371B6BA7E600BFCEEE /* SubmitViewController.swift */; };
+		B198533C1B6BE55300BFCEEE /* EvidenceCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */; };
 		B1CC524E1B693C6C00DB1BD2 /* ContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC524D1B693C6C00DB1BD2 /* ContactInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		B112DB051B66C0A500F6ADE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B112DB061B66C0A500F6ADE1 /* TicketBashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketBashTests.swift; sourceTree = "<group>"; };
 		B112DB141B66CC3500F6ADE1 /* TicketBash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TicketBash-Bridging-Header.h"; sourceTree = "<group>"; };
+		B19853371B6BA7E600BFCEEE /* SubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
+		B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvidenceCameraViewController.swift; sourceTree = "<group>"; };
 		B1CC524D1B693C6C00DB1BD2 /* ContactInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,8 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				B10D338E1B683F1F00DE4D8E /* TicketCameraViewController.swift */,
+				B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */,
 				B10D338C1B683CE400DE4D8E /* ExplanationViewController.swift */,
 				B1CC524D1B693C6C00DB1BD2 /* ContactInfoViewController.swift */,
+				B19853371B6BA7E600BFCEEE /* SubmitViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B19853381B6BA7E600BFCEEE /* SubmitViewController.swift in Sources */,
 				B112DAF11B66C0A500F6ADE1 /* AppDelegate.swift in Sources */,
 				B10D338D1B683CE400DE4D8E /* ExplanationViewController.swift in Sources */,
 				B10D354B1B692E9C00DE4D8E /* ParseLoginHelper.swift in Sources */,
@@ -362,6 +369,7 @@
 				B10D338F1B683F1F00DE4D8E /* TicketCameraViewController.swift in Sources */,
 				B10D354A1B692E9C00DE4D8E /* ErrorHandling.swift in Sources */,
 				B10D33921B6845F700DE4D8E /* Ticket.swift in Sources */,
+				B198533C1B6BE55300BFCEEE /* EvidenceCameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

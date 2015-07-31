@@ -1,15 +1,15 @@
 //
-//  TicketCameraViewController.swift
+//  EvidenceCameraViewController.swift
 //  TicketBash
 //
-//  Created by Nicolai Safai on 7/28/15.
+//  Created by Nicolai Safai on 7/31/15.
 //  Copyright (c) 2015 Lime. All rights reserved.
 //
 
 import UIKit
 import PBJVision
 
-class TicketCameraViewController: UIViewController, PBJVisionDelegate {
+class EvidenceCameraViewController: UIViewController, PBJVisionDelegate {
 
     let vision = PBJVision.sharedInstance()
     
@@ -44,8 +44,8 @@ class TicketCameraViewController: UIViewController, PBJVisionDelegate {
     @IBAction func acceptPicture(sender: AnyObject) {
         // save picture
         
-        // switch to evidence camera view controller
-        self.performSegueWithIdentifier("showEvidenceCamera", sender: self)
+        // switch to explanation view controller
+        self.performSegueWithIdentifier("showExplanation", sender: self)
     }
     
     @IBAction func photoButtonTapped(sender: AnyObject) {
@@ -63,6 +63,6 @@ extension TicketCameraViewController: PBJVisionDelegate {
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
         })
         
-
+        
     }
 }
