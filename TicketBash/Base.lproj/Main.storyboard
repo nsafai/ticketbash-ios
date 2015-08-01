@@ -461,7 +461,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <connections>
-                            <segue destination="GdB-4y-KPe" kind="embed" identifier="showCamera" id="Fhl-J0-dMk"/>
+                            <segue destination="GdB-4y-KPe" kind="embed" identifier="showCamera2" id="Fhl-J0-dMk"/>
                         </connections>
                     </containerView>
                     <navigationItem key="navigationItem" title="Picture of Evidence" id="Wo5-z5-VE7"/>

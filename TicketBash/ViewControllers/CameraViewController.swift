@@ -16,8 +16,7 @@ protocol CameraViewControllerDelegate {
 class CameraViewController: UIViewController, PBJVisionDelegate {
     
     let vision = PBJVision.sharedInstance()
-    var ticketImage: UIImage?
-    var evidenceImage: UIImage?
+    var acceptedImage: UIImage?
     
     var delegate: CameraViewControllerDelegate?
     
@@ -52,34 +51,18 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
     @IBAction func acceptPicture(sender: AnyObject) {
         
         println(self.delegate)
-        if self.delegate is TicketCameraViewController {
-            if let delegate = delegate, ticketImage = ticketImage {
-                // save to property
-                delegate.acceptedImage(ticketImage)
-                // save picture realm
-                
-                // save to camera roll (in background)
-                dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), { () -> Void in
-                    UIImageWriteToSavedPhotosAlbum(ticketImage, nil, nil, nil)
-                    println("Ticket Photo just saved!!!")
-                })
-            }
-        }
         
-        if self.delegate is EvidenceCameraViewController {
-            println("Ticket Photo just saved!!!")
-            if let delegate = delegate, evidenceImage = evidenceImage {
+            if let delegate = delegate, acceptedImage = acceptedImage {
                 // save to property
-                delegate.acceptedImage(evidenceImage)
+                delegate.acceptedImage(acceptedImage)
                 // save picture realm
                 
                 // save to camera roll (in background)
                 dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), { () -> Void in
-                    UIImageWriteToSavedPhotosAlbum(evidenceImage, nil, nil, nil)
-                    println("Ticket Photo just saved!!!")
+                    UIImageWriteToSavedPhotosAlbum(acceptedImage, nil, nil, nil)
+                    println("Photo just accepted!!!")
                 })
             }
-        }
         
     }
     @IBAction func photoButtonTapped(sender: AnyObject) {
@@ -95,17 +78,12 @@ extension CameraViewController: PBJVisionDelegate {
             let imageData: NSData = photoDict![PBJVisionPhotoJPEGKey] as! NSData
             let image = UIImage(data: imageData)
             
-            if self.delegate is TicketCameraViewController {
-                self.ticketImage = image
-            }
-            
-            if self.delegate is EvidenceCameraViewController {
-                self.evidenceImage = image
-            }
-            
+                self.acceptedImage = image
+
+      
             dispatch_async(dispatch_get_main_queue()) {
                 // unhide approve/retry buttons
-                println("I'm useful!")
+                println("picture was taken, unhide buttons!")
             }
         })
     }

@@ -27,5 +27,4 @@ extension EvidenceCameraViewController: CameraViewControllerDelegate {
         // segue to next view
         self.performSegueWithIdentifier("showExplanationController", sender: self)
     }
-
 }
