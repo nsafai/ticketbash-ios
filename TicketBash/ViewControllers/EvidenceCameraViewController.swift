@@ -41,7 +41,7 @@ extension EvidenceCameraViewController: CameraViewControllerDelegate {
         
         if let ticket = self.myTicket {
             self.realm.write() { //changes must be done within a write transaction/closure.
-                var imageData = UIImagePNGRepresentation(image)
+                var imageData = UIImageJPEGRepresentation(image, 0.8)
                 ticket.evidencePicture =  imageData // change realm image data value to what user just took in camera view controller
                 self.realm.add(ticket, update: true) // 3 Add  new ticket to Realm if none exists, else update it
             }

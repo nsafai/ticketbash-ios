@@ -18,6 +18,9 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
     let vision = PBJVision.sharedInstance()
     var acceptedImage: UIImage?
     
+    @IBOutlet weak var retryButton: UIButton!
+    @IBOutlet weak var acceptButton: UIButton!
+    
     var delegate: CameraViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -44,8 +47,17 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        // hide buttons
+        retryButton.hidden = true
+        acceptButton.hidden = true
+    }
+    
     @IBAction func retryPicture(sender: AnyObject) {
         self.vision.startPreview()
+        // hide buttons again
+        retryButton.hidden = true
+        acceptButton.hidden = true
     }
     
     @IBAction func acceptPicture(sender: AnyObject) {
@@ -67,6 +79,8 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
     }
     @IBAction func photoButtonTapped(sender: AnyObject) {
         self.vision.capturePhoto()
+        retryButton.hidden = false
+        acceptButton.hidden = false
     }
 }
 

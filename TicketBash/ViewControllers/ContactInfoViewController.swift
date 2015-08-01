@@ -102,6 +102,8 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             println(ticketData)
             
             let ticketObject = PFObject(className: "Ticket")
+            ticketObject["ticketPicture"] = ticketData.ticketPicture
+            ticketObject["evidencePicture"] = ticketData.evidencePicture
             ticketObject["explanationText"] = ticketData.explanationText
             ticketObject["mailingAddress"] = ticketData.mailingAddress
             ticketObject["mailingCity"] = ticketData.mailingCity
@@ -110,7 +112,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             ticketObject["user"] = PFUser.currentUser()
             ticketObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
             })
-            println("")
+            println("sent ticket to Parse")
         }
     }
 }

@@ -449,6 +449,10 @@
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="top" secondItem="ky6-61-hFu" secondAttribute="top" id="zBE-5u-99P"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="acceptButton" destination="8Zd-Uo-VVP" id="f8c-04-Bmw"/>
+                        <outlet property="retryButton" destination="ky6-61-hFu" id="ore-oC-nAz"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="740" y="1155"/>
