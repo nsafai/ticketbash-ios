@@ -358,7 +358,7 @@
             </objects>
             <point key="canvasLocation" x="-293" y="400"/>
         </scene>
-        <!--Ticket Camera View Controller-->
+        <!--Picture of Parking Ticket-->
         <scene sceneID="PCl-GH-D9Y">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1l3-mf-7dv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -370,9 +370,9 @@
                             <segue destination="GdB-4y-KPe" kind="embed" identifier="showCamera" id="qlv-Sl-VCK"/>
                         </connections>
                     </containerView>
-                    <navigationItem key="navigationItem" id="uzQ-B4-jjc"/>
+                    <navigationItem key="navigationItem" title="Picture of Parking Ticket" id="23U-M4-cEw"/>
                     <connections>
-                        <segue destination="t6v-GG-VNE" kind="show" identifier="showEvidenceCamera" id="Y6e-ls-FlA"/>
+                        <segue destination="t6v-GG-VNE" kind="show" identifier="showEvidenceController" id="Y6e-ls-FlA"/>
                     </connections>
                 </viewController>
             </objects>
@@ -453,7 +453,7 @@
             </objects>
             <point key="canvasLocation" x="740" y="1155"/>
         </scene>
-        <!--Evidence Camera View Controller-->
+        <!--Picture of Evidence-->
         <scene sceneID="3D1-aH-9VK">
             <objects>
                 <viewController id="t6v-GG-VNE" customClass="EvidenceCameraViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
@@ -461,12 +461,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <connections>
-                            <segue destination="GdB-4y-KPe" kind="embed" id="Fhl-J0-dMk"/>
+                            <segue destination="GdB-4y-KPe" kind="embed" identifier="showCamera" id="Fhl-J0-dMk"/>
                         </connections>
                     </containerView>
-                    <navigationItem key="navigationItem" id="Lul-Cq-pAB"/>
+                    <navigationItem key="navigationItem" title="Picture of Evidence" id="Wo5-z5-VE7"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="show" identifier="showExplanation" id="G02-h7-D11"/>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="showExplanationController" id="G02-h7-D11"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wea-MY-dF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -475,6 +475,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qlv-Sl-VCK"/>
+        <segue reference="Fhl-J0-dMk"/>
     </inferredMetricsTieBreakers>
 </document>

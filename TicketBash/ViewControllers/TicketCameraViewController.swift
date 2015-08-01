@@ -11,15 +11,12 @@ import PBJVision
 
 class TicketCameraViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-            
-          }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "showCamera") {
             let cameraViewController = segue.destinationViewController as! CameraViewController
             cameraViewController.delegate = self
+            // do anything specific to ticket (different than in explanation)
         }
     }
 }
@@ -28,6 +25,7 @@ extension TicketCameraViewController: CameraViewControllerDelegate {
     func acceptedImage(image: UIImage) {
         // save to realm
         // segue to next view
+        self.performSegueWithIdentifier("showEvidenceController", sender: self)
     }
 }
-//        self.performSegueWithIdentifier("showEvidenceCamera", sender: self)
+//

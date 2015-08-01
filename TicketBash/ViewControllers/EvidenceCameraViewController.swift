@@ -9,11 +9,23 @@
 import UIKit
 import PBJVision
 
-class EvidenceCameraViewController: UIViewController, PBJVisionDelegate {
-
-    let vision = PBJVision.sharedInstance()
+class EvidenceCameraViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showCamera2") {
+            let cameraViewController = segue.destinationViewController as! CameraViewController
+            cameraViewController.delegate = self
+            // do anything specific to ticket (different than in explanation)
+        }
     }
+}
+
+extension EvidenceCameraViewController: CameraViewControllerDelegate {
+    func acceptedImage(image: UIImage) {
+        // save to realm
+        // segue to next view
+        self.performSegueWithIdentifier("showExplanationController", sender: self)
+    }
+
 }
