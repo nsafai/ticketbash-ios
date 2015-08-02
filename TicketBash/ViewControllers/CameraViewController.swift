@@ -25,6 +25,15 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        // hide buttons
+        retryButton.hidden = true
+        acceptButton.hidden = true
+        
         
         let previewView = UIView(frame: self.view.frame)
         previewView.backgroundColor = UIColor.blackColor()
@@ -44,13 +53,6 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
         vision.outputFormat = PBJOutputFormat.Standard
         vision.captureSessionPreset = AVCaptureSessionPresetHigh
         vision.startPreview()
-        
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        // hide buttons
-        retryButton.hidden = true
-        acceptButton.hidden = true
     }
     
     @IBAction func retryPicture(sender: AnyObject) {
@@ -79,8 +81,7 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
     }
     @IBAction func photoButtonTapped(sender: AnyObject) {
         self.vision.capturePhoto()
-        retryButton.hidden = false
-        acceptButton.hidden = false
+
     }
 }
 
@@ -97,6 +98,8 @@ extension CameraViewController: PBJVisionDelegate {
       
             dispatch_async(dispatch_get_main_queue()) {
                 // unhide approve/retry buttons
+                self.retryButton.hidden = false
+                self.acceptButton.hidden = false
                 println("picture was taken, unhide buttons!")
             }
         })

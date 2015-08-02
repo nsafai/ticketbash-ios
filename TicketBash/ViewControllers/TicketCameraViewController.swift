@@ -11,7 +11,7 @@ import PBJVision
 import RealmSwift
 
 class TicketCameraViewController: UIViewController {
-    var myTicket: Ticket?
+    
     let realm = Realm()
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -25,8 +25,10 @@ class TicketCameraViewController: UIViewController {
 
 extension TicketCameraViewController: CameraViewControllerDelegate {
     func acceptedImage(image: UIImage) {
+        
+        var myTicket: Ticket?
         // save to realm
-        var tickets = realm.objects(Ticket)
+        var tickets = self.realm.objects(Ticket)
         if let ticket = tickets.first {
             myTicket = ticket
             //            explanationTextView.text = myTicket!.explanationText
@@ -36,19 +38,18 @@ extension TicketCameraViewController: CameraViewControllerDelegate {
             println("created new ticket")
         }
         
-        if let ticket = self.myTicket {
+        
+        if let ticket = myTicket {
             self.realm.write() {
                 //changes must be done within a write transaction/closure.
                 var imageData = UIImageJPEGRepresentation(image, 0.8)
                 ticket.ticketPicture = imageData
                 // change realm image data value to what user just took in camera view controller
+                
                 self.realm.add(ticket, update: true)
                 // 3 Add  new ticket to Realm if none exists, else update it
             }
         }
-
-        // segue to next view
         self.performSegueWithIdentifier("showEvidenceController", sender: self)
     }
 }
-//
