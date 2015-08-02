@@ -102,8 +102,8 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             println(ticketData)
             
             let ticketObject = PFObject(className: "Ticket")
-            ticketObject["ticketPicture"] = ticketData.ticketPicture
-            ticketObject["evidencePicture"] = ticketData.evidencePicture
+            ticketObject["ticketPicture"] = PFFile(data: ticketData.ticketPicture)
+            ticketObject["evidencePicture"] = PFFile(data: ticketData.evidencePicture)
             ticketObject["explanationText"] = ticketData.explanationText
             ticketObject["mailingAddress"] = ticketData.mailingAddress
             ticketObject["mailingCity"] = ticketData.mailingCity
