@@ -351,12 +351,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Ma1-VL-2I6"/>
+                        <segue destination="3CI-4N-yF4" kind="relationship" relationship="rootViewController" id="EiO-kn-3Io"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q00-Je-2fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1285" y="-308"/>
+            <point key="canvasLocation" x="-276" y="400"/>
         </scene>
         <!--Picture of Parking Ticket-->
         <scene sceneID="PCl-GH-D9Y">
@@ -479,7 +479,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ma1-VL-2I6"/>
-        <segue reference="Fhl-J0-dMk"/>
+        <segue reference="qlv-Sl-VCK"/>
     </inferredMetricsTieBreakers>
 </document>

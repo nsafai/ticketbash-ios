@@ -29,10 +29,10 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
             
             if let error = error {
                 ErrorHandling.defaultErrorHandler(error)
-                println("Error logging in \(user)")
+//                println("Error logging in \(user)")
             } else if let user = user {
                 // code below indicates what should happen if PFLogInViewController succesfully logs in a user
-                println("CASE 1 Logged in user is \(user)")
+//                println("CASE 1 Logged in user is \(user)")
                 self.dismissViewControllerAnimated(true, completion: nil)
 //                self.performSegueWithIdentifier("showContactInfo", sender: self)
             }
@@ -44,7 +44,7 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
         let user = PFUser.currentUser()
         if (user != nil) {
             // someone is logged in
-            println("CASE 2 Logged in user is \(user)")
+//            println("CASE 2 Logged in user is \(user)")
             //            self.performSegueWithIdentifier("showContactInfo", sender: self)
             
         } else {
@@ -76,10 +76,10 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
         if let ticket = tickets.first {
             myTicket = ticket
             explanationTextView.text = myTicket!.explanationText
-            println("grabbed ticket from realm")
+//            println("grabbed ticket from realm")
         } else {
             myTicket = Ticket()
-            println("created new ticket")
+//            println("created new ticket")
         }
         
     }
@@ -92,7 +92,7 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
                 self.realm.add(ticket, update: true) // 3 Add  new ticket to Realm if none exists, else update it
             }
         }
-        println(myTicket)
+//        println(myTicket)
         self.performSegueWithIdentifier("showContactInfo", sender: self)
     }
     

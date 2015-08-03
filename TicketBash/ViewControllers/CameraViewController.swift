@@ -26,10 +26,6 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-    }
-    
-    override func viewWillAppear(animated: Bool) {
         // hide buttons
         retryButton.hidden = true
         acceptButton.hidden = true
@@ -44,15 +40,18 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
         view.addSubview(previewView)
         view.sendSubviewToBack(previewView)
         
-        
-        
         vision.delegate = self
         vision.cameraMode = .Photo
         vision.cameraOrientation = .Portrait
         vision.focusMode = .ContinuousAutoFocus
         vision.outputFormat = PBJOutputFormat.Standard
         vision.captureSessionPreset = AVCaptureSessionPresetHigh
-        vision.startPreview()
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+      vision.startPreview()
+
     }
     
     @IBAction func retryPicture(sender: AnyObject) {
@@ -64,7 +63,7 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
     
     @IBAction func acceptPicture(sender: AnyObject) {
         
-        println(self.delegate)
+//        println(self.delegate)
         
             if let delegate = delegate, acceptedImage = acceptedImage {
                 // save to property
@@ -74,7 +73,7 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
                 // save to camera roll (in background)
                 dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), { () -> Void in
                     UIImageWriteToSavedPhotosAlbum(acceptedImage, nil, nil, nil)
-                    println("Photo just accepted!!!")
+//                    println("Photo just accepted!!!")
                 })
             }
         
@@ -100,7 +99,8 @@ extension CameraViewController: PBJVisionDelegate {
                 // unhide approve/retry buttons
                 self.retryButton.hidden = false
                 self.acceptButton.hidden = false
-                println("picture was taken, unhide buttons!")
+                vision.stopPreview()
+//                println("picture was taken, unhide buttons!")
             }
         })
     }

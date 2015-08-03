@@ -33,10 +33,10 @@ extension EvidenceCameraViewController: CameraViewControllerDelegate {
         if let ticket = tickets.first {
             myTicket = ticket
 //            explanationTextView.text = myTicket!.explanationText
-            println("grabbed ticket from realm")
+//            println("grabbed ticket from realm")
         } else {
             myTicket = Ticket()
-            println("created new ticket")
+//            println("created new ticket")
         }
         
         if let ticket = self.myTicket {

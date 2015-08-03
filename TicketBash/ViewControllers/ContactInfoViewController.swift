@@ -56,10 +56,10 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             stateTextField.text = myTicket!.mailingState
             zipTextField.text = myTicket!.mailingZip
             phoneTextField.text = myTicket!.phoneNumber
-            println("grabbed ticket from realm")
+//            println("grabbed ticket from realm")
         } else {
             myTicket = Ticket()
-            println("created new ticket")
+//            println("created new ticket")
         }
         
     }
@@ -101,9 +101,9 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             }
             
         }
-        println(myTicket)
+//        println(myTicket)
         if let ticketData = myTicket {
-            println(ticketData)
+//            println(ticketData)
             
             // generate PDF
             generatePDF(ticketData)
@@ -116,17 +116,13 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             
             // TODO: convert PDF to NSData to upload to Parse
             var pdfPath = path.objectAtIndex(0).stringByAppendingPathComponent("hahaPDF.pdf")
-            var PDFUrl = NSURL(string: pdfPath)            //convert pdfPath string to NSURL
-            var myData = NSData(contentsOfURL: PDFUrl!)
-            
-            
-            var pdfData: NSData! = NSFileManager.defaultManager().contentsAtPath("\(path)/hahaPDF.pdf")
+            var myData = NSData(contentsOfFile: pdfPath)
+//            println(pdfPath)
+
             
             //send to parse
             let ticketObject = PFObject(className: "Ticket")
-            //            var testPDF: NSData!
-            //            testPDF = NSData("testPDF")
-//            ticketObject["ticketPDF"] = PFFile(data: pdfData)
+            ticketObject["ticketPDF"] = PFFile(data: myData!)
             ticketObject["ticketPicture"] = PFFile(data: ticketData.ticketPicture)
             ticketObject["evidencePicture"] = PFFile(data: ticketData.evidencePicture)
             ticketObject["explanationText"] = ticketData.explanationText
@@ -137,10 +133,9 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             ticketObject["phoneNumber"] = ticketData.phoneNumber
             ticketObject["user"] = PFUser.currentUser()
             ticketObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
-            })
-            
             println("sent ticket to Parse")
-        }
+            })
+        } 
     }
     
     func generatePDF (ticketData: Ticket) {
@@ -164,7 +159,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                         "P.O. Box 29021\n" +
                         "Cadman Plaza Station\n" +
                         "Brooklyn, NY 11202-9021"
-        let openingNotes = "\n\n\n\nTo Whom It May Concern\n\nI'm writing you to contest my parking ticket. Please find my parking ticket and evidence attached. "
+        let openingNotes = "\n\n\n\nTo Whom It May Concern\n\nI'm writing you to contest my parking ticket. Please find a picture of the parking citation and photographic evidence attached. "
         
         // create pdf
         pdfGenerator.setupPDFDocumentNamed("hahaPDF", withSize: size)
@@ -181,7 +176,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         pdfGenerator.addLineFromPoint(CGPointMake(75, 150), toEndPoint: CGPointMake(775, 150), withColor: black, andWidth: 0.5)
         
         //// body
-        pdfGenerator.addText("\(toAddress)\(openingNotes)\(ticketData.explanationText)\n\nSincerely,\n\n\(ticketData.firstName) \(ticketData.lastName)\n\(ticketData.phoneNumber)", withFrame: CGRectMake(75, 200, 775, 1100), withFont: paraFont, withColor: black, textAlignment: left, verticalAlignment: 0)
+        pdfGenerator.addText("\(toAddress)\(openingNotes)\(ticketData.explanationText)\n\nSincerely,\n\n\(ticketData.firstName) \(ticketData.lastName)\n\(ticketData.phoneNumber)", withFrame: CGRectMake(75, 200, 700, 1100), withFont: paraFont, withColor: black, textAlignment: left, verticalAlignment: 0)
         
         //// footer
         pdfGenerator.addLineFromPoint(CGPointMake(75, 1000), toEndPoint: CGPointMake(775, 1000), withColor: black, andWidth: 0.5)
