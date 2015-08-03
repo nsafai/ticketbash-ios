@@ -15,6 +15,7 @@
 #import <Parse/Parse.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <JLPDFGenerator/JLPDFGenerator.h>
 
 // unimported/installed pods:
 // pod 'FBSDKShareKit'

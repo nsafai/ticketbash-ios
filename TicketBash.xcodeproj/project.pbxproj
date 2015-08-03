@@ -25,6 +25,7 @@
 		B19853381B6BA7E600BFCEEE /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19853371B6BA7E600BFCEEE /* SubmitViewController.swift */; };
 		B198533C1B6BE55300BFCEEE /* EvidenceCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */; };
 		B198533E1B6BE93F00BFCEEE /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198533D1B6BE93F00BFCEEE /* CameraViewController.swift */; };
+		B19853431B6ED6D100BFCEEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19853421B6ED6D100BFCEEE /* Foundation.framework */; };
 		B1CC524E1B693C6C00DB1BD2 /* ContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC524D1B693C6C00DB1BD2 /* ContactInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		B19853371B6BA7E600BFCEEE /* SubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
 		B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvidenceCameraViewController.swift; sourceTree = "<group>"; };
 		B198533D1B6BE93F00BFCEEE /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		B19853421B6ED6D100BFCEEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B1CC524D1B693C6C00DB1BD2 /* ContactInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B19853431B6ED6D100BFCEEE /* Foundation.framework in Frameworks */,
 				B10D33861B683B8200DE4D8E /* Realm.framework in Frameworks */,
 				B10D33881B683B8200DE4D8E /* RealmSwift.framework in Frameworks */,
 				12E54AB55EEC580D8D3AD86F /* Pods_TicketBash.framework in Frameworks */,
@@ -113,6 +116,7 @@
 		683B9107FD748C86679A3C8E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B19853421B6ED6D100BFCEEE /* Foundation.framework */,
 				B10D33831B68389400DE4D8E /* Realm.framework */,
 				B10D33841B68389400DE4D8E /* RealmSwift.framework */,
 				A28786E6DC54C2309ACC5E3A /* Pods_TicketBash.framework */,

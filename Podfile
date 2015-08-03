@@ -12,6 +12,7 @@ target 'TicketBash' do
 	pod 'ParseUI'
 	pod 'ConvenienceKit'
 	pod 'ParseFacebookUtils'
+	pod 'JLPDFGenerator'
 
 end
 

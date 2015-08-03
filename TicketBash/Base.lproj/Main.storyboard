@@ -351,17 +351,16 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="3CI-4N-yF4" kind="relationship" relationship="rootViewController" id="w4q-ec-Lf0"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Ma1-VL-2I6"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q00-Je-2fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-293" y="400"/>
+            <point key="canvasLocation" x="1285" y="-308"/>
         </scene>
         <!--Picture of Parking Ticket-->
         <scene sceneID="PCl-GH-D9Y">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1l3-mf-7dv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="3CI-4N-yF4" customClass="TicketCameraViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
                     <containerView key="view" opaque="NO" contentMode="scaleToFill" id="JJO-nc-Mcx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -375,13 +374,13 @@
                         <segue destination="t6v-GG-VNE" kind="show" identifier="showEvidenceController" id="Y6e-ls-FlA"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1l3-mf-7dv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="402" y="400"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="51b-3W-3lb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D5Y-t7-9rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="GdB-4y-KPe" customClass="CameraViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aVJ-YE-oXK"/>
@@ -454,6 +453,7 @@
                         <outlet property="retryButton" destination="ky6-61-hFu" id="ore-oC-nAz"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5Y-t7-9rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="740" y="1155"/>
         </scene>
@@ -479,6 +479,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Ma1-VL-2I6"/>
         <segue reference="Fhl-J0-dMk"/>
     </inferredMetricsTieBreakers>
 </document>

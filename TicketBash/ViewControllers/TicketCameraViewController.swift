@@ -42,6 +42,7 @@ extension TicketCameraViewController: CameraViewControllerDelegate {
         if let ticket = myTicket {
             self.realm.write() {
                 //changes must be done within a write transaction/closure.
+                
                 var imageData = UIImageJPEGRepresentation(image, 0.8)
                 ticket.ticketPicture = imageData
                 // change realm image data value to what user just took in camera view controller

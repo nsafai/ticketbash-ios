@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "796EA7B949528EDA610251B6"
-               BuildableName = "FBSDKShareKit.framework"
-               BlueprintName = "FBSDKShareKit"
+               BlueprintIdentifier = "6CA262B7F5BC9C19FE1B3F17"
+               BuildableName = "JLPDFGenerator.framework"
+               BlueprintName = "JLPDFGenerator"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

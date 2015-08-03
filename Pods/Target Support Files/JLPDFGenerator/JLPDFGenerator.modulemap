@@ -1,0 +1,6 @@
+framework module JLPDFGenerator {
+  umbrella header "JLPDFGenerator-umbrella.h"
+
+  export *
+  module * { export * }
+}
