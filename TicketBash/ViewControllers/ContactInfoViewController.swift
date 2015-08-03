@@ -115,13 +115,18 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             let currentDirPathString: AnyObject = path.objectAtIndex(0) // this returns absolute path /Users/Nicolai/[...]
             
             // TODO: convert PDF to NSData to upload to Parse
+            var pdfPath = path.objectAtIndex(0).stringByAppendingPathComponent("hahaPDF.pdf")
+            var PDFUrl = NSURL(string: pdfPath)            //convert pdfPath string to NSURL
+            var myData = NSData(contentsOfURL: PDFUrl!)
             
+            
+            var pdfData: NSData! = NSFileManager.defaultManager().contentsAtPath("\(path)/hahaPDF.pdf")
             
             //send to parse
             let ticketObject = PFObject(className: "Ticket")
             //            var testPDF: NSData!
             //            testPDF = NSData("testPDF")
-            //            ticketObject["ticketPDF"] = PFFile(data: testPDFData!)
+//            ticketObject["ticketPDF"] = PFFile(data: pdfData)
             ticketObject["ticketPicture"] = PFFile(data: ticketData.ticketPicture)
             ticketObject["evidencePicture"] = PFFile(data: ticketData.evidencePicture)
             ticketObject["explanationText"] = ticketData.explanationText
@@ -158,7 +163,8 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                         "Hearings By Mail Unit\n" +
                         "P.O. Box 29021\n" +
                         "Cadman Plaza Station\n" +
-                        "Brooklyn, NY 11202-9021" + "\n\n\n\nTo Whom It May Concern\n\nI'm writing you to contest my parking ticket. Please find my parking ticket and evidence attached. "
+                        "Brooklyn, NY 11202-9021"
+        let openingNotes = "\n\n\n\nTo Whom It May Concern\n\nI'm writing you to contest my parking ticket. Please find my parking ticket and evidence attached. "
         
         // create pdf
         pdfGenerator.setupPDFDocumentNamed("hahaPDF", withSize: size)
@@ -175,7 +181,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         pdfGenerator.addLineFromPoint(CGPointMake(75, 150), toEndPoint: CGPointMake(775, 150), withColor: black, andWidth: 0.5)
         
         //// body
-        pdfGenerator.addText("\(toAddress)\(ticketData.explanationText)\n\nSincerely,\n\n\(ticketData.firstName) \(ticketData.lastName)\n\(ticketData.phoneNumber)", withFrame: CGRectMake(75, 200, 775, 1100), withFont: paraFont, withColor: black, textAlignment: left, verticalAlignment: 0)
+        pdfGenerator.addText("\(toAddress)\(openingNotes)\(ticketData.explanationText)\n\nSincerely,\n\n\(ticketData.firstName) \(ticketData.lastName)\n\(ticketData.phoneNumber)", withFrame: CGRectMake(75, 200, 775, 1100), withFont: paraFont, withColor: black, textAlignment: left, verticalAlignment: 0)
         
         //// footer
         pdfGenerator.addLineFromPoint(CGPointMake(75, 1000), toEndPoint: CGPointMake(775, 1000), withColor: black, andWidth: 0.5)
