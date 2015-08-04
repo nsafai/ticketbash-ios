@@ -12,7 +12,8 @@ import RealmSwift
 class Ticket: Object {
     dynamic var id = 0
     
-
+    // stored in TicketOriginViewController (needs to be created)
+    dynamic var ticketOrigin: String = ""
     
     // stored in CitationCameraViewController
     dynamic var ticketPicture = NSData()
