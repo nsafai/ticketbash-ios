@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "18585847D129D28376ACD340"
-               BuildableName = "Pods_TicketBash.framework"
-               BlueprintName = "Pods-TicketBash"
+               BlueprintIdentifier = "FF33DFB0E12A84CCD4ABFC6D"
+               BuildableName = "GooglePlacesAutocomplete.framework"
+               BlueprintName = "GooglePlacesAutocomplete"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

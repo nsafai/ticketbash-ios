@@ -13,6 +13,7 @@ target 'TicketBash' do
 	pod 'ConvenienceKit'
 	pod 'ParseFacebookUtils'
 	pod 'JLPDFGenerator'
+	pod 'GooglePlacesAutocomplete'
 
 end
 

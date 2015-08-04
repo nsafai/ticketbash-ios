@@ -21,6 +21,7 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.4.0):
     - FBSDKCoreKit
+  - GooglePlacesAutocomplete (0.3.0)
   - JLPDFGenerator (1.0)
   - Parse (1.7.5.3):
     - Bolts/Tasks (>= 1.2.0)
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
+  - GooglePlacesAutocomplete
   - JLPDFGenerator
   - Parse
   - ParseFacebookUtils
@@ -50,6 +52,7 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 75bdd75c980e811db218488d99dd93b7740f4474
   FBSDKLoginKit: 02a9254a4c132412fa03577b0d53e936d068a7fb
   FBSDKShareKit: a42865f20ba2d1cc548c4d0f73ad22cff6377ddb
+  GooglePlacesAutocomplete: 7694636fce561c9d8ac807b8e490d299a730a633
   JLPDFGenerator: c030d93a1371f2d16e385d44a0a1ebc0ae68003d
   Parse: 373adbb1ad2e34d383542c3b28f678c49ebe4881
   ParseFacebookUtils: 008a24dc35884519ed6a6750648beb5149f1fad9

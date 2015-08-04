@@ -13,7 +13,6 @@
 		B10D33881B683B8200DE4D8E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10D33841B68389400DE4D8E /* RealmSwift.framework */; };
 		B10D33891B683B8200DE4D8E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B10D33841B68389400DE4D8E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B10D338D1B683CE400DE4D8E /* ExplanationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10D338C1B683CE400DE4D8E /* ExplanationViewController.swift */; };
-		B10D338F1B683F1F00DE4D8E /* TicketCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10D338E1B683F1F00DE4D8E /* TicketCameraViewController.swift */; };
 		B10D33921B6845F700DE4D8E /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10D33911B6845F700DE4D8E /* Ticket.swift */; };
 		B10D354A1B692E9C00DE4D8E /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10D35481B692E9C00DE4D8E /* ErrorHandling.swift */; };
 		B10D354B1B692E9C00DE4D8E /* ParseLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10D35491B692E9C00DE4D8E /* ParseLoginHelper.swift */; };
@@ -22,6 +21,7 @@
 		B112DAF81B66C0A500F6ADE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B112DAF71B66C0A500F6ADE1 /* Images.xcassets */; };
 		B112DAFB1B66C0A500F6ADE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B112DAF91B66C0A500F6ADE1 /* LaunchScreen.xib */; };
 		B112DB071B66C0A500F6ADE1 /* TicketBashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B112DB061B66C0A500F6ADE1 /* TicketBashTests.swift */; };
+		B163E4341B7032AE009AA5B8 /* CitationCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163E4331B7032AE009AA5B8 /* CitationCameraViewController.swift */; };
 		B19853381B6BA7E600BFCEEE /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19853371B6BA7E600BFCEEE /* SubmitViewController.swift */; };
 		B198533C1B6BE55300BFCEEE /* EvidenceCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */; };
 		B198533E1B6BE93F00BFCEEE /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198533D1B6BE93F00BFCEEE /* CameraViewController.swift */; };
@@ -61,7 +61,6 @@
 		B10D33831B68389400DE4D8E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		B10D33841B68389400DE4D8E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		B10D338C1B683CE400DE4D8E /* ExplanationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationViewController.swift; sourceTree = "<group>"; };
-		B10D338E1B683F1F00DE4D8E /* TicketCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketCameraViewController.swift; sourceTree = "<group>"; };
 		B10D33911B6845F700DE4D8E /* Ticket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		B10D35481B692E9C00DE4D8E /* ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
 		B10D35491B692E9C00DE4D8E /* ParseLoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLoginHelper.swift; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		B112DB051B66C0A500F6ADE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B112DB061B66C0A500F6ADE1 /* TicketBashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketBashTests.swift; sourceTree = "<group>"; };
 		B112DB141B66CC3500F6ADE1 /* TicketBash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TicketBash-Bridging-Header.h"; sourceTree = "<group>"; };
+		B163E4331B7032AE009AA5B8 /* CitationCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitationCameraViewController.swift; sourceTree = "<group>"; };
 		B19853371B6BA7E600BFCEEE /* SubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
 		B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvidenceCameraViewController.swift; sourceTree = "<group>"; };
 		B198533D1B6BE93F00BFCEEE /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -128,8 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				B198533D1B6BE93F00BFCEEE /* CameraViewController.swift */,
-				B10D338E1B683F1F00DE4D8E /* TicketCameraViewController.swift */,
 				B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */,
+				B163E4331B7032AE009AA5B8 /* CitationCameraViewController.swift */,
 				B10D338C1B683CE400DE4D8E /* ExplanationViewController.swift */,
 				B1CC524D1B693C6C00DB1BD2 /* ContactInfoViewController.swift */,
 				B19853371B6BA7E600BFCEEE /* SubmitViewController.swift */,
@@ -374,7 +374,7 @@
 				B10D338D1B683CE400DE4D8E /* ExplanationViewController.swift in Sources */,
 				B10D354B1B692E9C00DE4D8E /* ParseLoginHelper.swift in Sources */,
 				B1CC524E1B693C6C00DB1BD2 /* ContactInfoViewController.swift in Sources */,
-				B10D338F1B683F1F00DE4D8E /* TicketCameraViewController.swift in Sources */,
+				B163E4341B7032AE009AA5B8 /* CitationCameraViewController.swift in Sources */,
 				B10D354A1B692E9C00DE4D8E /* ErrorHandling.swift in Sources */,
 				B10D33921B6845F700DE4D8E /* Ticket.swift in Sources */,
 				B198533C1B6BE55300BFCEEE /* EvidenceCameraViewController.swift in Sources */,

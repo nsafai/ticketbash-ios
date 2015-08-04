@@ -1,5 +1,5 @@
 //
-//  EvidenceCameraViewController.swift
+//  CitationCameraViewController.swift
 //  TicketBash
 //
 //  Created by Nicolai Safai on 7/31/15.
@@ -10,12 +10,12 @@ import UIKit
 import PBJVision
 import RealmSwift
 
-class EvidenceCameraViewController: UIViewController {
+class CitationCameraViewController: UIViewController {
     var myTicket: Ticket?
     let realm = Realm()
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "showCamera2") {
+        if (segue.identifier == "showCamera") {
             let cameraViewController = segue.destinationViewController as! CameraViewController
             cameraViewController.delegate = self
             // do anything specific to ticket (different than in explanation)
@@ -26,7 +26,7 @@ class EvidenceCameraViewController: UIViewController {
     }
 }
 
-extension EvidenceCameraViewController: CameraViewControllerDelegate {
+extension CitationCameraViewController: CameraViewControllerDelegate {
     func acceptedImage(image: UIImage) {
         // save to realm
         var tickets = realm.objects(Ticket)
@@ -42,11 +42,11 @@ extension EvidenceCameraViewController: CameraViewControllerDelegate {
         if let ticket = self.myTicket {
             self.realm.write() { //changes must be done within a write transaction/closure.
                 var imageData = UIImageJPEGRepresentation(image, 0.7)
-                ticket.evidencePicture =  imageData // change realm image data value to what user just took in camera view controller
+                ticket.ticketPicture =  imageData // change realm image data value to what user just took in camera view controller
                 self.realm.add(ticket, update: true) // 3 Add  new ticket to Realm if none exists, else update it
             }
         }
         // segue to next view
-        self.performSegueWithIdentifier("showTicketController", sender: self)
+        self.performSegueWithIdentifier("showExplanationController", sender: self)
     }
 }

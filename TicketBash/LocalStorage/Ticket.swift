@@ -14,7 +14,7 @@ class Ticket: Object {
     
 
     
-    // stored in TicketCameraViewController
+    // stored in CitationCameraViewController
     dynamic var ticketPicture = NSData()
     
     // stored in EvidenceCameraViewController

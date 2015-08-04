@@ -351,32 +351,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="3CI-4N-yF4" kind="relationship" relationship="rootViewController" id="EiO-kn-3Io"/>
+                        <segue destination="t6v-GG-VNE" kind="relationship" relationship="rootViewController" id="9ck-FI-AI4"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q00-Je-2fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-276" y="400"/>
-        </scene>
-        <!--Picture of Parking Ticket-->
-        <scene sceneID="PCl-GH-D9Y">
-            <objects>
-                <viewController id="3CI-4N-yF4" customClass="TicketCameraViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
-                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="JJO-nc-Mcx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <connections>
-                            <segue destination="GdB-4y-KPe" kind="embed" identifier="showCamera" id="qlv-Sl-VCK"/>
-                        </connections>
-                    </containerView>
-                    <navigationItem key="navigationItem" title="Picture of Parking Ticket" id="23U-M4-cEw"/>
-                    <connections>
-                        <segue destination="t6v-GG-VNE" kind="show" identifier="showEvidenceController" id="Y6e-ls-FlA"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1l3-mf-7dv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="402" y="400"/>
+            <point key="canvasLocation" x="772" y="-310"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="51b-3W-3lb">
@@ -455,7 +435,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5Y-t7-9rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="740" y="1155"/>
+            <point key="canvasLocation" x="738" y="1111"/>
         </scene>
         <!--Picture of Evidence-->
         <scene sceneID="3D1-aH-9VK">
@@ -465,20 +445,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <connections>
-                            <segue destination="GdB-4y-KPe" kind="embed" identifier="showCamera2" id="Fhl-J0-dMk"/>
+                            <segue destination="GdB-4y-KPe" kind="embed" identifier="showCamera2" id="lsY-UU-Z0X"/>
                         </connections>
                     </containerView>
                     <navigationItem key="navigationItem" title="Picture of Evidence" id="Wo5-z5-VE7"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="show" identifier="showExplanationController" id="G02-h7-D11"/>
+                        <segue destination="sG2-kq-qBF" kind="show" identifier="showTicketController" id="dDZ-ab-F3K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wea-MY-dF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072" y="400"/>
+            <point key="canvasLocation" x="188" y="426"/>
+        </scene>
+        <!--Picture of Citation-->
+        <scene sceneID="P82-x8-9Ps">
+            <objects>
+                <viewController id="sG2-kq-qBF" customClass="CitationCameraViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="Tsb-Rr-JOw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="GdB-4y-KPe" kind="embed" identifier="showCamera" id="Ka4-xC-2La"/>
+                        </connections>
+                    </containerView>
+                    <navigationItem key="navigationItem" title="Picture of Citation" id="sOI-tg-hgQ"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="showExplanationController" id="zOI-NV-VTt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNc-Nq-M9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1075" y="391"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qlv-Sl-VCK"/>
+        <segue reference="lsY-UU-Z0X"/>
     </inferredMetricsTieBreakers>
 </document>

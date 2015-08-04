@@ -111,8 +111,6 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             // find current directory path
             let path:NSArray = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
             println(path.objectAtIndex(0))
-            let currentDirectoryPath = NSFileManager.defaultManager().currentDirectoryPath // this returns "/"
-            let currentDirPathString: AnyObject = path.objectAtIndex(0) // this returns absolute path /Users/Nicolai/[...]
             
             // TODO: convert PDF to NSData to upload to Parse
             var pdfPath = path.objectAtIndex(0).stringByAppendingPathComponent("hahaPDF.pdf")
@@ -181,6 +179,37 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         //// footer
         pdfGenerator.addLineFromPoint(CGPointMake(75, 1000), toEndPoint: CGPointMake(775, 1000), withColor: black, andWidth: 0.5)
         pdfGenerator.addText("Page 1 of 3", withFrame: CGRectMake(0,1025,775,1100), withFont: paraFont, withColor: black, textAlignment: right, verticalAlignment: 0)
+        
+        // page 2
+        //// header
+        pdfGenerator.addPageToPDF()
+        pdfGenerator.addText("Exhibit A", withFrame: CGRectMake(0,77,850,1100), withFont: nameFont, withColor: black, textAlignment: center, verticalAlignment: 0)
+        pdfGenerator.addText("Parking Citation", withFrame: CGRectMake(0,100,850,1100), withFont: paraFont, withColor: black, textAlignment: center, verticalAlignment: 0)
+        //// draw lines
+        pdfGenerator.addLineFromPoint(CGPointMake(75, 150), toEndPoint: CGPointMake(775, 150), withColor: black, andWidth: 0.5)
+        
+        //// body
+        pdfGenerator.addImage(UIImage(data: ticketData.ticketPicture), inRect: CGRectMake(219, 225, 412, 700))
+        
+        //// footer
+        pdfGenerator.addLineFromPoint(CGPointMake(75, 1000), toEndPoint: CGPointMake(775, 1000), withColor: black, andWidth: 0.5)
+        pdfGenerator.addText("Page 2 of 3", withFrame: CGRectMake(0,1025,775,1100), withFont: paraFont, withColor: black, textAlignment: right, verticalAlignment: 0)
+        
+        // page 3
+        //// header
+        pdfGenerator.addPageToPDF()
+        pdfGenerator.addText("Exhibit B", withFrame: CGRectMake(0,77,850,1100), withFont: nameFont, withColor: black, textAlignment: center, verticalAlignment: 0)
+        pdfGenerator.addText("Photographic Evidence", withFrame: CGRectMake(0,100,850,1100), withFont: paraFont, withColor: black, textAlignment: center, verticalAlignment: 0)
+        //// draw lines
+        pdfGenerator.addLineFromPoint(CGPointMake(75, 150), toEndPoint: CGPointMake(775, 150), withColor: black, andWidth: 0.5)
+        
+        //// body
+        pdfGenerator.addImage(UIImage(data: ticketData.evidencePicture), inRect: CGRectMake(162, 225, 526, 700))
+        
+        //// footer
+        pdfGenerator.addLineFromPoint(CGPointMake(75, 1000), toEndPoint: CGPointMake(775, 1000), withColor: black, andWidth: 0.5)
+        pdfGenerator.addText("Page 3 of 3", withFrame: CGRectMake(0,1025,775,1100), withFont: paraFont, withColor: black, textAlignment: right, verticalAlignment: 0)
+        
         // save pdf, or if it exists, update it
         pdfGenerator.finishPDF()
     }
