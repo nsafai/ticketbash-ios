@@ -370,14 +370,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7I-bD-f1b">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7I-bD-f1b">
                                 <rect key="frame" x="255" y="490" width="90" height="90"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="O6J-2I-PtK"/>
-                                    <constraint firstAttribute="width" constant="90" id="QDH-ex-cxP"/>
+                                    <constraint firstAttribute="height" constant="90" id="O6J-2I-PtK">
+                                        <variation key="heightClass=regular" constant="120"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="90" id="QDH-ex-cxP">
+                                        <variation key="heightClass=regular" constant="120"/>
+                                    </constraint>
                                 </constraints>
-                                <state key="normal">
+                                <state key="normal" image="Camera Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -417,12 +420,18 @@
                         <constraints>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="trailing" secondItem="YpS-NE-l16" secondAttribute="trailingMargin" id="80q-ef-DBJ"/>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="firstBaseline" secondItem="ky6-61-hFu" secondAttribute="firstBaseline" id="F0R-dY-yDJ"/>
-                            <constraint firstAttribute="bottom" secondItem="j7I-bD-f1b" secondAttribute="bottom" constant="20" symbolic="YES" id="Hkr-pc-Ao5"/>
+                            <constraint firstAttribute="bottom" secondItem="j7I-bD-f1b" secondAttribute="bottom" constant="20" symbolic="YES" id="Hkr-pc-Ao5">
+                                <variation key="heightClass=regular" constant="32"/>
+                            </constraint>
                             <constraint firstItem="ky6-61-hFu" firstAttribute="leading" secondItem="YpS-NE-l16" secondAttribute="leadingMargin" id="LIo-qE-xy2"/>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="baseline" secondItem="ky6-61-hFu" secondAttribute="baseline" id="ReB-r2-gtW"/>
-                            <constraint firstItem="j7I-bD-f1b" firstAttribute="centerX" secondItem="YpS-NE-l16" secondAttribute="centerX" id="X0u-vY-MYn"/>
+                            <constraint firstItem="j7I-bD-f1b" firstAttribute="centerX" secondItem="YpS-NE-l16" secondAttribute="centerX" id="X0u-vY-MYn">
+                                <variation key="heightClass=regular" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="baseline" secondItem="ky6-61-hFu" secondAttribute="baseline" id="bpe-Mt-usf"/>
-                            <constraint firstItem="G6B-tI-vSm" firstAttribute="top" secondItem="ky6-61-hFu" secondAttribute="bottom" constant="211" id="kX8-Xf-SZg"/>
+                            <constraint firstItem="G6B-tI-vSm" firstAttribute="top" secondItem="ky6-61-hFu" secondAttribute="bottom" constant="211" id="kX8-Xf-SZg">
+                                <variation key="heightClass=regular" constant="363"/>
+                            </constraint>
                             <constraint firstItem="ky6-61-hFu" firstAttribute="firstBaseline" secondItem="8Zd-Uo-VVP" secondAttribute="firstBaseline" id="oLQ-OZ-wGV"/>
                             <constraint firstItem="ky6-61-hFu" firstAttribute="bottom" secondItem="8Zd-Uo-VVP" secondAttribute="bottom" id="wew-w5-2JZ"/>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="top" secondItem="ky6-61-hFu" secondAttribute="top" id="zBE-5u-99P"/>
@@ -479,6 +488,9 @@
             <point key="canvasLocation" x="1075" y="391"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Camera Button" width="216" height="216"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="lsY-UU-Z0X"/>
     </inferredMetricsTieBreakers>
