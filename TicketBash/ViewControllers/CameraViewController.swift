@@ -20,6 +20,7 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
     
     @IBOutlet weak var retryButton: UIButton!
     @IBOutlet weak var acceptButton: UIButton!
+    @IBOutlet weak var cameraText: UILabel!
     
     @IBOutlet weak var photoButton: UIButton!
     var delegate: CameraViewControllerDelegate?
@@ -47,15 +48,19 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
         vision.focusMode = .ContinuousAutoFocus
         vision.outputFormat = PBJOutputFormat.Standard
         vision.captureSessionPreset = AVCaptureSessionPresetHigh
-        
     }
     
     override func viewWillAppear(animated: Bool) {
-      vision.startPreview()
+        vision.startPreview()
         self.photoButton.userInteractionEnabled = true;
         self.photoButton.hidden = false
         self.navigationController?.navigationBarHidden = true
-
+        
+        if (self.parentViewController?.isKindOfClass(CitationCameraViewController) == true) {
+            cameraText.text = "Take a picture of\nyour parking ticket"
+        } else if (self.parentViewController?.isKindOfClass(EvidenceCameraViewController) == true) {
+            cameraText.text = "Take a picture of\nevidence\n(this helps a lot)"
+        }
     }
     
     @IBAction func retryPicture(sender: AnyObject) {

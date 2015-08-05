@@ -356,7 +356,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q00-Je-2fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772" y="-310"/>
+            <point key="canvasLocation" x="218" y="-300.75"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="51b-3W-3lb">
@@ -461,8 +461,29 @@
                                     <action selector="retryPicture:" destination="GdB-4y-KPe" eventType="touchUpInside" id="9N5-MY-iHU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a picture of your parking ticket" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="no3-bK-9Hz">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="Xcn-4c-cNI">
+                                        <variation key="heightClass=regular" constant="235"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Xcn-4c-cNI"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Xcn-4c-cNI"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="bottom" secondItem="ky6-61-hFu" secondAttribute="bottom" id="0RE-Mm-4gw"/>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="trailing" secondItem="YpS-NE-l16" secondAttribute="trailingMargin" id="80q-ef-DBJ"/>
@@ -474,6 +495,10 @@
                                 <variation key="heightClass=regular" constant="32"/>
                             </constraint>
                             <constraint firstItem="ky6-61-hFu" firstAttribute="leading" secondItem="YpS-NE-l16" secondAttribute="leadingMargin" id="LIo-qE-xy2"/>
+                            <constraint firstItem="no3-bK-9Hz" firstAttribute="centerX" secondItem="j7I-bD-f1b" secondAttribute="centerX" id="P2p-D1-RIK"/>
+                            <constraint firstItem="no3-bK-9Hz" firstAttribute="top" secondItem="aVJ-YE-oXK" secondAttribute="bottom" constant="44" id="PRT-b1-txJ">
+                                <variation key="heightClass=regular" constant="25"/>
+                            </constraint>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="baseline" secondItem="ky6-61-hFu" secondAttribute="baseline" id="ReB-r2-gtW"/>
                             <constraint firstItem="ky6-61-hFu" firstAttribute="centerY" secondItem="YpS-NE-l16" secondAttribute="centerY" id="Vhb-QP-5U9"/>
                             <constraint firstItem="j7I-bD-f1b" firstAttribute="centerX" secondItem="YpS-NE-l16" secondAttribute="centerX" id="X0u-vY-MYn">
@@ -489,13 +514,22 @@
                             <constraint firstItem="ky6-61-hFu" firstAttribute="top" secondItem="aVJ-YE-oXK" secondAttribute="bottom" constant="350" id="qh5-JJ-sO4"/>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="top" secondItem="ky6-61-hFu" secondAttribute="top" id="rDn-XJ-Ve7"/>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="top" secondItem="ky6-61-hFu" secondAttribute="top" id="tq2-36-bRr"/>
+                            <constraint firstItem="no3-bK-9Hz" firstAttribute="leading" secondItem="YpS-NE-l16" secondAttribute="leadingMargin" constant="56" id="uJd-SZ-QZn">
+                                <variation key="heightClass=regular" constant="34"/>
+                            </constraint>
                             <constraint firstItem="ky6-61-hFu" firstAttribute="bottom" secondItem="8Zd-Uo-VVP" secondAttribute="bottom" id="wew-w5-2JZ"/>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="trailing" secondItem="YpS-NE-l16" secondAttribute="trailingMargin" id="wfS-OA-ePt"/>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="top" secondItem="ky6-61-hFu" secondAttribute="top" id="zBE-5u-99P"/>
                             <constraint firstItem="ky6-61-hFu" firstAttribute="leading" secondItem="YpS-NE-l16" secondAttribute="leadingMargin" id="zcd-Ws-VoX"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="no3-bK-9Hz"/>
+                            </mask>
                             <mask key="constraints">
+                                <exclude reference="P2p-D1-RIK"/>
+                                <exclude reference="PRT-b1-txJ"/>
+                                <exclude reference="uJd-SZ-QZn"/>
                                 <exclude reference="Vhb-QP-5U9"/>
                                 <exclude reference="qh5-JJ-sO4"/>
                                 <exclude reference="zcd-Ws-VoX"/>
@@ -511,7 +545,13 @@
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="no3-bK-9Hz"/>
+                            </mask>
                             <mask key="constraints">
+                                <include reference="P2p-D1-RIK"/>
+                                <include reference="PRT-b1-txJ"/>
+                                <include reference="uJd-SZ-QZn"/>
                                 <exclude reference="LIo-qE-xy2"/>
                                 <include reference="Vhb-QP-5U9"/>
                                 <exclude reference="oLQ-OZ-wGV"/>
@@ -540,13 +580,14 @@
                     </view>
                     <connections>
                         <outlet property="acceptButton" destination="8Zd-Uo-VVP" id="f8c-04-Bmw"/>
+                        <outlet property="cameraText" destination="no3-bK-9Hz" id="M1b-8z-9MC"/>
                         <outlet property="photoButton" destination="j7I-bD-f1b" id="Z6h-BM-hIr"/>
                         <outlet property="retryButton" destination="ky6-61-hFu" id="ore-oC-nAz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5Y-t7-9rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="866" y="1187.25"/>
+            <point key="canvasLocation" x="644" y="1152.75"/>
         </scene>
         <!--Picture of Evidence-->
         <scene sceneID="3D1-aH-9VK">
@@ -566,7 +607,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wea-MY-dF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="188" y="426"/>
+            <point key="canvasLocation" x="218" y="390.75"/>
         </scene>
         <!--Picture of Citation-->
         <scene sceneID="P82-x8-9Ps">
@@ -586,7 +627,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNc-Nq-M9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075" y="391"/>
+            <point key="canvasLocation" x="1069" y="399.75"/>
         </scene>
     </scenes>
     <resources>
@@ -595,6 +636,6 @@
         <image name="refresh" width="165" height="165"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lsY-UU-Z0X"/>
+        <segue reference="Ka4-xC-2La"/>
     </inferredMetricsTieBreakers>
 </document>
