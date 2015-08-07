@@ -89,29 +89,30 @@ extension PaymentViewController: PKPaymentAuthorizationViewControllerDelegate {
             
 //            // 4
 //            let shippingAddress = self.createShippingAddressFromRef(payment.shippingAddress)
-            
+            let URLstring = "https://ticketbash.ngrok.com/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)&stripe_token=\(token!.tokenId)"
+
             // 5
-            let url = NSURL(string: "https://ticketbash.ngrok.com/api/v0/process_ticket?parse_id=12345&stripe_token=12345")  // Replace with your server or computer's local IP Address!
+            let url = NSURL(string: URLstring)  // Replace with your server or computer's local IP Address!
+            
             let request = NSMutableURLRequest(URL: url!)
             request.HTTPMethod = "POST"
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.setValue("application/json", forHTTPHeaderField: "Accept")
             
             // 6
-            let body = ["stripeToken": token!.tokenId,
-                "amount": self.shippingCost,
-                "description": "TicketBash Shipping Cost",
-                "shipping": [
-                    "city": self.myTicket?.mailingCity,
-                    "state": self.myTicket?.mailingState,
-                    "zip": self.myTicket?.mailingZip,
-                    "firstName": self.myTicket?.firstName,
-                    "lastName": self.myTicket?.lastName]
-                // include product ID (Ticket ID) sowe know what was shipped with this purchase
-            ]
+//            let body: [String:AnyObject] = ["stripeToken": token!.tokenId,
+//                "amount": self.shippingCost,
+//                "description": "TicketBash Shipping Cost",
+//                "shipping": ["city": self.myTicket?.mailingCity,
+//                    "state": self.myTicket?.mailingState,
+//                    "zip": self.myTicket?.mailingZip,
+//                    "firstName": self.myTicket?.firstName,
+//                    "lastName": self.myTicket?.lastName]
+//                // include product ID (Ticket ID) sowe know what was shipped with this purchase
+//            ]
             
             var error: NSError?
-            request.HTTPBody = NSJSONSerialization.dataWithJSONObject(body, options: NSJSONWritingOptions(), error: &error)
+//            request.HTTPBody = NSJSONSerialization.dataWithJSONObject(body, options: NSJSONWritingOptions(), error: &error)
             
             // 7
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response, data, error) -> Void in

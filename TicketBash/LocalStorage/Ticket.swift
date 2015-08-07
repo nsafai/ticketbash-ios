@@ -28,10 +28,12 @@ class Ticket: Object {
     dynamic var firstName: String = ""
     dynamic var lastName: String = ""
     dynamic var mailingAddress: String = ""
+    dynamic var mailingAddress2: String = ""
     dynamic var mailingCity: String = ""
     dynamic var mailingState: String = ""
     dynamic var mailingZip: String = ""
     dynamic var phoneNumber: String = ""
+    dynamic var parseObjectID: String = ""
     
     override class func primaryKey() -> String {
         return "id"

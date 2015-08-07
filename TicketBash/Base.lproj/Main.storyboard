@@ -139,6 +139,11 @@
                                     <segue destination="Rg3-IU-Rbz" kind="show" id="C5f-ii-eT3"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address Line 2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mFn-9o-yWM">
+                                <rect key="frame" x="0.0" y="122" width="600" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" label=""/>
@@ -151,8 +156,11 @@
                             <constraint firstAttribute="trailing" secondItem="7wM-Rl-amQ" secondAttribute="trailing" id="9KX-OZ-xiA"/>
                             <constraint firstItem="9xd-1C-mzZ" firstAttribute="trailing" secondItem="aEn-BZ-Mes" secondAttribute="trailing" id="9Kd-6P-ed0"/>
                             <constraint firstItem="7Ko-9J-O4X" firstAttribute="trailing" secondItem="3Aa-nY-uIN" secondAttribute="trailing" id="A5N-KK-dYA"/>
+                            <constraint firstItem="mFn-9o-yWM" firstAttribute="trailing" secondItem="bkE-gM-V6O" secondAttribute="trailing" id="JqD-QT-GVI"/>
                             <constraint firstItem="aEn-BZ-Mes" firstAttribute="top" secondItem="3Aa-nY-uIN" secondAttribute="bottom" constant="28" id="Mtu-tH-4kP"/>
-                            <constraint firstItem="7Ko-9J-O4X" firstAttribute="top" secondItem="bkE-gM-V6O" secondAttribute="bottom" constant="28" id="NHk-j5-jx6"/>
+                            <constraint firstItem="7Ko-9J-O4X" firstAttribute="top" secondItem="bkE-gM-V6O" secondAttribute="bottom" constant="28" id="NHk-j5-jx6">
+                                <variation key="heightClass=regular" constant="57"/>
+                            </constraint>
                             <constraint firstItem="7wM-Rl-amQ" firstAttribute="leading" secondItem="9xd-1C-mzZ" secondAttribute="leading" id="NQ5-Zz-FbA"/>
                             <constraint firstItem="7wM-Rl-amQ" firstAttribute="leading" secondItem="66Q-cn-QhR" secondAttribute="leading" id="PDd-q3-hzD"/>
                             <constraint firstItem="Bgk-ko-7j7" firstAttribute="trailing" secondItem="bkE-gM-V6O" secondAttribute="trailing" id="QN5-Ih-ESf"/>
@@ -164,25 +172,46 @@
                             <constraint firstItem="Bgk-ko-7j7" firstAttribute="trailing" secondItem="YLf-aH-I3Y" secondAttribute="trailing" id="Zus-bu-UBl"/>
                             <constraint firstItem="9xd-1C-mzZ" firstAttribute="top" secondItem="7Ko-9J-O4X" secondAttribute="bottom" constant="28" id="aoz-1w-h92"/>
                             <constraint firstItem="bkE-gM-V6O" firstAttribute="leading" secondItem="Bgk-ko-7j7" secondAttribute="leading" id="cwI-Np-lix"/>
-                            <constraint firstItem="3Aa-nY-uIN" firstAttribute="top" secondItem="Bgk-ko-7j7" secondAttribute="bottom" constant="28" id="eUs-K8-JU7"/>
+                            <constraint firstItem="3Aa-nY-uIN" firstAttribute="top" secondItem="Bgk-ko-7j7" secondAttribute="bottom" constant="28" id="eUs-K8-JU7">
+                                <variation key="heightClass=regular" constant="57"/>
+                            </constraint>
+                            <constraint firstItem="mFn-9o-yWM" firstAttribute="top" secondItem="Bgk-ko-7j7" secondAttribute="bottom" constant="28" id="g8p-Vx-DQS"/>
                             <constraint firstItem="7wM-Rl-amQ" firstAttribute="top" secondItem="aEn-BZ-Mes" secondAttribute="bottom" constant="60" id="gB6-0M-u4U"/>
                             <constraint firstItem="Bgk-ko-7j7" firstAttribute="leading" secondItem="YLf-aH-I3Y" secondAttribute="leading" id="jzB-PR-KyZ"/>
                             <constraint firstItem="9xd-1C-mzZ" firstAttribute="leading" secondItem="aEn-BZ-Mes" secondAttribute="leading" id="nYP-cQ-nZy"/>
                             <constraint firstItem="Iif-bA-2LN" firstAttribute="top" secondItem="7wM-Rl-amQ" secondAttribute="bottom" constant="251" id="pWH-tv-xVs"/>
                             <constraint firstItem="Iif-bA-2LN" firstAttribute="top" secondItem="7wM-Rl-amQ" secondAttribute="bottom" constant="251" id="uv8-3a-ztr"/>
+                            <constraint firstItem="mFn-9o-yWM" firstAttribute="leading" secondItem="bkE-gM-V6O" secondAttribute="leading" id="z8F-wa-TKe"/>
                             <constraint firstItem="Bgk-ko-7j7" firstAttribute="top" secondItem="NJY-Hf-iRd" secondAttribute="bottom" constant="29" id="z8W-Jr-JgQ"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="mFn-9o-yWM"/>
+                            </mask>
                             <mask key="constraints">
+                                <exclude reference="JqD-QT-GVI"/>
+                                <exclude reference="g8p-Vx-DQS"/>
+                                <exclude reference="z8F-wa-TKe"/>
                                 <exclude reference="0B6-bz-2MV"/>
                                 <exclude reference="NQ5-Zz-FbA"/>
                                 <exclude reference="gB6-0M-u4U"/>
                                 <exclude reference="uv8-3a-ztr"/>
                             </mask>
                         </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="mFn-9o-yWM"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="JqD-QT-GVI"/>
+                                <include reference="g8p-Vx-DQS"/>
+                                <include reference="z8F-wa-TKe"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Contact Info" id="Ary-f8-eva"/>
                     <connections>
+                        <outlet property="address2TextField" destination="mFn-9o-yWM" id="dvM-gP-gPQ"/>
                         <outlet property="addressTextField" destination="bkE-gM-V6O" id="NCf-vj-VOM"/>
                         <outlet property="cityTextField" destination="3Aa-nY-uIN" id="E4K-rV-1yv"/>
                         <outlet property="firstNameTextField" destination="YLf-aH-I3Y" id="vwL-oE-oBm"/>
@@ -666,6 +695,6 @@
         <image name="refresh" width="165" height="165"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ka4-xC-2La"/>
+        <segue reference="lsY-UU-Z0X"/>
     </inferredMetricsTieBreakers>
 </document>

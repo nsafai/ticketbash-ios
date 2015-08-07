@@ -17,6 +17,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var address2TextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var zipTextField: UITextField!
@@ -35,6 +36,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
         addressTextField.delegate = self
+        address2TextField.delegate = self
         cityTextField.delegate = self
         stateTextField.delegate = self
         zipTextField.delegate = self
@@ -52,6 +54,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             firstNameTextField.text = myTicket!.firstName // grab value of myTicket.FirstName and populate the text field
             lastNameTextField.text = myTicket!.lastName
             addressTextField.text = myTicket!.mailingAddress
+            address2TextField.text = myTicket!.mailingAddress2
             cityTextField.text = myTicket!.mailingCity
             stateTextField.text = myTicket!.mailingState
             zipTextField.text = myTicket!.mailingZip
@@ -71,6 +74,8 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         } else if textField == lastNameTextField {
             addressTextField.becomeFirstResponder()
         } else if textField == addressTextField {
+            address2TextField.becomeFirstResponder()
+        } else if textField == address2TextField {
             cityTextField.becomeFirstResponder()
         } else if textField == cityTextField {
             stateTextField.becomeFirstResponder()
@@ -93,13 +98,13 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                 ticket.firstName = self.firstNameTextField.text // change realm text value to what user just wrote in text view
                 ticket.lastName = self.lastNameTextField.text
                 ticket.mailingAddress = self.addressTextField.text
+                ticket.mailingAddress2 = self.address2TextField.text
                 ticket.mailingCity = self.cityTextField.text
                 ticket.mailingState = self.stateTextField.text
                 ticket.mailingZip = self.zipTextField.text
                 ticket.phoneNumber = self.phoneTextField.text
                 self.realm.add(ticket, update: true) // 3 Add a new ticket to Realm if none exists, else update it
             }
-            
         }
 //        println(myTicket)
         if let ticketData = myTicket {
@@ -124,15 +129,27 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             ticketObject["ticketPicture"] = PFFile(data: ticketData.ticketPicture)
             ticketObject["evidencePicture"] = PFFile(data: ticketData.evidencePicture)
             ticketObject["explanationText"] = ticketData.explanationText
+            ticketObject["firstName"] = ticketData.firstName
+            ticketObject["lastName"] = ticketData.lastName
             ticketObject["mailingAddress"] = ticketData.mailingAddress
+            ticketObject["mailingAddress2"] = ticketData.mailingAddress2
             ticketObject["mailingCity"] = ticketData.mailingCity
             ticketObject["mailingState"] = ticketData.mailingState
             ticketObject["mailingZip"] = ticketData.mailingZip
             ticketObject["phoneNumber"] = ticketData.phoneNumber
             ticketObject["user"] = PFUser.currentUser()
+            
             ticketObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
-            println("sent ticket to Parse")
+                println("sent ticket to Parse")
+                if let ticket = self.myTicket {
+                    self.realm.write() {
+                        ticketData.parseObjectID = ticketObject.objectId!
+                        self.realm.add(ticket, update: true)
+                    }
+                }
             })
+
+            println("let's take a look at the ticket object: \(ticketObject)")
         } 
     }
     
@@ -169,7 +186,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         // add content
         //// header
         pdfGenerator.addText("\(ticketData.firstName) \(ticketData.lastName)", withFrame: CGRectMake(0,77,850,1100), withFont: nameFont, withColor: black, textAlignment: center, verticalAlignment: 0)
-        pdfGenerator.addText("\(ticketData.mailingAddress), \(ticketData.mailingCity), \(ticketData.mailingState), \(ticketData.mailingZip)\ntel: \(ticketData.phoneNumber)", withFrame: CGRectMake(0,100,850,1100), withFont: paraFont, withColor: black, textAlignment: center, verticalAlignment: 0)
+        pdfGenerator.addText("\(ticketData.mailingAddress), \(ticketData.mailingAddress2) \(ticketData.mailingCity), \(ticketData.mailingState), \(ticketData.mailingZip)\ntel: \(ticketData.phoneNumber)", withFrame: CGRectMake(0,100,850,1100), withFont: paraFont, withColor: black, textAlignment: center, verticalAlignment: 0)
         //// draw lines
         pdfGenerator.addLineFromPoint(CGPointMake(75, 150), toEndPoint: CGPointMake(775, 150), withColor: black, andWidth: 0.5)
         
