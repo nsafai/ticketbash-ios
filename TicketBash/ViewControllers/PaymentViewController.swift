@@ -10,26 +10,31 @@ import UIKit
 import PaymentKit
 import PassKit
 import RealmSwift
+import Stripe
+
 
 class PaymentViewController: UIViewController {
     
     //local storage
     var myTicket: Ticket?
     let realm = Realm()
-    var shippingCost: Int = 3
+    var shippingCost: NSDecimalNumber = 3
     
     //apple pay
     @IBOutlet weak var applePayButton: UIButton!
     let SupportedPaymentNetworks = [PKPaymentNetworkVisa, PKPaymentNetworkMasterCard, PKPaymentNetworkAmex]
     let ApplePaySwagMerchantID = "merchant.com.Lime.TicketBash"
     
+    // credit card
+    weak var paymentView: PTKView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         applePayButton.hidden = !PKPaymentAuthorizationViewController.canMakePaymentsUsingNetworks(SupportedPaymentNetworks)
-
+        
+        var tickets = realm.objects(Ticket)
         if let ticket = tickets.first { // if there is a stored value then the 'tickets' array is not nil --> assign the value of the first ticket in the array to 'ticket'
             myTicket = ticket // assign the value of ticket to myTicket
             //            println("grabbed ticket from realm")
@@ -86,22 +91,22 @@ extension PaymentViewController: PKPaymentAuthorizationViewControllerDelegate {
 //            let shippingAddress = self.createShippingAddressFromRef(payment.shippingAddress)
             
             // 5
-            let url = NSURL(string: "http://<your ip address>/pay")  // Replace with computers local IP Address!
+            let url = NSURL(string: "https://ticketbash.ngrok.com/api/v0/process_ticket?parse_id=12345&stripe_token=12345")  // Replace with your server or computer's local IP Address!
             let request = NSMutableURLRequest(URL: url!)
             request.HTTPMethod = "POST"
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.setValue("application/json", forHTTPHeaderField: "Accept")
             
             // 6
-            let body = ["stripeToken": token.tokenId,
-                "amount": shippingCost.decimalNumberByMultiplyingBy(NSDecimalNumber(string: "100")),
+            let body = ["stripeToken": token!.tokenId,
+                "amount": self.shippingCost,
                 "description": "TicketBash Shipping Cost",
                 "shipping": [
-                    "city": myTicket?.mailingCity,
-                    "state": myTicket?.mailingState,
-                    "zip": myTicket?.mailingZip,
-                    "firstName": myTicket?.firstName,
-                    "lastName": myTicket?.lastName]
+                    "city": self.myTicket?.mailingCity,
+                    "state": self.myTicket?.mailingState,
+                    "zip": self.myTicket?.mailingZip,
+                    "firstName": self.myTicket?.firstName,
+                    "lastName": self.myTicket?.lastName]
                 // include product ID (Ticket ID) sowe know what was shipped with this purchase
             ]
             
