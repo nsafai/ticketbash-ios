@@ -313,59 +313,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMH-p4-WEd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPZ-Yi-lss">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="108" id="VmM-eh-jRT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="SaveCC">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="ApplePayBTN_51pt__whiteLine_logo_">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="VmM-eh-jRT"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="VmM-eh-jRT"/>
-                                    </mask>
-                                </variation>
+                                <connections>
+                                    <action selector="purchase:" destination="xBr-eK-H5V" eventType="touchUpInside" id="ELK-sy-WXo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yMH-p4-WEd" firstAttribute="top" secondItem="qYL-oL-A2E" secondAttribute="bottom" constant="300" id="DZ7-FE-OkQ"/>
-                            <constraint firstItem="i0k-HX-39J" firstAttribute="top" secondItem="yMH-p4-WEd" secondAttribute="bottom" constant="365" id="Rpx-ND-Qfq"/>
-                            <constraint firstItem="yMH-p4-WEd" firstAttribute="centerX" secondItem="ukN-ng-QqO" secondAttribute="centerX" id="fK4-aN-veg"/>
+                            <constraint firstItem="oPZ-Yi-lss" firstAttribute="top" secondItem="qYL-oL-A2E" secondAttribute="bottom" constant="141" id="Lri-HU-JNL">
+                                <variation key="heightClass=regular" constant="217"/>
+                            </constraint>
+                            <constraint firstItem="oPZ-Yi-lss" firstAttribute="centerX" secondItem="ukN-ng-QqO" secondAttribute="centerX" id="Vn5-BF-3xn"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="yMH-p4-WEd"/>
+                                <exclude reference="oPZ-Yi-lss"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="DZ7-FE-OkQ"/>
-                                <exclude reference="fK4-aN-veg"/>
-                                <exclude reference="Rpx-ND-Qfq"/>
+                                <exclude reference="Lri-HU-JNL"/>
+                                <exclude reference="Vn5-BF-3xn"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
-                                <include reference="yMH-p4-WEd"/>
+                                <include reference="oPZ-Yi-lss"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="DZ7-FE-OkQ"/>
-                                <include reference="fK4-aN-veg"/>
-                                <include reference="Rpx-ND-Qfq"/>
+                                <include reference="Lri-HU-JNL"/>
+                                <include reference="Vn5-BF-3xn"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Payment Details" id="gua-b2-rAJ"/>
                     <connections>
-                        <outlet property="saveButton" destination="yMH-p4-WEd" id="cvi-qZ-0G9"/>
+                        <outlet property="applePayButton" destination="oPZ-Yi-lss" id="TQf-kK-Wtg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FmS-yP-LZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -674,6 +660,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ApplePayBTN_51pt__whiteLine_logo_" width="140" height="51"/>
         <image name="Camera Button" width="216" height="216"/>
         <image name="checkmark" width="166" height="166"/>
         <image name="refresh" width="165" height="165"/>
