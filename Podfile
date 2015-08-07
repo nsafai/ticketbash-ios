@@ -14,6 +14,9 @@ target 'TicketBash' do
 	pod 'ParseFacebookUtils'
 	pod 'JLPDFGenerator'
 	pod 'GooglePlacesAutocomplete'
+	pod 'Stripe'
+	pod 'PaymentKit'
+	pod 'Stripe/ApplePay'
 
 end
 

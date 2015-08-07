@@ -16,6 +16,9 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <JLPDFGenerator/JLPDFGenerator.h>
+#import <Stripe/Stripe.h>
+#import <Stripe/Stripe+ApplePay.h>
+#import <PaymentKit/PTKView.h>
 
 // unimported/installed pods:
 // pod 'FBSDKShareKit'

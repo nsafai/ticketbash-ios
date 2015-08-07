@@ -21,6 +21,7 @@
 		B112DAF81B66C0A500F6ADE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B112DAF71B66C0A500F6ADE1 /* Images.xcassets */; };
 		B112DAFB1B66C0A500F6ADE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B112DAF91B66C0A500F6ADE1 /* LaunchScreen.xib */; };
 		B112DB071B66C0A500F6ADE1 /* TicketBashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B112DB061B66C0A500F6ADE1 /* TicketBashTests.swift */; };
+		B157AAAE1B73B55600DF795F /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157AAAD1B73B55600DF795F /* PaymentViewController.swift */; };
 		B163E4341B7032AE009AA5B8 /* CitationCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163E4331B7032AE009AA5B8 /* CitationCameraViewController.swift */; };
 		B19853381B6BA7E600BFCEEE /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19853371B6BA7E600BFCEEE /* SubmitViewController.swift */; };
 		B198533C1B6BE55300BFCEEE /* EvidenceCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */; };
@@ -74,6 +75,8 @@
 		B112DB051B66C0A500F6ADE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B112DB061B66C0A500F6ADE1 /* TicketBashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketBashTests.swift; sourceTree = "<group>"; };
 		B112DB141B66CC3500F6ADE1 /* TicketBash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TicketBash-Bridging-Header.h"; sourceTree = "<group>"; };
+		B157AAAD1B73B55600DF795F /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		B157AAAF1B74511000DF795F /* TicketBash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TicketBash.entitlements; sourceTree = "<group>"; };
 		B163E4331B7032AE009AA5B8 /* CitationCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitationCameraViewController.swift; sourceTree = "<group>"; };
 		B19853371B6BA7E600BFCEEE /* SubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
 		B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvidenceCameraViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 				B10D338C1B683CE400DE4D8E /* ExplanationViewController.swift */,
 				B1CC524D1B693C6C00DB1BD2 /* ContactInfoViewController.swift */,
 				B19853371B6BA7E600BFCEEE /* SubmitViewController.swift */,
+				B157AAAD1B73B55600DF795F /* PaymentViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -177,6 +181,7 @@
 		B112DAED1B66C0A500F6ADE1 /* TicketBash */ = {
 			isa = PBXGroup;
 			children = (
+				B157AAAF1B74511000DF795F /* TicketBash.entitlements */,
 				B10D35471B692E9C00DE4D8E /* Helpers */,
 				B10D33901B6845E900DE4D8E /* LocalStorage */,
 				B10D338B1B683CD600DE4D8E /* ViewControllers */,
@@ -269,6 +274,11 @@
 					B112DAEA1B66C0A500F6ADE1 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = A36A43H5ZZ;
+						SystemCapabilities = {
+							com.apple.OMC = {
+								enabled = 1;
+							};
+						};
 					};
 					B112DAFF1B66C0A500F6ADE1 = {
 						CreatedOnToolsVersion = 6.4;
@@ -374,6 +384,7 @@
 				B10D338D1B683CE400DE4D8E /* ExplanationViewController.swift in Sources */,
 				B10D354B1B692E9C00DE4D8E /* ParseLoginHelper.swift in Sources */,
 				B1CC524E1B693C6C00DB1BD2 /* ContactInfoViewController.swift in Sources */,
+				B157AAAE1B73B55600DF795F /* PaymentViewController.swift in Sources */,
 				B163E4341B7032AE009AA5B8 /* CitationCameraViewController.swift in Sources */,
 				B10D354A1B692E9C00DE4D8E /* ErrorHandling.swift in Sources */,
 				B10D33921B6845F700DE4D8E /* Ticket.swift in Sources */,
@@ -505,9 +516,15 @@
 			baseConfigurationReference = 1C869B814DE9655B6927C186 /* Pods-TicketBash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TicketBash/TicketBash.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					STRIPE_ENABLE_APPLEPAY,
+				);
 				INFOPLIST_FILE = TicketBash/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -522,9 +539,14 @@
 			baseConfigurationReference = 9D402A7624A5B5E5A8F41284 /* Pods-TicketBash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TicketBash/TicketBash.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
+					"COCOAPODS=1",
+					STRIPE_ENABLE_APPLEPAY,
+				);
 				INFOPLIST_FILE = TicketBash/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

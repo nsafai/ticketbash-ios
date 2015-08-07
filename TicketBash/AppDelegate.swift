@@ -13,15 +13,20 @@ import ParseUI
 import FBSDKLoginKit
 import ParseFacebookUtils
 import RealmSwift
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let StripePublishableKey = "pk_test_NPRQHdM6jMvSoWV0D74zEdIE"
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
        
+        // Set up Stripe
+        Stripe.setDefaultPublishableKey(StripePublishableKey)
+//        [Stripe setDefaultPublishableKey:StripePublishableKey];
         
         // Set up the Parse SDK
         Parse.setApplicationId("XGBNSjq1RRCVmAiiX1QRVbcbqik1wJo41uUAomIu", clientKey: "YpZD16HyM0cq0w2sblzad4ecstKGjo5JAtp9IJ8C")

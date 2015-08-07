@@ -12,14 +12,12 @@
 	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
-	<key>FacebookAppID</key>
-	<string>939499679451287</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
-	<key>FacebookDisplayName</key>
-	<string>TicketBash</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -29,10 +27,12 @@
 			</array>
 		</dict>
 	</array>
-	<key>CFBundleSignature</key>
-	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>939499679451287</string>
+	<key>FacebookDisplayName</key>
+	<string>TicketBash</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
