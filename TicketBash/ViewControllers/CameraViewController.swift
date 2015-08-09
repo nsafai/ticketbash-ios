@@ -83,7 +83,7 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
                 
                 // save to camera roll (in background)
                 dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), { () -> Void in
-                    UIImageWriteToSavedPhotosAlbum(acceptedImage, nil, nil, nil)
+//                    UIImageWriteToSavedPhotosAlbum(acceptedImage, nil, nil, nil)
 //                    println("Photo just accepted!!!")
                 })
             }
