@@ -64,6 +64,22 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         confirmationLabel.hidden = false
         notifyButton.hidden = false
         
+        //send to parse
+        let requestObject = PFObject(className: "CityRequest")
+        requestObject["city"] = self.cityRequestTextField.text
+        requestObject["user"] = PFUser.currentUser()
+        
+        requestObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
+            println("sent Request to Parse")
+            if let ticket = self.myTicket {
+                self.realm.write() {
+//                    ticketData.parseObjectID = ticketObject.objectId!
+                    self.realm.add(ticket, update: true)
+                }
+            }
+        })
+
+        
     }
     
     @IBAction func notifyMe(sender: AnyObject) {
@@ -76,5 +92,8 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         
         UIApplication.sharedApplication().registerUserNotificationSettings( settings )
         UIApplication.sharedApplication().registerForRemoteNotifications()
+        
+        println(UIUserNotificationSettings)
         }
-}
+    
+    }
