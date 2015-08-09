@@ -32,7 +32,7 @@ extension EvidenceCameraViewController: CameraViewControllerDelegate {
         var tickets = realm.objects(Ticket)
         if let ticket = tickets.first {
             myTicket = ticket
-//            explanationTextView.text = myTicket!.explanationText
+
 //            println("grabbed ticket from realm")
         } else {
             myTicket = Ticket()

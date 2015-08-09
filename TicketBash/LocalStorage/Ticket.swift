@@ -35,6 +35,7 @@ class Ticket: Object {
     dynamic var phoneNumber: String = ""
     dynamic var parseObjectID: String = ""
     
+    
     override class func primaryKey() -> String {
         return "id"
     }
