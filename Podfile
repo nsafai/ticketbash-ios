@@ -17,6 +17,7 @@ target 'TicketBash' do
 	pod 'Stripe'
 	pod 'PaymentKit'
 	pod 'Stripe/ApplePay'
+	pod 'BMPageViewController'
 
 end
 

@@ -52,6 +52,7 @@ code_sign_if_enabled() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'Pods-TicketBash/BMPageViewController.framework'
   install_framework 'Pods-TicketBash/Bolts.framework'
   install_framework 'Pods-TicketBash/ConvenienceKit.framework'
   install_framework 'Pods-TicketBash/FBSDKCoreKit.framework'
@@ -68,6 +69,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-TicketBash/Stripe.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'Pods-TicketBash/BMPageViewController.framework'
   install_framework 'Pods-TicketBash/Bolts.framework'
   install_framework 'Pods-TicketBash/ConvenienceKit.framework'
   install_framework 'Pods-TicketBash/FBSDKCoreKit.framework'

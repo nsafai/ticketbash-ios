@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F4FC79E5679055EB6739D103"
-               BuildableName = "JLPDFGenerator.framework"
-               BlueprintName = "JLPDFGenerator"
+               BlueprintIdentifier = "E9D889F9E9542BAA0A366394"
+               BuildableName = "BMPageViewController.framework"
+               BlueprintName = "BMPageViewController"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

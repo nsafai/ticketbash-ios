@@ -19,6 +19,7 @@
 #import <Stripe/Stripe.h>
 #import <Stripe/Stripe+ApplePay.h>
 #import <PaymentKit/PTKView.h>
+#import <BMPageViewController/BMPageViewController.h>
 
 // unimported/installed pods:
 // pod 'FBSDKShareKit'

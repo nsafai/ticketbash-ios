@@ -15,15 +15,14 @@ class TicketOriginViewController: UIViewController {
     
     var parseLoginHelper: ParseLoginHelper!
     let loginViewController = PFLogInViewController()
-
-    
     let realm = Realm()
     var myTicket: Ticket?
     @IBOutlet weak var newYorkButton: UIButton!
     @IBOutlet weak var otherButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.parseLoginHelper = ParseLoginHelper {[unowned self] user, error in // Initialize the ParseLoginHelper with a callback
             
             if let error = error {
@@ -44,20 +43,19 @@ class TicketOriginViewController: UIViewController {
         
         if let ticket = tickets.first { // if there is a stored value then the 'tickets' array is not nil --> assign the value of the first ticket in the array to 'ticket'
             myTicket = ticket // assign the value of ticket to myTicket
-                    } else {
+        } else {
             myTicket = Ticket()
             //            println("created new ticket")
-            
-            realm.write({ () -> Void in
-                if self.myTicket?.isFirstTime == true {
-                    self.performSegueWithIdentifier("showInstructions", sender: self)
-                    self.navigationController?.navigationBarHidden = false
-                    self.myTicket?.isFirstTime = false
-                }
-            })
-            
         }
-
+        
+        self.performSegueWithIdentifier("showInstructions", sender: self)
+        realm.write({ () -> Void in
+            //                if self.myTicket?.isFirstTime == true {
+            self.navigationController?.navigationBarHidden = false
+            self.myTicket?.isFirstTime = false
+            //                }
+        })
+        
         let user = PFUser.currentUser()
         if (user != nil) {
             // someone is logged in
@@ -85,7 +83,7 @@ class TicketOriginViewController: UIViewController {
         }
         
     }
-
+    
     @IBAction func newYorkButton(sender: AnyObject) {
         realm.write { () -> Void in
             self.myTicket?.ticketOrigin = newYorkCity

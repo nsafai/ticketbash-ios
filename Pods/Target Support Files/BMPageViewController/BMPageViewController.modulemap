@@ -1,0 +1,6 @@
+framework module BMPageViewController {
+  umbrella header "BMPageViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

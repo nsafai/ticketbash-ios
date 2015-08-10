@@ -1,4 +1,5 @@
 PODS:
+  - BMPageViewController (1.0.0)
   - Bolts (1.2.0):
     - Bolts/AppLinks (= 1.2.0)
     - Bolts/Tasks (= 1.2.0)
@@ -40,6 +41,7 @@ PODS:
   - Stripe/Core (5.0.0)
 
 DEPENDENCIES:
+  - BMPageViewController
   - ConvenienceKit
   - FBSDKCoreKit
   - FBSDKLoginKit
@@ -55,6 +57,7 @@ DEPENDENCIES:
   - Stripe/ApplePay
 
 SPEC CHECKSUMS:
+  BMPageViewController: dd373e2459e982b120638268ff1665eb6b412ad7
   Bolts: d176cb1e0012175589e389a9db49b85e27787576
   ConvenienceKit: 947032f82c3d419d107e0cbde1fcb725e9c7ed62
   Facebook-iOS-SDK: cd87f0b2f0c1d9574b44e8fa2baacc275524bac3
