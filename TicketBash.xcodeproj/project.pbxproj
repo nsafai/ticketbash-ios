@@ -25,6 +25,7 @@
 		B130F5951B77B965005D64E0 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B130F5941B77B965005D64E0 /* Color.swift */; };
 		B130F5991B77C05F005D64E0 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B130F5981B77C05F005D64E0 /* Locations.swift */; };
 		B130F59B1B77C455005D64E0 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B130F59A1B77C455005D64E0 /* RequestViewController.swift */; };
+		B130F5A11B7832AA005D64E0 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B130F5A01B7832AA005D64E0 /* Delay.swift */; };
 		B157AAAE1B73B55600DF795F /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157AAAD1B73B55600DF795F /* PaymentViewController.swift */; };
 		B157AAB11B76B77200DF795F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157AAB01B76B77200DF795F /* HomeViewController.swift */; };
 		B157AAB31B76C22600DF795F /* TicketOriginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157AAB21B76C22600DF795F /* TicketOriginViewController.swift */; };
@@ -85,6 +86,7 @@
 		B130F5941B77B965005D64E0 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B130F5981B77C05F005D64E0 /* Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		B130F59A1B77C455005D64E0 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		B130F5A01B7832AA005D64E0 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
 		B157AAAD1B73B55600DF795F /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		B157AAAF1B74511000DF795F /* TicketBash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TicketBash.entitlements; sourceTree = "<group>"; };
 		B157AAB01B76B77200DF795F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				B130F5921B77B8A3005D64E0 /* GeneratePDF.swift */,
 				B130F5941B77B965005D64E0 /* Color.swift */,
 				B130F5981B77C05F005D64E0 /* Locations.swift */,
+				B130F5A01B7832AA005D64E0 /* Delay.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				B130F5931B77B8A3005D64E0 /* GeneratePDF.swift in Sources */,
 				B10D33921B6845F700DE4D8E /* Ticket.swift in Sources */,
 				B157AAB31B76C22600DF795F /* TicketOriginViewController.swift in Sources */,
+				B130F5A11B7832AA005D64E0 /* Delay.swift in Sources */,
 				B198533C1B6BE55300BFCEEE /* EvidenceCameraViewController.swift in Sources */,
 				B157AAB11B76B77200DF795F /* HomeViewController.swift in Sources */,
 			);

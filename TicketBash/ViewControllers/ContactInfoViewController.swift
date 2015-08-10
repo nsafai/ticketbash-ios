@@ -41,6 +41,8 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         stateTextField.delegate = self
         zipTextField.delegate = self
         phoneTextField.delegate = self
+        
+//        firstNameTextField.placeholder.textColor = paletteGrey
     }
     
     override func viewWillAppear(animated: Bool) {

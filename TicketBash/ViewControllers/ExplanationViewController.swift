@@ -16,43 +16,55 @@ import ParseFacebookUtils
 
 class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UITextViewDelegate {
     
+    
+    let placeholderText: String = "Enter text here…. Why did you NOT deserve the parking ticket?"
+    
     @IBOutlet weak var explanationTextView: UITextView!
     var myTicket: Ticket?
     let realm = Realm()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-//                self.performSegueWithIdentifier("showContactInfo", sender: self)
-            }
-
-
+    }
     
     override func viewWillAppear(animated: Bool) {
         self.navigationItem.hidesBackButton = true
         self.navigationController?.navigationBarHidden = false
         
-        
-        
-//        explanationTextView.returnKeyType = .Next
         explanationTextView.delegate = self
-        explanationTextView.becomeFirstResponder()
+        explanationTextView.text = self.placeholderText
+        explanationTextView.textColor = UIColor.lightGrayColor()
+        
+        delay(2.5) {
+            explanationTextView.becomeFirstResponder()
+        }
+
         
         var tickets = realm.objects(Ticket)
-        
         if let ticket = tickets.first {
             myTicket = ticket
-            explanationTextView.text = myTicket!.explanationText
-//            println("grabbed ticket from realm")
+//            explanationTextView.text = myTicket!.explanationText
         } else {
             myTicket = Ticket()
-//            println("created new ticket")
         }
-        
     }
-
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        if textView.text == placeholderText {
+            textView.text = ""
+            textView.textColor = paletteWhite
+        }
+        textView.becomeFirstResponder()
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        if textView.text == "" {
+            textView.text = placeholderText
+            textView.textColor = paletteGrey
+        }
+        textView.resignFirstResponder()
+    }
+    
     @IBAction func nextButton(sender: AnyObject) {
         
         if let ticket = self.myTicket {
@@ -61,9 +73,8 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
                 self.realm.add(ticket, update: true) // 3 Add  new ticket to Realm if none exists, else update it
             }
         }
-//        println(myTicket)
         self.performSegueWithIdentifier("showContactInfo", sender: self)
     }
 }
-    
+
    
