@@ -8,8 +8,12 @@
 
 import UIKit
 import RealmSwift
+import ConvenienceKit
 
 class RequestViewController: UIViewController, UITextFieldDelegate {
+    
+    var keyboardNotificationHandler: KeyboardNotificationHandler?
+    @IBOutlet weak var toolbarBottomSpace: NSLayoutConstraint!
     
     @IBOutlet weak var cityRequestTextField: UITextField!
     @IBOutlet weak var textImageView: UIImageView!
@@ -26,16 +30,6 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        delay(keyboardDelay) {
-            cityRequestTextField.becomeFirstResponder()
-        }
-        
-        cityRequestTextField .setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
-        
-        confirmationLabel.hidden = true
-        notifyButton.hidden = true
-        submitButton.hidden = true
-        
         var tickets = realm.objects(Ticket)
         
         if let ticket = tickets.first { // if there is a stored value then the 'tickets' array is not nil --> assign the value of the first ticket in the array to 'ticket'
@@ -47,6 +41,37 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
             //            println("created new ticket")
         }
       
+        //polish
+        
+        confirmationLabel.hidden = true
+        notifyButton.hidden = true
+//        submitButton.hidden = true
+        
+        delay(keyboardDelay) {
+            cityRequestTextField.becomeFirstResponder()
+        }
+        
+        keyboardNotificationHandler = KeyboardNotificationHandler()
+        
+        
+//        keyboardNotificationHandler!.keyboardWillBeHiddenHandler = { (height: CGFloat) in
+//            UIView.animateWithDuration(0.3){
+//                self.toolbarBottomSpace.constant = 0
+//                self.view.layoutIfNeeded()
+//            }
+//        }
+//        
+//        keyboardNotificationHandler!.keyboardWillBeShownHandler = { (height: CGFloat) in
+//            UIView.animateWithDuration(0.3) {
+//                self.toolbarBottomSpace.constant = -height
+//                self.view.layoutIfNeeded()
+//            }
+//        }
+        
+        cityRequestTextField .setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
+        
+        
+
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
