@@ -134,8 +134,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             var pdfPath = path.objectAtIndex(0).stringByAppendingPathComponent("hahaPDF.pdf")
             var myData = NSData(contentsOfFile: pdfPath)
             //            println(pdfPath)
-            
-            
+        
             //send to parse
             let ticketObject = PFObject(className: "Ticket")
             ticketObject["ticketPDF"] = PFFile(data: myData!)

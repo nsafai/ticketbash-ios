@@ -853,7 +853,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="paidOption:" destination="Rg3-IU-Rbz" eventType="touchUpInside" id="Nq0-aZ-3mC"/>
-                                    <segue destination="xBr-eK-H5V" kind="show" id="Vaa-ii-Dg2"/>
+                                    <segue destination="xBr-eK-H5V" kind="show" id="pL1-R3-uDf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="We will mail your dispute for you. Relax!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtK-75-jSY">
@@ -1056,10 +1056,13 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Payment Details" id="gua-b2-rAJ"/>
+                    <connections>
+                        <outlet property="applePayButton" destination="73S-hv-d4i" id="jZ1-ZM-FYb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FmS-yP-LZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3708" y="90.75"/>
+            <point key="canvasLocation" x="3678" y="816.75"/>
         </scene>
         <!--What to Expect-->
         <scene sceneID="uOj-8H-dxO">
@@ -1078,7 +1081,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8D-3q-MG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3708" y="783"/>
+            <point key="canvasLocation" x="3678" y="182.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k12-sy-4Ym">
