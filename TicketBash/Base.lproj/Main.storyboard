@@ -1037,7 +1037,68 @@
                     <view key="view" contentMode="scaleToFill" id="odA-GG-kV4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjO-rS-QiB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9XP-AC-iJC"/>
+                                    <constraint firstAttribute="height" constant="64" id="TL4-FO-xLo"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="eQE-rS-h7j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Dispute a Parking Ticket">
+                                    <color key="titleColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9XP-AC-iJC"/>
+                                        <exclude reference="TL4-FO-xLo"/>
+                                        <exclude reference="eQE-rS-h7j"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="TL4-FO-xLo"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="710" width="400" height="50"/>
+                                    <mask key="constraints">
+                                        <include reference="9XP-AC-iJC"/>
+                                        <exclude reference="TL4-FO-xLo"/>
+                                        <include reference="eQE-rS-h7j"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="UjO-rS-QiB" secondAttribute="trailing" constant="-16" id="i86-60-cLh"/>
+                            <constraint firstItem="UjO-rS-QiB" firstAttribute="leading" secondItem="odA-GG-kV4" secondAttribute="leadingMargin" constant="-16" id="oe4-b4-L3n"/>
+                            <constraint firstItem="FYF-gb-gk9" firstAttribute="top" secondItem="UjO-rS-QiB" secondAttribute="bottom" constant="40" id="oqA-BA-fKq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="UjO-rS-QiB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="i86-60-cLh"/>
+                                <exclude reference="oe4-b4-L3n"/>
+                                <exclude reference="oqA-BA-fKq"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="UjO-rS-QiB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="i86-60-cLh"/>
+                                <include reference="oe4-b4-L3n"/>
+                                <include reference="oqA-BA-fKq"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="0lO-34-YYy"/>
                     <connections>
@@ -2179,15 +2240,13 @@ the parking ticket?</string>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="-16" y="730" width="432" height="50"/>
+                                            <rect key="frame" x="-16" y="710" width="432" height="50"/>
                                             <mask key="constraints">
                                                 <include reference="Ca9-wz-UBK"/>
                                                 <exclude reference="tV5-6s-xHl"/>
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="disputeButton:" destination="2ns-cR-3xX" eventType="touchUpInside" id="GCl-6A-z3Z"/>
-                                            <action selector="disputeButton:" destination="dgK-6f-OWZ" eventType="touchUpInside" id="WfR-IK-FdD"/>
                                             <action selector="getStarted:" destination="dgK-6f-OWZ" eventType="touchUpInside" id="9YY-1i-ZMw"/>
                                         </connections>
                                     </button>
@@ -2267,7 +2326,9 @@ the parking ticket?</string>
                                     <constraint firstItem="e97-gF-eg3" firstAttribute="top" secondItem="SMI-NM-Rqi" secondAttribute="bottom" constant="91" id="wMU-mZ-YFj">
                                         <variation key="heightClass=regular" constant="25"/>
                                     </constraint>
-                                    <constraint firstAttribute="bottom" secondItem="e97-gF-eg3" secondAttribute="bottom" constant="20" id="yek-Gy-to7"/>
+                                    <constraint firstAttribute="bottom" secondItem="e97-gF-eg3" secondAttribute="bottom" constant="20" id="yek-Gy-to7">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                    </constraint>
                                     <constraint firstItem="e97-gF-eg3" firstAttribute="centerX" secondItem="SMI-NM-Rqi" secondAttribute="centerX" id="zbR-dX-Abn"/>
                                     <constraint firstAttribute="centerX" secondItem="D9s-68-ezR" secondAttribute="centerX" id="zxb-Rv-Ko9"/>
                                 </constraints>
@@ -2539,7 +2600,7 @@ the parking ticket?</string>
         <image name="ticketmeter" width="292" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Lwb-tt-1ys"/>
+        <segue reference="eV5-fN-nmN"/>
         <segue reference="Ka4-xC-2La"/>
     </inferredMetricsTieBreakers>
 </document>

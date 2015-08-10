@@ -23,6 +23,7 @@ class TicketOriginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.parseLoginHelper = ParseLoginHelper {[unowned self] user, error in // Initialize the ParseLoginHelper with a callback
             
             if let error = error {
@@ -34,10 +35,6 @@ class TicketOriginViewController: UIViewController {
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBarHidden = false
         
         var tickets = realm.objects(Ticket)
         
@@ -50,10 +47,22 @@ class TicketOriginViewController: UIViewController {
         
         self.performSegueWithIdentifier("showInstructions", sender: self)
         realm.write({ () -> Void in
-            //                if self.myTicket?.isFirstTime == true {
-            self.navigationController?.navigationBarHidden = false
-            self.myTicket?.isFirstTime = false
-            //                }
+                self.myTicket?.isFirstTime == true
+                self.realm.add(self.myTicket!, update: true)
+        })
+
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
+        
+
+        realm.write({ () -> Void in
+            if self.myTicket?.isFirstTime == true {
+                self.navigationController?.navigationBarHidden = false
+                self.myTicket?.isFirstTime = false
+                            }
+            self.realm.add(self.myTicket!, update: true)
         })
         
         let user = PFUser.currentUser()

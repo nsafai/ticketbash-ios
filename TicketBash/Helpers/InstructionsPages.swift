@@ -14,8 +14,12 @@ class InstructionsPages: BMPageViewControllerPage {
 
     @IBOutlet weak var getStartedButton: UIButton!
     
+
     
     @IBAction func getStarted(sender: AnyObject) {
-        self.performSegueWithIdentifier("dismissInstructions", sender: self)
+//        self.performSegueWithIdentifier("dismissInstructions", sender: self)
+        self.dismissViewControllerAnimated(true, completion: { () -> Void in
+            
+        })
     }
 }
