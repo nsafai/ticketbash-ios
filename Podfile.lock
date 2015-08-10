@@ -33,14 +33,11 @@ PODS:
     - Parse (~> 1.7)
   - PaymentKit (1.1.1)
   - PBJVision (0.4.2)
-  - Stripe (4.0.3):
-    - Stripe/Checkout (= 4.0.3)
-    - Stripe/Core (= 4.0.3)
-  - Stripe/ApplePay (4.0.3):
+  - Stripe (5.0.0):
+    - Stripe/Core (= 5.0.0)
+  - Stripe/ApplePay (5.0.0):
     - Stripe/Core
-  - Stripe/Checkout (4.0.3):
-    - Stripe/Core
-  - Stripe/Core (4.0.3)
+  - Stripe/Core (5.0.0)
 
 DEPENDENCIES:
   - ConvenienceKit
@@ -71,6 +68,6 @@ SPEC CHECKSUMS:
   ParseUI: d1228541b02a36a7354c8f47747f5f7a89cf1ff0
   PaymentKit: 323c25233af5060880daa0c31366d4b688c34487
   PBJVision: fe43c9a58bb1c1277d16fd802fa836d25e034a45
-  Stripe: 43a4307dc789483a61668d187c4a917d1348b0b6
+  Stripe: 7689b0065d0f2da3249582eada12bf1529bed2d0
 
 COCOAPODS: 0.38.2

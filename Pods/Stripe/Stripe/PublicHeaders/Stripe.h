@@ -11,14 +11,11 @@
 #import "STPBankAccount.h"
 #import "STPCard.h"
 #import "STPToken.h"
-#import "STPNullabilityMacros.h"
 
-#if __has_include("STPCheckoutOptions.h")
 #import "STPCheckoutOptions.h"
 #import "STPCheckoutViewController.h"
-#endif
 
-#if __has_include("Stripe+ApplePay.h") && TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE
 #import "Stripe+ApplePay.h"
 #import "STPAPIClient+ApplePay.h"
 #endif
