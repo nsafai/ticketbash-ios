@@ -32,7 +32,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="233"/>
                                 <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="yes"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nai-BF-uZm">
                                 <rect key="frame" x="0.0" y="299" width="600" height="50"/>
@@ -517,7 +517,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="nextButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QLp-2V-AiU"/>
+                                    <segue destination="Rg3-IU-Rbz" kind="show" id="iI3-uu-hmu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -601,6 +601,7 @@
                             <constraint firstAttribute="centerX" secondItem="M1E-El-j35" secondAttribute="centerX" id="xcu-uP-OBB"/>
                             <constraint firstItem="mFn-9o-yWM" firstAttribute="leading" secondItem="bkE-gM-V6O" secondAttribute="leading" id="z8F-wa-TKe"/>
                             <constraint firstItem="Bgk-ko-7j7" firstAttribute="top" secondItem="NJY-Hf-iRd" secondAttribute="bottom" constant="29" id="z8W-Jr-JgQ"/>
+                            <constraint firstItem="Iif-bA-2LN" firstAttribute="top" secondItem="USR-gL-8cZ" secondAttribute="bottom" constant="216" id="zcG-8t-Mm4"/>
                             <constraint firstItem="A5U-Lm-274" firstAttribute="top" secondItem="Bgk-ko-7j7" secondAttribute="bottom" id="zhk-CH-5k9"/>
                         </constraints>
                         <variation key="default">
@@ -667,6 +668,7 @@
                                 <exclude reference="J47-aU-IOM"/>
                                 <exclude reference="McM-QN-EyW"/>
                                 <exclude reference="VZj-EB-d0G"/>
+                                <exclude reference="zcG-8t-Mm4"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -739,6 +741,7 @@
                                 <include reference="J47-aU-IOM"/>
                                 <include reference="McM-QN-EyW"/>
                                 <include reference="VZj-EB-d0G"/>
+                                <include reference="zcG-8t-Mm4"/>
                             </mask>
                         </variation>
                     </view>
@@ -749,6 +752,7 @@
                         <outlet property="cityTextField" destination="3Aa-nY-uIN" id="E4K-rV-1yv"/>
                         <outlet property="firstNameTextField" destination="YLf-aH-I3Y" id="vwL-oE-oBm"/>
                         <outlet property="lastNameTextField" destination="Bgk-ko-7j7" id="MNv-OE-izu"/>
+                        <outlet property="nextButton" destination="USR-gL-8cZ" id="5Vx-cK-TOV"/>
                         <outlet property="phoneTextField" destination="9xd-1C-mzZ" id="6nG-TW-OX2"/>
                         <outlet property="stateTextField" destination="7Ko-9J-O4X" id="gxL-jN-uX3"/>
                         <outlet property="zipTextField" destination="aEn-BZ-Mes" id="zsW-x2-qWa"/>
@@ -1085,7 +1089,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="lmU-nU-j0s"/>
+                        <segue destination="Riq-p6-P05" kind="relationship" relationship="rootViewController" id="Oua-nQ-SOA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q00-Je-2fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2672,7 +2676,7 @@ the parking ticket?</string>
         <image name="ticketmeter" width="292" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Oua-nQ-SOA"/>
         <segue reference="Ka4-xC-2La"/>
-        <segue reference="lmU-nU-j0s"/>
     </inferredMetricsTieBreakers>
 </document>

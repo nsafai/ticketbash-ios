@@ -24,6 +24,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var phoneTextField: UITextField!
     
     
+    @IBOutlet weak var nextButton: UIButton!
     
     // local storage
     var myTicket: Ticket?
