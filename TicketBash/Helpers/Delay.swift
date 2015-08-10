@@ -8,6 +8,9 @@
 
 import Foundation
 
+let keyboardDelay = 0.3
+let instructionsDelay = 5.0
+
 func delay(delay:Double, closure:()->()) {
     dispatch_after(
         dispatch_time(

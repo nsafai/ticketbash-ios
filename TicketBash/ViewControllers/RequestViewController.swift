@@ -26,7 +26,12 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        cityRequestTextField.becomeFirstResponder()
+        delay(keyboardDelay) {
+            cityRequestTextField.becomeFirstResponder()
+        }
+        
+        cityRequestTextField .setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
+        
         confirmationLabel.hidden = true
         notifyButton.hidden = true
         submitButton.hidden = true

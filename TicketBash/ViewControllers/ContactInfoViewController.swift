@@ -47,7 +47,19 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(animated: Bool) {
         
-        firstNameTextField.becomeFirstResponder()
+        delay(keyboardDelay) {
+            firstNameTextField.becomeFirstResponder()
+        }
+        
+        firstNameTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
+        lastNameTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
+        addressTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
+        address2TextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
+        cityTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
+        stateTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
+        zipTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
+        phoneTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
+        
         
         var tickets = realm.objects(Ticket)
         

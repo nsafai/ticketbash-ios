@@ -24,23 +24,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
        
-        // Set up Stripe
+        UINavigationBar.appearance().barTintColor = paletteDarkBlue
+        UINavigationBar.appearance().tintColor = paletteWhite
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: paletteWhite]
+        UINavigationBar.appearance().translucent = false
+        
+        UIToolbar.appearance().barTintColor = paletteDarkBlue
+        UIToolbar.appearance().tintColor = paletteWhite
+        UIToolbar.appearance().translucent = false
+
+        
         Stripe.setDefaultPublishableKey(StripePublishableKey)
-//        [Stripe setDefaultPublishableKey:StripePublishableKey];
-        
-        // Set up the Parse SDK
+
         Parse.setApplicationId("XGBNSjq1RRCVmAiiX1QRVbcbqik1wJo41uUAomIu", clientKey: "YpZD16HyM0cq0w2sblzad4ecstKGjo5JAtp9IJ8C")
-        
         
         let acl = PFACL()
         acl.setPublicReadAccess(true)
         PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
         
-        // Initialize Facebook
         // 1
         PFFacebookUtils.initializeFacebook()
         
-         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
     }
 

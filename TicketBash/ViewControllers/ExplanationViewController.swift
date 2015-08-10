@@ -33,9 +33,9 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
         
         explanationTextView.delegate = self
         explanationTextView.text = self.placeholderText
-        explanationTextView.textColor = UIColor.lightGrayColor()
+//        explanationTextView.textColor = UIColor.lightGrayColor()
         
-        delay(2.5) {
+        delay(instructionsDelay) {
             explanationTextView.becomeFirstResponder()
         }
 
@@ -43,9 +43,13 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
         var tickets = realm.objects(Ticket)
         if let ticket = tickets.first {
             myTicket = ticket
-//            explanationTextView.text = myTicket!.explanationText
+//            if (explanationTextView.text != "") {
+//                explanationTextView.text = myTicket!.explanationText
+//            }
+            
         } else {
             myTicket = Ticket()
+            // first time user is seeing this screen        
         }
     }
     
@@ -74,6 +78,11 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
             }
         }
         self.performSegueWithIdentifier("showContactInfo", sender: self)
+    }
+    @IBAction func invisibleEdit(sender: AnyObject) {
+        delay(keyboardDelay) {
+                explanationTextView.becomeFirstResponder()
+        }
     }
 }
 
