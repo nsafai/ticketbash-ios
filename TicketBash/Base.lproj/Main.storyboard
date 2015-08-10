@@ -28,20 +28,59 @@
                                     <action selector="invisibleEdit:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rAe-cP-lqT"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5n2-aB-xJO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Enter text here…. Why did you NOT deserve the parking ticket?" translatesAutoresizingMaskIntoConstraints="NO" id="5n2-aB-xJO">
                                 <rect key="frame" x="0.0" y="64" width="600" height="233"/>
                                 <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="yes"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nai-BF-uZm">
+                                <rect key="frame" x="0.0" y="299" width="600" height="50"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="noE-5I-HPl">
+                                        <variation key="heightClass=regular" constant="50"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="t0R-wE-Bbh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="t0R-wE-Bbh"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="t0R-wE-Bbh"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="nextButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Tym-QX-ftU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="5n2-aB-xJO" secondAttribute="centerX" id="3hC-sG-Vob"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qlj-0k-pSo" secondAttribute="trailing" id="5ng-Rf-1m5">
                                 <variation key="heightClass=regular" constant="-16"/>
                             </constraint>
                             <constraint firstItem="5n2-aB-xJO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="736-p1-e0j">
                                 <variation key="heightClass=regular" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="5n2-aB-xJO" secondAttribute="trailing" constant="-16" id="8tM-Ym-ZEn"/>
+                            <constraint firstItem="Nai-BF-uZm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="9hw-Qn-U97"/>
+                            <constraint firstAttribute="centerX" secondItem="Nai-BF-uZm" secondAttribute="centerX" id="9nf-wP-WHg"/>
+                            <constraint firstItem="5n2-aB-xJO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="NEO-gh-ADz"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Nai-BF-uZm" secondAttribute="bottom" constant="216" id="TFE-Ms-qOr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nai-BF-uZm" secondAttribute="trailing" constant="-16" id="ed4-RT-VGa"/>
+                            <constraint firstItem="qlj-0k-pSo" firstAttribute="top" secondItem="5n2-aB-xJO" secondAttribute="bottom" constant="50" id="mK5-cW-auh"/>
+                            <constraint firstItem="qlj-0k-pSo" firstAttribute="top" secondItem="Nai-BF-uZm" secondAttribute="bottom" id="qgi-kA-oMJ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-50"/>
                             </constraint>
                             <constraint firstItem="qlj-0k-pSo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="sLW-hE-wUy">
                                 <variation key="heightClass=regular" constant="-16"/>
@@ -51,10 +90,20 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="qlj-0k-pSo"/>
+                                <exclude reference="Nai-BF-uZm"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="3hC-sG-Vob"/>
+                                <exclude reference="8tM-Ym-ZEn"/>
+                                <exclude reference="NEO-gh-ADz"/>
+                                <exclude reference="9hw-Qn-U97"/>
+                                <exclude reference="9nf-wP-WHg"/>
+                                <exclude reference="ed4-RT-VGa"/>
                                 <exclude reference="5ng-Rf-1m5"/>
+                                <exclude reference="mK5-cW-auh"/>
+                                <exclude reference="qgi-kA-oMJ"/>
                                 <exclude reference="sLW-hE-wUy"/>
+                                <exclude reference="TFE-Ms-qOr"/>
                                 <exclude reference="y2w-Uw-Cbq"/>
                             </mask>
                         </variation>
@@ -68,16 +117,33 @@
                                 <include reference="y2w-Uw-Cbq"/>
                             </mask>
                         </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Nai-BF-uZm"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3hC-sG-Vob"/>
+                                <include reference="8tM-Ym-ZEn"/>
+                                <include reference="NEO-gh-ADz"/>
+                                <include reference="9hw-Qn-U97"/>
+                                <include reference="9nf-wP-WHg"/>
+                                <include reference="ed4-RT-VGa"/>
+                                <include reference="mK5-cW-auh"/>
+                                <include reference="qgi-kA-oMJ"/>
+                                <include reference="TFE-Ms-qOr"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Explanation" id="AuP-CJ-sE5"/>
                     <connections>
                         <outlet property="explanationTextView" destination="5n2-aB-xJO" id="RHn-QI-AjV"/>
+                        <outlet property="nextButton" destination="Nai-BF-uZm" id="C8H-g1-geU"/>
                         <segue destination="MKZ-8v-mWK" kind="show" identifier="showContactInfo" id="djk-7r-gLz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645" y="396.75"/>
+            <point key="canvasLocation" x="1644" y="396.75"/>
         </scene>
         <!--Contact Info-->
         <scene sceneID="nkc-bj-Dku">
@@ -1019,7 +1085,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Riq-p6-P05" kind="relationship" relationship="rootViewController" id="Lwb-tt-1ys"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="lmU-nU-j0s"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q00-Je-2fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1163,7 +1229,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="20" y="104" width="344" height="200"/>
+                                    <rect key="frame" x="19" y="104" width="345" height="200"/>
                                     <mask key="constraints">
                                         <include reference="NWn-uq-Ie2"/>
                                     </mask>
@@ -1187,7 +1253,7 @@
                                 <variation key="heightClass=regular" constant="16"/>
                             </constraint>
                             <constraint firstItem="0fT-uE-HtO" firstAttribute="leading" secondItem="3hv-sS-Hzc" secondAttribute="leadingMargin" constant="20" id="eZb-EM-ipx">
-                                <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="3"/>
                             </constraint>
                             <constraint firstItem="tzp-ts-WhS" firstAttribute="top" secondItem="AEk-iS-yXn" secondAttribute="bottom" constant="10" id="fSs-3Z-KEF"/>
                             <constraint firstAttribute="centerY" secondItem="tzp-ts-WhS" secondAttribute="centerY" constant="288.5" id="gcn-Py-8YE">
@@ -1286,7 +1352,7 @@
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="20" y="84" width="360" height="200"/>
+                                            <rect key="frame" x="20" y="104" width="360" height="200"/>
                                             <mask key="constraints">
                                                 <include reference="GWM-d5-bwV"/>
                                                 <include reference="kvy-U4-3O6"/>
@@ -1315,7 +1381,7 @@
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="69" y="20" width="261" height="54"/>
+                                            <rect key="frame" x="69" y="40" width="261" height="54"/>
                                             <mask key="constraints">
                                                 <exclude reference="grB-3w-POM"/>
                                             </mask>
@@ -1330,7 +1396,9 @@
                                     <constraint firstAttribute="centerX" secondItem="Mrm-9e-qRs" secondAttribute="centerX" id="PFa-aH-ep7"/>
                                     <constraint firstAttribute="trailing" secondItem="7bu-EZ-rcw" secondAttribute="trailing" constant="20" id="R2p-lS-lTD"/>
                                     <constraint firstItem="7bu-EZ-rcw" firstAttribute="leading" secondItem="f2r-Qo-VRS" secondAttribute="leading" constant="20" id="bWZ-y6-EFb"/>
-                                    <constraint firstItem="Mrm-9e-qRs" firstAttribute="top" secondItem="f2r-Qo-VRS" secondAttribute="top" constant="20" id="pqY-No-g4H"/>
+                                    <constraint firstItem="Mrm-9e-qRs" firstAttribute="top" secondItem="f2r-Qo-VRS" secondAttribute="top" constant="20" id="pqY-No-g4H">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -1866,7 +1934,7 @@ the parking ticket?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5Y-t7-9rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="644" y="1339"/>
+            <point key="canvasLocation" x="648" y="1168.5"/>
         </scene>
         <!--Picture of Evidence-->
         <scene sceneID="3D1-aH-9VK">
@@ -2272,7 +2340,7 @@ the parking ticket?</string>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="69" y="20" width="261" height="54"/>
+                                            <rect key="frame" x="69" y="40" width="261" height="54"/>
                                             <mask key="constraints">
                                                 <exclude reference="Dbd-F5-D36"/>
                                             </mask>
@@ -2293,7 +2361,7 @@ the parking ticket?</string>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="20" y="84" width="360" height="200"/>
+                                            <rect key="frame" x="20" y="104" width="360" height="200"/>
                                             <mask key="constraints">
                                                 <include reference="aon-Nl-SYi"/>
                                             </mask>
@@ -2302,7 +2370,9 @@ the parking ticket?</string>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="D9s-68-ezR" firstAttribute="top" secondItem="Ftl-cX-7D8" secondAttribute="top" constant="20" id="0Xf-4d-7uf"/>
+                                    <constraint firstItem="D9s-68-ezR" firstAttribute="top" secondItem="Ftl-cX-7D8" secondAttribute="top" constant="20" id="0Xf-4d-7uf">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" secondItem="ozj-ba-Stk" secondAttribute="trailing" constant="20" id="3d5-E3-bE8"/>
                                     <constraint firstItem="ozj-ba-Stk" firstAttribute="leading" secondItem="Ftl-cX-7D8" secondAttribute="leading" constant="20" id="5D6-A8-pgo"/>
                                     <constraint firstAttribute="trailing" secondItem="e97-gF-eg3" secondAttribute="trailing" constant="-16" id="DSk-kh-af8"/>
@@ -2477,7 +2547,7 @@ the parking ticket?</string>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="20" y="84" width="360" height="200"/>
+                                            <rect key="frame" x="20" y="104" width="360" height="200"/>
                                             <mask key="constraints">
                                                 <include reference="2dw-Wz-b6P"/>
                                                 <include reference="hlt-yK-ilN"/>
@@ -2506,7 +2576,7 @@ the parking ticket?</string>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="69.5" y="20" width="261" height="54"/>
+                                            <rect key="frame" x="69.5" y="40" width="261" height="54"/>
                                             <mask key="constraints">
                                                 <exclude reference="GMh-es-m2p"/>
                                             </mask>
@@ -2518,7 +2588,9 @@ the parking ticket?</string>
                                     <constraint firstItem="Kyb-fn-tLg" firstAttribute="top" secondItem="A8g-M6-oab" secondAttribute="bottom" constant="10" id="3bf-Oc-S7i"/>
                                     <constraint firstAttribute="centerX" secondItem="Kyb-fn-tLg" secondAttribute="centerX" id="FLt-Dl-BnX"/>
                                     <constraint firstAttribute="trailing" secondItem="Kyb-fn-tLg" secondAttribute="trailing" constant="20" id="QB8-3S-iiE"/>
-                                    <constraint firstItem="A8g-M6-oab" firstAttribute="top" secondItem="gcr-XB-nSs" secondAttribute="top" constant="20" id="f2e-6c-0BA"/>
+                                    <constraint firstItem="A8g-M6-oab" firstAttribute="top" secondItem="gcr-XB-nSs" secondAttribute="top" constant="20" id="f2e-6c-0BA">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                    </constraint>
                                     <constraint firstItem="Kyb-fn-tLg" firstAttribute="leading" secondItem="gcr-XB-nSs" secondAttribute="leading" constant="20" id="lPX-pf-YR6"/>
                                     <constraint firstAttribute="centerX" secondItem="A8g-M6-oab" secondAttribute="centerX" id="rZT-Hh-4ik"/>
                                 </constraints>
@@ -2600,7 +2672,7 @@ the parking ticket?</string>
         <image name="ticketmeter" width="292" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eV5-fN-nmN"/>
         <segue reference="Ka4-xC-2La"/>
+        <segue reference="lmU-nU-j0s"/>
     </inferredMetricsTieBreakers>
 </document>

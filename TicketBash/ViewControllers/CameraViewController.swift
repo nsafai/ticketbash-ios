@@ -87,13 +87,11 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
 //                    println("Photo just accepted!!!")
                 })
             }
-        
     }
     @IBAction func photoButtonTapped(sender: AnyObject) {
         self.photoButton.userInteractionEnabled = false;
         self.photoButton.hidden = true
         self.vision.capturePhoto()
-
     }
 }
 
@@ -107,7 +105,6 @@ extension CameraViewController: PBJVisionDelegate {
             
                 self.acceptedImage = image
 
-      
             dispatch_async(dispatch_get_main_queue()) {
                 // unhide approve/retry buttons
                 self.retryButton.hidden = false

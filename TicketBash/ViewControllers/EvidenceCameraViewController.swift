@@ -21,9 +21,6 @@ class EvidenceCameraViewController: UIViewController {
             // do anything specific to ticket (different than in explanation)
         }
     }
-    override func viewWillAppear(animated: Bool) {
-        
-    }
 }
 
 extension EvidenceCameraViewController: CameraViewControllerDelegate {
@@ -32,11 +29,8 @@ extension EvidenceCameraViewController: CameraViewControllerDelegate {
         var tickets = realm.objects(Ticket)
         if let ticket = tickets.first {
             myTicket = ticket
-
-//            println("grabbed ticket from realm")
         } else {
             myTicket = Ticket()
-//            println("created new ticket")
         }
         
         if let ticket = self.myTicket {

@@ -22,9 +22,6 @@ class CitationCameraViewController: UIViewController {
             // do anything specific to ticket (different than in explanation)
         }
     }
-    override func viewWillAppear(animated: Bool) {
-        
-    }
 }
 
 extension CitationCameraViewController: CameraViewControllerDelegate {

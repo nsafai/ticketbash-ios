@@ -19,6 +19,7 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
     
     let placeholderText: String = "Enter text here…. Why did you NOT deserve the parking ticket?"
     
+    
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var explanationTextView: UITextView!
     var myTicket: Ticket?
@@ -26,34 +27,39 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showButton()
     }
     
     override func viewWillAppear(animated: Bool) {
         self.navigationItem.hidesBackButton = true
         self.navigationController?.navigationBarHidden = false
         
-        showButton()
-        
+        nextButton.hidden = true
         
         explanationTextView.delegate = self
         explanationTextView.text = self.placeholderText
-//        explanationTextView.textColor = UIColor.lightGrayColor()
         
-        delay(instructionsDelay) {
-            explanationTextView.becomeFirstResponder()
-        }
+//        delay(instructionsDelay) {
+//            explanationTextView.becomeFirstResponder()
+//        }
 
         
         var tickets = realm.objects(Ticket)
         if let ticket = tickets.first {
             myTicket = ticket
-//            if (explanationTextView.text != "") {
-//                explanationTextView.text = myTicket!.explanationText
-//            }
+            if (explanationTextView.text != "") {
+                explanationTextView.text = myTicket!.explanationText
+            }
             
         } else {
             myTicket = Ticket()
             // first time user is seeing this screen        
+        }
+        // this code needs to be below realm code above
+        showButton()
+        if explanationTextView.text == "" {
+            explanationTextView.text = placeholderText
+            explanationTextView.textColor = paletteGrey
         }
     }
     func showButton() {
@@ -70,14 +76,14 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
             textView.textColor = paletteWhite
         }
         textView.becomeFirstResponder()
+    }
+    
+    func textViewDidChange(textView: UITextView) {
         showButton()
     }
     
     func textViewDidEndEditing(textView: UITextView) {
-        if textView.text == "" {
-            textView.text = placeholderText
-            textView.textColor = paletteGrey
-        }
+        
         textView.resignFirstResponder()
     }
     
@@ -92,9 +98,7 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
         self.performSegueWithIdentifier("showContactInfo", sender: self)
     }
     @IBAction func invisibleEdit(sender: AnyObject) {
-        delay(keyboardDelay) {
                 explanationTextView.becomeFirstResponder()
-        }
     }
 }
 
