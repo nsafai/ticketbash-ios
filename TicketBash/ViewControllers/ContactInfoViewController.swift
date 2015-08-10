@@ -22,8 +22,6 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var zipTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
-    
-    
     @IBOutlet weak var nextButton: UIButton!
     
     // local storage
@@ -43,7 +41,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         zipTextField.delegate = self
         phoneTextField.delegate = self
         
-//        firstNameTextField.placeholder.textColor = paletteGrey
+        //        firstNameTextField.placeholder.textColor = paletteGrey
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -74,10 +72,10 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             stateTextField.text = myTicket!.mailingState
             zipTextField.text = myTicket!.mailingZip
             phoneTextField.text = myTicket!.phoneNumber
-//            println("grabbed ticket from realm")
+            //            println("grabbed ticket from realm")
         } else {
             myTicket = Ticket()
-//            println("created new ticket")
+            //            println("created new ticket")
         }
         
     }
@@ -105,7 +103,6 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         
         return true
     }
-    
     @IBAction func nextButton(sender: AnyObject) {
         
         if let ticket = self.myTicket { // safety just incase this button is clicked before viewWillAppear finished loading
@@ -120,10 +117,11 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                 ticket.phoneNumber = self.phoneTextField.text
                 self.realm.add(ticket, update: true) // 3 Add a new ticket to Realm if none exists, else update it
             }
+            
         }
-//        println(myTicket)
+        //        println(myTicket)
         if let ticketData = myTicket {
-//            println(ticketData)
+            //            println(ticketData)
             
             // generate PDF
             generatePDF(ticketData)
@@ -135,8 +133,8 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             // TODO: convert PDF to NSData to upload to Parse
             var pdfPath = path.objectAtIndex(0).stringByAppendingPathComponent("hahaPDF.pdf")
             var myData = NSData(contentsOfFile: pdfPath)
-//            println(pdfPath)
-
+            //            println(pdfPath)
+            
             
             //send to parse
             let ticketObject = PFObject(className: "Ticket")
@@ -163,10 +161,9 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                     }
                 }
             })
-
+            
             println("let's take a look at the ticket object: \(ticketObject)")
         }
+        
     }
-    
-
 }
