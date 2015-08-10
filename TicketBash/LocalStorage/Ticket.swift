@@ -12,7 +12,13 @@ import RealmSwift
 class Ticket: Object {
     dynamic var id = 0
     
-    // stored in TicketOriginViewController (needs to be created)
+    // stored in InstructionsViewController
+    dynamic var isFirstTime: Bool = true
+    
+    // stored in RequestViewController
+    dynamic var notificationsEnabled: Bool = false
+    
+    // stored in TicketOriginViewController
     dynamic var ticketOrigin: String = ""
     
     // stored in CitationCameraViewController

@@ -19,6 +19,7 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
     
     let placeholderText: String = "Enter text here…. Why did you NOT deserve the parking ticket?"
     
+    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var explanationTextView: UITextView!
     var myTicket: Ticket?
     let realm = Realm()
@@ -30,6 +31,9 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
     override func viewWillAppear(animated: Bool) {
         self.navigationItem.hidesBackButton = true
         self.navigationController?.navigationBarHidden = false
+        
+        showButton()
+        
         
         explanationTextView.delegate = self
         explanationTextView.text = self.placeholderText
@@ -52,6 +56,13 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
             // first time user is seeing this screen        
         }
     }
+    func showButton() {
+        if (explanationTextView.text == "") || (explanationTextView.text == self.placeholderText) {
+            nextButton.hidden = true
+        } else {
+            nextButton.hidden = false
+        }
+    }
     
     func textViewDidBeginEditing(textView: UITextView) {
         if textView.text == placeholderText {
@@ -59,6 +70,7 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
             textView.textColor = paletteWhite
         }
         textView.becomeFirstResponder()
+        showButton()
     }
     
     func textViewDidEndEditing(textView: UITextView) {

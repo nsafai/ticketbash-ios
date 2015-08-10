@@ -92,7 +92,13 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         }
         
         confirmationLabel.hidden = false
-        notifyButton.hidden = false
+        
+        if (self.myTicket?.notificationsEnabled == true) {
+            notifyButton.hidden = false
+        }
+//        else {
+//            notifyButton.hidden = true
+//        }
         
         //send to parse
         let requestObject = PFObject(className: "CityRequest")
@@ -123,7 +129,12 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         UIApplication.sharedApplication().registerUserNotificationSettings( settings )
         UIApplication.sharedApplication().registerForRemoteNotifications()
         
-        println(UIUserNotificationSettings)
+        realm.write { () -> Void in
+            self.myTicket?.notificationsEnabled = false
+            self.realm.add(self.myTicket!, update: true)
+            println(self.myTicket!.ticketOrigin)
         }
+        }
+    
     
     }
