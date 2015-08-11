@@ -22,8 +22,7 @@ class TicketOriginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         self.parseLoginHelper = ParseLoginHelper {[unowned self] user, error in // Initialize the ParseLoginHelper with a callback
             
             if let error = error {
@@ -37,7 +36,6 @@ class TicketOriginViewController: UIViewController {
         }
         
         var tickets = realm.objects(Ticket)
-        
         if let ticket = tickets.first { // if there is a stored value then the 'tickets' array is not nil --> assign the value of the first ticket in the array to 'ticket'
             myTicket = ticket // assign the value of ticket to myTicket
         } else {
@@ -49,20 +47,18 @@ class TicketOriginViewController: UIViewController {
                 self.myTicket?.isFirstTime == true
                 self.realm.add(self.myTicket!, update: true)
         })
-
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBarHidden = false
-        
         realm.write({ () -> Void in
             if self.myTicket?.isFirstTime == true {
                 self.navigationController?.navigationBarHidden = false
                 self.performSegueWithIdentifier("showInstructions", sender: self)
                 self.myTicket?.isFirstTime = false
-                            }
+            }
             self.realm.add(self.myTicket!, update: true)
         })
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
         
         let user = PFUser.currentUser()
         if (user != nil) {
@@ -89,7 +85,6 @@ class TicketOriginViewController: UIViewController {
             self.presentViewController(self.loginViewController, animated: true, completion: nil)
             //            self.navigationController?.pushViewController(self.loginViewController, animated: true)
         }
-        
     }
     
     @IBAction func newYorkButton(sender: AnyObject) {
