@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C9EFB835CE088BE5599BB8AB"
+               BlueprintIdentifier = "0484F1AF91F8BA770A713CD8"
                BuildableName = "Pods_TicketBash.framework"
                BlueprintName = "Pods-TicketBash"
                ReferencedContainer = "container:Pods.xcodeproj">

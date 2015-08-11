@@ -6,7 +6,6 @@ PODS:
   - Bolts/AppLinks (1.2.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.2.0)
-  - ConvenienceKit (0.2.0)
   - Facebook-iOS-SDK (3.23.2):
     - Bolts (~> 1.0)
   - FBSDKCoreKit (4.4.0):
@@ -19,8 +18,6 @@ PODS:
     - Bolts (~> 1.1)
     - FBSDKCoreKit/arc
   - FBSDKLoginKit (4.4.0):
-    - FBSDKCoreKit
-  - FBSDKShareKit (4.4.0):
     - FBSDKCoreKit
   - GooglePlacesAutocomplete (0.3.0)
   - JLPDFGenerator (1.0)
@@ -42,10 +39,8 @@ PODS:
 
 DEPENDENCIES:
   - BMPageViewController
-  - ConvenienceKit
   - FBSDKCoreKit
   - FBSDKLoginKit
-  - FBSDKShareKit
   - GooglePlacesAutocomplete
   - JLPDFGenerator
   - Parse
@@ -59,11 +54,9 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   BMPageViewController: dd373e2459e982b120638268ff1665eb6b412ad7
   Bolts: d176cb1e0012175589e389a9db49b85e27787576
-  ConvenienceKit: 947032f82c3d419d107e0cbde1fcb725e9c7ed62
   Facebook-iOS-SDK: cd87f0b2f0c1d9574b44e8fa2baacc275524bac3
   FBSDKCoreKit: 75bdd75c980e811db218488d99dd93b7740f4474
   FBSDKLoginKit: 02a9254a4c132412fa03577b0d53e936d068a7fb
-  FBSDKShareKit: a42865f20ba2d1cc548c4d0f73ad22cff6377ddb
   GooglePlacesAutocomplete: 7694636fce561c9d8ac807b8e490d299a730a633
   JLPDFGenerator: c030d93a1371f2d16e385d44a0a1ebc0ae68003d
   Parse: 373adbb1ad2e34d383542c3b28f678c49ebe4881

@@ -12,7 +12,6 @@ import PassKit
 import RealmSwift
 import Stripe
 
-
 class PaymentViewController: UIViewController {
     
     //local storage

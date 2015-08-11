@@ -54,10 +54,8 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-TicketBash/BMPageViewController.framework'
   install_framework 'Pods-TicketBash/Bolts.framework'
-  install_framework 'Pods-TicketBash/ConvenienceKit.framework'
   install_framework 'Pods-TicketBash/FBSDKCoreKit.framework'
   install_framework 'Pods-TicketBash/FBSDKLoginKit.framework'
-  install_framework 'Pods-TicketBash/FBSDKShareKit.framework'
   install_framework 'Pods-TicketBash/FacebookSDK.framework'
   install_framework 'Pods-TicketBash/GooglePlacesAutocomplete.framework'
   install_framework 'Pods-TicketBash/JLPDFGenerator.framework'
@@ -71,10 +69,8 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-TicketBash/BMPageViewController.framework'
   install_framework 'Pods-TicketBash/Bolts.framework'
-  install_framework 'Pods-TicketBash/ConvenienceKit.framework'
   install_framework 'Pods-TicketBash/FBSDKCoreKit.framework'
   install_framework 'Pods-TicketBash/FBSDKLoginKit.framework'
-  install_framework 'Pods-TicketBash/FBSDKShareKit.framework'
   install_framework 'Pods-TicketBash/FacebookSDK.framework'
   install_framework 'Pods-TicketBash/GooglePlacesAutocomplete.framework'
   install_framework 'Pods-TicketBash/JLPDFGenerator.framework'

@@ -8,12 +8,9 @@
 
 import UIKit
 import RealmSwift
-import ConvenienceKit
 
 class RequestViewController: UIViewController, UITextFieldDelegate {
-    
-    var keyboardNotificationHandler: KeyboardNotificationHandler?
-    @IBOutlet weak var toolbarBottomSpace: NSLayoutConstraint!
+
     
     @IBOutlet weak var cityRequestTextField: UITextField!
     @IBOutlet weak var textImageView: UIImageView!
@@ -26,11 +23,16 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         cityRequestTextField.delegate = self
-        
+        cityRequestTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+
     }
     
     override func viewWillAppear(animated: Bool) {
         var tickets = realm.objects(Ticket)
+        
+        if cityRequestTextField.text == "" {
+            submitButton.hidden = true
+        }
         
         if let ticket = tickets.first { // if there is a stored value then the 'tickets' array is not nil --> assign the value of the first ticket in the array to 'ticket'
             myTicket = ticket // assign the value of ticket to myTicket
@@ -42,7 +44,6 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         }
       
         //polish
-        
         confirmationLabel.hidden = true
         notifyButton.hidden = true
 //        submitButton.hidden = true
@@ -50,28 +51,22 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         delay(keyboardDelay) {
             cityRequestTextField.becomeFirstResponder()
         }
-        
-        keyboardNotificationHandler = KeyboardNotificationHandler()
-        
-        
-//        keyboardNotificationHandler!.keyboardWillBeHiddenHandler = { (height: CGFloat) in
-//            UIView.animateWithDuration(0.3){
-//                self.toolbarBottomSpace.constant = 0
-//                self.view.layoutIfNeeded()
-//            }
-//        }
-//        
-//        keyboardNotificationHandler!.keyboardWillBeShownHandler = { (height: CGFloat) in
-//            UIView.animateWithDuration(0.3) {
-//                self.toolbarBottomSpace.constant = -height
-//                self.view.layoutIfNeeded()
-//            }
-//        }
-        
         cityRequestTextField .setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
-        
-        
-
+    }
+    
+    func textFieldDidChange(textField: UITextField) {
+        showButton()
+        if cityRequestTextField.text == "" {
+            submitButton.hidden = true
+        }
+    }
+    
+    func showButton() {
+        if (cityRequestTextField.text == "") {
+            submitButton.hidden = true
+        } else {
+            submitButton.hidden = false
+        }
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {

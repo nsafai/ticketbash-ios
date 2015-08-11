@@ -2150,7 +2150,6 @@ but adding new cities regularly</string>
                         <outlet property="notifyButton" destination="nen-xQ-ipQ" id="JD8-lm-JDo"/>
                         <outlet property="submitButton" destination="cYR-pW-VSJ" id="40s-xB-ckc"/>
                         <outlet property="textImageView" destination="W5C-Ny-Tfn" id="HML-Be-z3h"/>
-                        <outlet property="toolbarBottomSpace" destination="v01-hK-Wkm" id="O5Q-cX-nJL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uki-kG-36B" userLabel="First Responder" sceneMemberID="firstResponder"/>
