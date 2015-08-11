@@ -14,7 +14,6 @@ class InstructionsPages: BMPageViewControllerPage {
 
     @IBOutlet weak var getStartedButton: UIButton!
     
-
     
     @IBAction func getStarted(sender: AnyObject) {
 //        self.performSegueWithIdentifier("dismissInstructions", sender: self)

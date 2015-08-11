@@ -45,7 +45,6 @@ class TicketOriginViewController: UIViewController {
             //            println("created new ticket")
         }
         
-        self.performSegueWithIdentifier("showInstructions", sender: self)
         realm.write({ () -> Void in
                 self.myTicket?.isFirstTime == true
                 self.realm.add(self.myTicket!, update: true)
@@ -56,10 +55,10 @@ class TicketOriginViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
         
-
         realm.write({ () -> Void in
             if self.myTicket?.isFirstTime == true {
                 self.navigationController?.navigationBarHidden = false
+                self.performSegueWithIdentifier("showInstructions", sender: self)
                 self.myTicket?.isFirstTime = false
                             }
             self.realm.add(self.myTicket!, update: true)

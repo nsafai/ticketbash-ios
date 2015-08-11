@@ -18,10 +18,6 @@ import BMPageViewController
 class InstructionsViewController: BMPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     override func pageIdentifiers() -> [AnyObject] {
-        return ["step1", "step2", "step3", "step4"]
-    }
-    
-    func viewWillAppear() {
-        println("intructions view controller did appear")
+        return ["step1", "step2", "step3", "step4", "step5"]
     }
 }
