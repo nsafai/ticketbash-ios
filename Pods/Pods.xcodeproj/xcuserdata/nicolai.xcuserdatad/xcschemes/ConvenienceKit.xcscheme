@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0EB44FCFE79874556E86B7EF"
-               BuildableName = "GooglePlacesAutocomplete.framework"
-               BlueprintName = "GooglePlacesAutocomplete"
+               BlueprintIdentifier = "7B1AB33F2BB66B714598BED9"
+               BuildableName = "ConvenienceKit.framework"
+               BlueprintName = "ConvenienceKit"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

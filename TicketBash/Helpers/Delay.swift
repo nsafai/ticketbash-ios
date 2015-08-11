@@ -8,7 +8,7 @@
 
 import Foundation
 
-let keyboardDelay = 0.3
+let keyboardDelay = 0.1
 let instructionsDelay = 8.0
 let hesitationDelay = 2.0
 let noobieDelay = 8.0

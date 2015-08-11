@@ -202,6 +202,8 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         }
     }
     func determineNextButtonFunction() {
+        
+            // first name
         if ((firstNameTextField.isFirstResponder() == true) && (lastNameTextField.text == "")) {
             lastNameTextField.becomeFirstResponder()
         } else if ((firstNameTextField.isFirstResponder() == true) && (addressTextField.text == "")){
@@ -210,15 +212,29 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             address2TextField.becomeFirstResponder()
         } else if ((firstNameTextField.isFirstResponder() == true) && (phoneTextField.text == "")) {
             phoneTextField.becomeFirstResponder()
+        }
+            // last name
+        else if ((lastNameTextField.isFirstResponder() == true) && (firstNameTextField.text == "")) {
+            phoneTextField.becomeFirstResponder()
         } else if ((lastNameTextField.isFirstResponder() == true) && (addressTextField.text == "")){
             addressTextField.becomeFirstResponder()
         } else if ((lastNameTextField.isFirstResponder() == true) && (address2TextField.text == "")){
             address2TextField.becomeFirstResponder()
         } else if ((lastNameTextField.isFirstResponder() == true) && (phoneTextField.text == "")) {
             phoneTextField.becomeFirstResponder()
-        } else if ((address2TextField.isFirstResponder() == true) && (phoneTextField.text == "")) {
-            phoneTextField.becomeFirstResponder()
         }
+            // address 2
+        
+          else if ((address2TextField.isFirstResponder() == true) && (firstNameTextField.text == "")) {
+            firstNameTextField.becomeFirstResponder()
+        } else if ((address2TextField.isFirstResponder() == true) && (lastNameTextField.text == "")) {
+            lastNameTextField.becomeFirstResponder()
+        } else if ((address2TextField.isFirstResponder() == true) && (addressTextField.text == "")) {
+            addressTextField.becomeFirstResponder()
+        } else if ((address2TextField.isFirstResponder() == true) && (phoneTextField.text == "")) {
+        phoneTextField.becomeFirstResponder()
+    }
+
     }
 }
 extension ContactInfoViewController: GooglePlacesAutocompleteDelegate {

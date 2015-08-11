@@ -10,7 +10,7 @@ target 'TicketBash' do
 #	pod 'FBSDKShareKit'
 	pod 'Parse'
 	pod 'ParseUI'
-#	pod 'ConvenienceKit'
+	pod 'ConvenienceKit'
 	pod 'ParseFacebookUtils'
 	pod 'JLPDFGenerator'
 	pod 'GooglePlacesAutocomplete'

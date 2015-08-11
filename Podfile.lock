@@ -6,6 +6,7 @@ PODS:
   - Bolts/AppLinks (1.2.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.2.0)
+  - ConvenienceKit (0.2.0)
   - Facebook-iOS-SDK (3.23.2):
     - Bolts (~> 1.0)
   - FBSDKCoreKit (4.4.0):
@@ -39,6 +40,7 @@ PODS:
 
 DEPENDENCIES:
   - BMPageViewController
+  - ConvenienceKit
   - FBSDKCoreKit
   - FBSDKLoginKit
   - GooglePlacesAutocomplete
@@ -54,6 +56,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   BMPageViewController: dd373e2459e982b120638268ff1665eb6b412ad7
   Bolts: d176cb1e0012175589e389a9db49b85e27787576
+  ConvenienceKit: 947032f82c3d419d107e0cbde1fcb725e9c7ed62
   Facebook-iOS-SDK: cd87f0b2f0c1d9574b44e8fa2baacc275524bac3
   FBSDKCoreKit: 75bdd75c980e811db218488d99dd93b7740f4474
   FBSDKLoginKit: 02a9254a4c132412fa03577b0d53e936d068a7fb

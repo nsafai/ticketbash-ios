@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1A1CA13FA1822CBB6847EB49"
+               BlueprintIdentifier = "19C5A476FD2A5C5B72970C26"
                BuildableName = "JLPDFGenerator.framework"
                BlueprintName = "JLPDFGenerator"
                ReferencedContainer = "container:Pods.xcodeproj">
