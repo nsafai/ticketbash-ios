@@ -1410,7 +1410,7 @@ After you mail it, the MTA will contact you directly within 1-5 weeks.</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="MKZ-8v-mWK" kind="relationship" relationship="rootViewController" id="OO3-eH-N3E"/>
+                        <segue destination="Riq-p6-P05" kind="relationship" relationship="rootViewController" id="SAp-N8-ITR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q00-Je-2fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3012,8 +3012,8 @@ If they decline your dispute, you can appeal the decision in person. Instruction
         <image name="ticketmeter" width="292" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="SAp-N8-ITR"/>
         <segue reference="Ka4-xC-2La"/>
         <segue reference="xpK-2k-4Nl"/>
-        <segue reference="OO3-eH-N3E"/>
     </inferredMetricsTieBreakers>
 </document>
