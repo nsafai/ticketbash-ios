@@ -20,6 +20,7 @@
 #import <Stripe/Stripe+ApplePay.h>
 #import <PaymentKit/PTKView.h>
 #import <BMPageViewController/BMPageViewController.h>
+#import <GooglePlacesAutocomplete/GooglePlacesAutocomplete.h>
 
 // unimported/installed pods:
 // pod 'FBSDKShareKit'

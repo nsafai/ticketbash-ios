@@ -11,6 +11,7 @@ import RealmSwift
 import Parse
 import JLPDFGenerator
 import Foundation
+import GooglePlacesAutocomplete
 
 class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     
@@ -18,11 +19,16 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var address2TextField: UITextField!
-    @IBOutlet weak var cityTextField: UITextField!
-    @IBOutlet weak var stateTextField: UITextField!
-    @IBOutlet weak var zipTextField: UITextField!
+//    @IBOutlet weak var cityTextField: UITextField!
+//    @IBOutlet weak var stateTextField: UITextField!
+//    @IBOutlet weak var zipTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
+    
+    let gpaViewController = GooglePlacesAutocomplete(
+        apiKey: "AIzaSyAL6IoheqMuKptTF3lnonhR3WZeLn9sNi4",
+        placeType: .Address
+    )
     
     // local storage
     var myTicket: Ticket?
@@ -36,15 +42,20 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         lastNameTextField.delegate = self
         addressTextField.delegate = self
         address2TextField.delegate = self
-        cityTextField.delegate = self
-        stateTextField.delegate = self
-        zipTextField.delegate = self
+//        cityTextField.delegate = self
+//        stateTextField.delegate = self
+//        zipTextField.delegate = self
         phoneTextField.delegate = self
         
+//        addressTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
         //        firstNameTextField.placeholder.textColor = paletteGrey
     }
     
     override func viewWillAppear(animated: Bool) {
+        
+        gpaViewController.placeDelegate = self
+        gpaViewController.navigationItem.title = "Mailing Address"
+        
         
         delay(keyboardDelay) {
             firstNameTextField.becomeFirstResponder()
@@ -54,9 +65,9 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         lastNameTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
         addressTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
         address2TextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
-        cityTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
-        stateTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
-        zipTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
+//        cityTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
+//        stateTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
+//        zipTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
         phoneTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
         
         
@@ -68,9 +79,9 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             lastNameTextField.text = myTicket!.lastName
             addressTextField.text = myTicket!.mailingAddress
             address2TextField.text = myTicket!.mailingAddress2
-            cityTextField.text = myTicket!.mailingCity
-            stateTextField.text = myTicket!.mailingState
-            zipTextField.text = myTicket!.mailingZip
+//            cityTextField.text = myTicket!.mailingCity
+//            stateTextField.text = myTicket!.mailingState
+//            zipTextField.text = myTicket!.mailingZip
             phoneTextField.text = myTicket!.phoneNumber
             //            println("grabbed ticket from realm")
         } else {
@@ -89,36 +100,55 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         } else if textField == addressTextField {
             address2TextField.becomeFirstResponder()
         } else if textField == address2TextField {
-            cityTextField.becomeFirstResponder()
-        } else if textField == cityTextField {
-            stateTextField.becomeFirstResponder()
-        } else if textField == stateTextField {
-            zipTextField.becomeFirstResponder()
-        } else if textField == zipTextField {
-            // this doesn't do anything yet because there is no Return key on numeric pad.
             phoneTextField.becomeFirstResponder()
-        } else if textField == phoneTextField {
-            // click next Button
         }
+//        else if textField == address2TextField {
+//            cityTextField.becomeFirstResponder()
+//        } else if textField == cityTextField {
+//            stateTextField.becomeFirstResponder()
+//        } else if textField == stateTextField {
+//            zipTextField.becomeFirstResponder()
+//        } else if textField == zipTextField {
+//            // this doesn't do anything yet because there is no Return key on numeric pad.
+//            phoneTextField.becomeFirstResponder()
+//        } else if textField == phoneTextField {
+//            // click next Button
+//        }
         
         return true
     }
-    @IBAction func nextButton(sender: AnyObject) {
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        if (textField == addressTextField) {
+            presentViewController(gpaViewController, animated: true, completion: nil)
+        }
         
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        saveToRealm()
+    }
+    
+    func saveToRealm() {
         if let ticket = self.myTicket { // safety just incase this button is clicked before viewWillAppear finished loading
             self.realm.write() { //changes must be done within a write transaction/closure.
                 ticket.firstName = self.firstNameTextField.text // change realm text value to what user just wrote in text view
                 ticket.lastName = self.lastNameTextField.text
                 ticket.mailingAddress = self.addressTextField.text
                 ticket.mailingAddress2 = self.address2TextField.text
-                ticket.mailingCity = self.cityTextField.text
-                ticket.mailingState = self.stateTextField.text
-                ticket.mailingZip = self.zipTextField.text
+                //                ticket.mailingCity = self.cityTextField.text
+                //                ticket.mailingState = self.stateTextField.text
+                //                ticket.mailingZip = self.zipTextField.text
                 ticket.phoneNumber = self.phoneTextField.text
                 self.realm.add(ticket, update: true) // 3 Add a new ticket to Realm if none exists, else update it
             }
             
         }
+    }
+    
+    @IBAction func nextButton(sender: AnyObject) {
+        
+        saveToRealm()
         //        println(myTicket)
         if let ticketData = myTicket {
             //            println(ticketData)
@@ -145,9 +175,9 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             ticketObject["lastName"] = ticketData.lastName
             ticketObject["mailingAddress"] = ticketData.mailingAddress
             ticketObject["mailingAddress2"] = ticketData.mailingAddress2
-            ticketObject["mailingCity"] = ticketData.mailingCity
-            ticketObject["mailingState"] = ticketData.mailingState
-            ticketObject["mailingZip"] = ticketData.mailingZip
+//            ticketObject["mailingCity"] = ticketData.mailingCity
+//            ticketObject["mailingState"] = ticketData.mailingState
+//            ticketObject["mailingZip"] = ticketData.mailingZip
             ticketObject["phoneNumber"] = ticketData.phoneNumber
             ticketObject["user"] = PFUser.currentUser()
             
@@ -163,6 +193,22 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             
             println("let's take a look at the ticket object: \(ticketObject)")
         }
+    }
+}
+extension ContactInfoViewController: GooglePlacesAutocompleteDelegate {
+    func placeSelected(place: Place) {
+        println(place.description)
         
+        place.getDetails { details in
+            println(details)
+        }
+        dismissViewControllerAnimated(true) { () -> Void in
+            self.addressTextField.text = place.description
+            self.address2TextField.becomeFirstResponder()
+        }
+    }
+    
+    func placeViewClosed() {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
