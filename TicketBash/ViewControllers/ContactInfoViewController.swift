@@ -19,9 +19,9 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var address2TextField: UITextField!
-//    @IBOutlet weak var cityTextField: UITextField!
-//    @IBOutlet weak var stateTextField: UITextField!
-//    @IBOutlet weak var zipTextField: UITextField!
+    //    @IBOutlet weak var cityTextField: UITextField!
+    //    @IBOutlet weak var stateTextField: UITextField!
+    //    @IBOutlet weak var zipTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
@@ -42,12 +42,12 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         lastNameTextField.delegate = self
         addressTextField.delegate = self
         address2TextField.delegate = self
-//        cityTextField.delegate = self
-//        stateTextField.delegate = self
-//        zipTextField.delegate = self
+        //        cityTextField.delegate = self
+        //        stateTextField.delegate = self
+        //        zipTextField.delegate = self
         phoneTextField.delegate = self
         
-//        addressTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        //        addressTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
         //        firstNameTextField.placeholder.textColor = paletteGrey
     }
     
@@ -65,9 +65,9 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         lastNameTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
         addressTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
         address2TextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
-//        cityTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
-//        stateTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
-//        zipTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
+        //        cityTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
+        //        stateTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
+        //        zipTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
         phoneTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
         
         
@@ -79,9 +79,9 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             lastNameTextField.text = myTicket!.lastName
             addressTextField.text = myTicket!.mailingAddress
             address2TextField.text = myTicket!.mailingAddress2
-//            cityTextField.text = myTicket!.mailingCity
-//            stateTextField.text = myTicket!.mailingState
-//            zipTextField.text = myTicket!.mailingZip
+            //            cityTextField.text = myTicket!.mailingCity
+            //            stateTextField.text = myTicket!.mailingState
+            //            zipTextField.text = myTicket!.mailingZip
             phoneTextField.text = myTicket!.phoneNumber
             //            println("grabbed ticket from realm")
         } else {
@@ -102,18 +102,18 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         } else if textField == address2TextField {
             phoneTextField.becomeFirstResponder()
         }
-//        else if textField == address2TextField {
-//            cityTextField.becomeFirstResponder()
-//        } else if textField == cityTextField {
-//            stateTextField.becomeFirstResponder()
-//        } else if textField == stateTextField {
-//            zipTextField.becomeFirstResponder()
-//        } else if textField == zipTextField {
-//            // this doesn't do anything yet because there is no Return key on numeric pad.
-//            phoneTextField.becomeFirstResponder()
-//        } else if textField == phoneTextField {
-//            // click next Button
-//        }
+        //        else if textField == address2TextField {
+        //            cityTextField.becomeFirstResponder()
+        //        } else if textField == cityTextField {
+        //            stateTextField.becomeFirstResponder()
+        //        } else if textField == stateTextField {
+        //            zipTextField.becomeFirstResponder()
+        //        } else if textField == zipTextField {
+        //            // this doesn't do anything yet because there is no Return key on numeric pad.
+        //            phoneTextField.becomeFirstResponder()
+        //        } else if textField == phoneTextField {
+        //            // click next Button
+        //        }
         
         return true
     }
@@ -149,49 +149,75 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     @IBAction func nextButton(sender: AnyObject) {
         
         saveToRealm()
-        //        println(myTicket)
-        if let ticketData = myTicket {
-            //            println(ticketData)
-            
-            // generate PDF
-            generatePDF(ticketData)
-            
-            // find current directory path
-            let path:NSArray = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-            println(path.objectAtIndex(0))
-            
-            // TODO: convert PDF to NSData to upload to Parse
-            var pdfPath = path.objectAtIndex(0).stringByAppendingPathComponent("hahaPDF.pdf")
-            var myData = NSData(contentsOfFile: pdfPath)
-            //            println(pdfPath)
         
-            //send to parse
-            let ticketObject = PFObject(className: "Ticket")
-            ticketObject["ticketPDF"] = PFFile(data: myData!)
-            ticketObject["ticketPicture"] = PFFile(data: ticketData.ticketPicture)
-            ticketObject["evidencePicture"] = PFFile(data: ticketData.evidencePicture)
-            ticketObject["explanationText"] = ticketData.explanationText
-            ticketObject["firstName"] = ticketData.firstName
-            ticketObject["lastName"] = ticketData.lastName
-            ticketObject["mailingAddress"] = ticketData.mailingAddress
-            ticketObject["mailingAddress2"] = ticketData.mailingAddress2
-//            ticketObject["mailingCity"] = ticketData.mailingCity
-//            ticketObject["mailingState"] = ticketData.mailingState
-//            ticketObject["mailingZip"] = ticketData.mailingZip
-            ticketObject["phoneNumber"] = ticketData.phoneNumber
-            ticketObject["user"] = PFUser.currentUser()
+        if (firstNameTextField.text != "") && (lastNameTextField.text != "") && (addressTextField.text != "") && (phoneTextField.text != "") {
             
-            ticketObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
-                println("sent ticket to Parse")
-                if let ticket = self.myTicket {
-                    self.realm.write() {
-                        ticketData.parseObjectID = ticketObject.objectId!
-                        self.realm.add(ticket, update: true)
+            //        println(myTicket)
+            if let ticketData = myTicket {
+                //            println(ticketData)
+                
+                // generate PDF
+                generatePDF(ticketData)
+                
+                // find current directory path
+                let path:NSArray = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+                println(path.objectAtIndex(0))
+                
+                // TODO: convert PDF to NSData to upload to Parse
+                var pdfPath = path.objectAtIndex(0).stringByAppendingPathComponent("hahaPDF.pdf")
+                var myData = NSData(contentsOfFile: pdfPath)
+                //            println(pdfPath)
+                
+                //send to parse
+                let ticketObject = PFObject(className: "Ticket")
+                ticketObject["ticketPDF"] = PFFile(data: myData!)
+                ticketObject["ticketPicture"] = PFFile(data: ticketData.ticketPicture)
+                ticketObject["evidencePicture"] = PFFile(data: ticketData.evidencePicture)
+                ticketObject["explanationText"] = ticketData.explanationText
+                ticketObject["firstName"] = ticketData.firstName
+                ticketObject["lastName"] = ticketData.lastName
+                ticketObject["mailingAddress"] = ticketData.mailingAddress
+                ticketObject["mailingAddress2"] = ticketData.mailingAddress2
+                //            ticketObject["mailingCity"] = ticketData.mailingCity
+                //            ticketObject["mailingState"] = ticketData.mailingState
+                //            ticketObject["mailingZip"] = ticketData.mailingZip
+                ticketObject["phoneNumber"] = ticketData.phoneNumber
+                ticketObject["user"] = PFUser.currentUser()
+                
+                ticketObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
+                    println("sent ticket to Parse")
+                    if let ticket = self.myTicket {
+                        self.realm.write() {
+                            ticketData.parseObjectID = ticketObject.objectId!
+                            self.realm.add(ticket, update: true)
+                        }
                     }
-                }
-            })
-            
-            println("let's take a look at the ticket object: \(ticketObject)")
+                })
+                
+                println("let's take a look at the ticket object: \(ticketObject)")
+            }
+            self.performSegueWithIdentifier("submitContactInfo", sender: self)
+        } else {
+            determineNextButtonFunction()
+        }
+    }
+    func determineNextButtonFunction() {
+        if ((firstNameTextField.isFirstResponder() == true) && (lastNameTextField.text == "")) {
+            lastNameTextField.becomeFirstResponder()
+        } else if ((firstNameTextField.isFirstResponder() == true) && (addressTextField.text == "")){
+            addressTextField.becomeFirstResponder()
+        } else if ((firstNameTextField.isFirstResponder() == true) && (address2TextField.text == "")){
+            address2TextField.becomeFirstResponder()
+        } else if ((firstNameTextField.isFirstResponder() == true) && (phoneTextField.text == "")) {
+            phoneTextField.becomeFirstResponder()
+        } else if ((lastNameTextField.isFirstResponder() == true) && (addressTextField.text == "")){
+            addressTextField.becomeFirstResponder()
+        } else if ((lastNameTextField.isFirstResponder() == true) && (address2TextField.text == "")){
+            address2TextField.becomeFirstResponder()
+        } else if ((lastNameTextField.isFirstResponder() == true) && (phoneTextField.text == "")) {
+            phoneTextField.becomeFirstResponder()
+        } else if ((address2TextField.isFirstResponder() == true) && (phoneTextField.text == "")) {
+            phoneTextField.becomeFirstResponder()
         }
     }
 }

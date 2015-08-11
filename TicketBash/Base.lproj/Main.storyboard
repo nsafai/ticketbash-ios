@@ -245,7 +245,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="nextButton:" destination="MKZ-8v-mWK" eventType="touchUpInside" id="KOF-B1-25e"/>
-                                    <segue destination="Rg3-IU-Rbz" kind="show" id="iI3-uu-hmu"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="Vpt-xA-KrQ">
@@ -549,7 +548,7 @@
                             <constraint firstItem="USR-gL-8cZ" firstAttribute="leading" secondItem="66Q-cn-QhR" secondAttribute="leadingMargin" constant="-16" id="dhE-Cn-JPR"/>
                             <constraint firstItem="USR-gL-8cZ" firstAttribute="top" secondItem="M1E-El-j35" secondAttribute="bottom" constant="10" id="dj2-QU-BpU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="M1E-El-j35" secondAttribute="trailing" constant="15" id="dkW-Th-ATE">
-                                <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="Iif-bA-2LN" firstAttribute="top" secondItem="USR-gL-8cZ" secondAttribute="bottom" constant="216" id="dub-Sj-euy"/>
                             <constraint firstItem="nvK-JD-kiE" firstAttribute="leading" secondItem="66Q-cn-QhR" secondAttribute="leadingMargin" constant="20" id="fCk-gy-9y8"/>
@@ -560,7 +559,7 @@
                             <constraint firstItem="Bgk-ko-7j7" firstAttribute="top" secondItem="Vpt-xA-KrQ" secondAttribute="bottom" constant="10" id="hjf-bT-Vej"/>
                             <constraint firstItem="A5U-Lm-274" firstAttribute="leading" secondItem="66Q-cn-QhR" secondAttribute="leadingMargin" constant="20" id="i9C-FM-CuZ"/>
                             <constraint firstItem="M1E-El-j35" firstAttribute="leading" secondItem="66Q-cn-QhR" secondAttribute="leadingMargin" constant="15" id="jSB-gv-7az">
-                                <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="Bgk-ko-7j7" firstAttribute="leading" secondItem="YLf-aH-I3Y" secondAttribute="leading" id="jzB-PR-KyZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hPn-ZN-37P" secondAttribute="trailing" constant="20" id="kFc-h2-epr"/>
@@ -793,6 +792,7 @@
                         <outlet property="lastNameTextField" destination="Bgk-ko-7j7" id="MNv-OE-izu"/>
                         <outlet property="nextButton" destination="USR-gL-8cZ" id="5Vx-cK-TOV"/>
                         <outlet property="phoneTextField" destination="9xd-1C-mzZ" id="6nG-TW-OX2"/>
+                        <segue destination="Rg3-IU-Rbz" kind="show" identifier="submitContactInfo" id="neg-fo-vEq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eoi-bW-wFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1155,7 +1155,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="MKZ-8v-mWK" kind="relationship" relationship="rootViewController" id="zDS-Qw-vjL"/>
+                        <segue destination="Riq-p6-P05" kind="relationship" relationship="rootViewController" id="5PP-pd-6JM"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q00-Je-2fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1615,75 +1615,8 @@ the parking ticket?</string>
                                         <include reference="QSY-cd-NnJ"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="240" y="448" width="120" height="120"/>
-                                </variation>
                                 <connections>
                                     <action selector="photoButtonTapped:" destination="GdB-4y-KPe" eventType="touchUpInside" id="pct-Hi-F5l"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zd-Uo-VVP" userLabel="checkmark">
-                                <rect key="frame" x="509" y="314" width="75" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="HO6-Pm-iGR"/>
-                                    <constraint firstAttribute="height" constant="100" id="Ncr-Mp-Dpl"/>
-                                    <constraint firstAttribute="height" constant="75" id="dGx-NG-yW7"/>
-                                    <constraint firstAttribute="width" constant="100" id="mel-Kr-nMc"/>
-                                </constraints>
-                                <state key="normal" image="checkmark">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Ncr-Mp-Dpl"/>
-                                        <exclude reference="mel-Kr-nMc"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <exclude reference="HO6-Pm-iGR"/>
-                                        <include reference="Ncr-Mp-Dpl"/>
-                                        <exclude reference="dGx-NG-yW7"/>
-                                        <include reference="mel-Kr-nMc"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="484" y="150" width="100" height="100"/>
-                                </variation>
-                                <connections>
-                                    <action selector="acceptPicture:" destination="GdB-4y-KPe" eventType="touchUpInside" id="ywL-4Q-b48"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ky6-61-hFu" userLabel="retry">
-                                <rect key="frame" x="16" y="314" width="75" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="WrP-yv-2Vh"/>
-                                    <constraint firstAttribute="height" constant="100" id="bpy-yH-dA1"/>
-                                    <constraint firstAttribute="width" constant="100" id="hVE-hZ-Njf"/>
-                                    <constraint firstAttribute="height" constant="75" id="vNM-wc-KCM"/>
-                                </constraints>
-                                <state key="normal" image="refresh">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="bpy-yH-dA1"/>
-                                        <exclude reference="hVE-hZ-Njf"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <exclude reference="WrP-yv-2Vh"/>
-                                        <include reference="bpy-yH-dA1"/>
-                                        <include reference="hVE-hZ-Njf"/>
-                                        <exclude reference="vNM-wc-KCM"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="150" width="100" height="100"/>
-                                </variation>
-                                <connections>
-                                    <action selector="retryPicture:" destination="GdB-4y-KPe" eventType="touchUpInside" id="9N5-MY-iHU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a picture of your parking ticket" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="no3-bK-9Hz">
@@ -1706,10 +1639,73 @@ the parking ticket?</string>
                                         <include reference="Xcn-4c-cNI"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="50" y="45" width="500" height="235"/>
-                                </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zd-Uo-VVP" userLabel="checkmark">
+                                <rect key="frame" x="509" y="314" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="HO6-Pm-iGR"/>
+                                    <constraint firstAttribute="height" constant="100" id="Ncr-Mp-Dpl">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="75" id="dGx-NG-yW7"/>
+                                    <constraint firstAttribute="width" constant="100" id="mel-Kr-nMc">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                                    </constraint>
+                                </constraints>
+                                <state key="normal" image="checkmark">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ncr-Mp-Dpl"/>
+                                        <exclude reference="mel-Kr-nMc"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="HO6-Pm-iGR"/>
+                                        <include reference="Ncr-Mp-Dpl"/>
+                                        <exclude reference="dGx-NG-yW7"/>
+                                        <include reference="mel-Kr-nMc"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="acceptPicture:" destination="GdB-4y-KPe" eventType="touchUpInside" id="ywL-4Q-b48"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ky6-61-hFu" userLabel="retry">
+                                <rect key="frame" x="16" y="314" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="WrP-yv-2Vh"/>
+                                    <constraint firstAttribute="height" constant="100" id="bpy-yH-dA1">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="100" id="hVE-hZ-Njf">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="75" id="vNM-wc-KCM"/>
+                                </constraints>
+                                <state key="normal" image="refresh">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bpy-yH-dA1"/>
+                                        <exclude reference="hVE-hZ-Njf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="WrP-yv-2Vh"/>
+                                        <include reference="bpy-yH-dA1"/>
+                                        <include reference="hVE-hZ-Njf"/>
+                                        <exclude reference="vNM-wc-KCM"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="retryPicture:" destination="GdB-4y-KPe" eventType="touchUpInside" id="9N5-MY-iHU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1726,14 +1722,21 @@ the parking ticket?</string>
                             <constraint firstItem="no3-bK-9Hz" firstAttribute="top" secondItem="aVJ-YE-oXK" secondAttribute="bottom" constant="44" id="PRT-b1-txJ">
                                 <variation key="heightClass=regular" constant="25"/>
                             </constraint>
-                            <constraint firstItem="ky6-61-hFu" firstAttribute="centerY" secondItem="YpS-NE-l16" secondAttribute="centerY" id="Vhb-QP-5U9"/>
+                            <constraint firstItem="ky6-61-hFu" firstAttribute="centerY" secondItem="YpS-NE-l16" secondAttribute="centerY" id="Vhb-QP-5U9">
+                                <variation key="heightClass=regular-widthClass=compact" constant="89"/>
+                            </constraint>
                             <constraint firstItem="j7I-bD-f1b" firstAttribute="centerX" secondItem="YpS-NE-l16" secondAttribute="centerX" id="X0u-vY-MYn">
                                 <variation key="heightClass=regular" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="G6B-tI-vSm" firstAttribute="top" secondItem="j7I-bD-f1b" secondAttribute="bottom" constant="32" id="fEr-b8-D15"/>
-                            <constraint firstItem="G6B-tI-vSm" firstAttribute="top" secondItem="ky6-61-hFu" secondAttribute="bottom" constant="350" id="g3f-f0-P8k"/>
+                            <constraint firstItem="G6B-tI-vSm" firstAttribute="top" secondItem="ky6-61-hFu" secondAttribute="bottom" constant="350" id="g3f-f0-P8k">
+                                <variation key="heightClass=regular-widthClass=compact" constant="362"/>
+                            </constraint>
                             <constraint firstItem="G6B-tI-vSm" firstAttribute="top" secondItem="ky6-61-hFu" secondAttribute="bottom" constant="211" id="kX8-Xf-SZg">
                                 <variation key="heightClass=regular" constant="363"/>
+                            </constraint>
+                            <constraint firstAttribute="centerY" secondItem="ky6-61-hFu" secondAttribute="centerY" constant="-109" id="qe2-i0-8OO">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-8"/>
                             </constraint>
                             <constraint firstItem="ky6-61-hFu" firstAttribute="top" secondItem="aVJ-YE-oXK" secondAttribute="bottom" constant="350" id="qh5-JJ-sO4"/>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="top" secondItem="ky6-61-hFu" secondAttribute="top" id="rDn-XJ-Ve7"/>
@@ -1755,15 +1758,16 @@ the parking ticket?</string>
                                 <exclude reference="PRT-b1-txJ"/>
                                 <exclude reference="uJd-SZ-QZn"/>
                                 <exclude reference="Vhb-QP-5U9"/>
+                                <exclude reference="qe2-i0-8OO"/>
                                 <exclude reference="qh5-JJ-sO4"/>
                                 <exclude reference="zcd-Ws-VoX"/>
-                                <exclude reference="Bd6-yg-IFj"/>
-                                <exclude reference="EHc-FC-Opc"/>
                                 <exclude reference="0RE-Mm-4gw"/>
                                 <exclude reference="ALY-X3-t6d"/>
                                 <exclude reference="rDn-XJ-Ve7"/>
                                 <exclude reference="tq2-36-bRr"/>
                                 <exclude reference="wfS-OA-ePt"/>
+                                <exclude reference="Bd6-yg-IFj"/>
+                                <exclude reference="EHc-FC-Opc"/>
                                 <exclude reference="fEr-b8-D15"/>
                                 <exclude reference="g3f-f0-P8k"/>
                             </mask>
@@ -1781,10 +1785,6 @@ the parking ticket?</string>
                                 <exclude reference="qh5-JJ-sO4"/>
                                 <exclude reference="wew-w5-2JZ"/>
                                 <include reference="zcd-Ws-VoX"/>
-                                <include reference="Bd6-yg-IFj"/>
-                                <exclude reference="EHc-FC-Opc"/>
-                                <exclude reference="Hkr-pc-Ao5"/>
-                                <exclude reference="X0u-vY-MYn"/>
                                 <exclude reference="0RE-Mm-4gw"/>
                                 <exclude reference="80q-ef-DBJ"/>
                                 <exclude reference="ALY-X3-t6d"/>
@@ -1792,9 +1792,19 @@ the parking ticket?</string>
                                 <exclude reference="tq2-36-bRr"/>
                                 <include reference="wfS-OA-ePt"/>
                                 <exclude reference="zBE-5u-99P"/>
+                                <include reference="Bd6-yg-IFj"/>
+                                <exclude reference="EHc-FC-Opc"/>
+                                <exclude reference="Hkr-pc-Ao5"/>
+                                <exclude reference="X0u-vY-MYn"/>
                                 <include reference="fEr-b8-D15"/>
                                 <include reference="g3f-f0-P8k"/>
                                 <exclude reference="kX8-Xf-SZg"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="Vhb-QP-5U9"/>
+                                <include reference="qe2-i0-8OO"/>
                             </mask>
                         </variation>
                     </view>
@@ -2569,7 +2579,7 @@ but adding new cities regularly</string>
         <image name="ticketmeter" width="292" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="5PP-pd-6JM"/>
         <segue reference="Ka4-xC-2La"/>
-        <segue reference="zDS-Qw-vjL"/>
     </inferredMetricsTieBreakers>
 </document>
