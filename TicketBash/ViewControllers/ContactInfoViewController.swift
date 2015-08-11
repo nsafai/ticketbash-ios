@@ -19,10 +19,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var address2TextField: UITextField!
-    //    @IBOutlet weak var cityTextField: UITextField!
-    //    @IBOutlet weak var stateTextField: UITextField!
-    //    @IBOutlet weak var zipTextField: UITextField!
-    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
     let gpaViewController = GooglePlacesAutocomplete(
@@ -42,20 +39,14 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         lastNameTextField.delegate = self
         addressTextField.delegate = self
         address2TextField.delegate = self
-        //        cityTextField.delegate = self
-        //        stateTextField.delegate = self
-        //        zipTextField.delegate = self
-        phoneTextField.delegate = self
+        emailTextField.delegate = self
         
-        //        addressTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
-        //        firstNameTextField.placeholder.textColor = paletteGrey
     }
     
     override func viewWillAppear(animated: Bool) {
         
         gpaViewController.placeDelegate = self
         gpaViewController.navigationItem.title = "Mailing Address"
-        
         
         delay(keyboardDelay) {
             firstNameTextField.becomeFirstResponder()
@@ -65,11 +56,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         lastNameTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
         addressTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
         address2TextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
-        //        cityTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
-        //        stateTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
-        //        zipTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
-        phoneTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
-        
+        emailTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
         
         var tickets = realm.objects(Ticket)
         
@@ -79,42 +66,26 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             lastNameTextField.text = myTicket!.lastName
             addressTextField.text = myTicket!.mailingAddress
             address2TextField.text = myTicket!.mailingAddress2
-            //            cityTextField.text = myTicket!.mailingCity
-            //            stateTextField.text = myTicket!.mailingState
-            //            zipTextField.text = myTicket!.mailingZip
-            phoneTextField.text = myTicket!.phoneNumber
-            //            println("grabbed ticket from realm")
+            emailTextField.text = myTicket!.email
         } else {
             myTicket = Ticket()
-            //            println("created new ticket")
         }
         
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
-        if textField == firstNameTextField { // Switch focus to other text field
+        if textField == firstNameTextField {
             lastNameTextField.becomeFirstResponder()
         } else if textField == lastNameTextField {
+            emailTextField.becomeFirstResponder()
+        } else if textField == emailTextField {
             addressTextField.becomeFirstResponder()
         } else if textField == addressTextField {
             address2TextField.becomeFirstResponder()
         } else if textField == address2TextField {
-            phoneTextField.becomeFirstResponder()
+            nextButton.sendActionsForControlEvents(UIControlEvents.TouchUpInside)
         }
-        //        else if textField == address2TextField {
-        //            cityTextField.becomeFirstResponder()
-        //        } else if textField == cityTextField {
-        //            stateTextField.becomeFirstResponder()
-        //        } else if textField == stateTextField {
-        //            zipTextField.becomeFirstResponder()
-        //        } else if textField == zipTextField {
-        //            // this doesn't do anything yet because there is no Return key on numeric pad.
-        //            phoneTextField.becomeFirstResponder()
-        //        } else if textField == phoneTextField {
-        //            // click next Button
-        //        }
-        
         return true
     }
     
@@ -136,13 +107,9 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                 ticket.lastName = self.lastNameTextField.text
                 ticket.mailingAddress = self.addressTextField.text
                 ticket.mailingAddress2 = self.address2TextField.text
-                //                ticket.mailingCity = self.cityTextField.text
-                //                ticket.mailingState = self.stateTextField.text
-                //                ticket.mailingZip = self.zipTextField.text
-                ticket.phoneNumber = self.phoneTextField.text
+                ticket.email = self.emailTextField.text
                 self.realm.add(ticket, update: true) // 3 Add a new ticket to Realm if none exists, else update it
             }
-            
         }
     }
     
@@ -150,12 +117,9 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         
         saveToRealm()
         
-        if (firstNameTextField.text != "") && (lastNameTextField.text != "") && (addressTextField.text != "") && (phoneTextField.text != "") {
+        if (firstNameTextField.text != "") && (lastNameTextField.text != "") && (addressTextField.text != "") && (emailTextField.text != "") {
             
-            //        println(myTicket)
             if let ticketData = myTicket {
-                //            println(ticketData)
-                
                 // generate PDF
                 generatePDF(ticketData)
                 
@@ -178,10 +142,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                 ticketObject["lastName"] = ticketData.lastName
                 ticketObject["mailingAddress"] = ticketData.mailingAddress
                 ticketObject["mailingAddress2"] = ticketData.mailingAddress2
-                //            ticketObject["mailingCity"] = ticketData.mailingCity
-                //            ticketObject["mailingState"] = ticketData.mailingState
-                //            ticketObject["mailingZip"] = ticketData.mailingZip
-                ticketObject["phoneNumber"] = ticketData.phoneNumber
+                ticketObject["email"] = ticketData.email
                 ticketObject["user"] = PFUser.currentUser()
                 
                 ticketObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
@@ -203,38 +164,37 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     }
     func determineNextButtonFunction() {
         
-            // first name
+        // first name
         if ((firstNameTextField.isFirstResponder() == true) && (lastNameTextField.text == "")) {
             lastNameTextField.becomeFirstResponder()
+        } else if ((firstNameTextField.isFirstResponder() == true) && (emailTextField.text == "")) {
+            emailTextField.becomeFirstResponder()
         } else if ((firstNameTextField.isFirstResponder() == true) && (addressTextField.text == "")){
             addressTextField.becomeFirstResponder()
         } else if ((firstNameTextField.isFirstResponder() == true) && (address2TextField.text == "")){
             address2TextField.becomeFirstResponder()
-        } else if ((firstNameTextField.isFirstResponder() == true) && (phoneTextField.text == "")) {
-            phoneTextField.becomeFirstResponder()
         }
             // last name
         else if ((lastNameTextField.isFirstResponder() == true) && (firstNameTextField.text == "")) {
-            phoneTextField.becomeFirstResponder()
-        } else if ((lastNameTextField.isFirstResponder() == true) && (addressTextField.text == "")){
+            emailTextField.becomeFirstResponder()
+        } else if ((lastNameTextField.isFirstResponder() == true) && (emailTextField.text == "")) {
+            emailTextField.becomeFirstResponder()
+        }else if ((lastNameTextField.isFirstResponder() == true) && (addressTextField.text == "")){
             addressTextField.becomeFirstResponder()
         } else if ((lastNameTextField.isFirstResponder() == true) && (address2TextField.text == "")){
             address2TextField.becomeFirstResponder()
-        } else if ((lastNameTextField.isFirstResponder() == true) && (phoneTextField.text == "")) {
-            phoneTextField.becomeFirstResponder()
         }
             // address 2
-        
-          else if ((address2TextField.isFirstResponder() == true) && (firstNameTextField.text == "")) {
+        else if ((address2TextField.isFirstResponder() == true) && (firstNameTextField.text == "")) {
             firstNameTextField.becomeFirstResponder()
         } else if ((address2TextField.isFirstResponder() == true) && (lastNameTextField.text == "")) {
             lastNameTextField.becomeFirstResponder()
+        } else if ((address2TextField.isFirstResponder() == true) && (emailTextField.text == "")) {
+            emailTextField.becomeFirstResponder()
         } else if ((address2TextField.isFirstResponder() == true) && (addressTextField.text == "")) {
             addressTextField.becomeFirstResponder()
-        } else if ((address2TextField.isFirstResponder() == true) && (phoneTextField.text == "")) {
-        phoneTextField.becomeFirstResponder()
-    }
-
+        }
+        
     }
 }
 extension ContactInfoViewController: GooglePlacesAutocompleteDelegate {
