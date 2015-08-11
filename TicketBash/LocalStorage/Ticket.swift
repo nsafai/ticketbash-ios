@@ -33,6 +33,7 @@ class Ticket: Object {
     // stored in ContactInfoViewController
     dynamic var firstName: String = ""
     dynamic var lastName: String = ""
+    dynamic var email: String = ""
     dynamic var mailingAddress: String = ""
     dynamic var mailingAddress2: String = ""
     dynamic var mailingCity: String = ""
