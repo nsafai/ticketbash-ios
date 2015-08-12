@@ -25,19 +25,18 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         cityRequestTextField.delegate = self
         cityRequestTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
         disclaimerLabel.hidden = true
+        
     }
     
     override func viewWillAppear(animated: Bool) {
         var tickets = realm.objects(Ticket)
-        
-        if cityRequestTextField.text == "" {
-            submitButton.hidden = true
-        }
+        cityRequestTextField.text == ""
+        submitButton.hidden = true
         
         if let ticket = tickets.first { // if there is a stored value then the 'tickets' array is not nil --> assign the value of the first ticket in the array to 'ticket'
             myTicket = ticket // assign the value of ticket to myTicket
             
-            cityRequestTextField.text = myTicket!.ticketOrigin
+//            cityRequestTextField.text = myTicket!.ticketOrigin
         } else {
             myTicket = Ticket()
             //            println("created new ticket")

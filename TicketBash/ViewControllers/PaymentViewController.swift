@@ -83,6 +83,27 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
     //credit card
     func handleToken(token: STPToken!) {
         //send token to backend and create charge
+        
+//        let URLstring = "https://ticketbash.ngrok.com/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)&stripe_token=\(token!.tokenId)"
+//        
+//        // 5
+//        let url = NSURL(string: URLstring)  // Replace with your server or computer's local IP Address!
+//        
+//        let request = NSMutableURLRequest(URL: url!)
+//        request.HTTPMethod = "POST"
+//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.setValue("application/json", forHTTPHeaderField: "Accept")
+//        
+//        var error: NSError?
+//        
+//        // 7
+//        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response, data, error) -> Void in
+//            if (error != nil) {
+//                
+//            } else {
+//
+//            }
+//        }
     }
     
     //credit card
