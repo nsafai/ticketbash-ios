@@ -100,6 +100,9 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
     @IBAction func invisibleEdit(sender: AnyObject) {
                 explanationTextView.becomeFirstResponder()
     }
+    @IBAction func helpButton(sender: AnyObject) {
+        FeedBackMailer.sharedInstance.sendFeedback()
+    }
 }
 
    

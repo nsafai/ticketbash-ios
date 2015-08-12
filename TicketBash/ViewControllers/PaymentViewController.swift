@@ -66,6 +66,9 @@ class PaymentViewController: UIViewController {
         self.presentViewController(applePayController, animated: true, completion: nil)
         
     }
+    @IBAction func helpButton(sender: AnyObject) {
+        FeedBackMailer.sharedInstance.sendFeedback()
+    }
 }
 extension PaymentViewController: PKPaymentAuthorizationViewControllerDelegate {
     func paymentAuthorizationViewController(controller: PKPaymentAuthorizationViewController!, didAuthorizePayment payment: PKPayment!, completion: ((PKPaymentAuthorizationStatus) -> Void)!) {

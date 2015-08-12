@@ -40,4 +40,7 @@ class SubmitViewController: UIViewController {
     @IBAction func paidOption(sender: AnyObject) {
         println(myTicket)
     }
+    @IBAction func helpButton(sender: AnyObject) {
+        FeedBackMailer.sharedInstance.sendFeedback()
+    }
 }

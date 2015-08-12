@@ -28,6 +28,10 @@
 		B130F5A11B7832AA005D64E0 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B130F5A01B7832AA005D64E0 /* Delay.swift */; };
 		B130F5A31B785100005D64E0 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B130F5A21B785100005D64E0 /* InstructionsViewController.swift */; };
 		B130F5A91B7934BC005D64E0 /* InstructionsPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B130F5A81B7934BC005D64E0 /* InstructionsPages.swift */; };
+		B130F5AC1B7A9823005D64E0 /* ParseLoginCodeForRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B130F5AB1B7A9823005D64E0 /* ParseLoginCodeForRootViewController.swift */; };
+		B130F5AE1B7A9A5F005D64E0 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B130F5AD1B7A9A5F005D64E0 /* MessageUI.framework */; };
+		B130F5B01B7AA635005D64E0 /* FeedBackMailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B130F5AF1B7AA635005D64E0 /* FeedBackMailer.swift */; };
+		B130F5B21B7AD53E005D64E0 /* NextStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B130F5B11B7AD53E005D64E0 /* NextStepsViewController.swift */; };
 		B157AAAE1B73B55600DF795F /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157AAAD1B73B55600DF795F /* PaymentViewController.swift */; };
 		B157AAB31B76C22600DF795F /* TicketOriginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157AAB21B76C22600DF795F /* TicketOriginViewController.swift */; };
 		B163E4341B7032AE009AA5B8 /* CitationCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163E4331B7032AE009AA5B8 /* CitationCameraViewController.swift */; };
@@ -90,6 +94,10 @@
 		B130F5A01B7832AA005D64E0 /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
 		B130F5A21B785100005D64E0 /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		B130F5A81B7934BC005D64E0 /* InstructionsPages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsPages.swift; sourceTree = "<group>"; };
+		B130F5AB1B7A9823005D64E0 /* ParseLoginCodeForRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLoginCodeForRootViewController.swift; sourceTree = "<group>"; };
+		B130F5AD1B7A9A5F005D64E0 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		B130F5AF1B7AA635005D64E0 /* FeedBackMailer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackMailer.swift; sourceTree = "<group>"; };
+		B130F5B11B7AD53E005D64E0 /* NextStepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextStepsViewController.swift; sourceTree = "<group>"; };
 		B157AAAD1B73B55600DF795F /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		B157AAAF1B74511000DF795F /* TicketBash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TicketBash.entitlements; sourceTree = "<group>"; };
 		B157AAB21B76C22600DF795F /* TicketOriginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketOriginViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B130F5AE1B7A9A5F005D64E0 /* MessageUI.framework in Frameworks */,
 				B19853431B6ED6D100BFCEEE /* Foundation.framework in Frameworks */,
 				B10D33861B683B8200DE4D8E /* Realm.framework in Frameworks */,
 				B10D33881B683B8200DE4D8E /* RealmSwift.framework in Frameworks */,
@@ -135,6 +144,7 @@
 		683B9107FD748C86679A3C8E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B130F5AD1B7A9A5F005D64E0 /* MessageUI.framework */,
 				B19853421B6ED6D100BFCEEE /* Foundation.framework */,
 				B10D33831B68389400DE4D8E /* Realm.framework */,
 				B10D33841B68389400DE4D8E /* RealmSwift.framework */,
@@ -156,6 +166,7 @@
 				B1CC524D1B693C6C00DB1BD2 /* ContactInfoViewController.swift */,
 				B19853371B6BA7E600BFCEEE /* SubmitViewController.swift */,
 				B157AAAD1B73B55600DF795F /* PaymentViewController.swift */,
+				B130F5B11B7AD53E005D64E0 /* NextStepsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -178,6 +189,7 @@
 				B130F5981B77C05F005D64E0 /* Locations.swift */,
 				B130F5A01B7832AA005D64E0 /* Delay.swift */,
 				B130F5A81B7934BC005D64E0 /* InstructionsPages.swift */,
+				B130F5AF1B7AA635005D64E0 /* FeedBackMailer.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -205,6 +217,7 @@
 		B112DAED1B66C0A500F6ADE1 /* TicketBash */ = {
 			isa = PBXGroup;
 			children = (
+				B130F5AA1B7A97FE005D64E0 /* Deleted Code */,
 				B157AAAF1B74511000DF795F /* TicketBash.entitlements */,
 				B10D35471B692E9C00DE4D8E /* Helpers */,
 				B10D33901B6845E900DE4D8E /* LocalStorage */,
@@ -242,6 +255,14 @@
 				B112DB051B66C0A500F6ADE1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B130F5AA1B7A97FE005D64E0 /* Deleted Code */ = {
+			isa = PBXGroup;
+			children = (
+				B130F5AB1B7A9823005D64E0 /* ParseLoginCodeForRootViewController.swift */,
+			);
+			path = "Deleted Code";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,12 +426,14 @@
 				B19853381B6BA7E600BFCEEE /* SubmitViewController.swift in Sources */,
 				B198533E1B6BE93F00BFCEEE /* CameraViewController.swift in Sources */,
 				B130F59B1B77C455005D64E0 /* RequestViewController.swift in Sources */,
+				B130F5B21B7AD53E005D64E0 /* NextStepsViewController.swift in Sources */,
 				B112DAF11B66C0A500F6ADE1 /* AppDelegate.swift in Sources */,
 				B10D338D1B683CE400DE4D8E /* ExplanationViewController.swift in Sources */,
 				B10D354B1B692E9C00DE4D8E /* ParseLoginHelper.swift in Sources */,
 				B1CC524E1B693C6C00DB1BD2 /* ContactInfoViewController.swift in Sources */,
 				B130F5991B77C05F005D64E0 /* Locations.swift in Sources */,
 				B157AAAE1B73B55600DF795F /* PaymentViewController.swift in Sources */,
+				B130F5AC1B7A9823005D64E0 /* ParseLoginCodeForRootViewController.swift in Sources */,
 				B163E4341B7032AE009AA5B8 /* CitationCameraViewController.swift in Sources */,
 				B130F5A91B7934BC005D64E0 /* InstructionsPages.swift in Sources */,
 				B130F5951B77B965005D64E0 /* Color.swift in Sources */,
@@ -419,6 +442,7 @@
 				B130F5931B77B8A3005D64E0 /* GeneratePDF.swift in Sources */,
 				B10D33921B6845F700DE4D8E /* Ticket.swift in Sources */,
 				B157AAB31B76C22600DF795F /* TicketOriginViewController.swift in Sources */,
+				B130F5B01B7AA635005D64E0 /* FeedBackMailer.swift in Sources */,
 				B130F5A11B7832AA005D64E0 /* Delay.swift in Sources */,
 				B198533C1B6BE55300BFCEEE /* EvidenceCameraViewController.swift in Sources */,
 			);

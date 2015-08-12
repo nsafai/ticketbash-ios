@@ -24,9 +24,6 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="334" width="600" height="266"/>
-                                </variation>
                                 <connections>
                                     <action selector="invisibleEdit:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rAe-cP-lqT"/>
                                 </connections>
@@ -36,9 +33,6 @@
                                 <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="20" width="600" height="264"/>
-                                </variation>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nai-BF-uZm">
                                 <rect key="frame" x="0.0" y="299" width="600" height="50"/>
@@ -60,8 +54,7 @@
                                         <exclude reference="t0R-wE-Bbh"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="304" width="600" height="80"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="t0R-wE-Bbh"/>
                                     </mask>
@@ -142,7 +135,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Explanation" id="AuP-CJ-sE5"/>
+                    <navigationItem key="navigationItem" title="Explanation" id="AuP-CJ-sE5">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="bl0-yU-eaF">
+                            <connections>
+                                <action selector="helpButton:" destination="vXZ-lx-hvc" id="Gjp-aI-lVU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="explanationTextView" destination="5n2-aB-xJO" id="RHn-QI-AjV"/>
                         <outlet property="nextButton" destination="Nai-BF-uZm" id="C8H-g1-geU"/>
@@ -786,7 +785,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Mailing Address" id="Ary-f8-eva"/>
+                    <navigationItem key="navigationItem" title="Mailing Address" id="Ary-f8-eva">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="xpF-xp-uAk">
+                            <connections>
+                                <action selector="helpButton:" destination="MKZ-8v-mWK" id="bTS-r0-ePs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="address2TextField" destination="mFn-9o-yWM" id="dvM-gP-gPQ"/>
                         <outlet property="addressTextField" destination="bkE-gM-V6O" id="NCf-vj-VOM"/>
@@ -1001,7 +1006,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Final Step" id="6sI-DW-aba"/>
+                    <navigationItem key="navigationItem" title="Final Step" id="6sI-DW-aba">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="oDu-df-LZ8">
+                            <connections>
+                                <action selector="helpButton:" destination="Rg3-IU-Rbz" id="ZSl-Mr-ALO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTy-4u-zDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1130,7 +1141,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Payment Details" id="gua-b2-rAJ"/>
+                    <navigationItem key="navigationItem" title="Payment Details" id="gua-b2-rAJ">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="r5a-qT-QuR">
+                            <connections>
+                                <action selector="helpButton:" destination="xBr-eK-H5V" id="MJv-Sa-CjK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="applePayButton" destination="73S-hv-d4i" id="jZ1-ZM-FYb"/>
                     </connections>
@@ -1139,10 +1156,10 @@
             </objects>
             <point key="canvasLocation" x="3678" y="816.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Next Steps View Controller-->
         <scene sceneID="uOj-8H-dxO">
             <objects>
-                <viewController id="g1W-Wz-p9S" sceneMemberID="viewController">
+                <viewController id="g1W-Wz-p9S" customClass="NextStepsViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FER-8K-UO3"/>
                         <viewControllerLayoutGuide type="bottom" id="SBI-Uy-Wdr"/>
@@ -1224,6 +1241,9 @@
                                         <include reference="oXd-bI-nSZ"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="helpButton:" destination="g1W-Wz-p9S" eventType="touchUpInside" id="4fX-LM-tdj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ew-O4-RbU">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1389,7 +1409,13 @@ After you mail it, the MTA will contact you directly within 1-5 weeks.</string>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="V1G-hH-3zI"/>
+                    <navigationItem key="navigationItem" id="V1G-hH-3zI">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="OzV-z2-oS0">
+                            <connections>
+                                <action selector="helpButton:" destination="g1W-Wz-p9S" id="Kfy-Nc-aOK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8D-3q-MG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1406,7 +1432,7 @@ After you mail it, the MTA will contact you directly within 1-5 weeks.</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="MKZ-8v-mWK" kind="relationship" relationship="rootViewController" id="bFs-FO-e5H"/>
+                        <segue destination="Riq-p6-P05" kind="relationship" relationship="rootViewController" id="yvz-cd-eFg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q00-Je-2fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1610,44 +1636,7 @@ After you mail it, the MTA will contact you directly within 1-5 weeks.</string>
                                         <exclude reference="P8Q-7c-0x7"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="220" y="440" width="160" height="160"/>
-                                </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKB-65-fP3">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="354" id="8c1-Tb-1lS"/>
-                                    <constraint firstAttribute="height" constant="88" id="9z0-xQ-rPS"/>
-                                    <constraint firstAttribute="width" constant="304" id="iuO-uM-RYU"/>
-                                </constraints>
-                                <string key="text">Where did you receive
-the parking ticket?</string>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
-                                <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="8c1-Tb-1lS"/>
-                                        <exclude reference="9z0-xQ-rPS"/>
-                                        <exclude reference="iuO-uM-RYU"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <exclude reference="8c1-Tb-1lS"/>
-                                        <include reference="9z0-xQ-rPS"/>
-                                        <include reference="iuO-uM-RYU"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="148.5" y="32" width="303.5" height="76.5"/>
-                                    <mask key="constraints">
-                                        <exclude reference="9z0-xQ-rPS"/>
-                                        <exclude reference="iuO-uM-RYU"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="70g-Ic-SJ3">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -1670,9 +1659,6 @@ the parking ticket?</string>
                                     <mask key="constraints">
                                         <include reference="EyC-4n-hcn"/>
                                     </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="183.5" width="600" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="newYorkButton:" destination="Riq-p6-P05" eventType="touchUpInside" id="y8n-9F-YzV"/>
@@ -1705,13 +1691,43 @@ the parking ticket?</string>
                                         <exclude reference="UoM-eE-iHq"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="253.5" width="600" height="70"/>
-                                </variation>
                                 <connections>
                                     <segue destination="BWO-PK-kbq" kind="show" id="z7W-4t-eDE"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKB-65-fP3">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="354" id="8c1-Tb-1lS"/>
+                                    <constraint firstAttribute="height" constant="88" id="9z0-xQ-rPS"/>
+                                    <constraint firstAttribute="width" constant="304" id="iuO-uM-RYU"/>
+                                </constraints>
+                                <string key="text">Where did you receive
+the parking ticket?</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8c1-Tb-1lS"/>
+                                        <exclude reference="9z0-xQ-rPS"/>
+                                        <exclude reference="iuO-uM-RYU"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="8c1-Tb-1lS"/>
+                                        <include reference="9z0-xQ-rPS"/>
+                                        <include reference="iuO-uM-RYU"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="9z0-xQ-rPS"/>
+                                        <exclude reference="iuO-uM-RYU"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1746,9 +1762,9 @@ the parking ticket?</string>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="aNX-75-UfL"/>
-                                <exclude reference="gKB-65-fP3"/>
                                 <exclude reference="70g-Ic-SJ3"/>
                                 <exclude reference="enx-bi-y9z"/>
+                                <exclude reference="gKB-65-fP3"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="CZa-nl-ivk"/>
@@ -1781,9 +1797,9 @@ the parking ticket?</string>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="aNX-75-UfL"/>
-                                <include reference="gKB-65-fP3"/>
                                 <include reference="70g-Ic-SJ3"/>
                                 <include reference="enx-bi-y9z"/>
+                                <include reference="gKB-65-fP3"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="CZa-nl-ivk"/>
@@ -1814,7 +1830,13 @@ the parking ticket?</string>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Wl0-7X-IhG"/>
+                    <navigationItem key="navigationItem" id="Wl0-7X-IhG">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="tGZ-tY-ptu">
+                            <connections>
+                                <action selector="helpButton:" destination="Riq-p6-P05" id="e5Y-DS-Jdv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="newYorkButton" destination="70g-Ic-SJ3" id="fdi-Ij-3fU"/>
                         <outlet property="otherButton" destination="enx-bi-y9z" id="Pq3-N5-IOR"/>
@@ -1866,9 +1888,6 @@ the parking ticket?</string>
                                         <include reference="QSY-cd-NnJ"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="240" y="448" width="120" height="120"/>
-                                </variation>
                                 <connections>
                                     <action selector="photoButtonTapped:" destination="GdB-4y-KPe" eventType="touchUpInside" id="pct-Hi-F5l"/>
                                 </connections>
@@ -1892,9 +1911,6 @@ the parking ticket?</string>
                                     <mask key="constraints">
                                         <include reference="Xcn-4c-cNI"/>
                                     </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="50" y="45" width="500" height="235"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zd-Uo-VVP" userLabel="checkmark">
@@ -1925,9 +1941,6 @@ the parking ticket?</string>
                                         <exclude reference="dGx-NG-yW7"/>
                                         <include reference="mel-Kr-nMc"/>
                                     </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="524" y="178" width="60" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="acceptPicture:" destination="GdB-4y-KPe" eventType="touchUpInside" id="ywL-4Q-b48"/>
@@ -1961,9 +1974,6 @@ the parking ticket?</string>
                                         <include reference="hVE-hZ-Njf"/>
                                         <exclude reference="vNM-wc-KCM"/>
                                     </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="178" width="60" height="60"/>
                                 </variation>
                                 <connections>
                                     <action selector="retryPicture:" destination="GdB-4y-KPe" eventType="touchUpInside" id="9N5-MY-iHU"/>
@@ -2160,6 +2170,9 @@ the parking ticket?</string>
                                         <include reference="yWy-xU-Isl"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="48" y="26" width="304" height="88"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cYR-pW-VSJ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -2203,6 +2216,9 @@ the parking ticket?</string>
                                         <include reference="UTB-qY-mbi"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="56" y="242" width="288" height="1"/>
+                                </variation>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City Name, State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nX4-FK-hKN">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -2221,6 +2237,9 @@ the parking ticket?</string>
                                     <mask key="constraints">
                                         <include reference="zsN-kq-RHZ"/>
                                     </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="212" width="400" height="30"/>
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSx-pN-uZz">
@@ -2248,6 +2267,9 @@ the parking ticket?</string>
                                     <mask key="constraints">
                                         <include reference="Obg-Cg-P2f"/>
                                     </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="71.5" y="249" width="257" height="17"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nen-xQ-ipQ">
@@ -2305,6 +2327,9 @@ but adding new cities regularly</string>
                                         <include reference="RD6-R5-oD1"/>
                                         <exclude reference="kAA-2Y-a2V"/>
                                     </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="48" y="114" width="304" height="88"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNs-GK-JvA">
@@ -2482,10 +2507,17 @@ but adding new cities regularly</string>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="diV-1f-lq0"/>
+                    <navigationItem key="navigationItem" id="diV-1f-lq0">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="ND6-J3-jUA">
+                            <connections>
+                                <action selector="helpButton:" destination="BWO-PK-kbq" id="ywF-uu-ONE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="cityRequestTextField" destination="nX4-FK-hKN" id="ixb-JK-xFf"/>
                         <outlet property="confirmationLabel" destination="CSx-pN-uZz" id="sfj-C0-6If"/>
+                        <outlet property="disclaimerLabel" destination="1xm-1f-FJr" id="otv-xJ-YvW"/>
                         <outlet property="notifyButton" destination="nen-xQ-ipQ" id="JD8-lm-JDo"/>
                         <outlet property="submitButton" destination="cYR-pW-VSJ" id="40s-xB-ckc"/>
                         <outlet property="textImageView" destination="W5C-Ny-Tfn" id="HML-Be-z3h"/>
@@ -2493,7 +2525,7 @@ but adding new cities regularly</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uki-kG-36B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="312" y="-465"/>
+            <point key="canvasLocation" x="312" y="-279"/>
         </scene>
         <!--Step 4-->
         <scene sceneID="hqX-mh-UkM">
@@ -2830,10 +2862,10 @@ but adding new cities regularly</string>
             </objects>
             <point key="canvasLocation" x="633" y="2127.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Next Steps View Controller-->
         <scene sceneID="siq-MV-aFC">
             <objects>
-                <viewController id="YAa-d2-yeQ" sceneMemberID="viewController">
+                <viewController id="YAa-d2-yeQ" customClass="NextStepsViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vbc-4R-OIu"/>
                         <viewControllerLayoutGuide type="bottom" id="bNz-Gm-7ax"/>
@@ -2866,6 +2898,9 @@ but adding new cities regularly</string>
                                         <include reference="EYv-r0-zFg"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="helpButton:" destination="YAa-d2-yeQ" eventType="touchUpInside" id="8NX-ba-Nqz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKT-P2-fbS">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -2897,9 +2932,7 @@ but adding new cities regularly</string>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zgt-KQ-fIb">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <string key="text">We have generated and mailed your dispute for you.
-
-But... you’re on your own from here! 
+                                <string key="text">Woohoo! We have generated and mailed your dispute for you. 
 
 The MTA will contact you directly with a response within 1-5 weeks. They will either drop the ticket, offer you a reduced fine, or decline your dispute.
 
@@ -3010,6 +3043,13 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="2O0-fD-g6e">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="AQv-qW-sSA">
+                            <connections>
+                                <action selector="helpButton:" destination="YAa-d2-yeQ" id="6cy-ij-xpg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4t-8Z-LJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3030,8 +3070,8 @@ If they decline your dispute, you can appeal the decision in person. Instruction
         <image name="ticketmeter" width="292" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="yvz-cd-eFg"/>
         <segue reference="Ka4-xC-2La"/>
         <segue reference="xpK-2k-4Nl"/>
-        <segue reference="bFs-FO-e5H"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,11 +11,11 @@ import RealmSwift
 
 class RequestViewController: UIViewController, UITextFieldDelegate {
 
-    
     @IBOutlet weak var cityRequestTextField: UITextField!
     @IBOutlet weak var textImageView: UIImageView!
     @IBOutlet weak var confirmationLabel: UILabel!
     
+    @IBOutlet weak var disclaimerLabel: UILabel!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var notifyButton: UIButton!
     let realm = Realm()
@@ -24,7 +24,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         cityRequestTextField.delegate = self
         cityRequestTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
-
+        disclaimerLabel.hidden = true
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -80,6 +80,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBAction func submitRequest(sender: AnyObject) {
+        disclaimerLabel.hidden = true
         realm.write { () -> Void in
             self.myTicket?.ticketOrigin = self.cityRequestTextField.text
             self.realm.add(self.myTicket!, update: true)
@@ -109,10 +110,11 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         })
-
-        
     }
     
+    @IBAction func helpButton(sender: AnyObject) {
+        FeedBackMailer.sharedInstance.sendFeedback()
+    }
     @IBAction func notifyMe(sender: AnyObject) {
         //registering for sending user various kinds of notifications
         var types: UIUserNotificationType = UIUserNotificationType.Badge |
@@ -129,7 +131,5 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
             self.realm.add(self.myTicket!, update: true)
             println(self.myTicket!.ticketOrigin)
         }
-        }
-    
-    
     }
+}

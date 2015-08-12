@@ -196,6 +196,9 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+    @IBAction func helpButton(sender: AnyObject) {
+        FeedBackMailer.sharedInstance.sendFeedback()
+    }
 }
 extension ContactInfoViewController: GooglePlacesAutocompleteDelegate {
     func placeSelected(place: Place) {
