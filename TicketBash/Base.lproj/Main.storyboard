@@ -819,7 +819,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dD5-cO-0QD">
-                                <rect key="frame" x="-1" y="393" width="600" height="50"/>
+                                <rect key="frame" x="-1" y="393" width="601" height="50"/>
                                 <color key="backgroundColor" red="0.58431372550000005" green="0.64705882349999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="4k3-CT-FoY">
@@ -1068,6 +1068,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="creditCardPurchase:" destination="xBr-eK-H5V" eventType="touchUpInside" id="pMW-fp-x6V"/>
                                     <action selector="nextButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="37d-zT-KDe"/>
                                     <segue destination="YAa-d2-yeQ" kind="show" id="gDc-Yc-4on"/>
                                 </connections>
@@ -1150,6 +1151,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="applePayButton" destination="73S-hv-d4i" id="jZ1-ZM-FYb"/>
+                        <outlet property="creditCardButton" destination="bUp-Nq-PK9" id="tfo-t2-oMM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FmS-yP-LZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1432,7 +1434,7 @@ After you mail it, the MTA will contact you directly within 1-5 weeks.</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Riq-p6-P05" kind="relationship" relationship="rootViewController" id="yvz-cd-eFg"/>
+                        <segue destination="xBr-eK-H5V" kind="relationship" relationship="rootViewController" id="tqa-7L-fRx"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q00-Je-2fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1448,7 +1450,7 @@ After you mail it, the MTA will contact you directly within 1-5 weeks.</string>
                         <viewControllerLayoutGuide type="bottom" id="FYF-gb-gk9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="odA-GG-kV4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -2170,9 +2172,6 @@ the parking ticket?</string>
                                         <include reference="yWy-xU-Isl"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="48" y="26" width="304" height="88"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cYR-pW-VSJ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -2216,9 +2215,6 @@ the parking ticket?</string>
                                         <include reference="UTB-qY-mbi"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="56" y="242" width="288" height="1"/>
-                                </variation>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City Name, State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nX4-FK-hKN">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -2237,9 +2233,6 @@ the parking ticket?</string>
                                     <mask key="constraints">
                                         <include reference="zsN-kq-RHZ"/>
                                     </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="212" width="400" height="30"/>
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSx-pN-uZz">
@@ -2267,9 +2260,6 @@ the parking ticket?</string>
                                     <mask key="constraints">
                                         <include reference="Obg-Cg-P2f"/>
                                     </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="71.5" y="249" width="257" height="17"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nen-xQ-ipQ">
@@ -2327,9 +2317,6 @@ but adding new cities regularly</string>
                                         <include reference="RD6-R5-oD1"/>
                                         <exclude reference="kAA-2Y-a2V"/>
                                     </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="48" y="114" width="304" height="88"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNs-GK-JvA">
@@ -3070,8 +3057,7 @@ If they decline your dispute, you can appeal the decision in person. Instruction
         <image name="ticketmeter" width="292" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yvz-cd-eFg"/>
-        <segue reference="Ka4-xC-2La"/>
-        <segue reference="xpK-2k-4Nl"/>
+        <segue reference="tqa-7L-fRx"/>
+        <segue reference="lsY-UU-Z0X"/>
     </inferredMetricsTieBreakers>
 </document>

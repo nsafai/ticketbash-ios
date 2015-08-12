@@ -12,20 +12,22 @@ import PassKit
 import RealmSwift
 import Stripe
 
-class PaymentViewController: UIViewController {
+class PaymentViewController: UIViewController, PTKViewDelegate {
     
     //local storage
     var myTicket: Ticket?
     let realm = Realm()
     var shippingCost: NSDecimalNumber = 3
     
+    // credit card (paymentkit)
+    var paymentView: PTKView?
+    @IBOutlet weak var creditCardButton: UIButton!
+    
     //apple pay
     @IBOutlet weak var applePayButton: UIButton!
     let SupportedPaymentNetworks = [PKPaymentNetworkVisa, PKPaymentNetworkMasterCard, PKPaymentNetworkAmex]
     let ApplePaySwagMerchantID = "merchant.com.Lime.TicketBash"
-    
-    // credit card
-    weak var paymentView: PTKView?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +44,52 @@ class PaymentViewController: UIViewController {
             //            println("created new ticket")
         }
         
+        //credit card
+        paymentView = PTKView(frame: CGRectMake(view.frame.origin.x, applePayButton.frame.origin.y+20, 290, 55))
+        
+        // polish
+        paymentView?.cardNumberField.textColor = paletteWhite
+        paymentView?.cardExpiryField.textColor = paletteWhite
+        paymentView?.cardCVCField.textColor = paletteWhite
+        paymentView?.placeholderView.image = UIImage(named: "line")
+        
+//        paymentView?.center = view.center
+        paymentView?.delegate = self
+        view.addSubview(paymentView!)
+        
+        creditCardButton!.enabled = false
+        creditCardButton.hidden = true
+        
+    }
+    //credit card
+    func paymentView(paymentView: PTKView!, withCard card: PTKCard!, isValid valid: Bool) {
+        creditCardButton!.enabled = valid
+        creditCardButton.hidden = false
+    }
+    //credit card
+    func createToken() {
+        let card = STPCard()
+        card.number = paymentView!.card.number
+        card.expMonth = paymentView!.card.expMonth
+        card.expYear = paymentView!.card.expYear
+        card.cvc = paymentView!.card.cvc
+        
+        STPAPIClient.sharedClient().createTokenWithCard(card, completion: { (token, ErrorHandling) -> Void in
+            self.handleToken(token)
+        })
     }
     
+    //credit card
+    func handleToken(token: STPToken!) {
+        //send token to backend and create charge
+    }
+    
+    //credit card
+    @IBAction func creditCardPurchase(sender: AnyObject) {
+        createToken()
+    }
+    
+    //apple pay
     @IBAction func purchase(sender: UIButton) {
         
         let request = PKPaymentRequest()
