@@ -22,6 +22,7 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
     // credit card (paymentkit)
     var paymentView: PTKView?
     @IBOutlet weak var creditCardButton: UIButton!
+    @IBOutlet weak var creditCardLine: UIImageView!
     
     //apple pay
     @IBOutlet weak var applePayButton: UIButton!
@@ -44,8 +45,9 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
             //            println("created new ticket")
         }
         
-        //credit card
-        paymentView = PTKView(frame: CGRectMake(view.frame.origin.x, applePayButton.frame.origin.y+20, 290, 55))
+        //credit card text field location
+        paymentView = PTKView(frame: CGRectMake(creditCardLine.frame.origin.x+5, creditCardLine.frame.origin.y+34, 290, 55))
+//        paymentView?.center = view.center
         
         // polish
         paymentView?.cardNumberField.textColor = paletteWhite
@@ -53,7 +55,6 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
         paymentView?.cardCVCField.textColor = paletteWhite
         paymentView?.placeholderView.image = UIImage(named: "line")
         
-//        paymentView?.center = view.center
         paymentView?.delegate = self
         view.addSubview(paymentView!)
         
