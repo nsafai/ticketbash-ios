@@ -2183,7 +2183,7 @@ the parking ticket?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNc-Nq-M9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="396.75"/>
+            <point key="canvasLocation" x="955.5" y="399.75"/>
         </scene>
         <!--Request View Controller-->
         <scene sceneID="jsU-9A-f5w">
@@ -3149,7 +3149,7 @@ If they decline your dispute, you can appeal the decision in person. Instruction
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7a4-Xy-SWd"/>
-        <segue reference="lsY-UU-Z0X"/>
+        <segue reference="Ka4-xC-2La"/>
         <segue reference="FNU-p6-r6K"/>
     </inferredMetricsTieBreakers>
 </document>

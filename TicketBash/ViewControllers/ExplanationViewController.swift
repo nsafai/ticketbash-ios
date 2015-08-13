@@ -31,7 +31,7 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.navigationItem.hidesBackButton = true
+//        self.navigationItem.hidesBackButton = true
         self.navigationController?.navigationBarHidden = false
         
         nextButton.hidden = true

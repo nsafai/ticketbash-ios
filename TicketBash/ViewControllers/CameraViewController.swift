@@ -51,10 +51,11 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
+//        vision.stopPreview()
         vision.startPreview()
         self.photoButton.userInteractionEnabled = true;
         self.photoButton.hidden = false
-        self.navigationController?.navigationBarHidden = true
+//        self.navigationController?.navigationBarHidden = true
         
         if (self.parentViewController?.isKindOfClass(CitationCameraViewController) == true) {
             cameraText.text = "Take a picture of\nyour parking ticket"
@@ -64,7 +65,7 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
     }
     
     @IBAction func retryPicture(sender: AnyObject) {
-        self.vision.startPreview()
+        vision.startPreview()
         // hide buttons again
         retryButton.hidden = true
         acceptButton.hidden = true

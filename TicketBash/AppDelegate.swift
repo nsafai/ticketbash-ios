@@ -33,8 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIToolbar.appearance().barTintColor = paletteDarkBlue
         UIToolbar.appearance().tintColor = paletteWhite
         UIToolbar.appearance().translucent = false
-
         
+
         Stripe.setDefaultPublishableKey(StripePublishableKey)
 
         Parse.setApplicationId("XGBNSjq1RRCVmAiiX1QRVbcbqik1wJo41uUAomIu", clientKey: "YpZD16HyM0cq0w2sblzad4ecstKGjo5JAtp9IJ8C")

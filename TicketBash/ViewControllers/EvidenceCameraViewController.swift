@@ -15,6 +15,7 @@ class EvidenceCameraViewController: UIViewController {
     let realm = Realm()
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        CameraViewController().vision.stopPreview()
         if (segue.identifier == "showCamera2") {
             let cameraViewController = segue.destinationViewController as! CameraViewController
             cameraViewController.delegate = self

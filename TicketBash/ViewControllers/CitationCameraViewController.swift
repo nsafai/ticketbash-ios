@@ -14,7 +14,9 @@ class CitationCameraViewController: UIViewController {
     var myTicket: Ticket?
     let realm = Realm()
     
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        CameraViewController().vision.stopPreview()
         if (segue.identifier == "showCamera") {
             
             let cameraViewController = segue.destinationViewController as! CameraViewController
