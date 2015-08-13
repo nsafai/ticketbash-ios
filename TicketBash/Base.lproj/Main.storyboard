@@ -1098,8 +1098,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="959-K3-JFb"/>
                                         <exclude reference="8EK-mL-mTK"/>
+                                        <exclude reference="959-K3-JFb"/>
                                         <exclude reference="q0y-sI-V9P"/>
                                     </mask>
                                 </variation>
@@ -1111,8 +1111,8 @@
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <exclude reference="959-K3-JFb"/>
                                         <include reference="8EK-mL-mTK"/>
+                                        <exclude reference="959-K3-JFb"/>
                                         <exclude reference="q0y-sI-V9P"/>
                                     </mask>
                                 </variation>
@@ -1148,21 +1148,21 @@
                                 <exclude reference="rlK-yd-rmR"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Cb9-Xo-Mm5"/>
-                                <exclude reference="WY6-3Z-LEf"/>
-                                <exclude reference="poU-Bj-38F"/>
-                                <exclude reference="1be-yI-S2t"/>
-                                <exclude reference="pzW-cI-Fhh"/>
                                 <exclude reference="Mdj-e2-6A1"/>
                                 <exclude reference="PsW-Ge-VTp"/>
                                 <exclude reference="WO1-8Q-bXa"/>
                                 <exclude reference="XyV-wI-xtV"/>
+                                <exclude reference="e4F-mr-Y12"/>
+                                <exclude reference="1be-yI-S2t"/>
+                                <exclude reference="pzW-cI-Fhh"/>
+                                <exclude reference="Cb9-Xo-Mm5"/>
+                                <exclude reference="WY6-3Z-LEf"/>
+                                <exclude reference="poU-Bj-38F"/>
                                 <exclude reference="5Jg-vo-Vaf"/>
                                 <exclude reference="9bQ-Jq-xLK"/>
                                 <exclude reference="D9w-hy-VLg"/>
                                 <exclude reference="mka-cY-EeY"/>
                                 <exclude reference="z9r-RJ-xXY"/>
-                                <exclude reference="e4F-mr-Y12"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1173,21 +1173,21 @@
                                 <include reference="rlK-yd-rmR"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Cb9-Xo-Mm5"/>
-                                <include reference="WY6-3Z-LEf"/>
-                                <include reference="poU-Bj-38F"/>
-                                <exclude reference="1be-yI-S2t"/>
-                                <include reference="pzW-cI-Fhh"/>
                                 <include reference="Mdj-e2-6A1"/>
                                 <include reference="PsW-Ge-VTp"/>
                                 <include reference="WO1-8Q-bXa"/>
                                 <include reference="XyV-wI-xtV"/>
+                                <include reference="e4F-mr-Y12"/>
+                                <exclude reference="1be-yI-S2t"/>
+                                <include reference="pzW-cI-Fhh"/>
+                                <include reference="Cb9-Xo-Mm5"/>
+                                <include reference="WY6-3Z-LEf"/>
+                                <include reference="poU-Bj-38F"/>
                                 <include reference="5Jg-vo-Vaf"/>
                                 <include reference="9bQ-Jq-xLK"/>
                                 <include reference="D9w-hy-VLg"/>
                                 <include reference="mka-cY-EeY"/>
                                 <exclude reference="z9r-RJ-xXY"/>
-                                <include reference="e4F-mr-Y12"/>
                             </mask>
                         </variation>
                     </view>
@@ -2156,14 +2156,20 @@ the parking ticket?</string>
                             <segue destination="GdB-4y-KPe" kind="embed" identifier="showCamera2" id="lsY-UU-Z0X"/>
                         </connections>
                     </containerView>
-                    <navigationItem key="navigationItem" title="Picture of Evidence" id="Wo5-z5-VE7"/>
+                    <navigationItem key="navigationItem" title="Picture of Evidence" id="Wo5-z5-VE7">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="tGS-RT-5Ho">
+                            <connections>
+                                <action selector="helpButton:" destination="t6v-GG-VNE" id="3fW-gX-Alx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="sG2-kq-qBF" kind="show" identifier="showTicketController" id="dDZ-ab-F3K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wea-MY-dF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="312" y="399.75"/>
+            <point key="canvasLocation" x="234" y="411"/>
         </scene>
         <!--Picture of Citation-->
         <scene sceneID="P82-x8-9Ps">
@@ -2176,7 +2182,13 @@ the parking ticket?</string>
                             <segue destination="GdB-4y-KPe" kind="embed" identifier="showCamera" id="Ka4-xC-2La"/>
                         </connections>
                     </containerView>
-                    <navigationItem key="navigationItem" title="Picture of Citation" id="sOI-tg-hgQ"/>
+                    <navigationItem key="navigationItem" title="Picture of Citation" id="sOI-tg-hgQ">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="J8a-3b-VJr">
+                            <connections>
+                                <action selector="helpButton:" destination="sG2-kq-qBF" id="Rwq-tE-6Mr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="show" identifier="showExplanationController" id="zOI-NV-VTt"/>
                     </connections>
@@ -2388,8 +2400,8 @@ but adding new cities regularly</string>
                                 </variation>
                                 <variation key="heightClass=regular">
                                     <mask key="constraints">
-                                        <exclude reference="ulh-UJ-sdG"/>
                                         <include reference="0wh-GB-6lX"/>
+                                        <exclude reference="ulh-UJ-sdG"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -2490,29 +2502,20 @@ but adding new cities regularly</string>
                                 <exclude reference="CNs-GK-JvA"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Pgz-82-4pS"/>
-                                <exclude reference="WqA-WI-AQc"/>
-                                <exclude reference="Xux-I8-hLJ"/>
                                 <exclude reference="GnP-87-4mD"/>
                                 <exclude reference="aTm-PB-wKk"/>
                                 <exclude reference="aze-gx-bmz"/>
                                 <exclude reference="pgE-DT-IMK"/>
+                                <exclude reference="v01-hK-Wkm"/>
+                                <exclude reference="H0o-id-eLl"/>
+                                <exclude reference="Pwj-K6-0XY"/>
+                                <exclude reference="Pgz-82-4pS"/>
+                                <exclude reference="WqA-WI-AQc"/>
+                                <exclude reference="Xux-I8-hLJ"/>
                                 <exclude reference="QPl-3S-TJh"/>
                                 <exclude reference="TXk-L5-U3j"/>
                                 <exclude reference="XPv-tq-cWU"/>
                                 <exclude reference="djI-I5-d1z"/>
-                                <exclude reference="GtR-id-wBq"/>
-                                <exclude reference="JsG-4p-zzO"/>
-                                <exclude reference="N98-QF-3QR"/>
-                                <exclude reference="f5V-Ur-wau"/>
-                                <exclude reference="H0o-id-eLl"/>
-                                <exclude reference="Pwj-K6-0XY"/>
-                                <exclude reference="6a1-5F-AtH"/>
-                                <exclude reference="AkU-cd-vzK"/>
-                                <exclude reference="Gao-I5-BnZ"/>
-                                <exclude reference="rRo-Yx-u7e"/>
-                                <exclude reference="WSx-uw-GAG"/>
-                                <exclude reference="Xlr-fa-WxF"/>
                                 <exclude reference="AVg-nA-Mqv"/>
                                 <exclude reference="JFz-Ba-yYG"/>
                                 <exclude reference="LUq-zN-Ywm"/>
@@ -2523,7 +2526,16 @@ but adding new cities regularly</string>
                                 <exclude reference="kx0-qC-3ed"/>
                                 <exclude reference="q3G-6G-qkm"/>
                                 <exclude reference="u99-aU-S4z"/>
-                                <exclude reference="v01-hK-Wkm"/>
+                                <exclude reference="6a1-5F-AtH"/>
+                                <exclude reference="AkU-cd-vzK"/>
+                                <exclude reference="Gao-I5-BnZ"/>
+                                <exclude reference="rRo-Yx-u7e"/>
+                                <exclude reference="GtR-id-wBq"/>
+                                <exclude reference="JsG-4p-zzO"/>
+                                <exclude reference="N98-QF-3QR"/>
+                                <exclude reference="f5V-Ur-wau"/>
+                                <exclude reference="WSx-uw-GAG"/>
+                                <exclude reference="Xlr-fa-WxF"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -2536,21 +2548,15 @@ but adding new cities regularly</string>
                                 <include reference="nen-xQ-ipQ"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="v01-hK-Wkm"/>
+                                <include reference="H0o-id-eLl"/>
+                                <include reference="Pwj-K6-0XY"/>
                                 <exclude reference="Pgz-82-4pS"/>
                                 <include reference="WqA-WI-AQc"/>
                                 <include reference="Xux-I8-hLJ"/>
                                 <include reference="TXk-L5-U3j"/>
                                 <include reference="XPv-tq-cWU"/>
                                 <include reference="djI-I5-d1z"/>
-                                <include reference="GtR-id-wBq"/>
-                                <include reference="JsG-4p-zzO"/>
-                                <include reference="f5V-Ur-wau"/>
-                                <include reference="H0o-id-eLl"/>
-                                <include reference="Pwj-K6-0XY"/>
-                                <exclude reference="6a1-5F-AtH"/>
-                                <include reference="AkU-cd-vzK"/>
-                                <include reference="Gao-I5-BnZ"/>
-                                <include reference="rRo-Yx-u7e"/>
                                 <include reference="AVg-nA-Mqv"/>
                                 <exclude reference="JFz-Ba-yYG"/>
                                 <include reference="LUq-zN-Ywm"/>
@@ -2560,7 +2566,13 @@ but adding new cities regularly</string>
                                 <include reference="kx0-qC-3ed"/>
                                 <include reference="q3G-6G-qkm"/>
                                 <exclude reference="u99-aU-S4z"/>
-                                <include reference="v01-hK-Wkm"/>
+                                <exclude reference="6a1-5F-AtH"/>
+                                <include reference="AkU-cd-vzK"/>
+                                <include reference="Gao-I5-BnZ"/>
+                                <include reference="rRo-Yx-u7e"/>
+                                <include reference="GtR-id-wBq"/>
+                                <include reference="JsG-4p-zzO"/>
+                                <include reference="f5V-Ur-wau"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -2576,11 +2588,11 @@ but adding new cities regularly</string>
                                 <exclude reference="pgE-DT-IMK"/>
                                 <include reference="QPl-3S-TJh"/>
                                 <exclude reference="TXk-L5-U3j"/>
+                                <include reference="gX8-C6-nMF"/>
                                 <exclude reference="JsG-4p-zzO"/>
                                 <include reference="N98-QF-3QR"/>
                                 <include reference="WSx-uw-GAG"/>
                                 <include reference="Xlr-fa-WxF"/>
-                                <include reference="gX8-C6-nMF"/>
                             </mask>
                         </variation>
                     </view>

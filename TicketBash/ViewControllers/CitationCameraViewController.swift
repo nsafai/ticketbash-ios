@@ -24,6 +24,9 @@ class CitationCameraViewController: UIViewController {
             // do anything specific to ticket (different than in explanation)
         }
     }
+    @IBAction func helpButton(sender: AnyObject) {
+        FeedBackMailer.sharedInstance.sendFeedback()
+    }
 }
 
 extension CitationCameraViewController: CameraViewControllerDelegate {
