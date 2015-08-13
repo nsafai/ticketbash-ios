@@ -1202,6 +1202,7 @@
                         <outlet property="applePayButton" destination="73S-hv-d4i" id="jZ1-ZM-FYb"/>
                         <outlet property="creditCardButton" destination="bUp-Nq-PK9" id="tfo-t2-oMM"/>
                         <outlet property="creditCardLine" destination="rlK-yd-rmR" id="fhL-sE-blW"/>
+                        <outlet property="disclaimerText" destination="O00-gr-OwE" id="Gtf-hZ-zvY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FmS-yP-LZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>

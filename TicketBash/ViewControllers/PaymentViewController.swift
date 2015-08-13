@@ -24,15 +24,18 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
     @IBOutlet weak var creditCardButton: UIButton!
     @IBOutlet weak var creditCardLine: UIImageView!
     
+    @IBOutlet weak var disclaimerText: UILabel!
     //apple pay
     @IBOutlet weak var applePayButton: UIButton!
     let SupportedPaymentNetworks = [PKPaymentNetworkVisa, PKPaymentNetworkMasterCard, PKPaymentNetworkAmex]
     let ApplePaySwagMerchantID = "merchant.com.Lime.TicketBash"
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillEnterForeground:", name: UIApplicationWillEnterForegroundNotification, object: nil)
+        
         // Do any additional setup after loading the view.
         applePayButton.hidden = !PKPaymentAuthorizationViewController.canMakePaymentsUsingNetworks(SupportedPaymentNetworks)
         
@@ -47,7 +50,7 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
         
         //credit card text field location
         paymentView = PTKView(frame: CGRectMake(creditCardLine.frame.origin.x+5, creditCardLine.frame.origin.y+34, 290, 55))
-//        paymentView?.center = view.center
+        //        paymentView?.center = view.center
         
         // polish
         paymentView?.cardNumberField.textColor = paletteWhite
@@ -66,6 +69,7 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
     func paymentView(paymentView: PTKView!, withCard card: PTKCard!, isValid valid: Bool) {
         creditCardButton!.enabled = valid
         creditCardButton.hidden = false
+        refreshButton()
     }
     //credit card
     func createToken() {
@@ -84,26 +88,26 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
     func handleToken(token: STPToken!) {
         //send token to backend and create charge
         
-//        let URLstring = "https://ticketbash.ngrok.com/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)&stripe_token=\(token!.tokenId)"
-//        
-//        // 5
-//        let url = NSURL(string: URLstring)  // Replace with your server or computer's local IP Address!
-//        
-//        let request = NSMutableURLRequest(URL: url!)
-//        request.HTTPMethod = "POST"
-//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//        request.setValue("application/json", forHTTPHeaderField: "Accept")
-//        
-//        var error: NSError?
-//        
-//        // 7
-//        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response, data, error) -> Void in
-//            if (error != nil) {
-//                
-//            } else {
-//
-//            }
-//        }
+        //        let URLstring = "https://ticketbash.ngrok.com/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)&stripe_token=\(token!.tokenId)"
+        //
+        //        // 5
+        //        let url = NSURL(string: URLstring)  // Replace with your server or computer's local IP Address!
+        //
+        //        let request = NSMutableURLRequest(URL: url!)
+        //        request.HTTPMethod = "POST"
+        //        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        //        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        //
+        //        var error: NSError?
+        //
+        //        // 7
+        //        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response, data, error) -> Void in
+        //            if (error != nil) {
+        //
+        //            } else {
+        //
+        //            }
+        //        }
     }
     
     //credit card
@@ -113,36 +117,40 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
     
     //apple pay
     @IBAction func purchase(sender: UIButton) {
-        
-        let request = PKPaymentRequest()
-        request.merchantIdentifier = ApplePaySwagMerchantID
-        request.supportedNetworks = SupportedPaymentNetworks
-        request.merchantCapabilities = PKMerchantCapability.Capability3DS
-        request.countryCode = "US"
-        request.currencyCode = "USD"
-        
-        request.paymentSummaryItems = [
-            PKPaymentSummaryItem(label: "TicketBash Shipping", amount: shippingCost),
-//            PKPaymentSummaryItem(label: "Certified Mail", amount: 10)
-        ]
-        
-        let applePayController = PKPaymentAuthorizationViewController(paymentRequest: request)
-        applePayController.delegate = self
-        
-        request.requiredShippingAddressFields = PKAddressField.Email //potentially unnecessary
-        
-        self.presentViewController(applePayController, animated: true, completion: nil)
-        
+        if (Reachability.isConnectedToNetwork() == true) {
+            let request = PKPaymentRequest()
+            request.merchantIdentifier = ApplePaySwagMerchantID
+            request.supportedNetworks = SupportedPaymentNetworks
+            request.merchantCapabilities = PKMerchantCapability.Capability3DS
+            request.countryCode = "US"
+            request.currencyCode = "USD"
+            
+            request.paymentSummaryItems = [
+                PKPaymentSummaryItem(label: "TicketBash Shipping", amount: shippingCost),
+                //            PKPaymentSummaryItem(label: "Certified Mail", amount: 10)
+            ]
+            
+            let applePayController = PKPaymentAuthorizationViewController(paymentRequest: request)
+            applePayController.delegate = self
+            
+            request.requiredShippingAddressFields = PKAddressField.Email //potentially unnecessary
+            
+            self.presentViewController(applePayController, animated: true, completion: nil)
+            
+        } else {
+            refreshButton()
+        }
     }
     @IBAction func helpButton(sender: AnyObject) {
         FeedBackMailer.sharedInstance.sendFeedback()
     }
 }
+
 extension PaymentViewController: PKPaymentAuthorizationViewControllerDelegate {
     func paymentAuthorizationViewController(controller: PKPaymentAuthorizationViewController!, didAuthorizePayment payment: PKPayment!, completion: ((PKPaymentAuthorizationStatus) -> Void)!) {
         
-//        // 1
-//        let shippingAddress = self.createShippingAddressFromRef(payment.shippingAddress)
+        //        // 1
+        //        let shippingAddress = self.createShippingAddressFromRef(payment.shippingAddress)
         
         // 2
         Stripe.setDefaultPublishableKey("pk_test_NPRQHdM6jMvSoWV0D74zEdIE")  // Replace With Real Stripe Key
@@ -157,10 +165,10 @@ extension PaymentViewController: PKPaymentAuthorizationViewControllerDelegate {
                 return
             }
             
-//            // 4
-//            let shippingAddress = self.createShippingAddressFromRef(payment.shippingAddress)
+            //            // 4
+            //            let shippingAddress = self.createShippingAddressFromRef(payment.shippingAddress)
             let URLstring = "https://ticketbash.ngrok.com/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)&stripe_token=\(token!.tokenId)"
-
+            
             // 5
             let url = NSURL(string: URLstring)  // Replace with your server or computer's local IP Address!
             
@@ -170,19 +178,19 @@ extension PaymentViewController: PKPaymentAuthorizationViewControllerDelegate {
             request.setValue("application/json", forHTTPHeaderField: "Accept")
             
             // 6
-//            let body: [String:AnyObject] = ["stripeToken": token!.tokenId,
-//                "amount": self.shippingCost,
-//                "description": "TicketBash Shipping Cost",
-//                "shipping": ["city": self.myTicket?.mailingCity,
-//                    "state": self.myTicket?.mailingState,
-//                    "zip": self.myTicket?.mailingZip,
-//                    "firstName": self.myTicket?.firstName,
-//                    "lastName": self.myTicket?.lastName]
-//                // include product ID (Ticket ID) sowe know what was shipped with this purchase
-//            ]
+            //            let body: [String:AnyObject] = ["stripeToken": token!.tokenId,
+            //                "amount": self.shippingCost,
+            //                "description": "TicketBash Shipping Cost",
+            //                "shipping": ["city": self.myTicket?.mailingCity,
+            //                    "state": self.myTicket?.mailingState,
+            //                    "zip": self.myTicket?.mailingZip,
+            //                    "firstName": self.myTicket?.firstName,
+            //                    "lastName": self.myTicket?.lastName]
+            //                // include product ID (Ticket ID) sowe know what was shipped with this purchase
+            //            ]
             
             var error: NSError?
-//            request.HTTPBody = NSJSONSerialization.dataWithJSONObject(body, options: NSJSONWritingOptions(), error: &error)
+            //            request.HTTPBody = NSJSONSerialization.dataWithJSONObject(body, options: NSJSONWritingOptions(), error: &error)
             
             // 7
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response, data, error) -> Void in
@@ -197,5 +205,23 @@ extension PaymentViewController: PKPaymentAuthorizationViewControllerDelegate {
     
     func paymentAuthorizationViewControllerDidFinish(controller: PKPaymentAuthorizationViewController!) {
         controller.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func refreshButton() {
+        println("refresh")
+        if (Reachability.isConnectedToNetwork() == true) {
+            creditCardButton.backgroundColor = paletteBlue
+            disclaimerText.text = "We never store your encrypted credit card data. We use Stripe.com to process all transactions with 256 bit SSL enryption."
+            creditCardButton.setTitle("Pay with Credit Card", forState: UIControlState.Normal)
+        } else {
+            creditCardButton.backgroundColor = paletteRed
+            disclaimerText.text = "Hmmm... No internet connection. Check your internet connection and try again in a few moments."
+            creditCardButton.setTitle("Retry", forState: UIControlState.Normal)
+        }
+    }
+    
+    func applicationWillEnterForeground(notification: NSNotification) {
+        println("did enter foreground")
+        refreshButton()
     }
 }
