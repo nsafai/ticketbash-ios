@@ -14,6 +14,7 @@ import FBSDKLoginKit
 import ParseFacebookUtils
 import RealmSwift
 import Stripe
+import Mixpanel
 
 
 
@@ -25,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
        
+        Mixpanel.sharedInstanceWithToken("05046b1a465d4f9d3327bacaf7d0c023")
+        let mixpanel: Mixpanel = Mixpanel.sharedInstance()
+        mixpanel.track("App launched")
+        
         UINavigationBar.appearance().barTintColor = paletteDarkBlue
         UINavigationBar.appearance().tintColor = paletteWhite
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: paletteWhite]

@@ -22,6 +22,9 @@ PODS:
     - FBSDKCoreKit
   - GooglePlacesAutocomplete (0.3.0)
   - JLPDFGenerator (1.0)
+  - Mixpanel (2.8.2):
+    - Mixpanel/Mixpanel (= 2.8.2)
+  - Mixpanel/Mixpanel (2.8.2)
   - Parse (1.7.5.3):
     - Bolts/Tasks (>= 1.2.0)
   - ParseFacebookUtils (1.7.5.3):
@@ -45,6 +48,7 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - GooglePlacesAutocomplete
   - JLPDFGenerator
+  - Mixpanel
   - Parse
   - ParseFacebookUtils
   - ParseUI
@@ -62,6 +66,7 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 02a9254a4c132412fa03577b0d53e936d068a7fb
   GooglePlacesAutocomplete: 7694636fce561c9d8ac807b8e490d299a730a633
   JLPDFGenerator: c030d93a1371f2d16e385d44a0a1ebc0ae68003d
+  Mixpanel: f4d71ac2a306e7cda6ad03d4a2be249a0fd7a967
   Parse: 373adbb1ad2e34d383542c3b28f678c49ebe4881
   ParseFacebookUtils: 008a24dc35884519ed6a6750648beb5149f1fad9
   ParseUI: d1228541b02a36a7354c8f47747f5f7a89cf1ff0

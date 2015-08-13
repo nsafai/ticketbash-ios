@@ -77,16 +77,16 @@ deserve the parking ticket?</string>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="vNl-gO-1gx"/>
                                         <exclude reference="bFk-8W-aV8"/>
                                         <exclude reference="kKV-Ym-Pkr"/>
+                                        <exclude reference="vNl-gO-1gx"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular">
                                     <mask key="constraints">
-                                        <exclude reference="vNl-gO-1gx"/>
                                         <include reference="bFk-8W-aV8"/>
                                         <include reference="kKV-Ym-Pkr"/>
+                                        <exclude reference="vNl-gO-1gx"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -133,20 +133,20 @@ deserve the parking ticket?</string>
                                 <exclude reference="wP1-KK-w0b"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="TFE-Ms-qOr"/>
+                                <exclude reference="y2w-Uw-Cbq"/>
                                 <exclude reference="4FG-XF-aNL"/>
                                 <exclude reference="m2s-LK-NlQ"/>
-                                <exclude reference="3hC-sG-Vob"/>
-                                <exclude reference="8tM-Ym-ZEn"/>
-                                <exclude reference="NEO-gh-ADz"/>
-                                <exclude reference="9hw-Qn-U97"/>
-                                <exclude reference="9nf-wP-WHg"/>
-                                <exclude reference="ed4-RT-VGa"/>
                                 <exclude reference="5ng-Rf-1m5"/>
                                 <exclude reference="mK5-cW-auh"/>
                                 <exclude reference="qgi-kA-oMJ"/>
                                 <exclude reference="sLW-hE-wUy"/>
-                                <exclude reference="TFE-Ms-qOr"/>
-                                <exclude reference="y2w-Uw-Cbq"/>
+                                <exclude reference="9hw-Qn-U97"/>
+                                <exclude reference="9nf-wP-WHg"/>
+                                <exclude reference="ed4-RT-VGa"/>
+                                <exclude reference="3hC-sG-Vob"/>
+                                <exclude reference="8tM-Ym-ZEn"/>
+                                <exclude reference="NEO-gh-ADz"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -154,9 +154,9 @@ deserve the parking ticket?</string>
                                 <include reference="qlj-0k-pSo"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="y2w-Uw-Cbq"/>
                                 <include reference="5ng-Rf-1m5"/>
                                 <include reference="sLW-hE-wUy"/>
-                                <include reference="y2w-Uw-Cbq"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -165,17 +165,17 @@ deserve the parking ticket?</string>
                                 <include reference="wP1-KK-w0b"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="TFE-Ms-qOr"/>
                                 <include reference="4FG-XF-aNL"/>
                                 <include reference="m2s-LK-NlQ"/>
-                                <include reference="3hC-sG-Vob"/>
-                                <include reference="8tM-Ym-ZEn"/>
-                                <include reference="NEO-gh-ADz"/>
+                                <include reference="mK5-cW-auh"/>
+                                <include reference="qgi-kA-oMJ"/>
                                 <include reference="9hw-Qn-U97"/>
                                 <include reference="9nf-wP-WHg"/>
                                 <include reference="ed4-RT-VGa"/>
-                                <include reference="mK5-cW-auh"/>
-                                <include reference="qgi-kA-oMJ"/>
-                                <include reference="TFE-Ms-qOr"/>
+                                <include reference="3hC-sG-Vob"/>
+                                <include reference="8tM-Ym-ZEn"/>
+                                <include reference="NEO-gh-ADz"/>
                             </mask>
                         </variation>
                     </view>

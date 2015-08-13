@@ -18,6 +18,7 @@ target 'TicketBash' do
 	pod 'PaymentKit'
 	pod 'Stripe/ApplePay'
 	pod 'BMPageViewController'
+	pod 'Mixpanel'
 
 end
 

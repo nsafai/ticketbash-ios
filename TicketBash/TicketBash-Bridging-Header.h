@@ -21,6 +21,7 @@
 #import <PaymentKit/PTKView.h>
 #import <BMPageViewController/BMPageViewController.h>
 #import <GooglePlacesAutocomplete/GooglePlacesAutocomplete.h>
+#import <Mixpanel/Mixpanel.h>
 
 // unimported/installed pods:
 // pod 'FBSDKShareKit'
