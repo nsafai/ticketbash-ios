@@ -88,55 +88,74 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
     func handleToken(token: STPToken!) {
         //send token to backend and create charge
         
-        //        let URLstring = "https://ticketbash.ngrok.com/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)&stripe_token=\(token!.tokenId)"
-        //
-        //        // 5
-        //        let url = NSURL(string: URLstring)  // Replace with your server or computer's local IP Address!
-        //
-        //        let request = NSMutableURLRequest(URL: url!)
-        //        request.HTTPMethod = "POST"
-        //        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        //        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        //
-        //        var error: NSError?
-        //
-        //        // 7
-        //        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response, data, error) -> Void in
-        //            if (error != nil) {
-        //
-        //            } else {
-        //
-        //            }
-        //        }
+                let URLstring = "https://ticketbash.ngrok.com/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)&stripe_token=\(token!.tokenId)"
+        
+                // 5
+                let url = NSURL(string: URLstring)  // Replace with your server or computer's local IP Address!
+        
+                let request = NSMutableURLRequest(URL: url!)
+                request.HTTPMethod = "POST"
+                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                request.setValue("application/json", forHTTPHeaderField: "Accept")
+        
+                var error: NSError?
+        
+                // 7
+                NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response, data, error) -> Void in
+                    if (error != nil) {
+        
+                    } else {
+        
+                    }
+                }
     }
     
     //credit card
     @IBAction func creditCardPurchase(sender: AnyObject) {
-        createToken()
+        var tickets = realm.objects(Ticket)
+        if let ticket = tickets.first {
+            if (ticket.finishedUploading == true) {
+                refreshButton()
+                createToken()
+            } else {
+                disclaimerText.text = "Try again in a minute. Your dispute is being uploaded."
+            }
+        }
     }
     
     //apple pay
     @IBAction func purchase(sender: UIButton) {
         if (Reachability.isConnectedToNetwork() == true) {
-            let request = PKPaymentRequest()
-            request.merchantIdentifier = ApplePaySwagMerchantID
-            request.supportedNetworks = SupportedPaymentNetworks
-            request.merchantCapabilities = PKMerchantCapability.Capability3DS
-            request.countryCode = "US"
-            request.currencyCode = "USD"
+            var tickets = realm.objects(Ticket)
+            if let ticket = tickets.first {
+                if (ticket.finishedUploading == true) {
+                    disclaimerText.text = "One sec! Your ticket dispute is still being uploaded."
+                    let request = PKPaymentRequest()
+                    request.merchantIdentifier = ApplePaySwagMerchantID
+                    request.supportedNetworks = SupportedPaymentNetworks
+                    request.merchantCapabilities = PKMerchantCapability.Capability3DS
+                    request.countryCode = "US"
+                    request.currencyCode = "USD"
+                    
+                    request.paymentSummaryItems = [
+                        PKPaymentSummaryItem(label: "TicketBash Shipping", amount: shippingCost),
+                        //            PKPaymentSummaryItem(label: "Certified Mail", amount: 10)
+                    ]
+                    
+                    let applePayController = PKPaymentAuthorizationViewController(paymentRequest: request)
+                    applePayController.delegate = self
+                    
+                    request.requiredShippingAddressFields = PKAddressField.Email //potentially unnecessary
+                    
+                    self.presentViewController(applePayController, animated: true, completion: nil)
+                    refreshButton()
+                }
+            } else {
+                // there is no object in realm
+                disclaimerText.text = "Try again in a minute. Your dispute is being uploaded."
+            }
             
-            request.paymentSummaryItems = [
-                PKPaymentSummaryItem(label: "TicketBash Shipping", amount: shippingCost),
-                //            PKPaymentSummaryItem(label: "Certified Mail", amount: 10)
-            ]
-            
-            let applePayController = PKPaymentAuthorizationViewController(paymentRequest: request)
-            applePayController.delegate = self
-            
-            request.requiredShippingAddressFields = PKAddressField.Email //potentially unnecessary
-            
-            self.presentViewController(applePayController, animated: true, completion: nil)
-            
+    
         } else {
             refreshButton()
         }
