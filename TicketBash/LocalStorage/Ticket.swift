@@ -43,6 +43,8 @@ class Ticket: Object {
     dynamic var parseObjectID: String = ""
     
     
+    dynamic var finishedUploading: Bool = false
+    
     override class func primaryKey() -> String {
         return "id"
     }

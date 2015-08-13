@@ -15,12 +15,14 @@ class SubmitViewController: UIViewController {
     var myTicket: Ticket?
     let realm = Realm()
     
+    @IBOutlet weak var freeButtonDisclaimer: UILabel!
+    @IBOutlet weak var paidButtonDisclaimer: UILabel!
+    @IBOutlet weak var freeButton: UIButton!
+    @IBOutlet weak var paidButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
-    
     
     override func viewWillAppear(animated: Bool) {
         
@@ -34,13 +36,50 @@ class SubmitViewController: UIViewController {
             println("created new ticket")
         }
     }
+    func refreshButton() {
+        println("refresh")
+        if (Reachability.isConnectedToNetwork() == true) {
+            freeButton.backgroundColor = paletteGrey
+            freeButtonDisclaimer.text = "You print it, address it, stamp it & send it"
+            freeButton.setTitle("I'll do the work myself - Free", forState: UIControlState.Normal)
+        } else {
+            freeButton.backgroundColor = paletteRed
+            freeButtonDisclaimer.text = "Hmmm... No internet connection."
+            freeButton.setTitle("Retry", forState: UIControlState.Normal)
+        }
+    }
+    func refreshButton2() {
+        println("refreshed paid button")
+        if (Reachability.isConnectedToNetwork() == true) {
+            paidButton.backgroundColor = paletteBlue
+            paidButtonDisclaimer.text = "Let us do the work... Relax!"
+            paidButton.setTitle("We mail it for you - $3", forState: UIControlState.Normal)
+        } else {
+            paidButton.backgroundColor = paletteRed
+            paidButtonDisclaimer.text = "Hmmm... No internet connection."
+            paidButton.setTitle("Retry", forState: UIControlState.Normal)
+        }
+    }
     @IBAction func freeButton(sender: AnyObject) {
+        
+        if (Reachability.isConnectedToNetwork() == true) {
+            self.performSegueWithIdentifier("freeSegue", sender:self)
+        } else {
+            refreshButton()
+        }
         println(myTicket)
     }
     @IBAction func paidOption(sender: AnyObject) {
+        
+        if (Reachability.isConnectedToNetwork() == true) {
+            self.performSegueWithIdentifier("paidSegue", sender:self)
+        } else {
+            refreshButton2()
+        }
         println(myTicket)
     }
     @IBAction func helpButton(sender: AnyObject) {
         FeedBackMailer.sharedInstance.sendFeedback()
     }
+
 }

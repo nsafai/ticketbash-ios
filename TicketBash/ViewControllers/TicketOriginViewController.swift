@@ -38,11 +38,11 @@ class TicketOriginViewController: UIViewController {
             self.realm.add(self.myTicket!, update: true)
         })
         realm.write({ () -> Void in
-//            if self.myTicket?.isFirstTime == true {
+            if self.myTicket?.isFirstTime == true {
                 self.navigationController?.navigationBarHidden = false
                 self.performSegueWithIdentifier("showInstructions", sender: self)
                 self.myTicket?.isFirstTime = false
-//            }
+            }
             self.realm.add(self.myTicket!, update: true)
         })
     }

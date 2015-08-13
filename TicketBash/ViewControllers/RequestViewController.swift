@@ -15,6 +15,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textImageView: UIImageView!
     @IBOutlet weak var confirmationLabel: UILabel!
     
+    @IBOutlet weak var internetLabel: UILabel!
     @IBOutlet weak var disclaimerLabel: UILabel!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var notifyButton: UIButton!
@@ -22,6 +23,8 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
     var myTicket: Ticket?
     
     override func viewDidLoad() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillEnterForeground:", name: UIApplicationWillEnterForegroundNotification, object: nil)
+        
         cityRequestTextField.delegate = self
         cityRequestTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
         disclaimerLabel.hidden = true
@@ -29,6 +32,8 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
+        
+        refreshButton()
         var tickets = realm.objects(Ticket)
         cityRequestTextField.text == ""
         submitButton.hidden = true
@@ -79,14 +84,16 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBAction func submitRequest(sender: AnyObject) {
-        disclaimerLabel.hidden = true
+        refreshButton()
+        
+        
         realm.write { () -> Void in
             self.myTicket?.ticketOrigin = self.cityRequestTextField.text
             self.realm.add(self.myTicket!, update: true)
             println(self.myTicket!.ticketOrigin)
         }
         
-        confirmationLabel.hidden = false
+        
         
         if (self.myTicket?.notificationsEnabled == true) {
             notifyButton.hidden = false
@@ -108,8 +115,29 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
                     self.realm.add(ticket, update: true)
                 }
             }
+            self.confirmationLabel.hidden = false
+            self.disclaimerLabel.hidden = false
         })
     }
+    
+    func refreshButton(){
+        println("refresh")
+        if (Reachability.isConnectedToNetwork() == true) {
+            submitButton.backgroundColor = paletteBlue
+            internetLabel.hidden = true
+            submitButton.setTitle("Submit", forState: UIControlState.Normal)
+        } else {
+            submitButton.backgroundColor = paletteRed
+            internetLabel.text = "Hmmm... No internet connection."
+            submitButton.setTitle("Retry", forState: UIControlState.Normal)
+        }
+    }
+    
+    func applicationWillEnterForeground(notification: NSNotification) {
+        println("did enter foreground")
+        refreshButton()
+    }
+
     
     @IBAction func helpButton(sender: AnyObject) {
         FeedBackMailer.sharedInstance.sendFeedback()

@@ -22,6 +22,8 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
+    @IBOutlet weak var disclaimerText: UILabel!
+    
     let gpaViewController = GooglePlacesAutocomplete(
         apiKey: "AIzaSyAL6IoheqMuKptTF3lnonhR3WZeLn9sNi4",
         placeType: .Address
@@ -34,6 +36,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillEnterForeground:", name: UIApplicationWillEnterForegroundNotification, object: nil)
         
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
@@ -44,6 +47,8 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
+    
+        refreshButton()
         
         gpaViewController.placeDelegate = self
         gpaViewController.navigationItem.title = "Mailing Address"
@@ -71,6 +76,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             myTicket = Ticket()
         }
         
+        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -91,9 +97,10 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidBeginEditing(textField: UITextField) {
         if (textField == addressTextField) {
-            presentViewController(gpaViewController, animated: true, completion: nil)
+            if (Reachability.isConnectedToNetwork() == true) {
+                presentViewController(gpaViewController, animated: true, completion: nil)
+            }
         }
-        
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
@@ -145,23 +152,48 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                 ticketObject["email"] = ticketData.email
                 ticketObject["user"] = PFUser.currentUser()
                 
-                ticketObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
-                    println("sent ticket to Parse")
-                    if let ticket = self.myTicket {
-                        self.realm.write() {
-                            ticketData.parseObjectID = ticketObject.objectId!
-                            self.realm.add(ticket, update: true)
+                if Reachability.isConnectedToNetwork() == true {
+                    ticketObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
+                        println("sent ticket to Parse")
+                        if let ticket = self.myTicket {
+                            self.realm.write() {
+                                ticketData.finishedUploading = true
+                                ticketData.parseObjectID = ticketObject.objectId!
+                                self.realm.add(ticket, update: true)
+                            }
                         }
-                    }
-                })
-                
+                    })
+                    self.performSegueWithIdentifier("submitContactInfo", sender: self)
+                } else {
+                    refreshButton()
+                }
                 println("let's take a look at the ticket object: \(ticketObject)")
             }
-            self.performSegueWithIdentifier("submitContactInfo", sender: self)
+            
         } else {
             determineNextButtonFunction()
         }
     }
+    
+    func applicationWillEnterForeground(notification: NSNotification) {
+        println("did enter foreground")
+        refreshButton()
+    }
+
+    
+    func refreshButton(){
+        println("refresh")
+        if (Reachability.isConnectedToNetwork() == true) {
+            nextButton.backgroundColor = paletteBlue
+            disclaimerText.text = "We only ask for this info once"
+            nextButton.setTitle("Next", forState: UIControlState.Normal)
+        } else {
+            nextButton.backgroundColor = paletteRed
+            disclaimerText.text = "Hmmm... No internet connection."
+            nextButton.setTitle("Retry", forState: UIControlState.Normal)
+        }
+    }
+    
     func determineNextButtonFunction() {
         
         // first name
@@ -199,6 +231,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     @IBAction func helpButton(sender: AnyObject) {
         FeedBackMailer.sharedInstance.sendFeedback()
     }
+    
 }
 extension ContactInfoViewController: GooglePlacesAutocompleteDelegate {
     func placeSelected(place: Place) {

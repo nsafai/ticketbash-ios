@@ -13,6 +13,8 @@ let paletteWhite = UIColorFromHex(0xECF0F1, alpha: 1.0)
 let paletteGrey = UIColorFromHex(0x95A5A6, alpha: 1.0)
 let paletteOrange = UIColorFromHex(0xE67E22, alpha: 1.0)
 let paletteDarkBlue = UIColorFromHex(0x222F3C, alpha: 1.0)
+let paletteRed = UIColorFromHex(0xE74C3C, alpha: 1.0)
+let paletteBlue = UIColorFromHex(0x2980B9, alpha: 1.0)
 
 
 // RGB
