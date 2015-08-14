@@ -64,6 +64,9 @@ class TicketOriginViewController: UIViewController {
         }
     }
     
+    @IBAction func howItWorks(sender: AnyObject) {
+        self.performSegueWithIdentifier("showInstructions", sender: self)
+    }
     @IBAction func newYorkButton(sender: AnyObject) {
         realm.write { () -> Void in
             self.myTicket?.ticketOrigin = newYorkCity
