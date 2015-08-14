@@ -19,6 +19,8 @@ target 'TicketBash' do
 	pod 'Stripe/ApplePay'
 	pod 'BMPageViewController'
 	pod 'Mixpanel'
+	pod 'RealmSwift'
+	pod 'Realm'
 
 end
 

@@ -103,9 +103,10 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
                 // 7
                 NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response, data, error) -> Void in
                     if (error != nil) {
-        
+                        //failure
                     } else {
-        
+                        //sucess
+                        self.performSegueWithIdentifier("paymentSucessSegue", sender: self)
                     }
                 }
     }
@@ -217,6 +218,7 @@ extension PaymentViewController: PKPaymentAuthorizationViewControllerDelegate {
                     completion(PKPaymentAuthorizationStatus.Failure)
                 } else {
                     completion(PKPaymentAuthorizationStatus.Success)
+                    self.performSegueWithIdentifier("paymentSucessSegue", sender: self)
                 }
             }
         }

@@ -12,6 +12,7 @@ import Parse
 import ParseUI
 import FBSDKLoginKit
 import ParseFacebookUtils
+import Realm
 import RealmSwift
 import Stripe
 import Mixpanel

@@ -35,6 +35,11 @@ PODS:
     - Parse (~> 1.7)
   - PaymentKit (1.1.1)
   - PBJVision (0.4.2)
+  - Realm (0.94.1):
+    - Realm/Headers (= 0.94.1)
+  - Realm/Headers (0.94.1)
+  - RealmSwift (0.94.1):
+    - Realm (= 0.94.1)
   - Stripe (5.0.0):
     - Stripe/Core (= 5.0.0)
   - Stripe/ApplePay (5.0.0):
@@ -54,6 +59,8 @@ DEPENDENCIES:
   - ParseUI
   - PaymentKit
   - PBJVision
+  - Realm
+  - RealmSwift
   - Stripe
   - Stripe/ApplePay
 
@@ -72,6 +79,8 @@ SPEC CHECKSUMS:
   ParseUI: d1228541b02a36a7354c8f47747f5f7a89cf1ff0
   PaymentKit: 323c25233af5060880daa0c31366d4b688c34487
   PBJVision: fe43c9a58bb1c1277d16fd802fa836d25e034a45
+  Realm: d999a6cf0b41577a077349c9cc9d496cc62a7d17
+  RealmSwift: 06b60ff5b1338755654d39aab44ac38001600f76
   Stripe: 7689b0065d0f2da3249582eada12bf1529bed2d0
 
 COCOAPODS: 0.38.2

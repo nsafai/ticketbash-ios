@@ -66,6 +66,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-TicketBash/ParseFacebookUtils.framework'
   install_framework 'Pods-TicketBash/ParseUI.framework'
   install_framework 'Pods-TicketBash/PaymentKit.framework'
+  install_framework 'Pods-TicketBash/Realm.framework'
+  install_framework 'Pods-TicketBash/RealmSwift.framework'
   install_framework 'Pods-TicketBash/Stripe.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -83,5 +85,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-TicketBash/ParseFacebookUtils.framework'
   install_framework 'Pods-TicketBash/ParseUI.framework'
   install_framework 'Pods-TicketBash/PaymentKit.framework'
+  install_framework 'Pods-TicketBash/Realm.framework'
+  install_framework 'Pods-TicketBash/RealmSwift.framework'
   install_framework 'Pods-TicketBash/Stripe.framework'
 fi
