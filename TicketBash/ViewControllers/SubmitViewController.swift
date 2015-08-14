@@ -51,7 +51,7 @@ class SubmitViewController: UIViewController {
     func refreshButton2() {
         println("refreshed paid button")
         if (Reachability.isConnectedToNetwork() == true) {
-            paidButton.backgroundColor = paletteBlue
+            paidButton.backgroundColor = paletteOrange
             paidButtonDisclaimer.text = "Let us do the work... Relax!"
             paidButton.setTitle("We mail it for you - $3", forState: UIControlState.Normal)
         } else {
