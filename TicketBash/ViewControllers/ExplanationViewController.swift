@@ -17,7 +17,7 @@ import ParseFacebookUtils
 class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UITextViewDelegate {
     
     
-    let placeholderText: String = "Enter text here…. Why did you NOT deserve the parking ticket?"
+    let placeholderText: String = "Keep in mind that whatever you type will end up directly on your dispute. Keep it formal, include any relevant evidence (like permit numbers), and avoid spelling mistakes!"
     
     
     @IBOutlet weak var nextButton: UIButton!

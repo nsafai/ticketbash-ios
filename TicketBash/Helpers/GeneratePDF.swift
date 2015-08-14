@@ -47,7 +47,7 @@ func generatePDF (ticketData: Ticket) {
     // add content
     //// header
     pdfGenerator.addText("\(ticketData.firstName) \(ticketData.lastName)", withFrame: CGRectMake(0,77,850,1100), withFont: nameFont, withColor: black, textAlignment: center, verticalAlignment: 0)
-    pdfGenerator.addText("\(ticketData.mailingAddress), \(ticketData.mailingAddress2) \(ticketData.mailingCity), \(ticketData.mailingState), \(ticketData.mailingZip)\ntel: \(ticketData.phoneNumber)", withFrame: CGRectMake(0,100,850,1100), withFont: paraFont, withColor: black, textAlignment: center, verticalAlignment: 0)
+    pdfGenerator.addText("\(ticketData.mailingAddress), \(ticketData.mailingAddress2)\ntel: \(ticketData.phoneNumber)", withFrame: CGRectMake(0,100,850,1100), withFont: paraFont, withColor: black, textAlignment: center, verticalAlignment: 0)
     //// draw lines
     pdfGenerator.addLineFromPoint(CGPointMake(75, 150), toEndPoint: CGPointMake(775, 150), withColor: black, andWidth: 0.5)
     

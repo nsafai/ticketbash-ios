@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -70,8 +71,8 @@
                                     <constraint firstAttribute="width" constant="304" id="kKV-Ym-Pkr"/>
                                     <constraint firstAttribute="width" constant="354" id="vNl-gO-1gx"/>
                                 </constraints>
-                                <string key="text">Why did you not 
-deserve the parking ticket?</string>
+                                <string key="text">Why don't you deserve 
+this parking ticket?</string>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="27"/>
                                 <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -89,7 +90,8 @@ deserve the parking ticket?</string>
                                         <exclude reference="vNl-gO-1gx"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="44" y="69" width="312.5" height="64.5"/>
                                     <mask key="constraints">
                                         <exclude reference="bFk-8W-aV8"/>
                                         <exclude reference="kKV-Ym-Pkr"/>
@@ -1378,7 +1380,7 @@ deserve the parking ticket?</string>
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="helpButton:" destination="g1W-Wz-p9S" eventType="touchUpInside" id="4fX-LM-tdj"/>
+                                    <action selector="helpButton:" destination="g1W-Wz-p9S" eventType="touchUpInside" id="FIs-3B-N7j"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ew-O4-RbU">
@@ -1405,6 +1407,9 @@ deserve the parking ticket?</string>
                                         <exclude reference="oAV-t5-4Lf"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="freeDismissButton:" destination="g1W-Wz-p9S" eventType="touchUpInside" id="GxA-PL-BVg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alright!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3R-FO-mLi">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -1659,7 +1664,7 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Rg3-IU-Rbz" kind="relationship" relationship="rootViewController" id="Y4z-yF-BW1"/>
+                        <segue destination="Riq-p6-P05" kind="relationship" relationship="rootViewController" id="HOC-03-Xf5"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q00-Je-2fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2094,6 +2099,9 @@ the parking ticket?</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 69" translatesAutoresizingMaskIntoConstraints="NO" id="ZN3-WZ-NQW">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7I-bD-f1b" userLabel="camera">
                                 <rect key="frame" x="255" y="490" width="90" height="90"/>
                                 <constraints>
@@ -2145,6 +2153,11 @@ the parking ticket?</string>
                                 <variation key="heightClass=regular">
                                     <mask key="constraints">
                                         <include reference="Xcn-4c-cNI"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="Xcn-4c-cNI"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -2218,17 +2231,23 @@ the parking ticket?</string>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="bottom" secondItem="ky6-61-hFu" secondAttribute="bottom" id="0RE-Mm-4gw"/>
+                            <constraint firstItem="no3-bK-9Hz" firstAttribute="width" secondItem="ZN3-WZ-NQW" secondAttribute="height" multiplier="30:23" id="2W4-np-Vpf">
+                                <variation key="heightClass=regular-widthClass=compact" constant="116.08695652173913"/>
+                            </constraint>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="trailing" secondItem="YpS-NE-l16" secondAttribute="trailingMargin" id="80q-ef-DBJ"/>
+                            <constraint firstItem="ZN3-WZ-NQW" firstAttribute="leading" secondItem="YpS-NE-l16" secondAttribute="leadingMargin" constant="-20" id="AB8-BI-2Ij"/>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="trailing" secondItem="YpS-NE-l16" secondAttribute="trailingMargin" id="ALY-X3-t6d"/>
                             <constraint firstItem="j7I-bD-f1b" firstAttribute="centerX" secondItem="YpS-NE-l16" secondAttribute="centerX" id="Bd6-yg-IFj"/>
                             <constraint firstItem="j7I-bD-f1b" firstAttribute="top" secondItem="aVJ-YE-oXK" secondAttribute="bottom" constant="648" id="EHc-FC-Opc"/>
                             <constraint firstAttribute="bottom" secondItem="j7I-bD-f1b" secondAttribute="bottom" constant="20" symbolic="YES" id="Hkr-pc-Ao5">
                                 <variation key="heightClass=regular" constant="32"/>
                             </constraint>
+                            <constraint firstAttribute="centerX" secondItem="ZN3-WZ-NQW" secondAttribute="centerX" id="IKQ-ey-VJ2"/>
                             <constraint firstItem="ky6-61-hFu" firstAttribute="leading" secondItem="YpS-NE-l16" secondAttribute="leadingMargin" id="LIo-qE-xy2"/>
                             <constraint firstItem="no3-bK-9Hz" firstAttribute="centerX" secondItem="j7I-bD-f1b" secondAttribute="centerX" id="P2p-D1-RIK"/>
                             <constraint firstItem="no3-bK-9Hz" firstAttribute="top" secondItem="aVJ-YE-oXK" secondAttribute="bottom" constant="44" id="PRT-b1-txJ">
                                 <variation key="heightClass=regular" constant="25"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="110"/>
                             </constraint>
                             <constraint firstItem="ky6-61-hFu" firstAttribute="centerY" secondItem="YpS-NE-l16" secondAttribute="centerY" id="Vhb-QP-5U9">
                                 <variation key="heightClass=regular-widthClass=compact" constant="89"/>
@@ -2236,6 +2255,7 @@ the parking ticket?</string>
                             <constraint firstItem="j7I-bD-f1b" firstAttribute="centerX" secondItem="YpS-NE-l16" secondAttribute="centerX" id="X0u-vY-MYn">
                                 <variation key="heightClass=regular" constant="0.0"/>
                             </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZN3-WZ-NQW" secondAttribute="trailing" constant="-20" id="buS-ru-EuT"/>
                             <constraint firstItem="G6B-tI-vSm" firstAttribute="top" secondItem="j7I-bD-f1b" secondAttribute="bottom" constant="32" id="fEr-b8-D15"/>
                             <constraint firstItem="G6B-tI-vSm" firstAttribute="top" secondItem="ky6-61-hFu" secondAttribute="bottom" constant="350" id="g3f-f0-P8k">
                                 <variation key="heightClass=regular-widthClass=compact" constant="362"/>
@@ -2243,6 +2263,7 @@ the parking ticket?</string>
                             <constraint firstItem="G6B-tI-vSm" firstAttribute="top" secondItem="ky6-61-hFu" secondAttribute="bottom" constant="211" id="kX8-Xf-SZg">
                                 <variation key="heightClass=regular" constant="363"/>
                             </constraint>
+                            <constraint firstItem="no3-bK-9Hz" firstAttribute="centerY" secondItem="ZN3-WZ-NQW" secondAttribute="centerY" constant="-0.5" id="lip-iX-RcA"/>
                             <constraint firstAttribute="centerY" secondItem="ky6-61-hFu" secondAttribute="centerY" constant="-109" id="qe2-i0-8OO">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-8"/>
                             </constraint>
@@ -2259,23 +2280,29 @@ the parking ticket?</string>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="ZN3-WZ-NQW"/>
                                 <exclude reference="no3-bK-9Hz"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="AB8-BI-2Ij"/>
+                                <exclude reference="IKQ-ey-VJ2"/>
+                                <exclude reference="buS-ru-EuT"/>
+                                <exclude reference="2W4-np-Vpf"/>
                                 <exclude reference="P2p-D1-RIK"/>
                                 <exclude reference="PRT-b1-txJ"/>
+                                <exclude reference="lip-iX-RcA"/>
                                 <exclude reference="uJd-SZ-QZn"/>
                                 <exclude reference="Vhb-QP-5U9"/>
                                 <exclude reference="qe2-i0-8OO"/>
                                 <exclude reference="qh5-JJ-sO4"/>
                                 <exclude reference="zcd-Ws-VoX"/>
-                                <exclude reference="Bd6-yg-IFj"/>
-                                <exclude reference="EHc-FC-Opc"/>
                                 <exclude reference="0RE-Mm-4gw"/>
                                 <exclude reference="ALY-X3-t6d"/>
                                 <exclude reference="rDn-XJ-Ve7"/>
                                 <exclude reference="tq2-36-bRr"/>
                                 <exclude reference="wfS-OA-ePt"/>
+                                <exclude reference="Bd6-yg-IFj"/>
+                                <exclude reference="EHc-FC-Opc"/>
                                 <exclude reference="fEr-b8-D15"/>
                                 <exclude reference="g3f-f0-P8k"/>
                             </mask>
@@ -2293,10 +2320,6 @@ the parking ticket?</string>
                                 <exclude reference="qh5-JJ-sO4"/>
                                 <exclude reference="wew-w5-2JZ"/>
                                 <include reference="zcd-Ws-VoX"/>
-                                <include reference="Bd6-yg-IFj"/>
-                                <exclude reference="EHc-FC-Opc"/>
-                                <exclude reference="Hkr-pc-Ao5"/>
-                                <exclude reference="X0u-vY-MYn"/>
                                 <exclude reference="0RE-Mm-4gw"/>
                                 <exclude reference="80q-ef-DBJ"/>
                                 <exclude reference="ALY-X3-t6d"/>
@@ -2304,13 +2327,25 @@ the parking ticket?</string>
                                 <exclude reference="tq2-36-bRr"/>
                                 <include reference="wfS-OA-ePt"/>
                                 <exclude reference="zBE-5u-99P"/>
+                                <include reference="Bd6-yg-IFj"/>
+                                <exclude reference="EHc-FC-Opc"/>
+                                <exclude reference="Hkr-pc-Ao5"/>
+                                <exclude reference="X0u-vY-MYn"/>
                                 <include reference="fEr-b8-D15"/>
                                 <include reference="g3f-f0-P8k"/>
                                 <exclude reference="kX8-Xf-SZg"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ZN3-WZ-NQW"/>
+                            </mask>
                             <mask key="constraints">
+                                <include reference="AB8-BI-2Ij"/>
+                                <include reference="IKQ-ey-VJ2"/>
+                                <include reference="buS-ru-EuT"/>
+                                <include reference="2W4-np-Vpf"/>
+                                <include reference="lip-iX-RcA"/>
                                 <exclude reference="Vhb-QP-5U9"/>
                                 <include reference="qe2-i0-8OO"/>
                             </mask>
@@ -3142,10 +3177,10 @@ but adding new cities regularly</string>
             </objects>
             <point key="canvasLocation" x="633" y="2127.75"/>
         </scene>
-        <!--Next Steps View Controller-->
+        <!--Paid Next Steps View Controller-->
         <scene sceneID="siq-MV-aFC">
             <objects>
-                <viewController id="YAa-d2-yeQ" customClass="NextStepsViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YAa-d2-yeQ" customClass="PaidNextStepsViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vbc-4R-OIu"/>
                         <viewControllerLayoutGuide type="bottom" id="bNz-Gm-7ax"/>
@@ -3179,7 +3214,7 @@ but adding new cities regularly</string>
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="helpButton:" destination="YAa-d2-yeQ" eventType="touchUpInside" id="8NX-ba-Nqz"/>
+                                    <action selector="helpButton:" destination="YAa-d2-yeQ" eventType="touchUpInside" id="Ku6-jf-O2A"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKT-P2-fbS">
@@ -3209,6 +3244,9 @@ but adding new cities regularly</string>
                                         <include reference="pte-9c-gYk"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="paidDismissButton:" destination="YAa-d2-yeQ" eventType="touchUpInside" id="VBM-bP-RT9"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGS-Yy-BlW">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -3387,7 +3425,7 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                     <navigationItem key="navigationItem" id="2O0-fD-g6e">
                         <barButtonItem key="rightBarButtonItem" title="Help" id="AQv-qW-sSA">
                             <connections>
-                                <action selector="helpButton:" destination="YAa-d2-yeQ" id="6cy-ij-xpg"/>
+                                <action selector="helpButton:" destination="YAa-d2-yeQ" id="85V-PV-w71"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -3400,6 +3438,7 @@ If they decline your dispute, you can appeal the decision in person. Instruction
     <resources>
         <image name="ApplePayBTN_64pt__whiteLine_logo_" width="140" height="64"/>
         <image name="Camera Button" width="216" height="216"/>
+        <image name="Rectangle 69" width="750" height="230"/>
         <image name="Step 1" width="750" height="1331"/>
         <image name="Step 2" width="750" height="1331"/>
         <image name="Step 3" width="750" height="1331"/>
@@ -3411,8 +3450,8 @@ If they decline your dispute, you can appeal the decision in person. Instruction
         <image name="ticketmeter" width="292" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="HOC-03-Xf5"/>
         <segue reference="lsY-UU-Z0X"/>
-        <segue reference="neg-fo-vEq"/>
-        <segue reference="FNU-p6-r6K"/>
+        <segue reference="xpK-2k-4Nl"/>
     </inferredMetricsTieBreakers>
 </document>

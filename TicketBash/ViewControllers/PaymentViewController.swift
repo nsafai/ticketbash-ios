@@ -88,7 +88,7 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
     func handleToken(token: STPToken!) {
         //send token to backend and create charge
         
-                let URLstring = "https://ticketbash.ngrok.com/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)&stripe_token=\(token!.tokenId)"
+                let URLstring = "https://ticketbash.herokuapp.com/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)&stripe_token=\(token!.tokenId)"
         
                 // 5
                 let url = NSURL(string: URLstring)  // Replace with your server or computer's local IP Address!
@@ -155,8 +155,7 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
                 // there is no object in realm
                 disclaimerText.text = "Try again in a minute. Your dispute is being uploaded."
             }
-            
-    
+
         } else {
             refreshButton()
         }
@@ -187,7 +186,7 @@ extension PaymentViewController: PKPaymentAuthorizationViewControllerDelegate {
             
             //            // 4
             //            let shippingAddress = self.createShippingAddressFromRef(payment.shippingAddress)
-            let URLstring = "https://ticketbash.ngrok.com/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)&stripe_token=\(token!.tokenId)"
+            let URLstring = "https://ticketbash.herokuapp.com/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)&stripe_token=\(token!.tokenId)"
             
             // 5
             let url = NSURL(string: URLstring)  // Replace with your server or computer's local IP Address!

@@ -1,20 +1,21 @@
 //
-//  NextStepsViewController.swift
+//  PaidNextStepsViewController.swift
 //  TicketBash
 //
-//  Created by Nicolai Safai on 8/11/15.
+//  Created by Nicolai Safai on 8/14/15.
 //  Copyright (c) 2015 Lime. All rights reserved.
 //
 
 import UIKit
 
-class NextStepsViewController: UIViewController {
+class PaidNextStepsViewController: UIViewController {
 
     @IBAction func helpButton(sender: AnyObject) {
         FeedBackMailer.sharedInstance.sendFeedback()
     }
-    @IBAction func freeDismissButton(sender: AnyObject) {
+   
+    @IBAction func paidDismissButton(sender: AnyObject) {
         //pop to root view controller
         self.navigationController!.popToRootViewControllerAnimated(true)
-}
+    }
 }

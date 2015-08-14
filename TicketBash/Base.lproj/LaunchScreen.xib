@@ -27,10 +27,10 @@
                         <constraint firstAttribute="width" constant="160" id="SLN-tr-prg"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ticket Dispute" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uGQ-aG-U9G">
-                    <rect key="frame" x="102" y="276.5" width="285" height="54"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TicketBash" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uGQ-aG-U9G">
+                    <rect key="frame" x="106" y="269.5" width="277" height="67"/>
                     <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="45"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="56"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </subviews>

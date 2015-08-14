@@ -9,8 +9,9 @@
 import UIKit
 import RealmSwift
 import Parse
-import JLPDFGenerator
+//import JLPDFGenerator
 import Foundation
+import Mixpanel
 import GooglePlacesAutocomplete
 
 class ContactInfoViewController: UIViewController, UITextFieldDelegate {
@@ -21,6 +22,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var address2TextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
+    let mixpanel: Mixpanel = Mixpanel.sharedInstance()
     
     @IBOutlet weak var disclaimerText: UILabel!
     
@@ -128,20 +130,20 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
             
             if let ticketData = myTicket {
                 // generate PDF
-                generatePDF(ticketData)
+//                generatePDF(ticketData)
                 
                 // find current directory path
                 let path:NSArray = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
                 println(path.objectAtIndex(0))
                 
-                // TODO: convert PDF to NSData to upload to Parse
-                var pdfPath = path.objectAtIndex(0).stringByAppendingPathComponent("hahaPDF.pdf")
-                var myData = NSData(contentsOfFile: pdfPath)
-                //            println(pdfPath)
+
+//                var pdfPath = path.objectAtIndex(0).stringByAppendingPathComponent("hahaPDF.pdf")
+//                var myData = NSData(contentsOfFile: pdfPath)
+
                 
                 //send to parse
                 let ticketObject = PFObject(className: "Ticket")
-                ticketObject["ticketPDF"] = PFFile(data: myData!)
+//                ticketObject["ticketPDF"] = PFFile(data: myData!)
                 ticketObject["ticketPicture"] = PFFile(data: ticketData.ticketPicture)
                 ticketObject["evidencePicture"] = PFFile(data: ticketData.evidencePicture)
                 ticketObject["explanationText"] = ticketData.explanationText
@@ -151,7 +153,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                 ticketObject["mailingAddress2"] = ticketData.mailingAddress2
                 ticketObject["email"] = ticketData.email
                 ticketObject["user"] = PFUser.currentUser()
-                
+                mixpanel.timeEvent("Ticket Upload")
                 if Reachability.isConnectedToNetwork() == true {
                     ticketObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
                         println("sent ticket to Parse")
@@ -159,6 +161,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                             self.realm.write() {
                                 ticketData.finishedUploading = true
                                 ticketData.parseObjectID = ticketObject.objectId!
+                                self.mixpanel.track("Ticket Upload")
                                 self.realm.add(ticket, update: true)
                             }
                         }

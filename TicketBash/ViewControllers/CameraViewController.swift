@@ -60,7 +60,7 @@ class CameraViewController: UIViewController, PBJVisionDelegate {
         if (self.parentViewController?.isKindOfClass(CitationCameraViewController) == true) {
             cameraText.text = "Take a picture of\nyour parking ticket"
         } else if (self.parentViewController?.isKindOfClass(EvidenceCameraViewController) == true) {
-            cameraText.text = "Take a picture of\nevidence\n(this helps a lot)"
+            cameraText.text = "Take a picture of\nyour vehicle\n(or other evidence)"
         }
     }
     
