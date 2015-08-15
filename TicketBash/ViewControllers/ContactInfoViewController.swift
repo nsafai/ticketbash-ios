@@ -144,6 +144,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                 //send to parse
                 let ticketObject = PFObject(className: "Ticket")
 //                ticketObject["ticketPDF"] = PFFile(data: myData!)
+                
                 ticketObject["ticketPicture"] = PFFile(data: ticketData.ticketPicture)
                 ticketObject["evidencePicture"] = PFFile(data: ticketData.evidencePicture)
                 ticketObject["explanationText"] = ticketData.explanationText
@@ -217,6 +218,16 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         }else if ((lastNameTextField.isFirstResponder() == true) && (addressTextField.text == "")){
             addressTextField.becomeFirstResponder()
         } else if ((lastNameTextField.isFirstResponder() == true) && (address2TextField.text == "")){
+            address2TextField.becomeFirstResponder()
+        }
+            // email
+        else if ((emailTextField.isFirstResponder() == true) && (firstNameTextField.text == "")) {
+            firstNameTextField.becomeFirstResponder()
+        } else if ((emailTextField.isFirstResponder() == true) && (lastNameTextField.text == "")) {
+            lastNameTextField.becomeFirstResponder()
+        }else if ((emailTextField.isFirstResponder() == true) && (addressTextField.text == "")){
+            addressTextField.becomeFirstResponder()
+        } else if ((emailTextField.isFirstResponder() == true) && (address2TextField.text == "")){
             address2TextField.becomeFirstResponder()
         }
             // address 2

@@ -39,7 +39,7 @@ class TicketOriginViewController: UIViewController {
         })
         realm.write({ () -> Void in
             if self.myTicket?.isFirstTime == true {
-                self.navigationController?.navigationBarHidden = false
+//                self.navigationController?.navigationBarHidden = false
                 self.performSegueWithIdentifier("showInstructions", sender: self)
                 self.myTicket?.isFirstTime = false
             }
@@ -48,7 +48,7 @@ class TicketOriginViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBarHidden = false
+//        self.navigationController?.navigationBarHidden = false
         
         var user = PFUser.currentUser()
         if (user != nil) {
@@ -64,9 +64,9 @@ class TicketOriginViewController: UIViewController {
         }
     }
     
-    @IBAction func howItWorks(sender: AnyObject) {
-        self.performSegueWithIdentifier("showInstructions", sender: self)
-    }
+//    @IBAction func howItWorks(sender: AnyObject) {
+//        self.performSegueWithIdentifier("showInstructions", sender: self)
+//    }
     @IBAction func newYorkButton(sender: AnyObject) {
         realm.write { () -> Void in
             self.myTicket?.ticketOrigin = newYorkCity

@@ -7,12 +7,12 @@
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "ApplePayBTN_64pt__whiteLine_logo_@2x.png"
+      "filename" : "ApplePayBTN_48pt__white_textLogo_@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "ApplePayBTN_64pt__whiteLine_logo_@3x.png"
+      "filename" : "ApplePayBTN_48pt__white_textLogo_@3x.png"
     }
   ],
   "info" : {

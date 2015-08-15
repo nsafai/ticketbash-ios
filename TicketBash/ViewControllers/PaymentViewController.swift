@@ -19,6 +19,8 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
     let realm = Realm()
     var shippingCost: NSDecimalNumber = 3
     
+    @IBOutlet weak var paymentOptionsLabel: UILabel!
+    @IBOutlet weak var orLabel: UILabel!
     // credit card (paymentkit)
     var paymentView: PTKView?
     @IBOutlet weak var creditCardButton: UIButton!
@@ -39,6 +41,11 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
         // Do any additional setup after loading the view.
         applePayButton.hidden = !PKPaymentAuthorizationViewController.canMakePaymentsUsingNetworks(SupportedPaymentNetworks)
         
+        if applePayButton.hidden == true {
+            orLabel.hidden = true
+            paymentOptionsLabel.hidden = true
+        }
+        
         var tickets = realm.objects(Ticket)
         if let ticket = tickets.first { // if there is a stored value then the 'tickets' array is not nil --> assign the value of the first ticket in the array to 'ticket'
             myTicket = ticket // assign the value of ticket to myTicket
@@ -48,8 +55,26 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
             //            println("created new ticket")
         }
         
-        //credit card text field location
-        paymentView = PTKView(frame: CGRectMake(creditCardLine.frame.origin.x+5, creditCardLine.frame.origin.y+34, 290, 55))
+        //credit card text field location adjustment for
+        if UIScreen.mainScreen().bounds.size.height == 480 {
+            // iPhone 4S
+            orLabel.hidden = true
+            paymentView = PTKView(frame: CGRectMake(creditCardLine.frame.origin.x+5, creditCardLine.frame.origin.y+30, 290, 55))
+        } else if UIScreen.mainScreen().bounds.size.height == 568 {
+            // iPhone 5
+            orLabel.hidden = false
+            paymentView = PTKView(frame: CGRectMake(creditCardLine.frame.origin.x+5, creditCardLine.frame.origin.y+120, 290, 55))
+        } else if UIScreen.mainScreen().bounds.size.height == 667 {
+            // iPhone 6
+            orLabel.hidden = false
+            paymentView = PTKView(frame: CGRectMake(creditCardLine.frame.origin.x+5, creditCardLine.frame.origin.y+160, 290, 55))
+        } else if UIScreen.mainScreen().bounds.size.height == 736 {
+            // iPhone 6Plus
+            orLabel.hidden = false
+            paymentView = PTKView(frame: CGRectMake(creditCardLine.frame.origin.x+5, creditCardLine.frame.origin.y+120, 290, 55))
+        }
+
+        
         //        paymentView?.center = view.center
         
         // polish
@@ -62,13 +87,13 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
         view.addSubview(paymentView!)
         
         creditCardButton!.enabled = false
-        creditCardButton.hidden = true
+        creditCardButton.backgroundColor = paletteGrey
         
     }
     //credit card
     func paymentView(paymentView: PTKView!, withCard card: PTKCard!, isValid valid: Bool) {
         creditCardButton!.enabled = valid
-        creditCardButton.hidden = false
+        creditCardButton.backgroundColor = paletteBlue
         refreshButton()
     }
     //credit card
@@ -231,7 +256,7 @@ extension PaymentViewController: PKPaymentAuthorizationViewControllerDelegate {
         println("refresh")
         if (Reachability.isConnectedToNetwork() == true) {
             creditCardButton.backgroundColor = paletteBlue
-            disclaimerText.text = "We never store your encrypted credit card data. We use Stripe.com to process all transactions with 256 bit SSL enryption."
+            disclaimerText.text = "We process all transactions with 256 bit SSL encryption."
             creditCardButton.setTitle("Pay with Credit Card", forState: UIControlState.Normal)
         } else {
             creditCardButton.backgroundColor = paletteRed
