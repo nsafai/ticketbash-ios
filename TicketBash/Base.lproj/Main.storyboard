@@ -925,6 +925,9 @@ this parking ticket?</string>
                                         <include reference="Hmo-fU-9lI"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="-4" y="171" width="408" height="100"/>
+                                </variation>
                                 <connections>
                                     <action selector="freeButton:" destination="Rg3-IU-Rbz" eventType="touchUpInside" id="luh-Va-q4o"/>
                                     <action selector="nextButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QNo-zh-HSb"/>
@@ -943,6 +946,9 @@ this parking ticket?</string>
                                     <mask key="constraints">
                                         <exclude reference="EnE-YO-kr9"/>
                                     </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="144" width="400" height="19.5"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sda-kw-Y3B">
@@ -1521,7 +1527,8 @@ this parking ticket?</string>
                                         <include reference="tB6-K7-7OR"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="153" y="72" width="94" height="38.5"/>
                                     <mask key="constraints">
                                         <exclude reference="Jht-hD-l5L"/>
                                         <exclude reference="tB6-K7-7OR"/>
@@ -1604,7 +1611,8 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                                         <exclude reference="p9S-ko-FOy"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="26" y="125" width="348" height="413.5"/>
                                     <mask key="subviews">
                                         <include reference="zI7-oc-2vH"/>
                                     </mask>
@@ -1750,12 +1758,12 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Rg3-IU-Rbz" kind="relationship" relationship="rootViewController" id="9Hw-UC-Ejn"/>
+                        <segue destination="Riq-p6-P05" kind="relationship" relationship="rootViewController" id="ktd-eb-e1r"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q00-Je-2fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1437" y="238"/>
+            <point key="canvasLocation" x="-1233" y="237.75"/>
         </scene>
         <!--Instructions View Controller-->
         <scene sceneID="LRo-5z-aaJ">
@@ -1954,9 +1962,6 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                                         <exclude reference="P8Q-7c-0x7"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="220" y="440" width="160" height="160"/>
-                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="70g-Ic-SJ3">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1980,9 +1985,6 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                                     <mask key="constraints">
                                         <include reference="EyC-4n-hcn"/>
                                     </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="-4" y="153.5" width="608" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="newYorkButton:" destination="Riq-p6-P05" eventType="touchUpInside" id="y8n-9F-YzV"/>
@@ -2015,9 +2017,6 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                                         <exclude reference="UoM-eE-iHq"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="-4" y="223.5" width="608" height="70"/>
-                                </variation>
                                 <connections>
                                     <segue destination="BWO-PK-kbq" kind="show" id="z7W-4t-eDE"/>
                                 </connections>
@@ -2048,8 +2047,7 @@ the parking ticket?</string>
                                         <include reference="iuO-uM-RYU"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="148.5" y="35" width="303.5" height="76.5"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="9z0-xQ-rPS"/>
                                         <exclude reference="iuO-uM-RYU"/>
@@ -3434,7 +3432,8 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                                         <exclude reference="iaS-IN-k78"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="26" y="125" width="348" height="519.5"/>
                                     <mask key="subviews">
                                         <include reference="Zgt-KQ-fIb"/>
                                     </mask>
@@ -3471,7 +3470,8 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                                         <include reference="UpQ-Ef-yns"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="138" y="72" width="124.5" height="38.5"/>
                                     <mask key="constraints">
                                         <exclude reference="SzE-Qm-P5w"/>
                                         <exclude reference="UpQ-Ef-yns"/>
@@ -3587,8 +3587,8 @@ If they decline your dispute, you can appeal the decision in person. Instruction
         <image name="ticketmeter" width="292" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9Hw-UC-Ejn"/>
+        <segue reference="ktd-eb-e1r"/>
+        <segue reference="lsY-UU-Z0X"/>
         <segue reference="xpK-2k-4Nl"/>
-        <segue reference="Ka4-xC-2La"/>
     </inferredMetricsTieBreakers>
 </document>
