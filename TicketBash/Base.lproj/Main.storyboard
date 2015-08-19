@@ -217,7 +217,7 @@ this parking ticket?</string>
                         <viewControllerLayoutGuide type="bottom" id="Iif-bA-2LN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="66Q-cn-QhR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rZo-iG-Ldl">
@@ -609,18 +609,6 @@ this parking ticket?</string>
                                     <mask key="constraints">
                                         <exclude reference="0fC-BD-FEb"/>
                                         <exclude reference="UVJ-Yb-j4e"/>
-                                        <exclude reference="Jbm-sd-Xed"/>
-                                        <exclude reference="M9F-CN-pPH"/>
-                                        <exclude reference="XuJ-wr-b4J"/>
-                                        <exclude reference="zLs-Vq-IH9"/>
-                                        <exclude reference="5DH-xk-tRf"/>
-                                        <exclude reference="aCs-tI-4Ik"/>
-                                        <exclude reference="bfM-KZ-bGa"/>
-                                        <exclude reference="oUK-Up-CTU"/>
-                                        <exclude reference="NiN-pI-C3T"/>
-                                        <exclude reference="Vgz-Re-VgP"/>
-                                        <exclude reference="ZLU-cL-UjB"/>
-                                        <exclude reference="kjo-vM-Sb6"/>
                                         <exclude reference="9W2-pE-gfn"/>
                                         <exclude reference="Lzc-6F-7KY"/>
                                         <exclude reference="YME-UK-e79"/>
@@ -629,27 +617,39 @@ this parking ticket?</string>
                                         <exclude reference="XJB-HJ-sAi"/>
                                         <exclude reference="cS7-71-ecQ"/>
                                         <exclude reference="sLp-bo-8aN"/>
-                                        <exclude reference="1j9-9J-gmD"/>
-                                        <exclude reference="QGN-zX-Qbr"/>
-                                        <exclude reference="klJ-Jl-J8H"/>
-                                        <exclude reference="wBJ-Do-jKh"/>
-                                        <exclude reference="72y-nE-Gzw"/>
-                                        <exclude reference="Aaj-Qv-zId"/>
-                                        <exclude reference="KZA-ws-mRU"/>
-                                        <exclude reference="Ypm-8s-VAk"/>
-                                        <exclude reference="0kH-9j-Cni"/>
-                                        <exclude reference="HML-O4-QK3"/>
-                                        <exclude reference="gDV-KQ-tIz"/>
-                                        <exclude reference="tIV-Ja-s70"/>
                                         <exclude reference="NJ3-aJ-w2M"/>
                                         <exclude reference="Zf9-qk-gDY"/>
                                         <exclude reference="gZv-fQ-FF8"/>
                                         <exclude reference="klZ-Sv-Kd8"/>
                                         <exclude reference="mLq-kH-gIQ"/>
+                                        <exclude reference="1j9-9J-gmD"/>
+                                        <exclude reference="QGN-zX-Qbr"/>
+                                        <exclude reference="klJ-Jl-J8H"/>
+                                        <exclude reference="wBJ-Do-jKh"/>
+                                        <exclude reference="5DH-xk-tRf"/>
+                                        <exclude reference="aCs-tI-4Ik"/>
+                                        <exclude reference="bfM-KZ-bGa"/>
+                                        <exclude reference="oUK-Up-CTU"/>
+                                        <exclude reference="Jbm-sd-Xed"/>
+                                        <exclude reference="M9F-CN-pPH"/>
+                                        <exclude reference="XuJ-wr-b4J"/>
+                                        <exclude reference="zLs-Vq-IH9"/>
+                                        <exclude reference="NiN-pI-C3T"/>
+                                        <exclude reference="Vgz-Re-VgP"/>
+                                        <exclude reference="ZLU-cL-UjB"/>
+                                        <exclude reference="kjo-vM-Sb6"/>
+                                        <exclude reference="0kH-9j-Cni"/>
+                                        <exclude reference="HML-O4-QK3"/>
+                                        <exclude reference="gDV-KQ-tIz"/>
+                                        <exclude reference="tIV-Ja-s70"/>
                                         <exclude reference="26I-tc-6Fd"/>
                                         <exclude reference="8Tx-4A-T6L"/>
                                         <exclude reference="FZS-lP-aOY"/>
                                         <exclude reference="Fvc-bk-xVZ"/>
+                                        <exclude reference="72y-nE-Gzw"/>
+                                        <exclude reference="Aaj-Qv-zId"/>
+                                        <exclude reference="KZA-ws-mRU"/>
+                                        <exclude reference="Ypm-8s-VAk"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -668,18 +668,6 @@ this parking ticket?</string>
                                     <mask key="constraints">
                                         <include reference="0fC-BD-FEb"/>
                                         <include reference="UVJ-Yb-j4e"/>
-                                        <include reference="Jbm-sd-Xed"/>
-                                        <include reference="M9F-CN-pPH"/>
-                                        <include reference="XuJ-wr-b4J"/>
-                                        <include reference="zLs-Vq-IH9"/>
-                                        <include reference="5DH-xk-tRf"/>
-                                        <include reference="aCs-tI-4Ik"/>
-                                        <include reference="bfM-KZ-bGa"/>
-                                        <include reference="oUK-Up-CTU"/>
-                                        <include reference="NiN-pI-C3T"/>
-                                        <include reference="Vgz-Re-VgP"/>
-                                        <include reference="ZLU-cL-UjB"/>
-                                        <include reference="kjo-vM-Sb6"/>
                                         <exclude reference="9W2-pE-gfn"/>
                                         <include reference="Lzc-6F-7KY"/>
                                         <include reference="YME-UK-e79"/>
@@ -688,27 +676,39 @@ this parking ticket?</string>
                                         <exclude reference="XJB-HJ-sAi"/>
                                         <include reference="cS7-71-ecQ"/>
                                         <exclude reference="sLp-bo-8aN"/>
-                                        <include reference="1j9-9J-gmD"/>
-                                        <include reference="QGN-zX-Qbr"/>
-                                        <include reference="klJ-Jl-J8H"/>
-                                        <include reference="wBJ-Do-jKh"/>
-                                        <include reference="72y-nE-Gzw"/>
-                                        <exclude reference="Aaj-Qv-zId"/>
-                                        <include reference="KZA-ws-mRU"/>
-                                        <exclude reference="Ypm-8s-VAk"/>
-                                        <exclude reference="0kH-9j-Cni"/>
-                                        <exclude reference="HML-O4-QK3"/>
-                                        <include reference="gDV-KQ-tIz"/>
-                                        <include reference="tIV-Ja-s70"/>
                                         <include reference="NJ3-aJ-w2M"/>
                                         <include reference="Zf9-qk-gDY"/>
                                         <include reference="gZv-fQ-FF8"/>
                                         <include reference="klZ-Sv-Kd8"/>
                                         <include reference="mLq-kH-gIQ"/>
+                                        <include reference="1j9-9J-gmD"/>
+                                        <include reference="QGN-zX-Qbr"/>
+                                        <include reference="klJ-Jl-J8H"/>
+                                        <include reference="wBJ-Do-jKh"/>
+                                        <include reference="5DH-xk-tRf"/>
+                                        <include reference="aCs-tI-4Ik"/>
+                                        <include reference="bfM-KZ-bGa"/>
+                                        <include reference="oUK-Up-CTU"/>
+                                        <include reference="Jbm-sd-Xed"/>
+                                        <include reference="M9F-CN-pPH"/>
+                                        <include reference="XuJ-wr-b4J"/>
+                                        <include reference="zLs-Vq-IH9"/>
+                                        <include reference="NiN-pI-C3T"/>
+                                        <include reference="Vgz-Re-VgP"/>
+                                        <include reference="ZLU-cL-UjB"/>
+                                        <include reference="kjo-vM-Sb6"/>
+                                        <exclude reference="0kH-9j-Cni"/>
+                                        <exclude reference="HML-O4-QK3"/>
+                                        <include reference="gDV-KQ-tIz"/>
+                                        <include reference="tIV-Ja-s70"/>
                                         <exclude reference="26I-tc-6Fd"/>
                                         <include reference="8Tx-4A-T6L"/>
                                         <include reference="FZS-lP-aOY"/>
                                         <exclude reference="Fvc-bk-xVZ"/>
+                                        <include reference="72y-nE-Gzw"/>
+                                        <exclude reference="Aaj-Qv-zId"/>
+                                        <include reference="KZA-ws-mRU"/>
+                                        <exclude reference="Ypm-8s-VAk"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -810,21 +810,21 @@ this parking ticket?</string>
                                 <exclude reference="M1E-El-j35"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Ufi-bC-RsX"/>
                                 <exclude reference="BL5-WK-DRX"/>
                                 <exclude reference="e35-if-PZg"/>
                                 <exclude reference="sMz-hM-Cop"/>
-                                <exclude reference="0Iz-82-nL1"/>
-                                <exclude reference="JeZ-zN-8f7"/>
-                                <exclude reference="TYQ-EQ-ZCx"/>
-                                <exclude reference="iRo-s9-fkz"/>
-                                <exclude reference="xcu-uP-OBB"/>
                                 <exclude reference="8cR-FK-hAV"/>
                                 <exclude reference="CCT-qb-ooy"/>
                                 <exclude reference="DRW-1n-RRp"/>
                                 <exclude reference="duu-5I-KlW"/>
                                 <exclude reference="ff5-Bi-30l"/>
                                 <exclude reference="uVu-JA-OoT"/>
-                                <exclude reference="Ufi-bC-RsX"/>
+                                <exclude reference="0Iz-82-nL1"/>
+                                <exclude reference="JeZ-zN-8f7"/>
+                                <exclude reference="TYQ-EQ-ZCx"/>
+                                <exclude reference="iRo-s9-fkz"/>
+                                <exclude reference="xcu-uP-OBB"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -841,21 +841,21 @@ this parking ticket?</string>
                                 <include reference="USR-gL-8cZ"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Ufi-bC-RsX"/>
                                 <include reference="BL5-WK-DRX"/>
                                 <include reference="e35-if-PZg"/>
                                 <include reference="sMz-hM-Cop"/>
-                                <include reference="0Iz-82-nL1"/>
-                                <include reference="JeZ-zN-8f7"/>
-                                <exclude reference="TYQ-EQ-ZCx"/>
-                                <include reference="iRo-s9-fkz"/>
-                                <exclude reference="xcu-uP-OBB"/>
                                 <include reference="8cR-FK-hAV"/>
                                 <include reference="CCT-qb-ooy"/>
                                 <include reference="DRW-1n-RRp"/>
                                 <exclude reference="duu-5I-KlW"/>
                                 <include reference="ff5-Bi-30l"/>
                                 <exclude reference="uVu-JA-OoT"/>
-                                <include reference="Ufi-bC-RsX"/>
+                                <include reference="0Iz-82-nL1"/>
+                                <include reference="JeZ-zN-8f7"/>
+                                <exclude reference="TYQ-EQ-ZCx"/>
+                                <include reference="iRo-s9-fkz"/>
+                                <exclude reference="xcu-uP-OBB"/>
                             </mask>
                         </variation>
                     </view>
@@ -891,7 +891,7 @@ this parking ticket?</string>
                         <viewControllerLayoutGuide type="bottom" id="g8X-AU-AtP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MnE-8V-fOK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dD5-cO-0QD">
@@ -934,7 +934,7 @@ this parking ticket?</string>
                                     <action selector="nextButton:" destination="MKZ-8v-mWK" eventType="touchUpInside" id="z09-uA-Bkk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You print it, address it, stamp it &amp; send it." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Et-uf-I4O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You print it, address it, stamp it &amp; send it." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Et-uf-I4O">
                                 <rect key="frame" x="-1" y="355" width="601" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="EnE-YO-kr9"/>
@@ -951,7 +951,7 @@ this parking ticket?</string>
                                     <rect key="frame" x="0.0" y="144" width="400" height="19.5"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sda-kw-Y3B">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sda-kw-Y3B">
                                 <rect key="frame" x="0.0" y="227" width="600" height="50"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -984,7 +984,7 @@ this parking ticket?</string>
                                     <action selector="paidOption:" destination="Rg3-IU-Rbz" eventType="touchUpInside" id="Nq0-aZ-3mC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let us do the work... Relax!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtK-75-jSY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Let us do the work... Relax!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtK-75-jSY">
                                 <rect key="frame" x="0.0" y="189" width="600" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rZ7-Di-srA"/>
@@ -1055,6 +1055,16 @@ this parking ticket?</string>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="28p-4g-6DJ"/>
+                                <exclude reference="Pzi-Y7-SWU"/>
+                                <exclude reference="oRc-oa-b2S"/>
+                                <exclude reference="u2s-MM-Dzg"/>
+                                <exclude reference="wAz-M2-XsW"/>
+                                <exclude reference="4d2-Z6-Jst"/>
+                                <exclude reference="HMe-Pn-tSC"/>
+                                <exclude reference="Vbc-Oe-aeT"/>
+                                <exclude reference="fBn-02-syz"/>
+                                <exclude reference="oMp-k9-AZj"/>
                                 <exclude reference="9Ga-pK-Hlm"/>
                                 <exclude reference="GIF-5L-iRj"/>
                                 <exclude reference="WgV-cO-UNK"/>
@@ -1064,16 +1074,6 @@ this parking ticket?</string>
                                 <exclude reference="R3o-Ef-6Aq"/>
                                 <exclude reference="a5P-2E-yPp"/>
                                 <exclude reference="thV-rX-XSg"/>
-                                <exclude reference="4d2-Z6-Jst"/>
-                                <exclude reference="HMe-Pn-tSC"/>
-                                <exclude reference="Vbc-Oe-aeT"/>
-                                <exclude reference="fBn-02-syz"/>
-                                <exclude reference="oMp-k9-AZj"/>
-                                <exclude reference="28p-4g-6DJ"/>
-                                <exclude reference="Pzi-Y7-SWU"/>
-                                <exclude reference="oRc-oa-b2S"/>
-                                <exclude reference="u2s-MM-Dzg"/>
-                                <exclude reference="wAz-M2-XsW"/>
                                 <exclude reference="QU4-fJ-i0X"/>
                                 <exclude reference="Rn6-rc-nat"/>
                                 <exclude reference="RrP-Zc-oPM"/>
@@ -1081,6 +1081,21 @@ this parking ticket?</string>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="constraints">
+                                <include reference="28p-4g-6DJ"/>
+                                <exclude reference="2e3-a0-bi0"/>
+                                <exclude reference="H6u-M2-g2Q"/>
+                                <exclude reference="hKr-Cu-UZL"/>
+                                <include reference="oRc-oa-b2S"/>
+                                <include reference="u2s-MM-Dzg"/>
+                                <exclude reference="z0b-Uq-m3t"/>
+                                <exclude reference="1DA-FG-A8C"/>
+                                <exclude reference="3Ji-Rg-rgy"/>
+                                <exclude reference="4d2-Z6-Jst"/>
+                                <include reference="HMe-Pn-tSC"/>
+                                <include reference="Vbc-Oe-aeT"/>
+                                <include reference="fBn-02-syz"/>
+                                <exclude reference="gfr-NW-TDA"/>
+                                <include reference="oMp-k9-AZj"/>
                                 <exclude reference="7OA-0v-EVn"/>
                                 <include reference="9Ga-pK-Hlm"/>
                                 <exclude reference="B46-CO-5Qw"/>
@@ -1094,31 +1109,16 @@ this parking ticket?</string>
                                 <exclude reference="gJm-NS-0OE"/>
                                 <include reference="thV-rX-XSg"/>
                                 <exclude reference="uC8-Rb-qJl"/>
-                                <exclude reference="1DA-FG-A8C"/>
-                                <exclude reference="3Ji-Rg-rgy"/>
-                                <exclude reference="4d2-Z6-Jst"/>
-                                <include reference="HMe-Pn-tSC"/>
-                                <include reference="Vbc-Oe-aeT"/>
-                                <include reference="fBn-02-syz"/>
-                                <exclude reference="gfr-NW-TDA"/>
-                                <include reference="oMp-k9-AZj"/>
-                                <include reference="28p-4g-6DJ"/>
-                                <exclude reference="2e3-a0-bi0"/>
-                                <exclude reference="H6u-M2-g2Q"/>
-                                <exclude reference="hKr-Cu-UZL"/>
-                                <include reference="oRc-oa-b2S"/>
-                                <include reference="u2s-MM-Dzg"/>
-                                <exclude reference="z0b-Uq-m3t"/>
                                 <include reference="QU4-fJ-i0X"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <exclude reference="GIF-5L-iRj"/>
-                                <include reference="WgV-cO-UNK"/>
-                                <exclude reference="oMp-k9-AZj"/>
                                 <exclude reference="Pzi-Y7-SWU"/>
                                 <include reference="wAz-M2-XsW"/>
+                                <exclude reference="oMp-k9-AZj"/>
+                                <exclude reference="GIF-5L-iRj"/>
+                                <include reference="WgV-cO-UNK"/>
                                 <exclude reference="QU4-fJ-i0X"/>
                                 <include reference="RrP-Zc-oPM"/>
                             </mask>
@@ -1153,7 +1153,7 @@ this parking ticket?</string>
                         <viewControllerLayoutGuide type="bottom" id="i0k-HX-39J"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ukN-ng-QqO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73S-hv-d4i">
@@ -1306,28 +1306,28 @@ this parking ticket?</string>
                                 <exclude reference="plS-4A-IBv"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="0hv-my-EEa"/>
-                                <exclude reference="1be-yI-S2t"/>
-                                <exclude reference="R1g-r6-01V"/>
-                                <exclude reference="pzW-cI-Fhh"/>
                                 <exclude reference="OJD-5X-8RN"/>
                                 <exclude reference="ZQi-uk-GJB"/>
-                                <exclude reference="Cb9-Xo-Mm5"/>
-                                <exclude reference="WY6-3Z-LEf"/>
-                                <exclude reference="poU-Bj-38F"/>
-                                <exclude reference="u1r-ZE-eaV"/>
-                                <exclude reference="zWR-Fz-gZX"/>
                                 <exclude reference="Mdj-e2-6A1"/>
                                 <exclude reference="PsW-Ge-VTp"/>
                                 <exclude reference="WO1-8Q-bXa"/>
                                 <exclude reference="XyV-wI-xtV"/>
                                 <exclude reference="dkX-ay-AxN"/>
+                                <exclude reference="e4F-mr-Y12"/>
+                                <exclude reference="0hv-my-EEa"/>
+                                <exclude reference="1be-yI-S2t"/>
+                                <exclude reference="R1g-r6-01V"/>
+                                <exclude reference="pzW-cI-Fhh"/>
+                                <exclude reference="Cb9-Xo-Mm5"/>
+                                <exclude reference="WY6-3Z-LEf"/>
+                                <exclude reference="poU-Bj-38F"/>
+                                <exclude reference="u1r-ZE-eaV"/>
+                                <exclude reference="zWR-Fz-gZX"/>
                                 <exclude reference="5Jg-vo-Vaf"/>
                                 <exclude reference="9bQ-Jq-xLK"/>
                                 <exclude reference="D9w-hy-VLg"/>
                                 <exclude reference="mka-cY-EeY"/>
                                 <exclude reference="z9r-RJ-xXY"/>
-                                <exclude reference="e4F-mr-Y12"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1340,28 +1340,28 @@ this parking ticket?</string>
                                 <include reference="plS-4A-IBv"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="0hv-my-EEa"/>
-                                <exclude reference="1be-yI-S2t"/>
-                                <include reference="R1g-r6-01V"/>
-                                <include reference="pzW-cI-Fhh"/>
                                 <include reference="OJD-5X-8RN"/>
                                 <include reference="ZQi-uk-GJB"/>
-                                <include reference="Cb9-Xo-Mm5"/>
-                                <exclude reference="WY6-3Z-LEf"/>
-                                <include reference="poU-Bj-38F"/>
-                                <exclude reference="u1r-ZE-eaV"/>
-                                <include reference="zWR-Fz-gZX"/>
                                 <exclude reference="Mdj-e2-6A1"/>
                                 <include reference="PsW-Ge-VTp"/>
                                 <include reference="WO1-8Q-bXa"/>
                                 <include reference="XyV-wI-xtV"/>
                                 <include reference="dkX-ay-AxN"/>
+                                <include reference="e4F-mr-Y12"/>
+                                <include reference="0hv-my-EEa"/>
+                                <exclude reference="1be-yI-S2t"/>
+                                <include reference="R1g-r6-01V"/>
+                                <include reference="pzW-cI-Fhh"/>
+                                <include reference="Cb9-Xo-Mm5"/>
+                                <exclude reference="WY6-3Z-LEf"/>
+                                <include reference="poU-Bj-38F"/>
+                                <exclude reference="u1r-ZE-eaV"/>
+                                <include reference="zWR-Fz-gZX"/>
                                 <include reference="5Jg-vo-Vaf"/>
                                 <include reference="9bQ-Jq-xLK"/>
                                 <include reference="D9w-hy-VLg"/>
                                 <include reference="mka-cY-EeY"/>
                                 <exclude reference="z9r-RJ-xXY"/>
-                                <include reference="e4F-mr-Y12"/>
                             </mask>
                         </variation>
                     </view>
@@ -1395,7 +1395,7 @@ this parking ticket?</string>
                         <viewControllerLayoutGuide type="bottom" id="SBI-Uy-Wdr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pl8-7c-kld">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nV-XX-3km">
@@ -1527,8 +1527,7 @@ this parking ticket?</string>
                                         <include reference="tB6-K7-7OR"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="153" y="72" width="94" height="38.5"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="Jht-hD-l5L"/>
                                         <exclude reference="tB6-K7-7OR"/>
@@ -1611,8 +1610,7 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                                         <exclude reference="p9S-ko-FOy"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="26" y="125" width="348" height="413.5"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="zI7-oc-2vH"/>
                                     </mask>
@@ -2054,9 +2052,23 @@ the parking ticket?</string>
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYb-a8-0DL">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="How it works">
+                                    <color key="titleColor" red="0.58431372550000005" green="0.64705882349999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="154" y="345" width="90" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="howItWorks:" destination="Riq-p6-P05" eventType="touchUpInside" id="j1i-Is-PmD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="qYb-a8-0DL" secondAttribute="centerX" id="1Fz-7G-24F"/>
                             <constraint firstAttribute="centerX" secondItem="enx-bi-y9z" secondAttribute="centerX" id="1Uo-xq-k1E"/>
                             <constraint firstAttribute="trailingMargin" secondItem="enx-bi-y9z" secondAttribute="trailing" constant="-16" id="1td-f2-OYB">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
@@ -2087,6 +2099,7 @@ the parking ticket?</string>
                             <constraint firstItem="gKB-65-fP3" firstAttribute="top" secondItem="dn0-lx-TGc" secondAttribute="bottom" constant="20" id="PTQ-oQ-S2Y">
                                 <variation key="heightClass=regular-widthClass=compact" constant="15"/>
                             </constraint>
+                            <constraint firstItem="qYb-a8-0DL" firstAttribute="top" secondItem="enx-bi-y9z" secondAttribute="bottom" constant="10" id="Pqw-21-rML"/>
                             <constraint firstItem="enx-bi-y9z" firstAttribute="leading" secondItem="Bul-Th-Pzq" secondAttribute="leading" id="QlK-dh-Cu0"/>
                             <constraint firstAttribute="centerX" secondItem="gKB-65-fP3" secondAttribute="centerX" id="S6S-wU-bQu"/>
                             <constraint firstItem="70g-Ic-SJ3" firstAttribute="top" secondItem="gKB-65-fP3" secondAttribute="bottom" priority="250" constant="42" id="csc-Sq-fE2"/>
@@ -2109,10 +2122,9 @@ the parking ticket?</string>
                                 <exclude reference="70g-Ic-SJ3"/>
                                 <exclude reference="enx-bi-y9z"/>
                                 <exclude reference="gKB-65-fP3"/>
+                                <exclude reference="qYb-a8-0DL"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="CZa-nl-ivk"/>
-                                <exclude reference="h3Q-nG-4qn"/>
                                 <exclude reference="3c6-cg-2d9"/>
                                 <exclude reference="Auq-Qo-dne"/>
                                 <exclude reference="PTQ-oQ-S2Y"/>
@@ -2139,8 +2151,12 @@ the parking ticket?</string>
                                 <exclude reference="QlK-dh-Cu0"/>
                                 <exclude reference="gXQ-ZW-9pq"/>
                                 <exclude reference="oDR-sD-gQV"/>
+                                <exclude reference="1Fz-7G-24F"/>
+                                <exclude reference="Pqw-21-rML"/>
                                 <exclude reference="JLg-id-AIF"/>
                                 <exclude reference="v2M-Mo-c4i"/>
+                                <exclude reference="CZa-nl-ivk"/>
+                                <exclude reference="h3Q-nG-4qn"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -2151,8 +2167,6 @@ the parking ticket?</string>
                                 <include reference="gKB-65-fP3"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="CZa-nl-ivk"/>
-                                <exclude reference="h3Q-nG-4qn"/>
                                 <include reference="3c6-cg-2d9"/>
                                 <include reference="S6S-wU-bQu"/>
                                 <exclude reference="myI-z4-2eL"/>
@@ -2176,9 +2190,14 @@ the parking ticket?</string>
                                 <exclude reference="oDR-sD-gQV"/>
                                 <include reference="JLg-id-AIF"/>
                                 <exclude reference="v2M-Mo-c4i"/>
+                                <include reference="CZa-nl-ivk"/>
+                                <exclude reference="h3Q-nG-4qn"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qYb-a8-0DL"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="3c6-cg-2d9"/>
                                 <exclude reference="Auq-Qo-dne"/>
@@ -2187,6 +2206,8 @@ the parking ticket?</string>
                                 <exclude reference="NS0-ky-Hnf"/>
                                 <include reference="csc-Sq-fE2"/>
                                 <exclude reference="z6f-dr-9GU"/>
+                                <include reference="1Fz-7G-24F"/>
+                                <include reference="Pqw-21-rML"/>
                             </mask>
                         </variation>
                     </view>
@@ -3321,7 +3342,7 @@ but adding new cities regularly</string>
                         <viewControllerLayoutGuide type="bottom" id="bNz-Gm-7ax"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kfa-7h-jWN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyD-Mj-gJF">
@@ -3432,8 +3453,7 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                                         <exclude reference="iaS-IN-k78"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="26" y="125" width="348" height="519.5"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="Zgt-KQ-fIb"/>
                                     </mask>
@@ -3470,8 +3490,7 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                                         <include reference="UpQ-Ef-yns"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="138" y="72" width="124.5" height="38.5"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="SzE-Qm-P5w"/>
                                         <exclude reference="UpQ-Ef-yns"/>
@@ -3587,8 +3606,8 @@ If they decline your dispute, you can appeal the decision in person. Instruction
         <image name="ticketmeter" width="292" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="FNU-p6-r6K"/>
         <segue reference="ktd-eb-e1r"/>
         <segue reference="lsY-UU-Z0X"/>
-        <segue reference="xpK-2k-4Nl"/>
     </inferredMetricsTieBreakers>
 </document>
