@@ -23,7 +23,7 @@ import Mixpanel
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let StripePublishableKey = "pk_test_NPRQHdM6jMvSoWV0D74zEdIE"
+    let StripePublishableKey = "pk_live_ePSPkOTAnggKbOkszyHseeiq"
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
        

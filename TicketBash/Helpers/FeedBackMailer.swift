@@ -11,7 +11,7 @@ import MessageUI
 
 class FeedBackMailer: UIViewController, MFMailComposeViewControllerDelegate {
     
-    let feedbackEmail = "help@ticketdispute.com"
+    let feedbackEmail = "help@ticketbash.xyz"
     
     class var sharedInstance : FeedBackMailer {
         struct Static {
