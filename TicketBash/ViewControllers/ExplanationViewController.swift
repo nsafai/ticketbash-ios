@@ -23,7 +23,7 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var explanationTextView: UITextView!
     var myTicket: Ticket?
-    let realm = Realm()
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()

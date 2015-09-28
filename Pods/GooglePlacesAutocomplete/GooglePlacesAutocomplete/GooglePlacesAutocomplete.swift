@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum PlaceType: Printable {
+public enum PlaceType: CustomStringConvertible {
   case All
   case Geocode
   case Address
@@ -63,7 +63,7 @@ public class Place: NSObject {
   }
 }
 
-public class PlaceDetails: Printable {
+public class PlaceDetails: CustomStringConvertible {
   public let name: String
   public let latitude: Double
   public let longitude: Double
@@ -172,7 +172,7 @@ public class GooglePlacesAutocompleteContainer: UIViewController {
   func keyboardWasShown(notification: NSNotification) {
     if isViewLoaded() && view.window != nil {
       let info: Dictionary = notification.userInfo!
-      let keyboardSize: CGSize = (info[UIKeyboardFrameBeginUserInfoKey]?.CGRectValue().size)!
+      let keyboardSize: CGSize = (info[UIKeyboardFrameBeginUserInfoKey]?.CGRectValue.size)!
       let contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0)
 
       tableView.contentInset = contentInsets;
@@ -281,12 +281,12 @@ class GooglePlacesRequestHelpers {
   */
   private class func query(parameters: [String: AnyObject]) -> String {
     var components: [(String, String)] = []
-    for key in sorted(Array(parameters.keys), <) {
+    for key in Array(parameters.keys).sort(<) {
       let value: AnyObject! = parameters[key]
       components += [(escape(key), escape("\(value)"))]
     }
-
-    return join("&", components.map{"\($0)=\($1)"} as [String])
+    var c = components.map{"\($0)=\($1)"} as [String]
+    return c.joinWithSeparator("&")
   }
 
   private class func escape(string: String) -> String {
@@ -309,35 +309,33 @@ class GooglePlacesRequestHelpers {
 
   private class func handleResponse(data: NSData!, response: NSHTTPURLResponse!, error: NSError!, success: NSDictionary -> ()) {
     if let error = error {
-      println("GooglePlaces Error: \(error.localizedDescription)")
+      print("GooglePlaces Error: \(error.localizedDescription)")
       return
     }
 
     if response == nil {
-      println("GooglePlaces Error: No response from API")
+      print("GooglePlaces Error: No response from API")
       return
     }
 
     if response.statusCode != 200 {
-      println("GooglePlaces Error: Invalid status code \(response.statusCode) from API")
+     print("GooglePlaces Error: Invalid status code \(response.statusCode) from API")
       return
     }
 
-    var serializationError: NSError?
-    var json: NSDictionary = NSJSONSerialization.JSONObjectWithData(
+    var json: NSDictionary = try! NSJSONSerialization.JSONObjectWithData(
       data,
-      options: NSJSONReadingOptions.MutableContainers,
-      error: &serializationError
+      options: NSJSONReadingOptions.MutableContainers
       ) as! NSDictionary
 
-    if let error = serializationError {
-      println("GooglePlaces Error: \(error.localizedDescription)")
-      return
-    }
+//    if let error = serializationError {
+//      print(")GooglePlaces Error: \(error.localizedDescription)")
+//      return
+//    }
 
     if let status = json["status"] as? String {
       if status != "OK" {
-        println("GooglePlaces API Error: \(status)")
+        print("GooglePlaces API Error: \(status)")
         return
       }
     }

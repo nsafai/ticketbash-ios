@@ -13,7 +13,7 @@ class SubmitViewController: UIViewController {
     
     // local storage
     var myTicket: Ticket?
-    let realm = Realm()
+    let realm = try! Realm()
     
     @IBOutlet weak var freeButtonDisclaimer: UILabel!
     @IBOutlet weak var paidButtonDisclaimer: UILabel!
@@ -30,14 +30,14 @@ class SubmitViewController: UIViewController {
         
         if let ticket = tickets.first { // if there is a stored value then the 'tickets' array is not nil --> assign the value of the first ticket in the array to 'ticket'
             myTicket = ticket // assign the value of ticket to myTicket
-            println("grabbed ticket from realm")
+            print("grabbed ticket from realm")
         } else {
             myTicket = Ticket()
-            println("created new ticket")
+            print("created new ticket")
         }
     }
     func refreshButton() {
-        println("refresh")
+        print("refresh")
         if (Reachability.isConnectedToNetwork() == true) {
             freeButton.backgroundColor = paletteGrey
             freeButtonDisclaimer.text = "You print it, address it, stamp it & send it"
@@ -49,7 +49,7 @@ class SubmitViewController: UIViewController {
         }
     }
     func refreshButton2() {
-        println("refreshed paid button")
+        print(")refreshed paid button")
         if (Reachability.isConnectedToNetwork() == true) {
             paidButton.backgroundColor = paletteOrange
             paidButtonDisclaimer.text = "Let us do the work... Relax!"
@@ -68,7 +68,7 @@ class SubmitViewController: UIViewController {
         } else {
             refreshButton()
         }
-        println(myTicket)
+        print(myTicket)
     }
     @IBAction func paidOption(sender: AnyObject) {
         
@@ -77,7 +77,7 @@ class SubmitViewController: UIViewController {
         } else {
             refreshButton2()
         }
-        println(myTicket)
+        print(myTicket)
     }
     @IBAction func helpButton(sender: AnyObject) {
         FeedBackMailer.sharedInstance.sendFeedback()

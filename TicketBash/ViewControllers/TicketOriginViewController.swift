@@ -17,7 +17,7 @@ class TicketOriginViewController: UIViewController {
     
     var parseLoginHelper: ParseLoginHelper!
     let loginViewController = PFLogInViewController()
-    let realm = Realm()
+    let realm = try! Realm()
     var myTicket: Ticket?
     @IBOutlet weak var newYorkButton: UIButton!
     @IBOutlet weak var otherButton: UIButton!
@@ -53,12 +53,12 @@ class TicketOriginViewController: UIViewController {
         var user = PFUser.currentUser()
         if (user != nil) {
             // someone is logged in
-            println(PFUser.currentUser())
+            print(PFUser.currentUser())
         } else {
             // no one is logged in, create an automatic user
             PFUser.enableAutomaticUser()
             PFUser.currentUser()?.saveInBackgroundWithBlock({ (sucess, ErrorHandling) -> Void in
-                println(PFUser.currentUser())
+                print(PFUser.currentUser())
             })
             
         }
@@ -72,7 +72,7 @@ class TicketOriginViewController: UIViewController {
             self.myTicket?.ticketOrigin = newYorkCity
             
             self.realm.add(self.myTicket!, update: true)
-            println(self.myTicket!.ticketOrigin)
+            print(self.myTicket!.ticketOrigin)
         }
     }
     @IBAction func helpButton(sender: AnyObject) {

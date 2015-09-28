@@ -13,7 +13,7 @@ protocol CameraViewControllerDelegate {
     func acceptedImage(image: UIImage)
 }
 
-class CameraViewController: UIViewController, PBJVisionDelegate {
+class CameraViewController: UIViewController {
     
     let vision = PBJVision.sharedInstance()
     var acceptedImage: UIImage?

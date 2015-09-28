@@ -16,7 +16,7 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
     
     //local storage
     var myTicket: Ticket?
-    let realm = Realm()
+    let realm = try! Realm()
     var shippingCost: NSDecimalNumber = 3
     
     @IBOutlet weak var paymentOptionsLabel: UILabel!
@@ -204,7 +204,7 @@ extension PaymentViewController: PKPaymentAuthorizationViewControllerDelegate {
             (token, error) -> Void in
             
             if (error != nil) {
-                println(error)
+                print(error)
                 completion(PKPaymentAuthorizationStatus.Failure)
                 return
             }
@@ -253,7 +253,7 @@ extension PaymentViewController: PKPaymentAuthorizationViewControllerDelegate {
     }
     
     func refreshButton() {
-        println("refresh")
+        print("refresh")
         if (Reachability.isConnectedToNetwork() == true) {
             creditCardButton.backgroundColor = paletteBlue
             disclaimerText.text = "We process all transactions with 256 bit SSL encryption using Stripe.com"
@@ -266,7 +266,7 @@ extension PaymentViewController: PKPaymentAuthorizationViewControllerDelegate {
     }
     
     func applicationWillEnterForeground(notification: NSNotification) {
-        println("did enter foreground")
+        print("did enter foreground")
         refreshButton()
     }
 }

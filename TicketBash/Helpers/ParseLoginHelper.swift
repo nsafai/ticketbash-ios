@@ -17,7 +17,7 @@ typealias ParseLoginHelperCallback = (PFUser?, NSError?) -> Void
   This class implements the 'PFLogInViewControllerDelegate' protocol. After a successfull login
   it will call the callback function and provide a 'PFUser' object.
 */
-class ParseLoginHelper : NSObject, NSObjectProtocol {
+class ParseLoginHelper : NSObject {
   static let errorDomain = "com.makeschool.parseloginhelpererrordomain"
   static let usernameNotFoundErrorCode = 1
   static let usernameNotFoundLocalizedDescription = "Could not retrieve Facebook username"
@@ -47,8 +47,8 @@ extension ParseLoginHelper : PFLogInViewControllerDelegate {
             // Facebook Error? -> hand error to callback
             self.callback(nil, error)
           }
-        
-          if let fbUsername = result?["name"] as? String {
+        let results = result as! [String: String]
+        if let fbUsername = results["name"]{
             // assign Facebook name to PFUser
             user.username = fbUsername
             // store PFUser

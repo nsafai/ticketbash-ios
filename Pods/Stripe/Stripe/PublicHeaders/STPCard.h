@@ -6,25 +6,18 @@
 //
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
+#import "STPCardBrand.h"
 
-
+/**
+ *  The various funding sources for a payment card.
+ */
 typedef NS_ENUM(NSInteger, STPCardFundingType) {
     STPCardFundingTypeDebit,
     STPCardFundingTypeCredit,
     STPCardFundingTypePrepaid,
     STPCardFundingTypeOther,
-};
-
-typedef NS_ENUM(NSInteger, STPCardBrand) {
-    STPCardBrandVisa,
-    STPCardBrandAmex,
-    STPCardBrandMasterCard,
-    STPCardBrandDiscover,
-    STPCardBrandJCB,
-    STPCardBrandDinersClub,
-    STPCardBrandUnknown,
 };
 
 /**
@@ -102,25 +95,33 @@ typedef NS_ENUM(NSInteger, STPCardBrand) {
 
 /**
  *  A proxy for the card's number, this uniquely identifies the credit card and can be used to compare different cards.
+ *  @deprecated This field will no longer be present in responses when using your publishable key. If you want to access the value of this field, you can look it up on your backend using your secret key.
  */
-@property (nonatomic, readonly, nullable) NSString *fingerprint;
+@property (nonatomic, readonly, nullable) NSString *fingerprint __attribute__((deprecated("This field will no longer be present in responses when using your publishable key. If you want to access the value of this field, you can look it up on your backend using your secret key.")));
 
 /**
  *  Two-letter ISO code representing the issuing country of the card.
  */
 @property (nonatomic, readonly, nullable) NSString *country;
 
-// These validation methods work as described in
-// http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/Validation.html#//apple_ref/doc/uid/20002173-CJBDBHCB
+/**
+ *  This is only applicable when tokenizing debit cards to issue payouts to managed accounts. You should not set it otherwise. The card can then be used as a transfer destination for funds in this currency.
+ */
+@property (nonatomic, copy, nullable) NSString *currency;
 
+/**
+ *  Validate each field of the card.
+ *  @return whether or not that field is valid.
+ *  @deprecated use STPCardValidator instead.
+ */
 - (BOOL)validateNumber:(__nullable id * __nullable )ioValue
-                 error:(NSError * __nullable * __nullable )outError;
+                 error:(NSError * __nullable * __nullable )outError __attribute__((deprecated("Use STPCardValidator instead.")));
 - (BOOL)validateCvc:(__nullable id * __nullable )ioValue
-              error:(NSError * __nullable * __nullable )outError;
+              error:(NSError * __nullable * __nullable )outError __attribute__((deprecated("Use STPCardValidator instead.")));
 - (BOOL)validateExpMonth:(__nullable  id * __nullable )ioValue
-                   error:(NSError * __nullable * __nullable )outError;
+                   error:(NSError * __nullable * __nullable )outError __attribute__((deprecated("Use STPCardValidator instead.")));
 - (BOOL)validateExpYear:(__nullable id * __nullable)ioValue
-                  error:(NSError * __nullable * __nullable )outError;
+                  error:(NSError * __nullable * __nullable )outError __attribute__((deprecated("Use STPCardValidator instead.")));
 
 /**
  *  This validates a fully populated card to check for all errors, including ones that come about
@@ -132,8 +133,9 @@ typedef NS_ENUM(NSInteger, STPCardBrand) {
  possible values
  *
  *  @return whether or not the card is valid.
+ *  @deprecated use STPCardValidator instead.
  */
-- (BOOL)validateCardReturningError:(NSError * __nullable * __nullable)outError;
+- (BOOL)validateCardReturningError:(NSError * __nullable * __nullable)outError __attribute__((deprecated("Use STPCardValidator instead.")));
 
 @end
 

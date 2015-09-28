@@ -19,7 +19,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var disclaimerLabel: UILabel!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var notifyButton: UIButton!
-    let realm = Realm()
+    let realm = try! Realm()
     var myTicket: Ticket?
     
     override func viewDidLoad() {
@@ -88,9 +88,9 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         
         
         realm.write { () -> Void in
-            self.myTicket?.ticketOrigin = self.cityRequestTextField.text
+            self.myTicket?.ticketOrigin = self.cityRequestTextField.text!
             self.realm.add(self.myTicket!, update: true)
-            println(self.myTicket!.ticketOrigin)
+            print(self.myTicket!.ticketOrigin)
         }
         
         
@@ -108,7 +108,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         requestObject["user"] = PFUser.currentUser()
         
         requestObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
-            println("sent Request to Parse")
+            print("sent Request to Parse")
             if let ticket = self.myTicket {
                 self.realm.write() {
 //                    ticketData.parseObjectID = ticketObject.objectId!
@@ -121,7 +121,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
     }
     
     func refreshButton(){
-        println("refresh")
+        print("refresh")
         if (Reachability.isConnectedToNetwork() == true) {
             submitButton.backgroundColor = paletteBlue
             internetLabel.hidden = true
@@ -134,7 +134,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
     }
     
     func applicationWillEnterForeground(notification: NSNotification) {
-        println("did enter foreground")
+        print("did enter foreground")
         refreshButton()
     }
 
@@ -144,9 +144,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func notifyMe(sender: AnyObject) {
         //registering for sending user various kinds of notifications
-        var types: UIUserNotificationType = UIUserNotificationType.Badge |
-            UIUserNotificationType.Alert |
-            UIUserNotificationType.Sound
+        var types: UIUserNotificationType = [.Badge, .Alert, .Sound]
         
         var settings: UIUserNotificationSettings = UIUserNotificationSettings( forTypes: types, categories: nil )
         
@@ -156,7 +154,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         realm.write { () -> Void in
             self.myTicket?.notificationsEnabled = false
             self.realm.add(self.myTicket!, update: true)
-            println(self.myTicket!.ticketOrigin)
+            print(self.myTicket!.ticketOrigin)
         }
     }
 }

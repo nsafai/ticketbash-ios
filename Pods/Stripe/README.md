@@ -10,7 +10,7 @@ The Stripe iOS SDK make it easy to collect your users' credit card details insid
 We also offer [seamless integration](https://stripe.com/applepay) with [Apple Pay](https://apple.com/apple-pay) that will allow you to securely collect payments from your customers in a way that prevents them from having to re-enter their credit card information.
 
 ## Requirements
-Our SDK is compatible with iOS apps supporting iOS6 and above. It requires Xcode 6.3+ and the iOS8 SDK to build the source.
+Our SDK is compatible with iOS apps supporting iOS 6 and above. It requires Xcode 6.3+ and the iOS 8 SDK to build the source.
 
 ## Integration
 
@@ -20,7 +20,7 @@ We've written a [guide](https://stripe.com/docs/mobile/ios) that explains everyt
 
 There are 2 example apps included in the repository:
 - Stripe iOS Example (Simple) shows a minimal Swift integration with our iOS SDK.
-- Stripe iOS Example (Custom) demonstrates 2 different ways of collecting your user's payment details: via Apple Pay, and via your own credit card form. It also uses our [ApplePayStubs](https://github.com/stripe/ApplePayStubs) library to demonstrate how the Apple Pay flow appears in the iOS simulator (normally Apple Pay requires a device to use). It, too, uses a small example backend to make charges.
+- Stripe iOS Example (Custom) demonstrates 2 different ways of collecting your user's payment details: via Apple Pay, and STPPaymentCardTextField, a native credit card UI form component we provide. It also uses our [ApplePayStubs](https://github.com/stripe/ApplePayStubs) library to demonstrate how the Apple Pay flow appears in the iOS simulator (normally Apple Pay requires a device to use). It, too, uses a small example backend to make charges.
 
 ### Getting started with the Simple iOS Example App
 
@@ -38,7 +38,7 @@ After this is done, you can make test payments through the app (use credit card 
 ## Running the tests
 
 1. Open Stripe.xcworkspace
-1. Choose the "iOS Tests" or "OSX Tests" scheme
+1. Choose the "iOS Tests" or "OS X Tests" scheme
 1. Run Product -> Test
 
 ## Migrating from older versions

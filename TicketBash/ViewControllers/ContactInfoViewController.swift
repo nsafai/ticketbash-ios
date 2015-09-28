@@ -33,7 +33,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     
     // local storage
     var myTicket: Ticket?
-    let realm = Realm()
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,11 +112,11 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     func saveToRealm() {
         if let ticket = self.myTicket { // safety just incase this button is clicked before viewWillAppear finished loading
             self.realm.write() { //changes must be done within a write transaction/closure.
-                ticket.firstName = self.firstNameTextField.text // change realm text value to what user just wrote in text view
-                ticket.lastName = self.lastNameTextField.text
-                ticket.mailingAddress = self.addressTextField.text
-                ticket.mailingAddress2 = self.address2TextField.text
-                ticket.email = self.emailTextField.text
+                ticket.firstName = self.firstNameTextField.text! // change realm text value to what user just wrote in text view
+                ticket.lastName = self.lastNameTextField.text!
+                ticket.mailingAddress = self.addressTextField!.text!
+                ticket.mailingAddress2 = self.address2TextField.text!
+                ticket.email = self.emailTextField.text!
                 self.realm.add(ticket, update: true) // 3 Add a new ticket to Realm if none exists, else update it
             }
         }
@@ -134,7 +134,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                 
                 // find current directory path
                 let path:NSArray = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-                println(path.objectAtIndex(0))
+                print(path.objectAtIndex(0))
                 
 
 //                var pdfPath = path.objectAtIndex(0).stringByAppendingPathComponent("hahaPDF.pdf")
@@ -157,7 +157,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                 mixpanel.timeEvent("Ticket Upload")
                 if Reachability.isConnectedToNetwork() == true {
                     ticketObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
-                        println("sent ticket to Parse")
+                        print("sent ticket to Parse")
                         if let ticket = self.myTicket {
                             self.realm.write() {
                                 ticketData.finishedUploading = true
@@ -171,7 +171,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                 } else {
                     refreshButton()
                 }
-                println("let's take a look at the ticket object: \(ticketObject)")
+                print("let's take a look at the ticket object: \(ticketObject)")
             }
             
         } else {
@@ -180,13 +180,13 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     }
     
     func applicationWillEnterForeground(notification: NSNotification) {
-        println("did enter foreground")
+        print("did enter foreground")
         refreshButton()
     }
 
     
     func refreshButton(){
-        println("refresh")
+        print("refresh")
         if (Reachability.isConnectedToNetwork() == true) {
             nextButton.backgroundColor = paletteBlue
             disclaimerText.text = "We only ask for this info once"
@@ -249,10 +249,10 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
 }
 extension ContactInfoViewController: GooglePlacesAutocompleteDelegate {
     func placeSelected(place: Place) {
-        println(place.description)
+        print(place.description)
         
         place.getDetails { details in
-            println(details)
+            print(details)
         }
         dismissViewControllerAnimated(true) { () -> Void in
             self.addressTextField.text = place.description
