@@ -59,19 +59,19 @@ class PaymentViewController: UIViewController, STPPaymentCardTextFieldDelegate {
         if UIScreen.mainScreen().bounds.size.height == 480 {
             // iPhone 4S
             orLabel.hidden = true
-            paymentView = STPPaymentCardTextField(frame: CGRectMake(creditCardLine.frame.origin.x+5, creditCardLine.frame.origin.y+30, 290, 55))
+            paymentView = STPPaymentCardTextField(frame: CGRectMake(creditCardLine.frame.origin.x+35, creditCardLine.frame.origin.y+30, 290, 55))
         } else if UIScreen.mainScreen().bounds.size.height == 568 {
             // iPhone 5
-            orLabel.hidden = false
-            paymentView = STPPaymentCardTextField(frame: CGRectMake(creditCardLine.frame.origin.x+8, creditCardLine.frame.origin.y+118, 290, 55))
+
+            paymentView = STPPaymentCardTextField(frame: CGRectMake(creditCardLine.frame.origin.x+38, creditCardLine.frame.origin.y+118, 290, 55))
         } else if UIScreen.mainScreen().bounds.size.height == 667 {
             // iPhone 6
-            orLabel.hidden = false
-            paymentView = STPPaymentCardTextField(frame: CGRectMake(creditCardLine.frame.origin.x+15, creditCardLine.frame.origin.y+216, 290, 55))
+//            orLabel.hidden = false
+            paymentView = STPPaymentCardTextField(frame: CGRectMake(creditCardLine.frame.origin.x+45, creditCardLine.frame.origin.y+216, 290, 55))
         } else if UIScreen.mainScreen().bounds.size.height == 736 {
             // iPhone 6Plus
-            orLabel.hidden = false
-            paymentView = STPPaymentCardTextField(frame: CGRectMake(creditCardLine.frame.origin.x+25, creditCardLine.frame.origin.y+285, 290, 55))
+
+            paymentView = STPPaymentCardTextField(frame: CGRectMake(creditCardLine.frame.origin.x+55, creditCardLine.frame.origin.y+285, 290, 55))
         }
 
         
