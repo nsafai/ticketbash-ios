@@ -7,11 +7,8 @@
 //
 import UIKit
 import RealmSwift
-import FBSDKCoreKit
 import Parse
 import ParseUI
-import FBSDKLoginKit
-import ParseFacebookUtils
 import JLPDFGenerator
 
 func generatePDF (ticketData: Ticket) {

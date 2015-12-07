@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Parse
 
 class RequestViewController: UIViewController, UITextFieldDelegate {
 
@@ -53,7 +54,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
 //        submitButton.hidden = true
         
         delay(keyboardDelay) {
-            cityRequestTextField.becomeFirstResponder()
+            self.cityRequestTextField.becomeFirstResponder()
         }
         cityRequestTextField .setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
     }
@@ -87,7 +88,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         refreshButton()
         
         
-        realm.write { () -> Void in
+        try! realm.write { () -> Void in
             self.myTicket?.ticketOrigin = self.cityRequestTextField.text!
             self.realm.add(self.myTicket!, update: true)
             print(self.myTicket!.ticketOrigin)
@@ -110,7 +111,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         requestObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
             print("sent Request to Parse")
             if let ticket = self.myTicket {
-                self.realm.write() {
+                try! self.realm.write() {
 //                    ticketData.parseObjectID = ticketObject.objectId!
                     self.realm.add(ticket, update: true)
                 }
@@ -122,7 +123,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
     
     func refreshButton(){
         print("refresh")
-        if (Reachability.isConnectedToNetwork() == true) {
+        if (Reachability.isConnectedToNetwork()) {
             submitButton.backgroundColor = paletteBlue
             internetLabel.hidden = true
             submitButton.setTitle("Submit", forState: UIControlState.Normal)
@@ -151,7 +152,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         UIApplication.sharedApplication().registerUserNotificationSettings( settings )
         UIApplication.sharedApplication().registerForRemoteNotifications()
         
-        realm.write { () -> Void in
+        try! realm.write { () -> Void in
             self.myTicket?.notificationsEnabled = false
             self.realm.add(self.myTicket!, update: true)
             print(self.myTicket!.ticketOrigin)

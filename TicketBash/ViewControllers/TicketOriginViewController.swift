@@ -33,11 +33,11 @@ class TicketOriginViewController: UIViewController {
             //            println("created new ticket")
         }
         
-        realm.write({ () -> Void in
+        try! realm.write({ () -> Void in
             self.myTicket?.isFirstTime == true
             self.realm.add(self.myTicket!, update: true)
         })
-        realm.write({ () -> Void in
+        try! realm.write({ () -> Void in
             if self.myTicket?.isFirstTime == true {
 //                self.navigationController?.navigationBarHidden = false
                 self.performSegueWithIdentifier("showInstructions", sender: self)
@@ -68,7 +68,7 @@ class TicketOriginViewController: UIViewController {
         self.performSegueWithIdentifier("showInstructions", sender: self)
     }
     @IBAction func newYorkButton(sender: AnyObject) {
-        realm.write { () -> Void in
+        try! realm.write { () -> Void in
             self.myTicket?.ticketOrigin = newYorkCity
             
             self.realm.add(self.myTicket!, update: true)

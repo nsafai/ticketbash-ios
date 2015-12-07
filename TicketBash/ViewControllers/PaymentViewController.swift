@@ -8,11 +8,11 @@
 
 import UIKit
 import PaymentKit
-import PassKit
+//import PassKit
 import RealmSwift
 import Stripe
 
-class PaymentViewController: UIViewController, PTKViewDelegate {
+class PaymentViewController: UIViewController, STPPaymentCardTextFieldDelegate {
     
     //local storage
     var myTicket: Ticket?
@@ -22,7 +22,7 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
     @IBOutlet weak var paymentOptionsLabel: UILabel!
     @IBOutlet weak var orLabel: UILabel!
     // credit card (paymentkit)
-    var paymentView: PTKView?
+    var paymentView: STPPaymentCardTextField?
     @IBOutlet weak var creditCardButton: UIButton!
     @IBOutlet weak var creditCardLine: UIImageView!
     
@@ -59,29 +59,29 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
         if UIScreen.mainScreen().bounds.size.height == 480 {
             // iPhone 4S
             orLabel.hidden = true
-            paymentView = PTKView(frame: CGRectMake(creditCardLine.frame.origin.x+5, creditCardLine.frame.origin.y+30, 290, 55))
+            paymentView = STPPaymentCardTextField(frame: CGRectMake(creditCardLine.frame.origin.x+5, creditCardLine.frame.origin.y+30, 290, 55))
         } else if UIScreen.mainScreen().bounds.size.height == 568 {
             // iPhone 5
             orLabel.hidden = false
-            paymentView = PTKView(frame: CGRectMake(creditCardLine.frame.origin.x+8, creditCardLine.frame.origin.y+118, 290, 55))
+            paymentView = STPPaymentCardTextField(frame: CGRectMake(creditCardLine.frame.origin.x+8, creditCardLine.frame.origin.y+118, 290, 55))
         } else if UIScreen.mainScreen().bounds.size.height == 667 {
             // iPhone 6
             orLabel.hidden = false
-            paymentView = PTKView(frame: CGRectMake(creditCardLine.frame.origin.x+15, creditCardLine.frame.origin.y+216, 290, 55))
+            paymentView = STPPaymentCardTextField(frame: CGRectMake(creditCardLine.frame.origin.x+15, creditCardLine.frame.origin.y+216, 290, 55))
         } else if UIScreen.mainScreen().bounds.size.height == 736 {
             // iPhone 6Plus
             orLabel.hidden = false
-            paymentView = PTKView(frame: CGRectMake(creditCardLine.frame.origin.x+25, creditCardLine.frame.origin.y+285, 290, 55))
+            paymentView = STPPaymentCardTextField(frame: CGRectMake(creditCardLine.frame.origin.x+25, creditCardLine.frame.origin.y+285, 290, 55))
         }
 
         
         //        paymentView?.center = view.center
         
         // polish
-        paymentView?.cardNumberField.textColor = paletteWhite
-        paymentView?.cardExpiryField.textColor = paletteWhite
-        paymentView?.cardCVCField.textColor = paletteWhite
-        paymentView?.placeholderView.image = UIImage(named: "line")
+//        paymentView?.cardNumberField.textColor = paletteWhite
+//        paymentView?.cardExpiryField.textColor = paletteWhite
+//        paymentView?.cardCVCField.textColor = paletteWhite
+//        paymentView?.placeholderView.image = UIImage(named: "line")
         
         paymentView?.delegate = self
         view.addSubview(paymentView!)
@@ -99,10 +99,10 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
     //credit card
     func createToken() {
         let card = STPCard()
-        card.number = paymentView!.card.number
-        card.expMonth = paymentView!.card.expMonth
-        card.expYear = paymentView!.card.expYear
-        card.cvc = paymentView!.card.cvc
+        card.number = paymentView!.card!.number
+        card.expMonth = paymentView!.card!.expMonth
+        card.expYear = paymentView!.card!.expYear
+        card.cvc = paymentView!.card!.cvc
         
         STPAPIClient.sharedClient().createTokenWithCard(card, completion: { (token, ErrorHandling) -> Void in
             self.handleToken(token)
@@ -151,7 +151,7 @@ class PaymentViewController: UIViewController, PTKViewDelegate {
     
     //apple pay
     @IBAction func purchase(sender: UIButton) {
-        if (Reachability.isConnectedToNetwork() == true) {
+        if (Reachability.isConnectedToNetwork()) {
             var tickets = realm.objects(Ticket)
             if let ticket = tickets.first {
                 if (ticket.finishedUploading == true) {

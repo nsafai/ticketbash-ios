@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12E54AB55EEC580D8D3AD86F /* Pods_TicketBash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28786E6DC54C2309ACC5E3A /* Pods_TicketBash.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		12E54AB55EEC580D8D3AD86F /* Pods_TicketBash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28786E6DC54C2309ACC5E3A /* Pods_TicketBash.framework */; };
 		B10D33861B683B8200DE4D8E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10D33831B68389400DE4D8E /* Realm.framework */; };
 		B10D33871B683B8200DE4D8E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B10D33831B68389400DE4D8E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B10D33881B683B8200DE4D8E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10D33841B68389400DE4D8E /* RealmSwift.framework */; };

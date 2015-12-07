@@ -1,62 +1,37 @@
 PODS:
   - BMPageViewController (1.0.0)
-  - Bolts (1.3.0):
-    - Bolts/AppLinks (= 1.3.0)
-    - Bolts/Tasks (= 1.3.0)
-  - Bolts/AppLinks (1.3.0):
-    - Bolts/Tasks
-  - Bolts/Tasks (1.3.0)
+  - Bolts/Tasks (1.5.0)
   - ConvenienceKit (0.4.0)
-  - Facebook-iOS-SDK (3.24.0):
-    - Bolts (~> 1.2)
-  - FBSDKCoreKit (4.6.0):
-    - Bolts (~> 1.1)
-    - FBSDKCoreKit/arc (= 4.6.0)
-    - FBSDKCoreKit/no-arc (= 4.6.0)
-  - FBSDKCoreKit/arc (4.6.0):
-    - Bolts (~> 1.1)
-  - FBSDKCoreKit/no-arc (4.6.0):
-    - Bolts (~> 1.1)
-    - FBSDKCoreKit/arc
-  - FBSDKLoginKit (4.6.0):
-    - FBSDKCoreKit
   - GooglePlacesAutocomplete (0.3.0)
   - JLPDFGenerator (1.0)
-  - Mixpanel (2.8.3):
-    - Mixpanel/Mixpanel (= 2.8.3)
-  - Mixpanel/Mixpanel (2.8.3)
-  - Parse (1.8.5):
-    - Bolts/Tasks (>= 1.2.2)
-  - ParseFacebookUtils (1.8.5):
-    - Bolts/Tasks (>= 1.2.2)
-    - Facebook-iOS-SDK (~> 3.24)
-    - Parse (~> 1.8.5)
-  - ParseUI (1.1.6):
-    - Bolts/Tasks (~> 1.2)
-    - Parse (~> 1.8)
+  - Mixpanel (2.9.1):
+    - Mixpanel/Mixpanel (= 2.9.1)
+  - Mixpanel/Mixpanel (2.9.1)
+  - Parse (1.10.0):
+    - Bolts/Tasks (~> 1.5)
+  - ParseUI (1.1.7):
+    - Bolts/Tasks (~> 1.3)
+    - Parse (~> 1.9)
   - PaymentKit (1.2)
   - PBJVision (0.4.2)
-  - Realm (0.95.2):
-    - Realm/Headers (= 0.95.2)
-  - Realm/Headers (0.95.2)
-  - RealmSwift (0.95.2):
-    - Realm (= 0.95.2)
-  - Stripe (5.1.4):
-    - Stripe/Core (= 5.1.4)
-  - Stripe/ApplePay (5.1.4):
+  - Realm (0.96.3):
+    - Realm/Headers (= 0.96.3)
+  - Realm/Headers (0.96.3)
+  - RealmSwift (0.96.3):
+    - Realm (= 0.96.3)
+  - Stripe (6.0.1):
+    - Stripe/Core (= 6.0.1)
+  - Stripe/ApplePay (6.0.1):
     - Stripe/Core
-  - Stripe/Core (5.1.4)
+  - Stripe/Core (6.0.1)
 
 DEPENDENCIES:
   - BMPageViewController
   - ConvenienceKit
-  - FBSDKCoreKit
-  - FBSDKLoginKit
   - GooglePlacesAutocomplete
   - JLPDFGenerator
   - Mixpanel
   - Parse
-  - ParseFacebookUtils
   - ParseUI
   - PaymentKit
   - PBJVision
@@ -67,21 +42,17 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   BMPageViewController: dd373e2459e982b120638268ff1665eb6b412ad7
-  Bolts: 805a4a87413e49d4a0c2b7d469084cbc46b09342
+  Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
   ConvenienceKit: ba1ad8797897dc0d011676e961a2f3e9b270c841
-  Facebook-iOS-SDK: cb209af2e67e3a5d323f966c22e4e482e819405e
-  FBSDKCoreKit: 9954492d90c5fd65ae831395697a1660360d61f1
-  FBSDKLoginKit: 3d07febbfa884b9878cacba54f705bb41f07d4b6
   GooglePlacesAutocomplete: 7694636fce561c9d8ac807b8e490d299a730a633
   JLPDFGenerator: c030d93a1371f2d16e385d44a0a1ebc0ae68003d
-  Mixpanel: fd52e097ae0d27295d0595b2261c60b94d191fda
-  Parse: 17ad8e0677ed682f7f00503860fcda0f4eb74168
-  ParseFacebookUtils: 839b5f4a11aa1064a8e2c4be9babeaf052d54138
-  ParseUI: 8a22e448c03f825203d8c379c80523517f68baa3
+  Mixpanel: 5ca24b2a05f4c77fe9bcfe7671d681d0f3f8d76f
+  Parse: 90b2544822200f84b18bfacc4e8b0a3a6c3584a2
+  ParseUI: c2bcdfbb00330e464b5b773266ae221697a3bb7b
   PaymentKit: 9bf248ab9a7343ccc65523890428e23678d1bde9
   PBJVision: fe43c9a58bb1c1277d16fd802fa836d25e034a45
-  Realm: 4c026902041bb39c4bd083ebc5e88f4f17973d72
-  RealmSwift: ac7822fe7ab8dca7fa979f4d576793b111d6dce1
-  Stripe: 6864be95b09092f05526bc2e0a50804bc556aa0d
+  Realm: 145d3cdf78a03aee71bde5381ad7e542bd541720
+  RealmSwift: aab84968aad662f61f36473d1aea019f63481505
+  Stripe: 04f215191702c268b89fe0cdf28dc24a9688a71b
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

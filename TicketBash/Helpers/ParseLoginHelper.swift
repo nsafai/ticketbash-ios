@@ -9,7 +9,6 @@
 import Foundation
 import Parse
 import ParseUI
-import FBSDKCoreKit
 
 typealias ParseLoginHelperCallback = (PFUser?, NSError?) -> Void
 
@@ -29,53 +28,53 @@ class ParseLoginHelper : NSObject {
   }
 }
 
-extension ParseLoginHelper : PFLogInViewControllerDelegate {
-  
-  
-  func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
-    // Determine if this is a Facebook login
-    let isFacebookLogin = FBSDKAccessToken.currentAccessToken() != nil
-
-    if !isFacebookLogin {
-      // Plain parse login, we can return user immediately
-      self.callback(user, nil)
-    } else {
-      // if this is a Facebook login, fetch the username from Facebook
-      FBSDKGraphRequest(graphPath: "me", parameters: nil).startWithCompletionHandler {
-        (connection: FBSDKGraphRequestConnection!, result: AnyObject?, error: NSError?) -> Void in
-          if let error = error {
-            // Facebook Error? -> hand error to callback
-            self.callback(nil, error)
-          }
-        let results = result as! [String: String]
-        if let fbUsername = results["name"]{
-            // assign Facebook name to PFUser
-            user.username = fbUsername
-            // store PFUser
-            user.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
-              if (success) {
-                // updated username could be stored -> call success
-                self.callback(user, error)
-              } else {
-                // updating username failed -> hand error to callback
-                self.callback(nil, error)
-              }
-            })
-          } else {
-            // cannot retrieve username? -> create error and hand it to callback
-            let userInfo = [NSLocalizedDescriptionKey : ParseLoginHelper.usernameNotFoundLocalizedDescription]
-            let noUsernameError = NSError(
-              domain: ParseLoginHelper.errorDomain,
-              code: ParseLoginHelper.usernameNotFoundErrorCode,
-              userInfo: userInfo
-            )
-            self.callback(nil, error)
-          }
-      }
-    }
-  }
-  
-}
+//extension ParseLoginHelper : PFLogInViewControllerDelegate {
+//  
+//  
+//  func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+//    // Determine if this is a Facebook login
+//    let isFacebookLogin = FBSDKAccessToken.currentAccessToken() != nil
+//
+//    if !isFacebookLogin {
+//      // Plain parse login, we can return user immediately
+//      self.callback(user, nil)
+//    } else {
+//      // if this is a Facebook login, fetch the username from Facebook
+//      FBSDKGraphRequest(graphPath: "me", parameters: nil).startWithCompletionHandler {
+//        (connection: FBSDKGraphRequestConnection!, result: AnyObject?, error: NSError?) -> Void in
+//          if let error = error {
+//            // Facebook Error? -> hand error to callback
+//            self.callback(nil, error)
+//          }
+//        let results = result as! [String: String]
+//        if let fbUsername = results["name"]{
+//            // assign Facebook name to PFUser
+//            user.username = fbUsername
+//            // store PFUser
+//            user.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
+//              if (success) {
+//                // updated username could be stored -> call success
+//                self.callback(user, error)
+//              } else {
+//                // updating username failed -> hand error to callback
+//                self.callback(nil, error)
+//              }
+//            })
+//          } else {
+//            // cannot retrieve username? -> create error and hand it to callback
+//            let userInfo = [NSLocalizedDescriptionKey : ParseLoginHelper.usernameNotFoundLocalizedDescription]
+//            let noUsernameError = NSError(
+//              domain: ParseLoginHelper.errorDomain,
+//              code: ParseLoginHelper.usernameNotFoundErrorCode,
+//              userInfo: userInfo
+//            )
+//            self.callback(nil, error)
+//          }
+//      }
+//    }
+//  }
+//  
+//}
 
 extension ParseLoginHelper : PFSignUpViewControllerDelegate {
   

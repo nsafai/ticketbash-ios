@@ -7,11 +7,8 @@
 //
 
 import UIKit
-import FBSDKCoreKit
 import Parse
 import ParseUI
-import FBSDKLoginKit
-import ParseFacebookUtils
 import Realm
 import RealmSwift
 import Stripe
@@ -46,13 +43,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("XGBNSjq1RRCVmAiiX1QRVbcbqik1wJo41uUAomIu", clientKey: "YpZD16HyM0cq0w2sblzad4ecstKGjo5JAtp9IJ8C")
         
         let acl = PFACL()
-        acl.setPublicReadAccess(true)
+        acl.publicReadAccess = true
         PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
         
         // 1
-        PFFacebookUtils.initializeFacebook()
-        
-        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+//        PFFacebookUtils.initializeFacebook()
+//        
+//        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        return true
 
     }
 
@@ -73,13 +71,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     //MARK: Facebook Integration
     
-    func applicationDidBecomeActive(application: UIApplication) {
-        FBSDKAppEvents.activateApp()
-    }
-    
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
-    }
+//    func applicationDidBecomeActive(application: UIApplication) {
+//        FBSDKAppEvents.activateApp()
+//    }
+//    
+//    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+//        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+//    }
 
     
 

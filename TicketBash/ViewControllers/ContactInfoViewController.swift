@@ -56,7 +56,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
         gpaViewController.navigationItem.title = "Mailing Address"
         
         delay(keyboardDelay) {
-            firstNameTextField.becomeFirstResponder()
+            self.firstNameTextField.becomeFirstResponder()
         }
         
         firstNameTextField.setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
@@ -111,7 +111,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     
     func saveToRealm() {
         if let ticket = self.myTicket { // safety just incase this button is clicked before viewWillAppear finished loading
-            self.realm.write() { //changes must be done within a write transaction/closure.
+            try! self.realm.write() { //changes must be done within a write transaction/closure.
                 ticket.firstName = self.firstNameTextField.text! // change realm text value to what user just wrote in text view
                 ticket.lastName = self.lastNameTextField.text!
                 ticket.mailingAddress = self.addressTextField!.text!
@@ -159,7 +159,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                     ticketObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
                         print("sent ticket to Parse")
                         if let ticket = self.myTicket {
-                            self.realm.write() {
+                            try! self.realm.write() {
                                 ticketData.finishedUploading = true
                                 ticketData.parseObjectID = ticketObject.objectId!
                                 self.mixpanel.track("Ticket Upload")

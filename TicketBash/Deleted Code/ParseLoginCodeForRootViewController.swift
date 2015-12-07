@@ -38,21 +38,21 @@ class ParseLoginCodeForRootViewController: UIViewController {
             // someone is logged in
 
         } else {
-                        self.loginViewController.fields = .UsernameAndPassword | .LogInButton | .SignUpButton | .PasswordForgotten
-                        // add | .Facebook for Facebook
-                        self.loginViewController.emailAsUsername = true
-                        var logInLogoTitle = UILabel()
-                        logInLogoTitle.text = "Ticket Bash"
-                        logInLogoTitle.font = UIFont(name: "HelveticaNeue-UltraLight",
-                            size: 70.0)
-            
-                        self.loginViewController.logInView?.logo = logInLogoTitle
-                        self.loginViewController.delegate = self.parseLoginHelper
-                        self.loginViewController.signUpController?.delegate = self.parseLoginHelper
-            
-                        // present login view controller modally
-                        self.presentViewController(self.loginViewController, animated: true, completion: nil)
-                                    self.navigationController?.pushViewController(self.loginViewController, animated: true)
+//                        self.loginViewController.fields = .UsernameAndPassword | .LogInButton | .SignUpButton | .PasswordForgotten
+//                        // add | .Facebook for Facebook
+//                        self.loginViewController.emailAsUsername = true
+//                        var logInLogoTitle = UILabel()
+//                        logInLogoTitle.text = "Ticket Bash"
+//                        logInLogoTitle.font = UIFont(name: "HelveticaNeue-UltraLight",
+//                            size: 70.0)
+//            
+//                        self.loginViewController.logInView?.logo = logInLogoTitle
+//                        self.loginViewController.delegate = self.parseLoginHelper
+//                        self.loginViewController.signUpController?.delegate = self.parseLoginHelper
+//            
+//                        // present login view controller modally
+//                        self.presentViewController(self.loginViewController, animated: true, completion: nil)
+//                                    self.navigationController?.pushViewController(self.loginViewController, animated: true)
         }
 
     }

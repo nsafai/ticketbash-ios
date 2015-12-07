@@ -11,10 +11,7 @@
 
 #import <PBJVision/PBJVision.h>
 #import <ParseUI/ParseUI.h>
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <Parse/Parse.h>
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
-#import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <JLPDFGenerator/JLPDFGenerator.h>
 #import <Stripe/Stripe.h>
 #import <Stripe/Stripe+ApplePay.h>

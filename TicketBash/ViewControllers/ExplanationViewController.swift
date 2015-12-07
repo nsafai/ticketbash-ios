@@ -8,11 +8,8 @@
 
 import UIKit
 import RealmSwift
-import FBSDKCoreKit
 import Parse
 import ParseUI
-import FBSDKLoginKit
-import ParseFacebookUtils
 
 class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UITextViewDelegate {
     
@@ -90,7 +87,8 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
     @IBAction func nextButton(sender: AnyObject) {
         
         if let ticket = self.myTicket {
-            self.realm.write() { //changes must be done within a write transaction/closure.
+            
+            try! self.realm.write() { //changes must be done within a write transaction/closure.
                 ticket.explanationText = self.explanationTextView.text // change realm text value to what user just wrote in text view
                 self.realm.add(ticket, update: true) // 3 Add  new ticket to Realm if none exists, else update it
             }

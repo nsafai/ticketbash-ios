@@ -8,14 +8,11 @@
 
 import UIKit
 import RealmSwift
-import FBSDKCoreKit
 import Parse
 import ParseUI
-import FBSDKLoginKit
-import ParseFacebookUtils
 import BMPageViewController
 
-class InstructionsViewController: BMPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+class InstructionsViewController: BMPageViewController {
     
     override func pageIdentifiers() -> [AnyObject] {
         return ["step1", "step2", "step3", "step4", "step5"]

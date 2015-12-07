@@ -25,10 +25,11 @@ import Realm
 public protocol MinMaxType {}
 extension Double: MinMaxType {}
 extension Float: MinMaxType {}
+extension Int: MinMaxType {}
+extension Int8: MinMaxType {}
 extension Int16: MinMaxType {}
 extension Int32: MinMaxType {}
 extension Int64: MinMaxType {}
-extension Int: MinMaxType {}
 extension NSDate: MinMaxType {}
 
 // MARK: AddableType
@@ -37,10 +38,11 @@ extension NSDate: MinMaxType {}
 public protocol AddableType {}
 extension Double: AddableType {}
 extension Float: AddableType {}
+extension Int: AddableType {}
+extension Int8: AddableType {}
 extension Int16: AddableType {}
 extension Int32: AddableType {}
 extension Int64: AddableType {}
-extension Int: AddableType {}
 
 /// :nodoc:
 /// Internal class. Do not use directly.
@@ -62,8 +64,7 @@ public class ResultsBase: NSObject, NSFastEnumeration {
     // MARK: Fast Enumeration
 
     public func countByEnumeratingWithState(state: UnsafeMutablePointer<NSFastEnumerationState>, objects buffer: AutoreleasingUnsafeMutablePointer<AnyObject?>, count len: Int) -> Int {
-        let enumeration: NSFastEnumeration = rlmResults // FIXME: no idea why this is needed, but doesn't compile otherwise
-        return enumeration.countByEnumeratingWithState(state, objects: buffer, count: len)
+        return Int(rlmResults.countByEnumeratingWithState(state, objects: buffer, count: UInt(len)))
     }
 }
 
@@ -78,10 +79,16 @@ Results cannot be created directly.
 */
 public final class Results<T: Object>: ResultsBase {
 
+    /// Element type contained in this collection.
+    public typealias Element = T
+
     // MARK: Properties
 
     /// Returns the Realm these results are associated with.
-    public var realm: Realm { return Realm(rlmResults.realm) }
+    /// Despite returning an `Optional<Realm>` in order to conform to
+    /// `RealmCollectionType`, it will always return `.Some()` since a `Results`
+    /// cannot exist independently from a `Realm`.
+    public var realm: Realm? { return Realm(rlmResults.realm) }
 
     /// Returns the number of objects in these results.
     public var count: Int { return Int(rlmResults.count) }
@@ -111,7 +118,7 @@ public final class Results<T: Object>: ResultsBase {
 
     - parameter predicate: The predicate to filter the objects.
 
-    - returns: The index of the given object, or `nil` if no objects match.
+    - returns: The index of the first matching object, or `nil` if no objects match.
     */
     public func indexOf(predicate: NSPredicate) -> Int? {
         return notFoundToNil(rlmResults.indexOfObjectWithPredicate(predicate))
@@ -123,7 +130,7 @@ public final class Results<T: Object>: ResultsBase {
 
     - parameter predicateFormat: The predicate format string which can accept variable arguments.
 
-    - returns: The index of the given object, or `nil` if no objects match.
+    - returns: The index of the first matching object, or `nil` if no objects match.
     */
     public func indexOf(predicateFormat: String, _ args: AnyObject...) -> Int? {
         return notFoundToNil(rlmResults.indexOfObjectWithPredicate(NSPredicate(format: predicateFormat, argumentArray: args)))
@@ -141,31 +148,31 @@ public final class Results<T: Object>: ResultsBase {
     public subscript(index: Int) -> T {
         get {
             throwForNegativeIndex(index)
-            return rlmResults[UInt(index)] as! T
+            return unsafeBitCast(rlmResults[UInt(index)], T.self)
         }
     }
 
     /// Returns the first object in the results, or `nil` if empty.
-    public var first: T? { return rlmResults.firstObject() as! T? }
+    public var first: T? { return unsafeBitCast(rlmResults.firstObject(), Optional<T>.self) }
 
     /// Returns the last object in the results, or `nil` if empty.
-    public var last: T? { return rlmResults.lastObject() as! T? }
+    public var last: T? { return unsafeBitCast(rlmResults.lastObject(), Optional<T>.self) }
 
     // MARK: KVC
 
     /**
-    Returns an Array containing the results of invoking `valueForKey:` using key on each of the collection's objects.
+    Returns an Array containing the results of invoking `valueForKey(_:)` using key on each of the collection's objects.
 
     - parameter key: The name of the property.
 
-    - returns: Array containing the results of invoking `valueForKey:` using key on each of the collection's objects.
+    - returns: Array containing the results of invoking `valueForKey(_:)` using key on each of the collection's objects.
     */
     public override func valueForKey(key: String) -> AnyObject? {
         return rlmResults.valueForKey(key)
     }
 
     /**
-    Invokes `setValue:forKey:` on each of the collection's objects using the specified value and key.
+    Invokes `setValue(_:forKey:)` on each of the collection's objects using the specified value and key.
 
     - warning: This method can only be called during a write transaction.
 
@@ -280,23 +287,7 @@ public final class Results<T: Object>: ResultsBase {
     }
 }
 
-public class RLMGenerator<T: Object>: AnyGenerator<T> {
-    private let generatorBase: NSFastGenerator
-
-    init(collection: RLMCollection) {
-        generatorBase = NSFastGenerator(collection)
-    }
-
-    public override func next() -> Element? {
-        let accessor = generatorBase.next() as! Element?
-        if let accessor = accessor {
-            RLMInitializeSwiftListAccessor(accessor)
-        }
-        return accessor
-    }
-}
-
-extension Results: CollectionType {
+extension Results: RealmCollectionType {
     // MARK: Sequence Support
 
     /// Returns a `GeneratorOf<T>` that yields successive elements in the results.
