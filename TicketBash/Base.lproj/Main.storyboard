@@ -702,7 +702,7 @@ this parking ticket?</string>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="0fC-BD-FEb"/>
-                                        <include reference="UVJ-Yb-j4e"/>
+                                        <exclude reference="UVJ-Yb-j4e"/>
                                         <exclude reference="9W2-pE-gfn"/>
                                         <include reference="Lzc-6F-7KY"/>
                                         <include reference="Srv-eh-5rk"/>
@@ -973,9 +973,6 @@ this parking ticket?</string>
                                         <include reference="Hmo-fU-9lI"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="-4" y="171" width="408" height="100"/>
-                                </variation>
                                 <connections>
                                     <action selector="freeButton:" destination="Rg3-IU-Rbz" eventType="touchUpInside" id="luh-Va-q4o"/>
                                     <action selector="nextButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QNo-zh-HSb"/>
@@ -995,9 +992,6 @@ this parking ticket?</string>
                                     <mask key="constraints">
                                         <exclude reference="EnE-YO-kr9"/>
                                     </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="144" width="400" height="19.5"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sda-kw-Y3B">
@@ -1059,7 +1053,9 @@ this parking ticket?</string>
                             <constraint firstItem="sda-kw-Y3B" firstAttribute="trailing" secondItem="9Et-uf-I4O" secondAttribute="trailing" id="3Ji-Rg-rgy"/>
                             <constraint firstItem="sda-kw-Y3B" firstAttribute="top" secondItem="xtK-75-jSY" secondAttribute="bottom" id="4d2-Z6-Jst"/>
                             <constraint firstItem="9Et-uf-I4O" firstAttribute="centerX" secondItem="dD5-cO-0QD" secondAttribute="centerX" id="7OA-0v-EVn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9Et-uf-I4O" secondAttribute="trailing" constant="-16" id="9Ga-pK-Hlm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Et-uf-I4O" secondAttribute="trailing" constant="-16" id="9Ga-pK-Hlm">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
                             <constraint firstItem="9Et-uf-I4O" firstAttribute="leading" secondItem="MnE-8V-fOK" secondAttribute="leadingMargin" constant="-17" id="B46-CO-5Qw"/>
                             <constraint firstItem="9Et-uf-I4O" firstAttribute="top" secondItem="HR3-Ke-kN6" secondAttribute="bottom" constant="150" id="GIF-5L-iRj"/>
                             <constraint firstItem="xtK-75-jSY" firstAttribute="top" secondItem="HR3-Ke-kN6" secondAttribute="bottom" constant="125" id="H6u-M2-g2Q"/>
@@ -1068,6 +1064,7 @@ this parking ticket?</string>
                             </constraint>
                             <constraint firstItem="dD5-cO-0QD" firstAttribute="top" secondItem="9Et-uf-I4O" secondAttribute="bottom" id="HOA-A7-3kB">
                                 <variation key="heightClass=regular" constant="8"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="7"/>
                             </constraint>
                             <constraint firstItem="xtK-75-jSY" firstAttribute="top" secondItem="dD5-cO-0QD" secondAttribute="bottom" constant="25" id="Pzi-Y7-SWU"/>
                             <constraint firstItem="g8X-AU-AtP" firstAttribute="top" secondItem="sda-kw-Y3B" secondAttribute="bottom" constant="150" id="QU4-fJ-i0X">
@@ -1078,10 +1075,10 @@ this parking ticket?</string>
                             <constraint firstItem="g8X-AU-AtP" firstAttribute="top" secondItem="xtK-75-jSY" secondAttribute="bottom" constant="80" id="RrP-Zc-oPM"/>
                             <constraint firstAttribute="centerX" secondItem="sda-kw-Y3B" secondAttribute="centerX" id="Vbc-Oe-aeT"/>
                             <constraint firstItem="9Et-uf-I4O" firstAttribute="top" secondItem="HR3-Ke-kN6" secondAttribute="bottom" constant="100" id="WgV-cO-UNK">
-                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="144"/>
                             </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="dD5-cO-0QD" secondAttribute="trailing" constant="-16" id="a5P-2E-yPp">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="-24"/>
                             </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="sda-kw-Y3B" secondAttribute="trailing" constant="-16" id="fBn-02-syz">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
@@ -1089,7 +1086,9 @@ this parking ticket?</string>
                             <constraint firstItem="dD5-cO-0QD" firstAttribute="leading" secondItem="9Et-uf-I4O" secondAttribute="leading" id="gJm-NS-0OE"/>
                             <constraint firstItem="sda-kw-Y3B" firstAttribute="top" secondItem="xtK-75-jSY" secondAttribute="bottom" constant="8" symbolic="YES" id="gfr-NW-TDA"/>
                             <constraint firstAttribute="trailing" secondItem="xtK-75-jSY" secondAttribute="trailing" id="hKr-Cu-UZL"/>
-                            <constraint firstItem="9Et-uf-I4O" firstAttribute="leading" secondItem="MnE-8V-fOK" secondAttribute="leadingMargin" constant="-16" id="lPm-Um-RGg"/>
+                            <constraint firstItem="9Et-uf-I4O" firstAttribute="leading" secondItem="MnE-8V-fOK" secondAttribute="leadingMargin" constant="-16" id="lPm-Um-RGg">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
                             <constraint firstItem="sda-kw-Y3B" firstAttribute="top" secondItem="xtK-75-jSY" secondAttribute="bottom" id="oMp-k9-AZj">
                                 <variation key="heightClass=regular" constant="8"/>
                                 <variation key="heightClass=regular-widthClass=compact" constant="8"/>
@@ -1097,7 +1096,7 @@ this parking ticket?</string>
                             <constraint firstAttribute="trailingMargin" secondItem="xtK-75-jSY" secondAttribute="trailing" constant="-16" id="oRc-oa-b2S"/>
                             <constraint firstAttribute="centerX" secondItem="9Et-uf-I4O" secondAttribute="centerX" id="sWZ-OA-uAm"/>
                             <constraint firstItem="dD5-cO-0QD" firstAttribute="leading" secondItem="MnE-8V-fOK" secondAttribute="leadingMargin" constant="-16" id="thV-rX-XSg">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="-24"/>
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="xtK-75-jSY" secondAttribute="centerX" id="u2s-MM-Dzg"/>
                             <constraint firstItem="dD5-cO-0QD" firstAttribute="top" secondItem="9Et-uf-I4O" secondAttribute="bottom" constant="8" symbolic="YES" id="uC8-Rb-qJl"/>
