@@ -83,7 +83,7 @@ class SubmitViewController: UIViewController {
         FeedBackMailer.sharedInstance.sendFeedback()
     }
     func sendTicketData() {
-        let URLstring = "https://ticketbash.ngrok.com/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)"
+        let URLstring = "\(Constants.ticketbashBaseURL)/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)"
         
         // 5
         let url = NSURL(string: URLstring)  // Replace with your server or computer's local IP Address!
