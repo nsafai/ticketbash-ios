@@ -113,7 +113,7 @@ class PaymentViewController: UIViewController, STPPaymentCardTextFieldDelegate {
     func handleToken(token: STPToken!) {
         //send token to backend and create charge
         
-                let URLstring = "https://ticketbash.ngrok.com/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)&stripe_token=\(token!.tokenId)"
+                let URLstring = "\(Constants.ticketbashBaseURL)/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)&stripe_token=\(token!.tokenId)"
         
                 // 5
                 let url = NSURL(string: URLstring)  // Replace with your server or computer's local IP Address!
@@ -211,7 +211,7 @@ extension PaymentViewController: PKPaymentAuthorizationViewControllerDelegate {
             
             //            // 4
             //            let shippingAddress = self.createShippingAddressFromRef(payment.shippingAddress)
-            let URLstring = "https://ticketbash.ngrok.com/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)&stripe_token=\(token!.tokenId)"
+            let URLstring = "\(Constants.ticketbashBaseURL)/api/v0/process_ticket?parse_id=\(self.myTicket!.parseObjectID)&stripe_token=\(token!.tokenId)"
             
             // 5
             let url = NSURL(string: URLstring)  // Replace with your server or computer's local IP Address!
