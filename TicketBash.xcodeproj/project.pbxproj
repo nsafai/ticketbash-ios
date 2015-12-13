@@ -42,6 +42,7 @@
 		B198533E1B6BE93F00BFCEEE /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198533D1B6BE93F00BFCEEE /* CameraViewController.swift */; };
 		B19853431B6ED6D100BFCEEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19853421B6ED6D100BFCEEE /* Foundation.framework */; };
 		B1CC524E1B693C6C00DB1BD2 /* ContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC524D1B693C6C00DB1BD2 /* ContactInfoViewController.swift */; };
+		EDE806D61C1E0BD0000DDEF1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE806D51C1E0BD0000DDEF1 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		B198533D1B6BE93F00BFCEEE /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		B19853421B6ED6D100BFCEEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B1CC524D1B693C6C00DB1BD2 /* ContactInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoViewController.swift; sourceTree = "<group>"; };
+		EDE806D51C1E0BD0000DDEF1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				B130F5A81B7934BC005D64E0 /* InstructionsPages.swift */,
 				B130F5AF1B7AA635005D64E0 /* FeedBackMailer.swift */,
 				B116EA0F1B7C63CB008FFCE9 /* Reachability.swift */,
+				EDE806D51C1E0BD0000DDEF1 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDE806D61C1E0BD0000DDEF1 /* Constants.swift in Sources */,
 				B19853381B6BA7E600BFCEEE /* SubmitViewController.swift in Sources */,
 				B198533E1B6BE93F00BFCEEE /* CameraViewController.swift in Sources */,
 				B130F59B1B77C455005D64E0 /* RequestViewController.swift in Sources */,
