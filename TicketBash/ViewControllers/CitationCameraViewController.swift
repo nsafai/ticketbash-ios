@@ -12,7 +12,6 @@ import RealmSwift
 
 class CitationCameraViewController: UIViewController {
     var myTicket: Ticket?
-    let realm = try!Realm()
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -43,10 +42,10 @@ extension CitationCameraViewController: CameraViewControllerDelegate {
         }
         
         if let ticket = self.myTicket {
-            try! self.realm.write() { //changes must be done within a write transaction/closure.
+            try! realm.write() { //changes must be done within a write transaction/closure.
                 var imageData = UIImageJPEGRepresentation(image, 0.6)
                 ticket.ticketPicture =  imageData! // change realm image data value to what user just took in camera view controller
-                self.realm.add(ticket, update: true) // 3 Add  new ticket to Realm if none exists, else update it
+                realm.add(ticket, update: true) // 3 Add  new ticket to Realm if none exists, else update it
             }
         }
         // segue to next view

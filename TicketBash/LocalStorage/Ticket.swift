@@ -21,6 +21,9 @@ class Ticket: Object {
     // stored in TicketOriginViewController
     dynamic var ticketOrigin: String = ""
     
+    // stored in TicketTypeViewController
+    dynamic var ticketType: String = ""
+    
     // stored in CitationCameraViewController
     dynamic var ticketPicture = NSData()
     

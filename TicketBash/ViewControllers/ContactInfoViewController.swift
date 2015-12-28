@@ -33,7 +33,6 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     
     // local storage
     var myTicket: Ticket?
-    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,13 +110,13 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
     
     func saveToRealm() {
         if let ticket = self.myTicket { // safety just incase this button is clicked before viewWillAppear finished loading
-            try! self.realm.write() { //changes must be done within a write transaction/closure.
+            try! realm.write() { //changes must be done within a write transaction/closure.
                 ticket.firstName = self.firstNameTextField.text! // change realm text value to what user just wrote in text view
                 ticket.lastName = self.lastNameTextField.text!
                 ticket.mailingAddress = self.addressTextField!.text!
                 ticket.mailingAddress2 = self.address2TextField.text!
                 ticket.email = self.emailTextField.text!
-                self.realm.add(ticket, update: true) // 3 Add a new ticket to Realm if none exists, else update it
+                realm.add(ticket, update: true) // 3 Add a new ticket to Realm if none exists, else update it
             }
         }
     }
@@ -159,11 +158,11 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                     ticketObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
                         print("sent ticket to Parse")
                         if let ticket = self.myTicket {
-                            try! self.realm.write() {
+                            try! realm.write() {
                                 ticketData.finishedUploading = true
                                 ticketData.parseObjectID = ticketObject.objectId!
                                 self.mixpanel.track("Ticket Upload")
-                                self.realm.add(ticket, update: true)
+                                realm.add(ticket, update: true)
                             }
                         }
                     })

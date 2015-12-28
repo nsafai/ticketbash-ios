@@ -20,7 +20,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var disclaimerLabel: UILabel!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var notifyButton: UIButton!
-    let realm = try! Realm()
+    
     var myTicket: Ticket?
     
     override func viewDidLoad() {
@@ -90,7 +90,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         
         try! realm.write { () -> Void in
             self.myTicket?.ticketOrigin = self.cityRequestTextField.text!
-            self.realm.add(self.myTicket!, update: true)
+            realm.add(self.myTicket!, update: true)
             print(self.myTicket!.ticketOrigin)
         }
         
@@ -111,9 +111,9 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         requestObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
             print("sent Request to Parse")
             if let ticket = self.myTicket {
-                try! self.realm.write() {
+                try! realm.write() {
 //                    ticketData.parseObjectID = ticketObject.objectId!
-                    self.realm.add(ticket, update: true)
+                    realm.add(ticket, update: true)
                 }
             }
             self.confirmationLabel.hidden = false
@@ -154,7 +154,7 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         
         try! realm.write { () -> Void in
             self.myTicket?.notificationsEnabled = false
-            self.realm.add(self.myTicket!, update: true)
+            realm.add(self.myTicket!, update: true)
             print(self.myTicket!.ticketOrigin)
         }
     }

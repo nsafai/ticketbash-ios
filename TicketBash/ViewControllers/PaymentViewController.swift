@@ -16,7 +16,7 @@ class PaymentViewController: UIViewController, STPPaymentCardTextFieldDelegate {
     
     //local storage
     var myTicket: Ticket?
-    let realm = try! Realm()
+
     var shippingCost: NSDecimalNumber = 3
     
     @IBOutlet weak var paymentOptionsLabel: UILabel!

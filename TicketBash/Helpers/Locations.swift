@@ -9,3 +9,4 @@
 import Foundation
 
 let newYorkCity = "New York City"
+let sanFranciscoCity = "San Francisco"

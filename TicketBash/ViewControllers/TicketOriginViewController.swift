@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Realm
 import RealmSwift
 import Parse
 import ParseUI
@@ -14,17 +15,29 @@ import MessageUI
 
 class TicketOriginViewController: UIViewController {
     
+
     
     var parseLoginHelper: ParseLoginHelper!
     let loginViewController = PFLogInViewController()
-    let realm = try! Realm()
     var myTicket: Ticket?
     @IBOutlet weak var newYorkButton: UIButton!
+    @IBOutlet weak var sanFranciscoButton: UIButton!
     @IBOutlet weak var otherButton: UIButton!
+    @IBOutlet weak var howItWorksButton: UIButton!
+    @IBOutlet weak var parkingMeterImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // realm migration
+//        RLMRealm.migrateRealm(RLMRealmConfiguration.defaultConfiguration())
+        
+//        setSchemaVersion(1, realmPath: Realm.defaultPath, migrationBlock: { migration, oldSchemaVersion in
+//            if oldSchemaVersion < 1 { }
+//        })
+
+        
+        print("Hello from TicketOriginViewController")
         var tickets = realm.objects(Ticket)
         if let ticket = tickets.first { // if there is a stored value then the 'tickets' array is not nil --> assign the value of the first ticket in the array to 'ticket'
             myTicket = ticket // assign the value of ticket to myTicket
@@ -35,7 +48,7 @@ class TicketOriginViewController: UIViewController {
         
         try! realm.write({ () -> Void in
             self.myTicket?.isFirstTime == true
-            self.realm.add(self.myTicket!, update: true)
+            realm.add(self.myTicket!, update: true)
         })
         try! realm.write({ () -> Void in
             if self.myTicket?.isFirstTime == true {
@@ -43,8 +56,17 @@ class TicketOriginViewController: UIViewController {
                 self.performSegueWithIdentifier("showInstructions", sender: self)
                 self.myTicket?.isFirstTime = false
             }
-            self.realm.add(self.myTicket!, update: true)
+            realm.add(self.myTicket!, update: true)
         })
+        
+        if UIScreen.mainScreen().bounds.size.height == 480 {
+            // iPhone 4S
+//            self.howItWorksButton.hidden = true
+            self.parkingMeterImage.hidden = true
+        }  else if UIScreen.mainScreen().bounds.size.height == 568 {
+            // iPhone 5
+            self.parkingMeterImage.hidden = true
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -68,13 +90,24 @@ class TicketOriginViewController: UIViewController {
         self.performSegueWithIdentifier("showInstructions", sender: self)
     }
     @IBAction func newYorkButton(sender: AnyObject) {
+        
         try! realm.write { () -> Void in
             self.myTicket?.ticketOrigin = newYorkCity
             
-            self.realm.add(self.myTicket!, update: true)
+            realm.add(self.myTicket!, update: true)
             print(self.myTicket!.ticketOrigin)
         }
     }
+    @IBAction func sanFranciscoButton(sender: AnyObject) {
+        
+        try! realm.write { () -> Void in
+            self.myTicket?.ticketOrigin = sanFranciscoCity
+            
+            realm.add(self.myTicket!, update: true)
+            print(self.myTicket!.ticketOrigin)
+        }
+    }
+    
     @IBAction func helpButton(sender: AnyObject) {
         FeedBackMailer.sharedInstance.sendFeedback()
     }

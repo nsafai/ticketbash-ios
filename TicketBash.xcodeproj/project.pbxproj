@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12E54AB55EEC580D8D3AD86F /* Pods_TicketBash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28786E6DC54C2309ACC5E3A /* Pods_TicketBash.framework */; };
+		B10761C31C1FE40500DC5A91 /* TicketTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10761C21C1FE40500DC5A91 /* TicketTypeViewController.swift */; };
 		B10D33861B683B8200DE4D8E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10D33831B68389400DE4D8E /* Realm.framework */; };
 		B10D33871B683B8200DE4D8E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B10D33831B68389400DE4D8E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B10D33881B683B8200DE4D8E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10D33841B68389400DE4D8E /* RealmSwift.framework */; };
@@ -74,6 +75,7 @@
 		1C869B814DE9655B6927C186 /* Pods-TicketBash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketBash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicketBash/Pods-TicketBash.debug.xcconfig"; sourceTree = "<group>"; };
 		9D402A7624A5B5E5A8F41284 /* Pods-TicketBash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketBash.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicketBash/Pods-TicketBash.release.xcconfig"; sourceTree = "<group>"; };
 		A28786E6DC54C2309ACC5E3A /* Pods_TicketBash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicketBash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10761C21C1FE40500DC5A91 /* TicketTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketTypeViewController.swift; sourceTree = "<group>"; };
 		B10D33831B68389400DE4D8E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		B10D33841B68389400DE4D8E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		B10D338C1B683CE400DE4D8E /* ExplanationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */,
 				B163E4331B7032AE009AA5B8 /* CitationCameraViewController.swift */,
 				B10D338C1B683CE400DE4D8E /* ExplanationViewController.swift */,
+				B10761C21C1FE40500DC5A91 /* TicketTypeViewController.swift */,
 				B1CC524D1B693C6C00DB1BD2 /* ContactInfoViewController.swift */,
 				B19853371B6BA7E600BFCEEE /* SubmitViewController.swift */,
 				B157AAAD1B73B55600DF795F /* PaymentViewController.swift */,
@@ -455,6 +458,7 @@
 				B130F5931B77B8A3005D64E0 /* GeneratePDF.swift in Sources */,
 				B10D33921B6845F700DE4D8E /* Ticket.swift in Sources */,
 				B157AAB31B76C22600DF795F /* TicketOriginViewController.swift in Sources */,
+				B10761C31C1FE40500DC5A91 /* TicketTypeViewController.swift in Sources */,
 				B130F5B01B7AA635005D64E0 /* FeedBackMailer.swift in Sources */,
 				B130F5A11B7832AA005D64E0 /* Delay.swift in Sources */,
 				B198533C1B6BE55300BFCEEE /* EvidenceCameraViewController.swift in Sources */,

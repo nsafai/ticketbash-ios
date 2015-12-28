@@ -14,14 +14,19 @@ import RealmSwift
 import Stripe
 import Mixpanel
 
-
+public var realm: Realm!
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let StripePublishableKey = "pk_live_ePSPkOTAnggKbOkszyHseeiq"
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    
+
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+        
+
+        
         // Override point for customization after application launch.
        
         Mixpanel.sharedInstanceWithToken("05046b1a465d4f9d3327bacaf7d0c023")
@@ -49,14 +54,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 1
 //        PFFacebookUtils.initializeFacebook()
 //        
+        
+        // realm migration
+        setSchemaVersion(1, realmPath: Realm.defaultPath, migrationBlock: { migration, oldSchemaVersion in
+            if oldSchemaVersion < 1 { }
+        })
+        realm = try! Realm()
+
+        
 //        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
-
     }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    }
+    func applicationWillFinishLaunchingWithOptions(application: UIApplication) {
+        print("Hello from App Delegate")
+        
+        
+        
+
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
@@ -66,15 +85,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-        
+    
     }
 
     //MARK: Facebook Integration
     
-//    func applicationDidBecomeActive(application: UIApplication) {
+    func applicationDidBecomeActive(application: UIApplication) {
 //        FBSDKAppEvents.activateApp()
-//    }
-//    
+        print("Hello from App Delegate")
+        
+        // realm migration
+//        RLMRealm.migrateRealm(RLMRealmConfiguration.defaultConfiguration())
+    }
+//
 //    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
 //        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
 //    }

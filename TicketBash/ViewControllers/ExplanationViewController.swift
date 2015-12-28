@@ -20,7 +20,6 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var explanationTextView: UITextView!
     var myTicket: Ticket?
-    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,9 +87,9 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
         
         if let ticket = self.myTicket {
             
-            try! self.realm.write() { //changes must be done within a write transaction/closure.
+            try! realm.write() { //changes must be done within a write transaction/closure.
                 ticket.explanationText = self.explanationTextView.text // change realm text value to what user just wrote in text view
-                self.realm.add(ticket, update: true) // 3 Add  new ticket to Realm if none exists, else update it
+                realm.add(ticket, update: true) // 3 Add  new ticket to Realm if none exists, else update it
             }
         }
         self.performSegueWithIdentifier("showContactInfo", sender: self)

@@ -13,7 +13,6 @@ class SubmitViewController: UIViewController {
     
     // local storage
     var myTicket: Ticket?
-    let realm = try! Realm()
     
     @IBOutlet weak var freeButtonDisclaimer: UILabel!
     @IBOutlet weak var paidButtonDisclaimer: UILabel!
