@@ -22,7 +22,7 @@ class Ticket: Object {
     dynamic var ticketOrigin: String = ""
     
     // stored in TicketTypeViewController
-    dynamic var ticketType: String = ""
+    dynamic var ticketType: String = "" // type of reason for disputing "meter malfunction" etc.
     
     // stored in CitationCameraViewController
     dynamic var ticketPicture = NSData()

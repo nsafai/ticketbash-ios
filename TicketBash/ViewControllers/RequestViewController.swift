@@ -35,8 +35,8 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(animated: Bool) {
         
         refreshButton()
-        var tickets = realm.objects(Ticket)
-        cityRequestTextField.text == ""
+        let tickets = realm.objects(Ticket)
+        cityRequestTextField.text = ""
         submitButton.hidden = true
         
         if let ticket = tickets.first { // if there is a stored value then the 'tickets' array is not nil --> assign the value of the first ticket in the array to 'ticket'
@@ -145,9 +145,9 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func notifyMe(sender: AnyObject) {
         //registering for sending user various kinds of notifications
-        var types: UIUserNotificationType = [.Badge, .Alert, .Sound]
+        let types: UIUserNotificationType = [.Badge, .Alert, .Sound]
         
-        var settings: UIUserNotificationSettings = UIUserNotificationSettings( forTypes: types, categories: nil )
+        let settings: UIUserNotificationSettings = UIUserNotificationSettings( forTypes: types, categories: nil )
         
         UIApplication.sharedApplication().registerUserNotificationSettings( settings )
         UIApplication.sharedApplication().registerForRemoteNotifications()

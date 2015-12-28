@@ -40,7 +40,7 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
 //        }
 
         
-        var tickets = realm.objects(Ticket)
+        let tickets = realm.objects(Ticket)
         if let ticket = tickets.first {
             myTicket = ticket
             if (explanationTextView.text != "") {

@@ -38,25 +38,26 @@ class TicketOriginViewController: UIViewController {
 
         
         print("Hello from TicketOriginViewController")
-        var tickets = realm.objects(Ticket)
+        let tickets = realm.objects(Ticket)
         if let ticket = tickets.first { // if there is a stored value then the 'tickets' array is not nil --> assign the value of the first ticket in the array to 'ticket'
             myTicket = ticket // assign the value of ticket to myTicket
         } else {
             myTicket = Ticket()
             //            println("created new ticket")
         }
-        
+//        
+//        try! realm.write({ () -> Void in
+//            self.myTicket?.isFirstTime = true
+//            realm.add(self.myTicket!, update: true)
+//        })
         try! realm.write({ () -> Void in
-            self.myTicket?.isFirstTime == true
-            realm.add(self.myTicket!, update: true)
-        })
-        try! realm.write({ () -> Void in
-            if self.myTicket?.isFirstTime == true {
+            if (self.myTicket?.isFirstTime == true) {
 //                self.navigationController?.navigationBarHidden = false
                 self.performSegueWithIdentifier("showInstructions", sender: self)
                 self.myTicket?.isFirstTime = false
-            }
+            } else {
             realm.add(self.myTicket!, update: true)
+            }
         })
         
         if UIScreen.mainScreen().bounds.size.height == 480 {
@@ -72,7 +73,7 @@ class TicketOriginViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
 //        self.navigationController?.navigationBarHidden = false
         
-        var user = PFUser.currentUser()
+        let user = PFUser.currentUser()
         if (user != nil) {
             // someone is logged in
             print(PFUser.currentUser())

@@ -42,6 +42,7 @@
 		B198533C1B6BE55300BFCEEE /* EvidenceCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */; };
 		B198533E1B6BE93F00BFCEEE /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B198533D1B6BE93F00BFCEEE /* CameraViewController.swift */; };
 		B19853431B6ED6D100BFCEEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19853421B6ED6D100BFCEEE /* Foundation.framework */; };
+		B1A6E27A1C31216300DBA824 /* DisputeReasons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A6E2791C31216300DBA824 /* DisputeReasons.swift */; };
 		B1CC524E1B693C6C00DB1BD2 /* ContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC524D1B693C6C00DB1BD2 /* ContactInfoViewController.swift */; };
 		EDE806D61C1E0BD0000DDEF1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE806D51C1E0BD0000DDEF1 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -113,6 +114,7 @@
 		B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvidenceCameraViewController.swift; sourceTree = "<group>"; };
 		B198533D1B6BE93F00BFCEEE /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		B19853421B6ED6D100BFCEEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B1A6E2791C31216300DBA824 /* DisputeReasons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisputeReasons.swift; sourceTree = "<group>"; };
 		B1CC524D1B693C6C00DB1BD2 /* ContactInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoViewController.swift; sourceTree = "<group>"; };
 		EDE806D51C1E0BD0000DDEF1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,12 +168,12 @@
 			children = (
 				B130F5A21B785100005D64E0 /* InstructionsViewController.swift */,
 				B157AAB21B76C22600DF795F /* TicketOriginViewController.swift */,
+				B10761C21C1FE40500DC5A91 /* TicketTypeViewController.swift */,
 				B130F59A1B77C455005D64E0 /* RequestViewController.swift */,
 				B198533D1B6BE93F00BFCEEE /* CameraViewController.swift */,
 				B198533B1B6BE55300BFCEEE /* EvidenceCameraViewController.swift */,
 				B163E4331B7032AE009AA5B8 /* CitationCameraViewController.swift */,
 				B10D338C1B683CE400DE4D8E /* ExplanationViewController.swift */,
-				B10761C21C1FE40500DC5A91 /* TicketTypeViewController.swift */,
 				B1CC524D1B693C6C00DB1BD2 /* ContactInfoViewController.swift */,
 				B19853371B6BA7E600BFCEEE /* SubmitViewController.swift */,
 				B157AAAD1B73B55600DF795F /* PaymentViewController.swift */,
@@ -202,6 +204,7 @@
 				B130F5AF1B7AA635005D64E0 /* FeedBackMailer.swift */,
 				B116EA0F1B7C63CB008FFCE9 /* Reachability.swift */,
 				EDE806D51C1E0BD0000DDEF1 /* Constants.swift */,
+				B1A6E2791C31216300DBA824 /* DisputeReasons.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				B116EA101B7C63CB008FFCE9 /* Reachability.swift in Sources */,
 				B130F5A31B785100005D64E0 /* InstructionsViewController.swift in Sources */,
 				B130F5931B77B8A3005D64E0 /* GeneratePDF.swift in Sources */,
+				B1A6E27A1C31216300DBA824 /* DisputeReasons.swift in Sources */,
 				B10D33921B6845F700DE4D8E /* Ticket.swift in Sources */,
 				B157AAB31B76C22600DF795F /* TicketOriginViewController.swift in Sources */,
 				B10761C31C1FE40500DC5A91 /* TicketTypeViewController.swift in Sources */,

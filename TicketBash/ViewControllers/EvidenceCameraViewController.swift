@@ -30,7 +30,7 @@ class EvidenceCameraViewController: UIViewController {
 extension EvidenceCameraViewController: CameraViewControllerDelegate {
     func acceptedImage(image: UIImage) {
         // save to realm
-        var tickets = realm.objects(Ticket)
+        let tickets = realm.objects(Ticket)
         if let ticket = tickets.first {
             myTicket = ticket
         } else {

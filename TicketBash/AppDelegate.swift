@@ -16,6 +16,7 @@ import Mixpanel
 
 public var realm: Realm!
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
