@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tmN-bl-i3v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tmN-bl-i3v">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -22,7 +22,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlj-0k-pSo" userLabel="Invisible Button">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,7 +32,6 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5n2-aB-xJO">
                                 <rect key="frame" x="0.0" y="64" width="600" height="233"/>
-                                <animations/>
                                 <string key="text">Keep in mind that whatever you type will end up directly on your dispute. Keep it formal, include any relevant evidence (like permit numbers), and avoid spelling mistakes!</string>
                                 <color key="textColor" red="0.58431372550000005" green="0.64705882349999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -41,7 +39,6 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nai-BF-uZm">
                                 <rect key="frame" x="0.0" y="299" width="600" height="50"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="noE-5I-HPl">
@@ -71,7 +68,6 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wP1-KK-w0b">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="bFk-8W-aV8"/>
                                     <constraint firstAttribute="width" constant="304" id="kKV-Ym-Pkr"/>
@@ -104,7 +100,6 @@ this parking ticket?</string>
                                 </variation>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="5n2-aB-xJO" secondAttribute="centerX" id="3hC-sG-Vob"/>
@@ -231,7 +226,6 @@ this parking ticket?</string>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YLf-aH-I3Y">
                                         <rect key="frame" x="0.0" y="64" width="600" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="34n-Ry-qYC"/>
                                             <constraint firstAttribute="height" constant="24" id="Ki4-bI-lMb"/>
@@ -263,7 +257,6 @@ this parking ticket?</string>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="n6f-iC-oUb">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="YZY-dl-gqO"/>
                                             <constraint firstAttribute="height" constant="1" id="Z2e-pB-roe"/>
@@ -292,7 +285,6 @@ this parking ticket?</string>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bgk-ko-7j7">
                                         <rect key="frame" x="0.0" y="93" width="600" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="99.5" id="Jcu-lx-MAn"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Mg4-eK-MPv"/>
@@ -325,7 +317,6 @@ this parking ticket?</string>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="hPn-ZN-37P">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="UJu-3w-z0I"/>
                                             <constraint firstAttribute="height" constant="1" id="d2n-Ul-0TY"/>
@@ -354,7 +345,6 @@ this parking ticket?</string>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9xd-1C-mzZ">
                                         <rect key="frame" x="0.0" y="238" width="600" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="3Dh-C4-ecq"/>
                                             <constraint firstAttribute="width" constant="52.5" id="4CY-ex-MxF"/>
@@ -386,7 +376,6 @@ this parking ticket?</string>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="nvK-JD-kiE">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="hbe-t7-vQv"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="iR2-Fy-QzE"/>
@@ -415,7 +404,6 @@ this parking ticket?</string>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bkE-gM-V6O">
                                         <rect key="frame" x="0.0" y="122" width="600" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="77" id="3A1-JP-oxn"/>
                                             <constraint firstAttribute="height" constant="30" id="qbp-ON-aWJ"/>
@@ -447,7 +435,6 @@ this parking ticket?</string>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="Vpt-xA-KrQ">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="Tnj-SM-KCY"/>
                                             <constraint firstAttribute="height" constant="1" id="bSE-hW-qlw"/>
@@ -476,7 +463,6 @@ this parking ticket?</string>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Apt. # / Unit" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mFn-9o-yWM">
                                         <rect key="frame" x="0.0" y="122" width="600" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="0LJ-ki-UUA"/>
                                             <constraint firstAttribute="width" constant="109.5" id="Weu-cO-d0U"/>
@@ -508,7 +494,6 @@ this parking ticket?</string>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="A5U-Lm-274">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="H94-KK-gtV"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="Had-n2-C0r"/>
@@ -536,7 +521,6 @@ this parking ticket?</string>
                                         </variation>
                                     </imageView>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="218" id="0fC-BD-FEb">
                                         <variation key="heightClass=regular-widthClass=compact" constant="220"/>
@@ -758,7 +742,6 @@ this parking ticket?</string>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USR-gL-8cZ">
                                 <rect key="frame" x="0.0" y="299" width="600" height="50"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8U0-px-fEW"/>
@@ -788,7 +771,6 @@ this parking ticket?</string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We only ask for this info once" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1E-El-j35">
                                 <rect key="frame" x="-1" y="355" width="601" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="83Y-tS-dR8"/>
                                     <constraint firstAttribute="height" constant="17" id="JsH-8a-sY8">
@@ -816,7 +798,6 @@ this parking ticket?</string>
                                 </variation>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <accessibility key="accessibilityConfiguration" label=""/>
                         <constraints>
@@ -943,7 +924,6 @@ this parking ticket?</string>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dD5-cO-0QD">
                                 <rect key="frame" x="-1" y="393" width="601" height="50"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.58431372550000005" green="0.64705882349999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="4k3-CT-FoY">
@@ -981,7 +961,6 @@ this parking ticket?</string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You print it, address it, stamp it &amp; send it." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Et-uf-I4O">
                                 <rect key="frame" x="-1" y="355" width="601" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="EnE-YO-kr9"/>
                                 </constraints>
@@ -996,7 +975,6 @@ this parking ticket?</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sda-kw-Y3B">
                                 <rect key="frame" x="0.0" y="227" width="600" height="50"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="3Ux-lJ-qkp">
@@ -1030,7 +1008,6 @@ this parking ticket?</string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Let us do the work... Relax!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtK-75-jSY">
                                 <rect key="frame" x="0.0" y="189" width="600" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rZ7-Di-srA"/>
                                 </constraints>
@@ -1044,7 +1021,6 @@ this parking ticket?</string>
                                 </variation>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="sda-kw-Y3B" firstAttribute="leading" secondItem="MnE-8V-fOK" secondAttribute="leading" id="1DA-FG-A8C"/>
@@ -1209,7 +1185,6 @@ this parking ticket?</string>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73S-hv-d4i">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
                                 <state key="normal" image="ApplePayBTN_48pt__white_textLogo_">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1219,7 +1194,6 @@ this parking ticket?</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUp-Nq-PK9">
                                 <rect key="frame" x="0.0" y="299" width="600" height="50"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="49w-5f-mGZ"/>
@@ -1253,14 +1227,12 @@ this parking ticket?</string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We process all transactions with 256 bit SSL encryption using Stripe.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O00-gr-OwE">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                 <color key="textColor" red="0.58431372550000005" green="0.64705882349999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rlK-yd-rmR">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="8EK-mL-mTK"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="959-K3-JFb"/>
@@ -1289,20 +1261,17 @@ this parking ticket?</string>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6y-C2-XEl">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Options" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plS-4A-IBv">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="plS-4A-IBv" secondAttribute="centerX" id="0hv-my-EEa"/>
@@ -1458,7 +1427,6 @@ this parking ticket?</string>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nV-XX-3km">
                                 <rect key="frame" x="0.0" y="227" width="600" height="50"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="79R-7E-k1E"/>
@@ -1497,7 +1465,6 @@ this parking ticket?</string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On second thought..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yM-WW-ZAS">
                                 <rect key="frame" x="0.0" y="189" width="600" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="JZy-JJ-IOT"/>
                                 </constraints>
@@ -1512,7 +1479,6 @@ this parking ticket?</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpA-u9-QHH">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.58431372550000005" green="0.64705882349999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="oXd-bI-nSZ"/>
@@ -1538,7 +1504,6 @@ this parking ticket?</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ew-O4-RbU">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="dPV-Rs-1jv"/>
@@ -1567,7 +1532,6 @@ this parking ticket?</string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alright!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3R-FO-mLi">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="304" id="Jht-hD-l5L"/>
                                     <constraint firstAttribute="width" constant="354" id="ae2-Yz-K1O"/>
@@ -1602,7 +1566,6 @@ this parking ticket?</string>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zI7-oc-2vH">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" id="C6h-OM-X5C"/>
                                             <constraint firstAttribute="width" id="Qx9-vb-Snt"/>
@@ -1639,7 +1602,6 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                                         </variation>
                                     </textView>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstItem="zI7-oc-2vH" firstAttribute="leading" secondItem="pep-yy-fCA" secondAttribute="leading" id="0Om-yT-yX9"/>
                                     <constraint firstItem="zI7-oc-2vH" firstAttribute="top" secondItem="pep-yy-fCA" secondAttribute="top" id="3up-Xe-eE4"/>
@@ -1697,7 +1659,6 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                                 </variation>
                             </scrollView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0Ew-O4-RbU" firstAttribute="leading" secondItem="pl8-7c-kld" secondAttribute="leadingMargin" constant="-16" id="0Hp-Ms-v6V">
@@ -1819,7 +1780,6 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ztc-nX-BDf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1841,7 +1801,6 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                     <view key="view" contentMode="scaleToFill" id="odA-GG-kV4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="0lO-34-YYy"/>
@@ -1867,10 +1826,8 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Step 1" translatesAutoresizingMaskIntoConstraints="NO" id="ECu-SN-8ev">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <animations/>
                             </imageView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ECu-SN-8ev" firstAttribute="leading" secondItem="3hv-sS-Hzc" secondAttribute="leadingMargin" constant="-16" id="DgE-ib-Lwi">
@@ -1928,10 +1885,8 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Step 2" translatesAutoresizingMaskIntoConstraints="NO" id="BcR-Wt-y4J">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <animations/>
                                     </imageView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="BcR-Wt-y4J" firstAttribute="top" secondItem="f2r-Qo-VRS" secondAttribute="top" id="Lxk-hE-2TA"/>
@@ -1963,7 +1918,6 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                                 </variation>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="f2r-Qo-VRS" secondAttribute="trailing" constant="-16" id="1m5-Wu-KDZ"/>
@@ -2015,27 +1969,26 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticketmeter" translatesAutoresizingMaskIntoConstraints="NO" id="aNX-75-UfL">
                                 <rect key="frame" x="164" y="447" width="160" height="160"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="DCk-c6-TBW"/>
-                                    <constraint firstAttribute="width" constant="160" id="MGa-xJ-AQv"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="Mvl-mt-0KV"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="P8Q-7c-0x7"/>
                                     <constraint firstAttribute="width" secondItem="aNX-75-UfL" secondAttribute="height" multiplier="146:147" id="aO7-6c-fVD"/>
+                                    <constraint firstAttribute="width" constant="160" id="alu-JG-vhx"/>
                                     <constraint firstAttribute="width" constant="160" id="c5H-CE-Nmf"/>
-                                    <constraint firstAttribute="height" constant="161" id="haI-UZ-Xf8"/>
                                     <constraint firstAttribute="width" constant="160" id="ldz-En-HZd"/>
                                     <constraint firstAttribute="height" constant="161" id="nN4-vS-YRr"/>
+                                    <constraint firstAttribute="height" constant="161" id="vOg-Bk-SGK"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="MGa-xJ-AQv"/>
                                         <exclude reference="Mvl-mt-0KV"/>
                                         <exclude reference="P8Q-7c-0x7"/>
                                         <exclude reference="aO7-6c-fVD"/>
-                                        <exclude reference="haI-UZ-Xf8"/>
+                                        <exclude reference="alu-JG-vhx"/>
                                         <exclude reference="ldz-En-HZd"/>
                                         <exclude reference="nN4-vS-YRr"/>
+                                        <exclude reference="vOg-Bk-SGK"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular">
@@ -2047,91 +2000,21 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="DCk-c6-TBW"/>
-                                        <include reference="MGa-xJ-AQv"/>
                                         <exclude reference="aO7-6c-fVD"/>
+                                        <include reference="alu-JG-vhx"/>
                                         <exclude reference="c5H-CE-Nmf"/>
-                                        <include reference="haI-UZ-Xf8"/>
                                         <exclude reference="ldz-En-HZd"/>
                                         <exclude reference="nN4-vS-YRr"/>
+                                        <include reference="vOg-Bk-SGK"/>
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="70g-Ic-SJ3">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="J5Q-sb-d90"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="New York City">
-                                    <color key="titleColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="J5Q-sb-d90"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="J5Q-sb-d90"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="newYorkButton:" destination="Riq-p6-P05" eventType="touchUpInside" id="y8n-9F-YzV"/>
-                                    <segue destination="t6v-GG-VNE" kind="show" id="h1A-5y-WJY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="enx-bi-y9z">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.58431372549019611" green="0.6470588235294118" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="BLx-Rk-4KV">
-                                        <variation key="heightClass=regular" constant="70"/>
-                                    </constraint>
-                                    <constraint firstAttribute="width" secondItem="enx-bi-y9z" secondAttribute="height" multiplier="40:7" id="MjS-Jy-tcL"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="UoM-eE-iHq"/>
-                                    <constraint firstAttribute="height" constant="70" id="o3s-5b-FJm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Somewhere Else">
-                                    <color key="titleColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="BLx-Rk-4KV"/>
-                                        <exclude reference="MjS-Jy-tcL"/>
-                                        <exclude reference="UoM-eE-iHq"/>
-                                        <exclude reference="o3s-5b-FJm"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="BLx-Rk-4KV"/>
-                                        <exclude reference="UoM-eE-iHq"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="BLx-Rk-4KV"/>
-                                        <exclude reference="MjS-Jy-tcL"/>
-                                        <include reference="o3s-5b-FJm"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="BWO-PK-kbq" kind="show" id="z7W-4t-eDE"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="gKB-65-fP3">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="354" id="8c1-Tb-1lS"/>
                                     <constraint firstAttribute="height" constant="88" id="9z0-xQ-rPS"/>
-                                    <constraint firstAttribute="height" constant="98" id="S6Q-UN-X6g"/>
+                                    <constraint firstAttribute="height" constant="98" id="HgP-aZ-0u0"/>
                                     <constraint firstAttribute="width" constant="304" id="iuO-uM-RYU"/>
                                 </constraints>
                                 <string key="text">Where did you receive
@@ -2143,7 +2026,7 @@ the parking ticket?</string>
                                     <mask key="constraints">
                                         <exclude reference="8c1-Tb-1lS"/>
                                         <exclude reference="9z0-xQ-rPS"/>
-                                        <exclude reference="S6Q-UN-X6g"/>
+                                        <exclude reference="HgP-aZ-0u0"/>
                                         <exclude reference="iuO-uM-RYU"/>
                                     </mask>
                                 </variation>
@@ -2157,124 +2040,263 @@ the parking ticket?</string>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="9z0-xQ-rPS"/>
-                                        <include reference="S6Q-UN-X6g"/>
+                                        <include reference="HgP-aZ-0u0"/>
                                         <exclude reference="iuO-uM-RYU"/>
                                     </mask>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYb-a8-0DL">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
                                 <state key="normal" title="How it works">
                                     <color key="titleColor" red="0.58431372550000005" green="0.64705882349999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="156" y="459" width="88" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="howItWorks:" destination="Riq-p6-P05" eventType="touchUpInside" id="j1i-Is-PmD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3zW-dd-ZdB">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lwk-E4-jAN">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="70g-Ic-SJ3">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="New York City">
+                                            <color key="titleColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="newYorkButton:" destination="Riq-p6-P05" eventType="touchUpInside" id="y8n-9F-YzV"/>
+                                            <segue destination="t6v-GG-VNE" kind="show" id="h1A-5y-WJY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="enx-bi-y9z">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.58431372549019611" green="0.6470588235294118" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="Ae4-hj-5sp"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="BLx-Rk-4KV">
+                                                <variation key="heightClass=regular" constant="70"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" secondItem="enx-bi-y9z" secondAttribute="height" multiplier="40:7" id="MjS-Jy-tcL"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="UoM-eE-iHq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Somewhere Else">
+                                            <color key="titleColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Ae4-hj-5sp"/>
+                                                <exclude reference="BLx-Rk-4KV"/>
+                                                <exclude reference="MjS-Jy-tcL"/>
+                                                <exclude reference="UoM-eE-iHq"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="BLx-Rk-4KV"/>
+                                                <exclude reference="UoM-eE-iHq"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Ae4-hj-5sp"/>
+                                                <exclude reference="BLx-Rk-4KV"/>
+                                                <exclude reference="MjS-Jy-tcL"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="BWO-PK-kbq" kind="show" id="z7W-4t-eDE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3zW-dd-ZdB">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="San Francisco">
+                                            <color key="titleColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sanFranciscoButton:" destination="Riq-p6-P05" eventType="touchUpInside" id="jkJ-mH-vxo"/>
+                                            <segue destination="9iz-E8-sJs" kind="show" id="0nU-C3-q0V"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="vsM-KZ-vti"/>
+                                    <constraint firstItem="enx-bi-y9z" firstAttribute="top" secondItem="3zW-dd-ZdB" secondAttribute="top" id="9y9-O1-P4y">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="218" id="B3p-lm-otT">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="220"/>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="70g-Ic-SJ3" secondAttribute="trailing" id="FMk-s1-wfT"/>
+                                    <constraint firstItem="70g-Ic-SJ3" firstAttribute="top" secondItem="lwk-E4-jAN" secondAttribute="top" constant="8" id="HYN-MH-9EH">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                    </constraint>
+                                    <constraint firstAttribute="bottom" secondItem="enx-bi-y9z" secondAttribute="bottom" constant="2" id="IFz-SF-N7p"/>
+                                    <constraint firstAttribute="width" constant="368" id="ILa-pG-oKW"/>
+                                    <constraint firstItem="70g-Ic-SJ3" firstAttribute="leading" secondItem="lwk-E4-jAN" secondAttribute="leading" id="Ka8-05-7EP"/>
+                                    <constraint firstItem="enx-bi-y9z" firstAttribute="leading" secondItem="3zW-dd-ZdB" secondAttribute="leading" id="PMI-rH-qfR">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                    </constraint>
+                                    <constraint firstItem="enx-bi-y9z" firstAttribute="top" secondItem="3zW-dd-ZdB" secondAttribute="bottom" id="QGf-7B-iLr"/>
+                                    <constraint firstItem="enx-bi-y9z" firstAttribute="trailing" secondItem="3zW-dd-ZdB" secondAttribute="trailing" id="RV9-ZY-mkX">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="214" id="aFw-9f-mpt"/>
+                                    <constraint firstItem="3zW-dd-ZdB" firstAttribute="top" secondItem="70g-Ic-SJ3" secondAttribute="top" id="edI-Al-BqF">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="220" id="fkq-ki-tXN"/>
+                                    <constraint firstItem="3zW-dd-ZdB" firstAttribute="leading" secondItem="70g-Ic-SJ3" secondAttribute="leading" id="fw5-si-g6I"/>
+                                    <constraint firstItem="3zW-dd-ZdB" firstAttribute="top" secondItem="70g-Ic-SJ3" secondAttribute="bottom" id="hRI-Qo-EY5"/>
+                                    <constraint firstItem="70g-Ic-SJ3" firstAttribute="centerX" secondItem="lwk-E4-jAN" secondAttribute="centerX" id="q4i-DF-04g"/>
+                                    <constraint firstItem="3zW-dd-ZdB" firstAttribute="trailing" secondItem="70g-Ic-SJ3" secondAttribute="trailing" id="v2G-5x-Cth"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="San Francisco">
-                                    <color key="titleColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="70g-Ic-SJ3"/>
+                                        <exclude reference="enx-bi-y9z"/>
+                                        <exclude reference="3zW-dd-ZdB"/>
+                                    </mask>
                                     <mask key="constraints">
-                                        <exclude reference="vsM-KZ-vti"/>
+                                        <exclude reference="B3p-lm-otT"/>
+                                        <exclude reference="ILa-pG-oKW"/>
+                                        <exclude reference="aFw-9f-mpt"/>
+                                        <exclude reference="fkq-ki-tXN"/>
+                                        <exclude reference="FMk-s1-wfT"/>
+                                        <exclude reference="HYN-MH-9EH"/>
+                                        <exclude reference="Ka8-05-7EP"/>
+                                        <exclude reference="q4i-DF-04g"/>
+                                        <exclude reference="edI-Al-BqF"/>
+                                        <exclude reference="fw5-si-g6I"/>
+                                        <exclude reference="hRI-Qo-EY5"/>
+                                        <exclude reference="v2G-5x-Cth"/>
+                                        <exclude reference="9y9-O1-P4y"/>
+                                        <exclude reference="IFz-SF-N7p"/>
+                                        <exclude reference="PMI-rH-qfR"/>
+                                        <exclude reference="QGf-7B-iLr"/>
+                                        <exclude reference="RV9-ZY-mkX"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="190" width="400" height="230"/>
+                                    <mask key="subviews">
+                                        <include reference="70g-Ic-SJ3"/>
+                                        <include reference="enx-bi-y9z"/>
+                                        <include reference="3zW-dd-ZdB"/>
+                                    </mask>
                                     <mask key="constraints">
-                                        <include reference="vsM-KZ-vti"/>
+                                        <exclude reference="B3p-lm-otT"/>
+                                        <exclude reference="ILa-pG-oKW"/>
+                                        <include reference="aFw-9f-mpt"/>
+                                        <exclude reference="fkq-ki-tXN"/>
+                                        <include reference="FMk-s1-wfT"/>
+                                        <include reference="HYN-MH-9EH"/>
+                                        <include reference="Ka8-05-7EP"/>
+                                        <include reference="q4i-DF-04g"/>
+                                        <include reference="edI-Al-BqF"/>
+                                        <include reference="fw5-si-g6I"/>
+                                        <include reference="hRI-Qo-EY5"/>
+                                        <include reference="v2G-5x-Cth"/>
+                                        <include reference="9y9-O1-P4y"/>
+                                        <include reference="IFz-SF-N7p"/>
+                                        <include reference="PMI-rH-qfR"/>
+                                        <include reference="QGf-7B-iLr"/>
+                                        <include reference="RV9-ZY-mkX"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <action selector="sanFranciscoButton:" destination="Riq-p6-P05" eventType="touchUpInside" id="jkJ-mH-vxo"/>
-                                    <segue destination="9iz-E8-sJs" kind="show" id="0nU-C3-q0V"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="enx-bi-y9z" firstAttribute="top" secondItem="3zW-dd-ZdB" secondAttribute="bottom" id="2wX-6t-37Y"/>
-                            <constraint firstItem="70g-Ic-SJ3" firstAttribute="top" secondItem="gKB-65-fP3" secondAttribute="bottom" constant="26" id="7dv-ap-Hpf"/>
-                            <constraint firstItem="3zW-dd-ZdB" firstAttribute="top" secondItem="70g-Ic-SJ3" secondAttribute="bottom" id="9T7-gM-DBa"/>
-                            <constraint firstItem="70g-Ic-SJ3" firstAttribute="leading" secondItem="3zW-dd-ZdB" secondAttribute="leading" id="ETO-Jq-Wfd"/>
-                            <constraint firstAttribute="trailing" secondItem="enx-bi-y9z" secondAttribute="trailing" id="Hux-ek-Y6l"/>
-                            <constraint firstItem="enx-bi-y9z" firstAttribute="trailing" secondItem="3zW-dd-ZdB" secondAttribute="trailing" id="IBO-8T-IBS"/>
+                            <constraint firstItem="gKB-65-fP3" firstAttribute="centerX" secondItem="aNX-75-UfL" secondAttribute="centerX" id="101-yw-MLd"/>
+                            <constraint firstItem="lwk-E4-jAN" firstAttribute="leading" secondItem="Bul-Th-Pzq" secondAttribute="leading" id="7Tw-xY-0Sc"/>
+                            <constraint firstItem="WBP-s8-Q69" firstAttribute="top" secondItem="lwk-E4-jAN" secondAttribute="bottom" constant="390" id="Btc-IE-S2U">
+                                <variation key="heightClass=regular-widthClass=compact" constant="251"/>
+                            </constraint>
+                            <constraint firstItem="gKB-65-fP3" firstAttribute="leading" secondItem="Bul-Th-Pzq" secondAttribute="leadingMargin" constant="-15" id="Cu7-sn-GPs"/>
+                            <constraint firstItem="qYb-a8-0DL" firstAttribute="top" secondItem="lwk-E4-jAN" secondAttribute="bottom" constant="8" id="D4t-Or-JKD">
+                                <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="gKB-65-fP3" firstAttribute="centerX" secondItem="lwk-E4-jAN" secondAttribute="centerX" id="DiH-TJ-Mgl"/>
+                            <constraint firstItem="lwk-E4-jAN" firstAttribute="top" secondItem="gKB-65-fP3" secondAttribute="top" id="IVN-bQ-9pR">
+                                <variation key="heightClass=regular-widthClass=compact" constant="116"/>
+                            </constraint>
                             <constraint firstItem="aNX-75-UfL" firstAttribute="bottom" secondItem="WBP-s8-Q69" secondAttribute="top" id="JWo-AY-OBp"/>
+                            <constraint firstItem="gKB-65-fP3" firstAttribute="top" secondItem="dn0-lx-TGc" secondAttribute="bottom" constant="10" id="MKs-Zz-6hR"/>
                             <constraint firstItem="gKB-65-fP3" firstAttribute="top" secondItem="dn0-lx-TGc" secondAttribute="bottom" constant="10" id="OJZ-x9-G54"/>
-                            <constraint firstItem="gKB-65-fP3" firstAttribute="leading" secondItem="Bul-Th-Pzq" secondAttribute="leadingMargin" constant="-15" id="PAo-jB-9ib"/>
-                            <constraint firstItem="qYb-a8-0DL" firstAttribute="top" secondItem="enx-bi-y9z" secondAttribute="bottom" constant="10" id="QE1-SJ-eaq"/>
-                            <constraint firstItem="3zW-dd-ZdB" firstAttribute="trailing" secondItem="70g-Ic-SJ3" secondAttribute="trailing" id="UzS-tj-N28"/>
-                            <constraint firstItem="qYb-a8-0DL" firstAttribute="centerX" secondItem="aNX-75-UfL" secondAttribute="centerX" id="XZt-20-1bG"/>
-                            <constraint firstItem="3zW-dd-ZdB" firstAttribute="leading" secondItem="enx-bi-y9z" secondAttribute="leading" id="Yq5-aj-pZy"/>
-                            <constraint firstItem="3zW-dd-ZdB" firstAttribute="leading" secondItem="Bul-Th-Pzq" secondAttribute="leading" id="ZyC-cd-Qhv"/>
-                            <constraint firstItem="gKB-65-fP3" firstAttribute="centerX" secondItem="70g-Ic-SJ3" secondAttribute="centerX" id="c0G-eC-1VA"/>
-                            <constraint firstItem="qYb-a8-0DL" firstAttribute="centerX" secondItem="enx-bi-y9z" secondAttribute="centerX" id="ybm-Pq-RGM"/>
+                            <constraint firstItem="qYb-a8-0DL" firstAttribute="top" secondItem="lwk-E4-jAN" secondAttribute="bottom" constant="8" symbolic="YES" id="cHB-0x-uft"/>
+                            <constraint firstItem="gKB-65-fP3" firstAttribute="centerX" secondItem="Bul-Th-Pzq" secondAttribute="centerX" id="gMm-Uo-PWh"/>
+                            <constraint firstItem="gKB-65-fP3" firstAttribute="centerX" secondItem="qYb-a8-0DL" secondAttribute="centerX" id="jyk-zl-Fg1"/>
+                            <constraint firstItem="aNX-75-UfL" firstAttribute="bottom" secondItem="WBP-s8-Q69" secondAttribute="top" id="l4e-YS-3kQ"/>
+                            <constraint firstItem="lwk-E4-jAN" firstAttribute="top" secondItem="gKB-65-fP3" secondAttribute="bottom" constant="18" id="nC8-77-xdq"/>
+                            <constraint firstAttribute="bottom" secondItem="qYb-a8-0DL" secondAttribute="bottom" constant="352" id="nOY-Wn-qJ8"/>
+                            <constraint firstItem="qYb-a8-0DL" firstAttribute="top" secondItem="lwk-E4-jAN" secondAttribute="top" id="tUX-5O-Mjv">
+                                <variation key="heightClass=regular-widthClass=compact" constant="228"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="aNX-75-UfL"/>
-                                <exclude reference="70g-Ic-SJ3"/>
-                                <exclude reference="enx-bi-y9z"/>
                                 <exclude reference="gKB-65-fP3"/>
                                 <exclude reference="qYb-a8-0DL"/>
-                                <exclude reference="3zW-dd-ZdB"/>
+                                <exclude reference="lwk-E4-jAN"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="PAo-jB-9ib"/>
-                                <exclude reference="c0G-eC-1VA"/>
-                                <exclude reference="7dv-ap-Hpf"/>
-                                <exclude reference="ETO-Jq-Wfd"/>
-                                <exclude reference="9T7-gM-DBa"/>
-                                <exclude reference="UzS-tj-N28"/>
-                                <exclude reference="Yq5-aj-pZy"/>
-                                <exclude reference="ZyC-cd-Qhv"/>
-                                <exclude reference="2wX-6t-37Y"/>
-                                <exclude reference="Hux-ek-Y6l"/>
-                                <exclude reference="IBO-8T-IBS"/>
-                                <exclude reference="QE1-SJ-eaq"/>
-                                <exclude reference="XZt-20-1bG"/>
-                                <exclude reference="ybm-Pq-RGM"/>
+                                <exclude reference="101-yw-MLd"/>
+                                <exclude reference="Cu7-sn-GPs"/>
+                                <exclude reference="DiH-TJ-Mgl"/>
+                                <exclude reference="MKs-Zz-6hR"/>
+                                <exclude reference="gMm-Uo-PWh"/>
+                                <exclude reference="jyk-zl-Fg1"/>
+                                <exclude reference="7Tw-xY-0Sc"/>
+                                <exclude reference="IVN-bQ-9pR"/>
+                                <exclude reference="nC8-77-xdq"/>
+                                <exclude reference="D4t-Or-JKD"/>
+                                <exclude reference="cHB-0x-uft"/>
+                                <exclude reference="nOY-Wn-qJ8"/>
+                                <exclude reference="tUX-5O-Mjv"/>
+                                <exclude reference="l4e-YS-3kQ"/>
+                                <exclude reference="Btc-IE-S2U"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="aNX-75-UfL"/>
-                                <include reference="70g-Ic-SJ3"/>
-                                <include reference="enx-bi-y9z"/>
                                 <include reference="gKB-65-fP3"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="qYb-a8-0DL"/>
-                                <include reference="3zW-dd-ZdB"/>
+                                <include reference="lwk-E4-jAN"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="PAo-jB-9ib"/>
-                                <include reference="c0G-eC-1VA"/>
-                                <include reference="7dv-ap-Hpf"/>
-                                <include reference="ETO-Jq-Wfd"/>
-                                <include reference="9T7-gM-DBa"/>
-                                <include reference="UzS-tj-N28"/>
-                                <include reference="Yq5-aj-pZy"/>
-                                <include reference="ZyC-cd-Qhv"/>
-                                <include reference="2wX-6t-37Y"/>
-                                <include reference="Hux-ek-Y6l"/>
-                                <include reference="IBO-8T-IBS"/>
-                                <include reference="QE1-SJ-eaq"/>
-                                <include reference="XZt-20-1bG"/>
-                                <include reference="ybm-Pq-RGM"/>
+                                <include reference="101-yw-MLd"/>
+                                <include reference="Cu7-sn-GPs"/>
+                                <include reference="DiH-TJ-Mgl"/>
+                                <include reference="MKs-Zz-6hR"/>
+                                <exclude reference="OJZ-x9-G54"/>
+                                <include reference="gMm-Uo-PWh"/>
+                                <include reference="jyk-zl-Fg1"/>
+                                <include reference="7Tw-xY-0Sc"/>
+                                <include reference="IVN-bQ-9pR"/>
+                                <include reference="nC8-77-xdq"/>
+                                <include reference="D4t-Or-JKD"/>
+                                <exclude reference="cHB-0x-uft"/>
+                                <exclude reference="nOY-Wn-qJ8"/>
+                                <exclude reference="tUX-5O-Mjv"/>
+                                <exclude reference="JWo-AY-OBp"/>
+                                <include reference="l4e-YS-3kQ"/>
+                                <exclude reference="Btc-IE-S2U"/>
                             </mask>
                         </variation>
                     </view>
@@ -2307,8 +2329,8 @@ the parking ticket?</string>
                         <viewControllerLayoutGuide type="bottom" id="kfP-1v-gUT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GD5-FB-jB7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Iyq-AD-lWK">
@@ -2337,11 +2359,9 @@ the parking ticket?</string>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 69" translatesAutoresizingMaskIntoConstraints="NO" id="ZN3-WZ-NQW">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7I-bD-f1b" userLabel="camera">
                                 <rect key="frame" x="255" y="490" width="90" height="90"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="G1x-r1-EcE"/>
                                     <constraint firstAttribute="height" constant="90" id="O6J-2I-PtK">
@@ -2375,7 +2395,6 @@ the parking ticket?</string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a picture of your parking ticket" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="no3-bK-9Hz">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="201" id="Xcn-4c-cNI">
                                         <variation key="heightClass=regular" constant="235"/>
@@ -2402,7 +2421,6 @@ the parking ticket?</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zd-Uo-VVP" userLabel="checkmark">
                                 <rect key="frame" x="509" y="314" width="75" height="75"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="HO6-Pm-iGR"/>
                                     <constraint firstAttribute="height" constant="100" id="Ncr-Mp-Dpl">
@@ -2436,7 +2454,6 @@ the parking ticket?</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ky6-61-hFu" userLabel="retry">
                                 <rect key="frame" x="16" y="314" width="75" height="75"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="WrP-yv-2Vh"/>
                                     <constraint firstAttribute="height" constant="100" id="bpy-yH-dA1">
@@ -2469,7 +2486,6 @@ the parking ticket?</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8Zd-Uo-VVP" firstAttribute="bottom" secondItem="ky6-61-hFu" secondAttribute="bottom" id="0RE-Mm-4gw"/>
@@ -2613,7 +2629,6 @@ the parking ticket?</string>
                     <containerView key="view" opaque="NO" contentMode="scaleToFill" id="FQ1-Ry-Axc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <animations/>
                         <connections>
                             <segue destination="GdB-4y-KPe" kind="embed" identifier="showCamera2" id="lsY-UU-Z0X"/>
                         </connections>
@@ -2640,7 +2655,6 @@ the parking ticket?</string>
                     <containerView key="view" opaque="NO" contentMode="scaleToFill" id="Tsb-Rr-JOw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <animations/>
                         <connections>
                             <segue destination="GdB-4y-KPe" kind="embed" identifier="showCamera" id="Ka4-xC-2La"/>
                         </connections>
@@ -2674,7 +2688,6 @@ the parking ticket?</string>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xxi-SA-gFq">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="354" id="Zql-BS-f8n"/>
                                     <constraint firstAttribute="width" constant="304" id="btQ-GS-PgH"/>
@@ -2702,7 +2715,6 @@ the parking ticket?</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cYR-pW-VSJ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="03E-JM-ccC">
@@ -2730,7 +2742,6 @@ the parking ticket?</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nen-xQ-ipQ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.58431372550000005" green="0.64705882349999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="1hv-l4-ImX">
@@ -2761,7 +2772,6 @@ the parking ticket?</string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xm-1f-FJr">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="AQl-D0-yJF"/>
                                     <constraint firstAttribute="width" constant="304" id="RD6-R5-oD1"/>
@@ -2789,7 +2799,6 @@ but adding new cities regularly</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Internet connection unavailable" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgx-Zn-fXw">
                                 <rect key="frame" x="-1" y="355" width="601" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="0wh-GB-6lX">
                                         <variation key="heightClass=regular" constant="14"/>
@@ -2818,7 +2827,6 @@ but adding new cities regularly</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNs-GK-JvA">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="354" id="Ahl-mv-egW"/>
                                     <constraint firstAttribute="height" constant="88" id="hsR-eV-hzY"/>
@@ -2846,7 +2854,6 @@ but adding new cities regularly</string>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="W5C-Ny-Tfn">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="UTB-qY-mbi"/>
                                 </constraints>
@@ -2863,7 +2870,6 @@ but adding new cities regularly</string>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City Name, State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nX4-FK-hKN">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="zsN-kq-RHZ"/>
                                 </constraints>
@@ -2883,7 +2889,6 @@ but adding new cities regularly</string>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSx-pN-uZz">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="257" id="Obg-Cg-P2f"/>
                                 </constraints>
@@ -2910,7 +2915,6 @@ but adding new cities regularly</string>
                                 </variation>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="nen-xQ-ipQ" firstAttribute="top" secondItem="cYR-pW-VSJ" secondAttribute="bottom" id="6a1-5F-AtH"/>
@@ -3128,10 +3132,8 @@ but adding new cities regularly</string>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Step 4" translatesAutoresizingMaskIntoConstraints="NO" id="nLc-Lg-4jd">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <animations/>
                                     </imageView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="nLc-Lg-4jd" firstAttribute="top" secondItem="Ftl-cX-7D8" secondAttribute="top" id="Z8g-9m-3u8"/>
@@ -3163,7 +3165,6 @@ but adding new cities regularly</string>
                                 </variation>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Ftl-cX-7D8" firstAttribute="top" secondItem="U5T-oC-GiS" secondAttribute="topMargin" id="6D8-M4-QQY"/>
@@ -3218,10 +3219,8 @@ but adding new cities regularly</string>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Step 3" translatesAutoresizingMaskIntoConstraints="NO" id="Ulr-ip-FuD">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <animations/>
                                     </imageView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Ulr-ip-FuD" firstAttribute="top" secondItem="gcr-XB-nSs" secondAttribute="top" id="Nda-Zr-veB"/>
@@ -3253,7 +3252,6 @@ but adding new cities regularly</string>
                                 </variation>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gcr-XB-nSs" firstAttribute="leading" secondItem="Whd-vf-HKY" secondAttribute="leadingMargin" constant="-16" id="20K-xm-wX2"/>
@@ -3308,11 +3306,9 @@ but adding new cities regularly</string>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Step 5" translatesAutoresizingMaskIntoConstraints="NO" id="Ton-fi-Tdb">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <animations/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KzE-5x-KFr">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <animations/>
                                         <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="pgR-6c-Fkc">
@@ -3347,7 +3343,6 @@ but adding new cities regularly</string>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Ton-fi-Tdb" secondAttribute="bottom" id="DA1-tc-HeU"/>
@@ -3415,7 +3410,6 @@ but adding new cities regularly</string>
                                 </variation>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kBs-ak-s8b" firstAttribute="leading" secondItem="Nxs-QO-JFf" secondAttribute="leadingMargin" constant="-16" id="2j7-se-i6H"/>
@@ -3470,7 +3464,6 @@ but adding new cities regularly</string>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyD-Mj-gJF">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.58431372550000005" green="0.64705882349999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="9VK-q5-Oap"/>
@@ -3499,7 +3492,6 @@ but adding new cities regularly</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKT-P2-fbS">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="7X2-QO-5yp"/>
@@ -3534,7 +3526,6 @@ but adding new cities regularly</string>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zgt-KQ-fIb">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="524.5" id="6GJ-Fa-48b"/>
                                         </constraints>
@@ -3560,7 +3551,6 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                                         </variation>
                                     </textView>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstItem="Zgt-KQ-fIb" firstAttribute="leading" secondItem="fGS-Yy-BlW" secondAttribute="leading" id="3uH-KM-q8j"/>
                                     <constraint firstAttribute="centerX" secondItem="Zgt-KQ-fIb" secondAttribute="centerX" id="Flw-ji-tf4"/>
@@ -3595,7 +3585,6 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Woohoo!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmW-U1-BcT">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="354" id="EHD-iJ-Hdh"/>
                                     <constraint firstAttribute="height" constant="88" id="SzE-Qm-P5w"/>
@@ -3626,7 +3615,6 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                                 </variation>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="NmW-U1-BcT" secondAttribute="centerX" id="GBC-mM-F6A"/>
