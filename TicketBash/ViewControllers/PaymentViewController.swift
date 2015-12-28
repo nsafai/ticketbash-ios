@@ -46,7 +46,7 @@ class PaymentViewController: UIViewController, STPPaymentCardTextFieldDelegate {
             paymentOptionsLabel.hidden = true
         }
         
-        var tickets = realm.objects(Ticket)
+        let tickets = realm.objects(Ticket)
         if let ticket = tickets.first { // if there is a stored value then the 'tickets' array is not nil --> assign the value of the first ticket in the array to 'ticket'
             myTicket = ticket // assign the value of ticket to myTicket
             //            println("grabbed ticket from realm")
@@ -138,7 +138,7 @@ class PaymentViewController: UIViewController, STPPaymentCardTextFieldDelegate {
     
     //credit card
     @IBAction func creditCardPurchase(sender: AnyObject) {
-        var tickets = realm.objects(Ticket)
+        let tickets = realm.objects(Ticket)
         if let ticket = tickets.first {
             if (ticket.finishedUploading == true) {
                 refreshButton()
@@ -152,7 +152,7 @@ class PaymentViewController: UIViewController, STPPaymentCardTextFieldDelegate {
     //apple pay
     @IBAction func purchase(sender: UIButton) {
         if (Reachability.isConnectedToNetwork()) {
-            var tickets = realm.objects(Ticket)
+            let tickets = realm.objects(Ticket)
             if let ticket = tickets.first {
                 if (ticket.finishedUploading == true) {
                     disclaimerText.text = "Please try again in a few seconds. Your dispute is still being uploaded."
@@ -191,7 +191,7 @@ class PaymentViewController: UIViewController, STPPaymentCardTextFieldDelegate {
 }
 
 extension PaymentViewController: PKPaymentAuthorizationViewControllerDelegate {
-    func paymentAuthorizationViewController(controller: PKPaymentAuthorizationViewController!, didAuthorizePayment payment: PKPayment!, completion: ((PKPaymentAuthorizationStatus) -> Void)!) {
+    func paymentAuthorizationViewController(controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, completion: ((PKPaymentAuthorizationStatus) -> Void)) {
         
         //        // 1
         //        let shippingAddress = self.createShippingAddressFromRef(payment.shippingAddress)
@@ -248,7 +248,7 @@ extension PaymentViewController: PKPaymentAuthorizationViewControllerDelegate {
         }
     }
     
-    func paymentAuthorizationViewControllerDidFinish(controller: PKPaymentAuthorizationViewController!) {
+    func paymentAuthorizationViewControllerDidFinish(controller: PKPaymentAuthorizationViewController) {
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
     
