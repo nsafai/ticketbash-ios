@@ -152,6 +152,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                 ticketObject["mailingAddress"] = ticketData.mailingAddress
                 ticketObject["mailingAddress2"] = ticketData.mailingAddress2
                 ticketObject["email"] = ticketData.email
+                ticketObject["ticketType"] = ticketData.ticketType
                 ticketObject["user"] = PFUser.currentUser()
                 mixpanel.timeEvent("Ticket Upload")
                 if Reachability.isConnectedToNetwork() == true {
