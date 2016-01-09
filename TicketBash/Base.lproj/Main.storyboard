@@ -8,7 +8,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Explanation-->
+        <!--Explanation View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController storyboardIdentifier="ExplanationViewController" id="vXZ-lx-hvc" customClass="ExplanationViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
@@ -192,7 +192,8 @@ this parking ticket?</string>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Explanation" id="AuP-CJ-sE5">
+                    <navigationItem key="navigationItem" id="AuP-CJ-sE5">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Qph-Xn-gzc"/>
                         <barButtonItem key="rightBarButtonItem" title="Help" id="bl0-yU-eaF">
                             <connections>
                                 <action selector="helpButton:" destination="vXZ-lx-hvc" id="Gjp-aI-lVU"/>
@@ -888,6 +889,7 @@ this parking ticket?</string>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Mailing Address" id="Ary-f8-eva">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="R7Q-18-lZ0"/>
                         <barButtonItem key="rightBarButtonItem" title="Help" id="xpF-xp-uAk">
                             <connections>
                                 <action selector="helpButton:" destination="MKZ-8v-mWK" id="bTS-r0-ePs"/>
@@ -1190,6 +1192,7 @@ this parking ticket?</string>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Final Step" id="6sI-DW-aba">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="IBN-XD-JFp"/>
                         <barButtonItem key="rightBarButtonItem" title="Help" id="oDu-df-LZ8">
                             <connections>
                                 <action selector="helpButton:" destination="Rg3-IU-Rbz" id="ZSl-Mr-ALO"/>
@@ -1208,7 +1211,7 @@ this parking ticket?</string>
             </objects>
             <point key="canvasLocation" x="3798" y="402.75"/>
         </scene>
-        <!--Payment Details-->
+        <!--Payment View Controller-->
         <scene sceneID="Lw3-20-52m">
             <objects>
                 <viewController id="xBr-eK-H5V" customClass="PaymentViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
@@ -1429,7 +1432,8 @@ this parking ticket?</string>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Payment Details" id="gua-b2-rAJ">
+                    <navigationItem key="navigationItem" id="gua-b2-rAJ">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Tlh-Zo-NfR"/>
                         <barButtonItem key="rightBarButtonItem" title="Help" id="r5a-qT-QuR">
                             <connections>
                                 <action selector="helpButton:" destination="xBr-eK-H5V" id="MJv-Sa-CjK"/>
@@ -1798,6 +1802,7 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="V1G-hH-3zI">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="IrF-ZJ-Qyp"/>
                         <barButtonItem key="rightBarButtonItem" title="Help" id="OzV-z2-oS0">
                             <connections>
                                 <action selector="helpButton:" destination="g1W-Wz-p9S" id="Kfy-Nc-aOK"/>
@@ -2334,6 +2339,7 @@ the parking ticket?</string>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Wl0-7X-IhG">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="CJ0-pK-jO6"/>
                         <barButtonItem key="rightBarButtonItem" title="Help" id="tGZ-tY-ptu">
                             <connections>
                                 <action selector="helpButton:" destination="Riq-p6-P05" id="e5Y-DS-Jdv"/>
@@ -2809,6 +2815,7 @@ this parking ticket</string>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Iyq-AD-lWK">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Vlq-WB-BDk"/>
                         <barButtonItem key="rightBarButtonItem" title="Help" id="KUr-H3-7ST">
                             <connections>
                                 <action selector="helpButton:" destination="9iz-E8-sJs" id="Cxm-V9-1xh"/>
@@ -3097,7 +3104,7 @@ this parking ticket</string>
             </objects>
             <point key="canvasLocation" x="1464" y="1174.5"/>
         </scene>
-        <!--Picture of Evidence-->
+        <!--Evidence Camera View Controller-->
         <scene sceneID="3D1-aH-9VK">
             <objects>
                 <viewController id="t6v-GG-VNE" customClass="EvidenceCameraViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
@@ -3108,7 +3115,8 @@ this parking ticket</string>
                             <segue destination="GdB-4y-KPe" kind="embed" identifier="showCamera2" id="lsY-UU-Z0X"/>
                         </connections>
                     </containerView>
-                    <navigationItem key="navigationItem" title="Picture of Evidence" id="Wo5-z5-VE7">
+                    <navigationItem key="navigationItem" id="Wo5-z5-VE7">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="YlU-Ci-h9I"/>
                         <barButtonItem key="rightBarButtonItem" title="Help" id="tGS-RT-5Ho">
                             <connections>
                                 <action selector="helpButton:" destination="t6v-GG-VNE" id="3fW-gX-Alx"/>
@@ -3123,7 +3131,7 @@ this parking ticket</string>
             </objects>
             <point key="canvasLocation" x="1050" y="417"/>
         </scene>
-        <!--Picture of Citation-->
+        <!--Citation Camera View Controller-->
         <scene sceneID="P82-x8-9Ps">
             <objects>
                 <viewController id="sG2-kq-qBF" customClass="CitationCameraViewController" customModule="TicketBash" customModuleProvider="target" sceneMemberID="viewController">
@@ -3134,7 +3142,8 @@ this parking ticket</string>
                             <segue destination="GdB-4y-KPe" kind="embed" identifier="showCamera" id="Ka4-xC-2La"/>
                         </connections>
                     </containerView>
-                    <navigationItem key="navigationItem" title="Picture of Citation" id="sOI-tg-hgQ">
+                    <navigationItem key="navigationItem" id="sOI-tg-hgQ">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="ii6-MZ-agd"/>
                         <barButtonItem key="rightBarButtonItem" title="Help" id="J8a-3b-VJr">
                             <connections>
                                 <action selector="helpButton:" destination="sG2-kq-qBF" id="Rwq-tE-6Mr"/>
@@ -3170,7 +3179,7 @@ this parking ticket</string>
                                 </constraints>
                                 <string key="text">Where did you receive
 the parking ticket?</string>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                 <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -3573,6 +3582,7 @@ but adding new cities regularly</string>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="diV-1f-lq0">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="idW-l8-MLn"/>
                         <barButtonItem key="rightBarButtonItem" title="Help" id="ND6-J3-jUA">
                             <connections>
                                 <action selector="helpButton:" destination="BWO-PK-kbq" id="ywF-uu-ONE"/>
@@ -4175,6 +4185,7 @@ If they decline your dispute, you can appeal the decision in person. Instruction
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="2O0-fD-g6e">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Zr7-Wu-fHd"/>
                         <barButtonItem key="rightBarButtonItem" title="Help" id="AQv-qW-sSA">
                             <connections>
                                 <action selector="helpButton:" destination="YAa-d2-yeQ" id="85V-PV-w71"/>
@@ -4202,9 +4213,9 @@ If they decline your dispute, you can appeal the decision in person. Instruction
         <image name="ticketmeter" width="292" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ka4-xC-2La"/>
-        <segue reference="q7s-mX-SnH"/>
+        <segue reference="h1A-5y-WJY"/>
         <segue reference="ktd-eb-e1r"/>
+        <segue reference="lsY-UU-Z0X"/>
         <segue reference="FNU-p6-r6K"/>
     </inferredMetricsTieBreakers>
 </document>
