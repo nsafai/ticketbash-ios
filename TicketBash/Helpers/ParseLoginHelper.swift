@@ -81,7 +81,7 @@ extension ParseLoginHelper : PFSignUpViewControllerDelegate {
   func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
 
     // customizing the label above username/password text fields
-    var signUpLogoTitle = UILabel()
+    let signUpLogoTitle = UILabel()
     signUpLogoTitle.text = "Ticket Bash"
     signUpLogoTitle.font = UIFont(name: "HelveticaNeue-UltraLight",
         size: 70.0)

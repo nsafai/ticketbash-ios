@@ -23,9 +23,9 @@ func generatePDF (ticketData: Ticket) {
     let center = NSTextAlignment.Center
     let right = NSTextAlignment.Right
     let left = NSTextAlignment.Left
-    var size: CGSize = CGSizeMake(850, 1100)
-    let verticalMargin: Float = 100
-    let horizontalMargin: Float = 75
+    let size: CGSize = CGSizeMake(850, 1100)
+//    let verticalMargin: Float = 100
+//    let horizontalMargin: Float = 75
     
     let toAddress = "NYC Department of Finance\n" +
         "Hearings By Mail Unit\n" +

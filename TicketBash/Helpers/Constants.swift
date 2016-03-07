@@ -7,5 +7,6 @@
 //
 
 struct Constants {
-    static let ticketbashBaseURL = "https://ticketbash.ngrok.io"
+//    static let ticketbashBaseURL = "https://ticketbash.ngrok.io" //testing
+    static let ticketbashBaseURL = "https://ticketbash-staging.herokuapp.com" //testing
 }

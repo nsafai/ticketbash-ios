@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PaymentKit
+//import PaymentKit
 //import PassKit
 import RealmSwift
 import Stripe
@@ -91,18 +91,18 @@ class PaymentViewController: UIViewController, STPPaymentCardTextFieldDelegate {
         
     }
     //credit card
-    func paymentView(paymentView: PTKView!, withCard card: PTKCard!, isValid valid: Bool) {
+    func paymentView(paymentView: STPPaymentCardTextField!, withCard card: STPCard!, isValid valid: Bool) {
         creditCardButton!.enabled = valid
         creditCardButton.backgroundColor = paletteBlue
         refreshButton()
     }
     //credit card
     func createToken() {
-        let card = STPCard()
-        card.number = paymentView!.card!.number
-        card.expMonth = paymentView!.card!.expMonth
-        card.expYear = paymentView!.card!.expYear
-        card.cvc = paymentView!.card!.cvc
+        let card = STPCardParams()
+        card.number = paymentView!.cardNumber
+        card.expMonth = paymentView!.cardParams.expMonth
+        card.expYear = paymentView!.cardParams.expYear
+        card.cvc = paymentView!.cardParams.cvc
         
         STPAPIClient.sharedClient().createTokenWithCard(card, completion: { (token, ErrorHandling) -> Void in
             self.handleToken(token)

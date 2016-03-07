@@ -1,29 +1,28 @@
 PODS:
   - BMPageViewController (1.0.0)
-  - Bolts/Tasks (1.5.0)
+  - Bolts/Tasks (1.6.0)
   - ConvenienceKit (0.4.0)
   - GooglePlacesAutocomplete (0.3.0)
   - JLPDFGenerator (1.0)
-  - Mixpanel (2.9.1):
-    - Mixpanel/Mixpanel (= 2.9.1)
-  - Mixpanel/Mixpanel (2.9.1)
-  - Parse (1.10.0):
+  - Mixpanel (2.9.4):
+    - Mixpanel/Mixpanel (= 2.9.4)
+  - Mixpanel/Mixpanel (2.9.4)
+  - Parse (1.12.0):
     - Bolts/Tasks (~> 1.5)
-  - ParseUI (1.1.7):
+  - ParseUI (1.2.0):
     - Bolts/Tasks (~> 1.3)
     - Parse (~> 1.9)
-  - PaymentKit (1.2)
   - PBJVision (0.4.2)
-  - Realm (0.96.3):
-    - Realm/Headers (= 0.96.3)
-  - Realm/Headers (0.96.3)
-  - RealmSwift (0.96.3):
-    - Realm (= 0.96.3)
-  - Stripe (6.0.1):
-    - Stripe/Core (= 6.0.1)
-  - Stripe/ApplePay (6.0.1):
+  - Realm (0.98.3):
+    - Realm/Headers (= 0.98.3)
+  - Realm/Headers (0.98.3)
+  - RealmSwift (0.98.3):
+    - Realm (= 0.98.3)
+  - Stripe (6.2.0):
+    - Stripe/Core (= 6.2.0)
+  - Stripe/ApplePay (6.2.0):
     - Stripe/Core
-  - Stripe/Core (6.0.1)
+  - Stripe/Core (6.2.0)
 
 DEPENDENCIES:
   - BMPageViewController
@@ -33,7 +32,6 @@ DEPENDENCIES:
   - Mixpanel
   - Parse
   - ParseUI
-  - PaymentKit
   - PBJVision
   - Realm
   - RealmSwift
@@ -42,17 +40,16 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   BMPageViewController: dd373e2459e982b120638268ff1665eb6b412ad7
-  Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
+  Bolts: f52a250053bb517ca874523c3913776359ab3def
   ConvenienceKit: ba1ad8797897dc0d011676e961a2f3e9b270c841
   GooglePlacesAutocomplete: 7694636fce561c9d8ac807b8e490d299a730a633
   JLPDFGenerator: c030d93a1371f2d16e385d44a0a1ebc0ae68003d
-  Mixpanel: 5ca24b2a05f4c77fe9bcfe7671d681d0f3f8d76f
-  Parse: 90b2544822200f84b18bfacc4e8b0a3a6c3584a2
-  ParseUI: c2bcdfbb00330e464b5b773266ae221697a3bb7b
-  PaymentKit: 9bf248ab9a7343ccc65523890428e23678d1bde9
+  Mixpanel: 80d2ca9bb38ae91c1044d738e80fe448377ac89f
+  Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
+  ParseUI: af2eba584799da4a9fbdac0e178662d7438b502e
   PBJVision: fe43c9a58bb1c1277d16fd802fa836d25e034a45
-  Realm: 145d3cdf78a03aee71bde5381ad7e542bd541720
-  RealmSwift: aab84968aad662f61f36473d1aea019f63481505
-  Stripe: 04f215191702c268b89fe0cdf28dc24a9688a71b
+  Realm: c6a7d00221a2d5177810a674aebd40c5e0b70b0f
+  RealmSwift: d6ecad6e4c2a645d6ac956c2c7e9efb375f39c31
+  Stripe: 275524137e6c4cc1058f6d32ece248adf30a21f9
 
 COCOAPODS: 0.39.0

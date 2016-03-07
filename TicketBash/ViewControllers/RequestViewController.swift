@@ -53,9 +53,9 @@ class RequestViewController: UIViewController, UITextFieldDelegate {
         notifyButton.hidden = true
 //        submitButton.hidden = true
         
-        delay(keyboardDelay) {
+//        delay(keyboardDelay) {
             self.cityRequestTextField.becomeFirstResponder()
-        }
+//        }
         cityRequestTextField .setValue(paletteGrey, forKeyPath: "_placeholderLabel.textColor")
     }
     

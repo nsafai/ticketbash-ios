@@ -24,7 +24,7 @@ class ParseLoginCodeForRootViewController: UIViewController {
                 //                println("Error logging in \(user)")
             } else if let user = user {
                 // code below indicates what should happen if PFLogInViewController succesfully logs in a user
-                //                println("CASE 1 Logged in user is \(user)")
+                print("CASE 1 Logged in user is \(user)")
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
@@ -33,7 +33,7 @@ class ParseLoginCodeForRootViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
         
-        var user = PFUser.currentUser()
+        let user = PFUser.currentUser()
         if (user != nil) {
             // someone is logged in
 

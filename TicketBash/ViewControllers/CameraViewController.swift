@@ -11,6 +11,7 @@ import PBJVision
 
 protocol CameraViewControllerDelegate {
     func acceptedImage(image: UIImage)
+    func skipStep()
 }
 
 class CameraViewController: UIViewController {
@@ -21,8 +22,9 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var retryButton: UIButton!
     @IBOutlet weak var acceptButton: UIButton!
     @IBOutlet weak var cameraText: UILabel!
-    
+    @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var photoButton: UIButton!
+    
     var delegate: CameraViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -59,8 +61,14 @@ class CameraViewController: UIViewController {
         
         if (self.parentViewController?.isKindOfClass(CitationCameraViewController) == true) {
             cameraText.text = "Take a picture of\nyour parking ticket"
+            
+//            skipButton.hidden = true
+            
         } else if (self.parentViewController?.isKindOfClass(EvidenceCameraViewController) == true) {
             cameraText.text = "Take a picture of\nyour vehicle\n(or evidence)"
+            
+//            skipButton.hidden = false
+            
         }
     }
     
@@ -80,7 +88,7 @@ class CameraViewController: UIViewController {
             if let delegate = delegate, acceptedImage = acceptedImage {
                 // save to property
                 delegate.acceptedImage(acceptedImage)
-                // save picture realm
+                // save picture to realm in delegate
                 
                 // save to camera roll (in background)
                 dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), { () -> Void in
@@ -88,6 +96,11 @@ class CameraViewController: UIViewController {
 //                    println("Photo just accepted!!!")
                 })
             }
+    }
+    @IBAction func skipButtonTapped(sender: AnyObject) {
+        if let delegate = delegate {
+            delegate.skipStep()
+        }
     }
     @IBAction func photoButtonTapped(sender: AnyObject) {
         self.photoButton.userInteractionEnabled = false;

@@ -53,10 +53,13 @@ class ExplanationViewController: UIViewController, PFLogInViewControllerDelegate
         }
         // this code needs to be below realm code above
         showButton()
-        if explanationTextView.text == "" {
-            explanationTextView.text = placeholderText
-            explanationTextView.textColor = paletteGrey
-        }
+//        if explanationTextView.text == "" {
+//            explanationTextView.text = placeholderText
+//            explanationTextView.textColor = paletteGrey
+//        }
+        self.explanationTextView.becomeFirstResponder()
+//        self.explanationTextView!.layer.borderWidth = 1
+//        self.explanationTextView!.layer.borderColor = paletteWhite.CGColor
     }
     func showButton() {
         if (explanationTextView.text == "") || (explanationTextView.text == self.placeholderText) {

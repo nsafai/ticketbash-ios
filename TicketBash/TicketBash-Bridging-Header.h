@@ -15,7 +15,7 @@
 #import <JLPDFGenerator/JLPDFGenerator.h>
 #import <Stripe/Stripe.h>
 #import <Stripe/Stripe+ApplePay.h>
-#import <PaymentKit/PTKView.h>
+//#import <PaymentKit/PTKView.h>
 #import <BMPageViewController/BMPageViewController.h>
 #import <GooglePlacesAutocomplete/GooglePlacesAutocomplete.h>
 #import <Mixpanel/Mixpanel.h>

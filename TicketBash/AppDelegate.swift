@@ -57,9 +57,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        
         
         // realm migration
-        setSchemaVersion(1, realmPath: Realm.defaultPath, migrationBlock: { migration, oldSchemaVersion in
-            if oldSchemaVersion < 1 { }
-        })
+        RLMRealm.migrateRealm(RLMRealmConfiguration.defaultConfiguration())
+
+//        realm.setSchemaVersion(1, realmPath: Realm.defaultPath, migrationBlock: { migration, oldSchemaVersion in
+//            if oldSchemaVersion < 1 { }
+//        })
         realm = try! Realm()
 
         
