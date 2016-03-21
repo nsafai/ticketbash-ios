@@ -4237,13 +4237,13 @@ but adding new cities regularly</string>
                                         <exclude reference="KzE-5x-KFr"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <exclude reference="CGK-Am-Z2d"/>
+                                        <exclude reference="K8O-5h-NdG"/>
                                         <exclude reference="2O1-Up-dTH"/>
                                         <exclude reference="5RE-xE-8zj"/>
                                         <exclude reference="8Oz-xT-6kS"/>
                                         <exclude reference="TW3-pZ-XnP"/>
                                         <exclude reference="eoH-S1-0HJ"/>
-                                        <exclude reference="CGK-Am-Z2d"/>
-                                        <exclude reference="K8O-5h-NdG"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular">
@@ -4256,13 +4256,13 @@ but adding new cities regularly</string>
                                         <include reference="Ton-fi-Tdb"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <include reference="CGK-Am-Z2d"/>
+                                        <include reference="K8O-5h-NdG"/>
                                         <include reference="2O1-Up-dTH"/>
                                         <include reference="5RE-xE-8zj"/>
                                         <include reference="8Oz-xT-6kS"/>
                                         <include reference="TW3-pZ-XnP"/>
                                         <include reference="eoH-S1-0HJ"/>
-                                        <include reference="CGK-Am-Z2d"/>
-                                        <include reference="K8O-5h-NdG"/>
                                     </mask>
                                 </variation>
                             </view>

@@ -38,6 +38,7 @@ class TicketOriginViewController: UIViewController {
 
         
         print("Hello from TicketOriginViewController")
+//        let realm = try! Realm()
         let tickets = realm.objects(Ticket)
         if let ticket = tickets.first { // if there is a stored value then the 'tickets' array is not nil --> assign the value of the first ticket in the array to 'ticket'
             myTicket = ticket // assign the value of ticket to myTicket
