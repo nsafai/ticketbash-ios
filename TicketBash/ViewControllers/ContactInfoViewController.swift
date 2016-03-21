@@ -155,6 +155,8 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                 ticketObject["ticketType"] = ticketData.ticketType
                 ticketObject["user"] = PFUser.currentUser()
                 mixpanel.timeEvent("Ticket Upload")
+                
+                //check for internet connection
                 if Reachability.isConnectedToNetwork() == true {
                     ticketObject.saveInBackgroundWithBlock({ (success, ErrorHandling) -> Void in
                         print("sent ticket to Parse")
