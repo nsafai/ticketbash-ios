@@ -48,6 +48,22 @@ extension EvidenceCameraViewController: CameraViewControllerDelegate {
         self.performSegueWithIdentifier("showTicketController", sender: self)
     }
     func skipStep() {
+        // save to realm
+        let tickets = realm.objects(Ticket)
+        if let ticket = tickets.first {
+            myTicket = ticket
+        } else {
+            myTicket = Ticket()
+        }
+        
+        if let ticket = self.myTicket {
+            try! realm.write() { //changes must be done within a write transaction/closure.
+                let imageData = NSData()
+                ticket.evidencePicture =  imageData // change realm image data value to what user just took in camera view controller
+                realm.add(ticket, update: true) // 3 Add  new ticket to Realm if none exists, else update it
+            }
+        }
+        // segue to next view
         self.performSegueWithIdentifier("showTicketController", sender: self)
     }
 }

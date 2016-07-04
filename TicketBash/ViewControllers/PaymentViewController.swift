@@ -17,7 +17,7 @@ class PaymentViewController: UIViewController, STPPaymentCardTextFieldDelegate {
     //local storage
     var myTicket: Ticket?
 
-    var shippingCost: NSDecimalNumber = 3
+    var shippingCost: NSDecimalNumber = 5
     
     @IBOutlet weak var paymentOptionsLabel: UILabel!
     @IBOutlet weak var orLabel: UILabel!
@@ -39,7 +39,7 @@ class PaymentViewController: UIViewController, STPPaymentCardTextFieldDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillEnterForeground:", name: UIApplicationWillEnterForegroundNotification, object: nil)
         
         // Do any additional setup after loading the view.
-        applePayButton.hidden = !PKPaymentAuthorizationViewController.canMakePaymentsUsingNetworks(SupportedPaymentNetworks)
+//        applePayButton.hidden = !PKPaymentAuthorizationViewController.canMakePaymentsUsingNetworks(SupportedPaymentNetworks)
         
         if applePayButton.hidden == true {
             orLabel.hidden = true

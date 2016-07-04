@@ -153,6 +153,7 @@ class ContactInfoViewController: UIViewController, UITextFieldDelegate {
                 ticketObject["mailingAddress2"] = ticketData.mailingAddress2
                 ticketObject["email"] = ticketData.email
                 ticketObject["ticketType"] = ticketData.ticketType
+                ticketObject["ticketOrigin"] = ticketData.ticketOrigin
                 ticketObject["user"] = PFUser.currentUser()
                 mixpanel.timeEvent("Ticket Upload")
                 

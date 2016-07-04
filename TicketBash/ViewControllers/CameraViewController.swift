@@ -62,12 +62,12 @@ class CameraViewController: UIViewController {
         if (self.parentViewController?.isKindOfClass(CitationCameraViewController) == true) {
             cameraText.text = "Take a picture of\nyour parking ticket"
             
-//            skipButton.hidden = true
+            skipButton.hidden = true
             
         } else if (self.parentViewController?.isKindOfClass(EvidenceCameraViewController) == true) {
             cameraText.text = "Take a picture of\nyour vehicle\n(or evidence)"
             
-//            skipButton.hidden = false
+            skipButton.hidden = false
             
         }
     }

@@ -9,7 +9,7 @@ target 'TicketBash' do
 	pod 'ParseUI'
 	pod 'ConvenienceKit'
 	pod 'JLPDFGenerator'
-	pod 'GooglePlacesAutocomplete'
+	pod 'GooglePlacesAutocomplete', :git => 'https://github.com/geoffCamp/ios_google_places_autocomplete'
 	pod 'Stripe'
 	pod 'Stripe/ApplePay'
 	pod 'BMPageViewController'

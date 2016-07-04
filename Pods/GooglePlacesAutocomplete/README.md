@@ -22,8 +22,7 @@ No attempt has been made to integrate MapKit since displaying Google Places on a
 ## Requirements
 
 - iOS 7.0+
-- XCode 6.2+ / Swift 1.2 (for XCode 6.1 / Swift 1.1 use version 0.2.1)
-
+- XCode 7.0+ / Swift 2.0
 
 ## Installation
 
@@ -64,6 +63,8 @@ Note: Don't forget to add the PoweredByGoogle image to your xcassets.
 
 
 ## Usage
+
+Use the [Google Developers Console](https://console.developers.google.com/) to enabled the 'Google Places API Web Service' and create a 'Server' API key credential. In both cases do *not* use the iOS options.
 
 ```swift
 import GooglePlacesAutocomplete // Not required when including source files directly in project
@@ -123,6 +124,15 @@ place.getDetails { details in
 ```
 
 See the [documentation](https://developers.google.com/places/webservice/details#PlaceDetailsResponses) for full response details.
+
+### Location Biasing
+
+The Place Autocomplete API supports biasing results to a specified circle by passing a `location` and a `radius` parameter. This instructs the service to *prefer* showing results within that circle. Results outside of the defined area may still be displayed.
+
+```swift
+gpaViewController.locationBias = LocationBias(latitude: 48.8534275, longitude: 2.3582787999999937, radius: 1000)
+```
+
 
 ### Styling
 
