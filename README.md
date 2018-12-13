@@ -15,6 +15,6 @@ An iOS app written in Swift that lets you dispute your SF/NYC parking tickets fr
 This project uses Swift, Google Maps API, Lob API, Stripe API
 
 ## Screenshots / Read More
-![](https://www.dropbox.com/s/023rtrfxbqhp5v2/Screenshot%202018-12-13%2014.39.46.png?dl=0)
+![Screenshot of TicketBash](https://www.dropbox.com/s/023rtrfxbqhp5v2/Screenshot%202018-12-13%2014.39.46.png)
 
 See more about the app here: [http://nicolaisafai.com/ticketbashwebsite](http://nicolaisafai.com/ticketbashwebsite)
